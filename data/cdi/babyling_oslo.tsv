@@ -1,0 +1,65 @@
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
+babyling-oslo	OS_002	NorCDI	18	555	23	16	noerror	Parents comment that she understands much more than she says. 
+babyling-oslo	OS_002	NorCDI	24	732	120	9	noerror	
+babyling-oslo	OS_003	NorCDI	18	556	65	62	noerror	
+babyling-oslo	OS_003	NorCDI	24	733	264	50	noerror	
+babyling-oslo	OS_005	NorCDI	18	545	75	49	noerror	
+babyling-oslo	OS_005	NorCDI	24	727	178	19	noerror	
+babyling-oslo	OS_007	NorCDI	18	549	127	79	noerror	
+babyling-oslo	OS_007	NorCDI	24	732	403	74	noerror	
+babyling-oslo	OS_009	NorCDI	18	546	86	54	noerror	
+babyling-oslo	OS_009	NorCDI	24	730	542	87	noerror	
+babyling-oslo	OS_012	NorCDI	18	550	210	90	noerror	
+babyling-oslo	OS_012	NorCDI	24	728	604	97	noerror	
+babyling-oslo	OS_014	NorCDI	18	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_014	NorCDI	24	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_015	NorCDI	18	555	33	27	noerror	
+babyling-oslo	OS_015	NorCDI	24	735	193	21	noerror	
+babyling-oslo	OS_016	NorCDI	18	542	26	33	noerror	
+babyling-oslo	OS_016	NorCDI	24	732	170	33	noerror	
+babyling-oslo	OS_017	NorCDI	18	550	8	5	noerror	Parents used 5 min to fill out the form 
+babyling-oslo	OS_017	NorCDI	24	731	139	12	noerror	
+babyling-oslo	OS_018	NorCDI	18	554	13	14	noerror	
+babyling-oslo	OS_018	NorCDI	24	731	45	2	noerror	
+babyling-oslo	OS_019	NorCDI	18	549	305	97	noerror	
+babyling-oslo	OS_019	NorCDI	24	732	704	99	noerror	
+babyling-oslo	OS_022	NorCDI	18	553	42	50	noerror	
+babyling-oslo	OS_022	NorCDI	24	729	160	16	noerror	
+babyling-oslo	OS_025	NorCDI	18	546	79	51	noerror	
+babyling-oslo	OS_025	NorCDI	24	731	247	31	noerror	
+babyling-oslo	OS_026	NorCDI	18	550	16	18	noerror	
+babyling-oslo	OS_026	NorCDI	24	733	158	31	noerror	
+babyling-oslo	OS_028	NorCDI	18	541	10	9	noerror	
+babyling-oslo	OS_028	NorCDI	24	727	160	31	noerror	
+babyling-oslo	OS_029	NorCDI	18	551	197	83	noerror	
+babyling-oslo	OS_029	NorCDI	24	734	507	81	noerror	
+babyling-oslo	OS_030	NorCDI	18	553	54	57	noerror	
+babyling-oslo	OS_030	NorCDI	24	736	170	33	noerror	
+babyling-oslo	OS_031	NorCDI	18	544	47	36	noerror	
+babyling-oslo	OS_031	NorCDI	24	729	349	49	noerror	
+babyling-oslo	OS_032	NorCDI	18	559	14	15	noerror	
+babyling-oslo	OS_032	NorCDI	24	736	148	29	noerror	
+babyling-oslo	OS_033	NorCDI	18	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_033	NorCDI	24	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_034	NorCDI	18	552	187	81	noerror	
+babyling-oslo	OS_034	NorCDI	24	730	474	75	noerror	
+babyling-oslo	OS_035	NorCDI	18	545	35	28	noerror	
+babyling-oslo	OS_035	NorCDI	24	726	150	14	noerror	
+babyling-oslo	OS_036	NorCDI	18	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_036	NorCDI	24	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_038	NorCDI	18	552	8	6	noerror	Parents commented that he has not started to speak yet, and that his brother was similiar and started to speak at the age of 2
+babyling-oslo	OS_038	NorCDI	24	NA	NA	NA	error	RA error
+babyling-oslo	OS_039	NorCDI	18	547	61	59	noerror	
+babyling-oslo	OS_039	NorCDI	24	731	227	43	noerror	
+babyling-oslo	OS_040	NorCDI	18	549	28	36	noerror	
+babyling-oslo	OS_040	NorCDI	24	733	91	16	noerror	
+babyling-oslo	OS_041	NorCDI	18	547	230	93	noerror	
+babyling-oslo	OS_041	NorCDI	24	736	643	99	noerror	
+babyling-oslo	OS_043	NorCDI	18	NA	NA	NA	error	Did not respond
+babyling-oslo	OS_043	NorCDI	24	727	286	38	noerror	
+babyling-oslo	OS_048	NorCDI	18	547	33	40	noerror	
+babyling-oslo	OS_048	NorCDI	24	731	277	52	noerror	
+babyling-oslo	OS_050	NorCDI	18	NA	NA	NA	error	Did not want to be contacted
+babyling-oslo	OS_050	NorCDI	24	NA	NA	NA	error	Did not want to be contacted
+babyling-oslo	OS_051	NorCDI	18	547	12	13	noerror	Parents used 6 min to fill out the form 
+babyling-oslo	OS_051	NorCDI	24	731	72	12	noerror	

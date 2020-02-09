@@ -1,0 +1,51 @@
+---
+title: "MB1 CDI Follow-up Data Reading and Merge"
+author: "The ManyBabies Analysis Team"
+date: '`r format(Sys.time(), "%a %b %d %X %Y")`'
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: yes
+---
+
+# Intro
+
+This Rmd is the first preprocessing file for the primary ManyBabies 1 (IDS Preference) dataset. The goal is to get everything into a single datafile that can be used for subsequent analyses.
+
+Data import functions are factored into a helper functions file.
+
+```{r}
+source("helper/preprocessing.R")
+```
+
+# CDI Data Import
+
+We first import the newly collected CDI data. Original file names did not always convey encoding type (e.g. `.txt` for tab separated data), hence those were first manually renamed to facilitate automated data reading.
+
+The only other issues were:
+- a misnamed column in `infantlanglab-utk.ts`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
+- extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
+- standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs
+
+```{r}
+files.cdi <- list.files("data/cdi/")
+data.cdi <- lapply(files.cdi, read_cdi) %>%
+  bind_rows()
+```
+
+# IDS Preference Data Import
+
+We then import the (pre-processed) data from the original Many Babies study on IDS preference.
+
+```{r}
+data.ids <- read_csv("data/ids_preference_trial.csv")
+```
+
+# Merge
+
+Finally we merge the IDS preference data into the CDI data, so that only IDS preference data from infants whose CDI score was recorded is kept in the final dataset.
+
+```{r}
+data.merged <- left_join(data.cdi, data.ids)
+```

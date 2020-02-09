@@ -1,0 +1,27 @@
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes			
+leeds-lcdu	MB04	O-CDI	18	543	90	NA	noerror	NA			
+leeds-lcdu	MB05	O-CDI	18	564	129	NA	noerror	NA			
+leeds-lcdu	MB07	O-CDI	18	549	12	NA	noerror	NA			
+leeds-lcdu	MB08	O-CDI	18	562	12	NA	noerror	NA			
+leeds-lcdu	MB09	O-CDI	18	552	51	NA	noerror	NA			
+leeds-lcdu	MB11	O-CDI	18	564	222	NA	noerror	NA			
+leeds-lcdu	MB12	O-CDI	18	557	3	NA	noerror	NA			
+leeds-lcdu	MB13	O-CDI	18	563	57	NA	noerror	NA			
+leeds-lcdu	MB15	O-CDI	18	557	59	NA	noerror	NA			
+leeds-lcdu	MB16	O-CDI	18	564	49	NA	noerror	NA			
+leeds-lcdu	MB01	O-CDI	24	720	172	NA	noerror	NA			
+leeds-lcdu	MB02	O-CDI	24	723	250	NA	noerror	NA			
+leeds-lcdu	MB03	O-CDI	24	744	171	NA	noerror	NA			
+leeds-lcdu	MB04	O-CDI	24	746	283	NA	noerror	one day out of age range (24;16) but only by a few hours			
+leeds-lcdu	MB05	O-CDI	24	744	402	NA	noerror	NA			
+leeds-lcdu	MB06	O-CDI	24	745	394	NA	noerror	NA			
+leeds-lcdu	MB07	O-CDI	24	742	156	NA	noerror	NA			
+leeds-lcdu	MB08	O-CDI	24	724	85	NA	noerror	NA			
+leeds-lcdu	MB09	O-CDI	24	723	167	NA	noerror	NA			
+leeds-lcdu	MB10	O-CDI	24	726	388	NA	noerror	NA			
+leeds-lcdu	MB11	O-CDI	24	745	395	NA	noerror	NA			
+leeds-lcdu	MB13	O-CDI	24	723	234	NA	noerror	NA			
+leeds-lcdu	MB14	O-CDI	24	733	332	NA	noerror	NA			
+leeds-lcdu	MB15	O-CDI	24	726	245	NA	noerror	NA			
+leeds-lcdu	MB16	O-CDI	24	732	112	NA	noerror	NA			
+											

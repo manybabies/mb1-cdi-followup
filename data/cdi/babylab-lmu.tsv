@@ -1,0 +1,121 @@
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
+babylab-lmu	4	FRAKIS	18	627	467	91-100	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	5	FRAKIS	18	593	28	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	5	FRAKIS	24	724	217	51-75	noerror	filled out web-based version
+babylab-lmu	6	FRAKIS	18	607	29	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	6	FRAKIS	24	730	65	11-25	noerror	filled out web-based version
+babylab-lmu	7	FRAKIS	24	730	432	76-90	noerror	filled out web-based version
+babylab-lmu	9	FRAKIS	18	589	70	51-75	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	10	FRAKIS	18	601	112	51-75	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	10	FRAKIS	24	729	337	51-75	noerror	filled out web-based version
+babylab-lmu	13	FRAKIS	18	605	50	26-50	error	"already aged out; filled out pen-and-paper version and forgot one page"
+babylab-lmu	13	FRAKIS	24	732	380	76-90	noerror	filled out web-based version
+babylab-lmu	14	FRAKIS	18	600	98	51-75	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	14	FRAKIS	24	723	207	26-50	noerror	filled out web-based version
+babylab-lmu	16	FRAKIS	18	610	30	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	16	FRAKIS	24	731	241	51-75	noerror	filled out web-based version
+babylab-lmu	18	FRAKIS	18	585	194	76-90	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	18	FRAKIS	24	726	559	91-100	noerror	filled out web-based version
+babylab-lmu	19	FRAKIS	18	601	30	11-25	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	19	FRAKIS	24	735	82	11-25	noerror	filled out web-based version
+babylab-lmu	20	FRAKIS	18	593	65	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	20	FRAKIS	24	727	311	76-90	noerror	filled out web-based version
+babylab-lmu	22	FRAKIS	18	603	39	11-25	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	22	FRAKIS	24	730	128	11-25	noerror	filled out web-based version
+babylab-lmu	23	FRAKIS	18	648	250	76-90	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	24	FRAKIS	24	721	125	26-50	noerror	filled out web-based version
+babylab-lmu	25	FRAKIS	18	641	431	91-100	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	26	FRAKIS	18	597	266	76-90	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	27	FRAKIS	24	730	248	51-75	noerror	filled out web-based version
+babylab-lmu	31	FRAKIS	18	589	25	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	31	FRAKIS	24	723	180	26-50	noerror	filled out web-based version
+babylab-lmu	32	FRAKIS	18	589	47	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	32	FRAKIS	24	723	250	26-50	noerror	filled out web-based version
+babylab-lmu	33	FRAKIS	18	535	126	91-100	noerror	filled out web-based version
+babylab-lmu	33	FRAKIS	24	695	399	76-90	error	"filled out web-based version when child was too young (younger than 17;15)"
+babylab-lmu	34	FRAKIS	18	589	10	11-25	error	"already aged out; filled out web-based version"
+babylab-lmu	34	FRAKIS	24	722	36	1-10	noerror	filled out web-based version
+babylab-lmu	35	FRAKIS	24	732	288	51-75	error	filled out web-based version but did not complete it
+babylab-lmu	35	FRAKIS	24	744	374	51-75	noerror	filled out web-based version a second time on another day and completed it
+babylab-lmu	36	FRAKIS	18	581	42	26-50	error	"already aged out; filled out web-based version"
+babylab-lmu	36	FRAKIS	24	733	329	76-90	noerror	filled out web-based version
+babylab-lmu	37	FRAKIS	24	722	38	1-10	noerror	filled out web-based version
+babylab-lmu	38	FRAKIS	18	571	144	51-75	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	38	FRAKIS	24	729	364	51-75	noerror	filled out web-based version
+babylab-lmu	39	FRAKIS	18	608	9	1-10	error	"already aged out; filled outweb-based version"
+babylab-lmu	39	FRAKIS	24	733	21	1-10	noerror	filled out web-based version
+babylab-lmu	40	FRAKIS	24	728	335	51-75	noerror	filled out web-based version
+babylab-lmu	41	FRAKIS	18	569	221	76-90	error	"already aged out; filled out web-based version"
+babylab-lmu	41	FRAKIS	24	734	481	91-100	noerror	filled out web-based version
+babylab-lmu	42	FRAKIS	18	570	84	51-75	error	"already aged out; filled out web-based version"
+babylab-lmu	42	FRAKIS	24	736	472	76-90	noerror	filled out web-based version
+babylab-lmu	44	FRAKIS	18	571	24	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	44	FRAKIS	24	723	77	11-25	noerror	filled out web-based version
+babylab-lmu	45	FRAKIS	24	736	135	26-50	noerror	filled out web-based version
+babylab-lmu	46	FRAKIS	18	550	45	26-50	noerror	filled out web-based version
+babylab-lmu	46	FRAKIS	24	729	335	51-75	noerror	filled out web-based version
+babylab-lmu	47	FRAKIS	18	554	66	51-75	noerror	filled out web-based version
+babylab-lmu	47	FRAKIS	24	711	500	91-100	error	"filled out web-based version when child was too young (younger than 23;15)"
+babylab-lmu	50	FRAKIS	18	567	11	11-25	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	50	FRAKIS	24	724	218	51-75	noerror	filled out web-based version
+babylab-lmu	51	FRAKIS	18	547	4	1-10	noerror	filled out web-based version
+babylab-lmu	51	FRAKIS	24	725	96	11-25	noerror	filled out web-based version
+babylab-lmu	52	FRAKIS	18	576	45	26-50	error	"already aged out; filled out pen-and-paper version"
+babylab-lmu	52	FRAKIS	24	737	259	51-75	noerror	filled out web-based version
+babylab-lmu	55	FRAKIS	18	559	24	26-50	noerror	filled out web-based version
+babylab-lmu	55	FRAKIS	24	722	263	51-75	noerror	filled out web-based version
+babylab-lmu	56	FRAKIS	18	562	37	26-50	error	"already aged out; filled out web-based version"
+babylab-lmu	56	FRAKIS	24	744	222	26-50	noerror	filled out web-based version
+babylab-lmu	57	FRAKIS	18	558	28	26-50	noerror	filled out web-based version
+babylab-lmu	57	FRAKIS	24	724	253	51-75	noerror	filled out web-based version
+babylab-lmu	58	FRAKIS	18	540	6	1-10	noerror	filled out web-based version
+babylab-lmu	58	FRAKIS	24	734	237	26-50	noerror	filled out web-based version
+babylab-lmu	59	FRAKIS	18	540	31	26-50	noerror	filled out web-based version
+babylab-lmu	59	FRAKIS	24	723	309	51-75	noerror	filled out web-based version
+babylab-lmu	60	FRAKIS	18	542	112	51-75	noerror	filled out web-based version
+babylab-lmu	60	FRAKIS	24	732	308	51-75	noerror	filled out web-based version
+babylab-lmu	61	FRAKIS	18	544	3	1-10	noerror	filled out web-based version
+babylab-lmu	61	FRAKIS	24	739	3	1-10	noerror	filled out web-based version
+babylab-lmu	62	FRAKIS	18	543	117	76-90	noerror	filled out web-based version
+babylab-lmu	62	FRAKIS	24	727	516	91-100	noerror	filled out web-based version
+babylab-lmu	63	FRAKIS	18	549	87	51-75	noerror	filled out web-based version
+babylab-lmu	63	FRAKIS	24	724	340	51-75	noerror	filled out web-based version
+babylab-lmu	65	FRAKIS	18	542	8	11-25	noerror	filled out web-based version
+babylab-lmu	65	FRAKIS	24	732	41	11-25	noerror	filled out web-based version
+babylab-lmu	66	FRAKIS	18	542	19	26-50	noerror	filled out web-based version
+babylab-lmu	66	FRAKIS	24	723	196	51-75	noerror	filled out web-based version
+babylab-lmu	69	FRAKIS	18	547	31	26-50	noerror	filled out web-based version
+babylab-lmu	69	FRAKIS	24	727	396	76-90	noerror	filled out web-based version
+babylab-lmu	70	FRAKIS	18	587	376	91-100	error	"already aged out; filled out web-based version"
+babylab-lmu	71	FRAKIS	18	553	21	26-50	noerror	filled out web-based version
+babylab-lmu	72	FRAKIS	24	732	80	11-25	noerror	filled out web-based version
+babylab-lmu	73	FRAKIS	24	732	38	1-10	noerror	filled out web-based version
+babylab-lmu	74	FRAKIS	18	544	62	51-75	noerror	filled out web-based version
+babylab-lmu	74	FRAKIS	24	730	499	91-100	noerror	filled out web-based version
+babylab-lmu	75	FRAKIS	18	576	111	76-90	error	"already aged out; filled out web-based version"
+babylab-lmu	76	FRAKIS	18	558	11	11-25	noerror	filled out web-based version
+babylab-lmu	76	FRAKIS	24	735	178	26-50	error	filled out web-based version but did not complete it
+babylab-lmu	76	FRAKIS	24	735	203	26-50	noerror	filled out web-based version a second time the same day and completed it
+babylab-lmu	79	FRAKIS	18	540	34	26-50	noerror	filled out web-based version
+babylab-lmu	79	FRAKIS	24	740	60	11-25	noerror	filled out web-based version
+babylab-lmu	80	FRAKIS	24	727	370	51-75	noerror	filled out web-based version
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
