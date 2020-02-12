@@ -11,7 +11,7 @@ output:
 
 # Intro
 
-This Rmd is the first preprocessing file for the primary ManyBabies 1 (IDS Preference) dataset. The goal is to get everything into a single datafile that can be used for subsequent analyses.
+This script is the first preprocessing file for the primary ManyBabies 1 CDI Follow-up dataset. The goal is to get everything into a single datafile that can be used for subsequent analyses.
 
 Data import functions are factored into a helper functions file.
 
@@ -26,20 +26,22 @@ source("helper/preprocessing.R")
 We first import the newly collected CDI data and useful lab information. Original data file names did not always convey encoding type (e.g. `.txt` for tab separated data), hence those were first manually renamed to facilitate automated data reading.
 
 The only other issues were:
-- a misnamed column in `infantlanglab-utk.ts`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
-- extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
-- standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in an unprocessed data file (`data/cdi/unprocessed_merge.csv`)
+
+* a misnamed column in `infantlanglab-utk.ts`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
+* extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
+* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in an unprocessed data file (`data/cdi/unprocessed_merge.csv`).
 
 ```{r cdi_import, message=FALSE, warning=FALSE, error=FALSE}
 # Lab information
 data.labs <- read_labs("data/labs.csv")
 # Participants data
 data.cdi <- list.files("data/cdi_raw/") %>%
-  map_dfr(read_cdi, save_unprocessed = T) %>%
+  map_dfr(read_cdi, save_unprocessed = !file.exists("data/unprocessed_cdi_merged.csv")) %>%
+  drop_na(labid) %>%
+  mutate(subid_unique = paste(labid, subid, sep = ":")) %>%
   mutate_at(vars(labid, subid, CDI.form, CDI.agerange, CDI.error),
             as_factor) %>%
   left_join(data.labs) %>%
-  drop_na(vocab_nwords) %>%
   mutate_at(vars(labid), as_factor)
 # Check for labs that signed up but didn't send data:
 missing_labs <- setdiff(levels(data.labs$labid),
@@ -51,13 +53,18 @@ At the moment, the following labs signed up but didn't send data (or possibly se
 
 ## IDS Preference Data Import
 
-We then import the (pre-processed) data from the original Many Babies study on IDS preference, and chech for consistency of coding for `labid` and `subid`.
+We then import the (pre-processed) data from the original Many Babies study on IDS preference.
 
 ```{r ids_import, message=FALSE, warning=FALSE, error=FALSE}
 # Import IDS data, rename variables, change column types
 data.ids <- read_csv("data/ids_preference_trial.csv") %>%
   rename(labid = lab) %>%
   mutate_at(vars(labid, subid), as_factor)
+```
+
+We can now start checking that the merge is possible, first with respect to the coding of `labid`.
+
+```{r labid_check}
 # Check for labid present in CDI but not IDS (i.e. differently named)
 changed_labid <- setdiff(data.cdi$labid,
                          data.ids$labid)
@@ -65,17 +72,61 @@ changed_labid <- setdiff(data.cdi$labid,
 # Only exception: leeds-lcdu in data.cdi should be lcduleeds
 data.cdi <- data.cdi %>%
   mutate(labid = case_when(labid == "leeds-lcdu" ~ "lcduleeds",
-                           T ~ str_remove(labid, "-|_")))
+                           T ~ str_remove_all(labid, "-|_")))
 # We check again for safety
 changed_labid <- setdiff(data.cdi$labid,
                          data.ids$labid)
 ```
 
+Now that we have consistent coding for `labid`, we can update the new `data.cdi$subid_unique` and check for consistency at that level (if there is a new `subid_unique` that does not correspond to an old one, then the corresponding `subid` is faulty or the participant is missing from `data.ids`).
+
+```{r subid_check}
+# Update subid_unique in CDI
+data.cdi <- data.cdi %>%
+  mutate(subid_unique = paste(labid, subid, sep = ":"))
+# Check for labid present in CDI but not IDS (i.e. differently named)
+changed_subid <- setdiff(data.cdi$subid_unique,
+                         data.ids$subid_unique)
+# Many subids to check, let's extract the labs with issues
+changed_subid_labs <- changed_subid %>%
+  str_match("[a-z]+") %>%
+  unique()
+# Too many lab, let's print for each lab the proposed subids (CDI) and the possible subids (IDS)
+unused_subid <- setdiff(data.ids$subid_unique,
+                        data.cdi$subid_unique)
+check_subid <- changed_subid_labs %>%
+  map(~list(CDI = str_subset(changed_subid, .x) %>% str_sort(),
+            IDS = str_subset(unused_subid, .x) %>% str_sort()))
+# Fix formatting issues, update subid_unique
+data.cdi <- data.cdi %>%
+  mutate_at(vars(subid), as.character) %>%
+  mutate(subid = case_when(labid == "babylabbrookes" ~ str_replace(subid, "brookes-", "mb"),
+                           labid == "bcrlunlv" ~ paste0("mb", str_pad(subid, 4, pad = 0)),
+                           labid == "lscppsl" ~ paste0(subid, "lscppsl"),
+                           labid %in% changed_subid_labs ~
+                             str_remove_all(subid, "-|_") %>% str_to_lower(),
+                           T ~ subid),
+         subid_unique = paste(labid, subid, sep = ":")) %>%
+  mutate_at(vars(subid, subid_unique), as_factor)
+# Check again for safety
+changed_subid <- setdiff(data.cdi$subid_unique,
+                         data.ids$subid_unique)
+unused_subid <- setdiff(data.ids$subid_unique,
+                        data.cdi$subid_unique)
+check_subid <- changed_subid %>%
+  str_match("[a-z]+") %>%
+  unique() %>%
+  map(~list(CDI = str_subset(changed_subid, .x) %>% str_sort(),
+            IDS = str_subset(unused_subid, .x) %>% str_sort()))
+```
+
+If most of these resulted from formatting issues, some resulted from infants in the CDI data having been previously excluded from the IDS data for exclusion criteria documented in the corresponding paper. However, dealing with this issue is not the scope of the current script.
+
 # Merge
 
 Finally we merge the IDS preference data into the CDI data, so that only IDS preference data from infants whose CDI score was recorded is kept in the final dataset.
 
-```{r data_merge}
+```{r data_merge, message=FALSE, warning=FALSE, error=FALSE}
 data.merged <- left_join(data.cdi, data.ids)
 write_csv(data.merged, "data/01_processed_merged.csv")
 ```
