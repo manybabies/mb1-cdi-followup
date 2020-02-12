@@ -15,30 +15,45 @@ This Rmd is the first preprocessing file for the primary ManyBabies 1 (IDS Prefe
 
 Data import functions are factored into a helper functions file.
 
-```{r}
+```{r setup, message=FALSE, warning=FALSE, error=FALSE}
 source("helper/preprocessing.R")
 ```
 
-# CDI Data Import
+# Data Import
 
-We first import the newly collected CDI data. Original file names did not always convey encoding type (e.g. `.txt` for tab separated data), hence those were first manually renamed to facilitate automated data reading.
+## CDI Data Import
+
+We first import the newly collected CDI data and useful lab information. Original data file names did not always convey encoding type (e.g. `.txt` for tab separated data), hence those were first manually renamed to facilitate automated data reading.
 
 The only other issues were:
 - a misnamed column in `infantlanglab-utk.ts`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
 - extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
-- standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs
+- standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in an unprocessed data file (`data/cdi/unprocessed_merge.csv`)
 
-```{r}
-files.cdi <- list.files("data/cdi/")
-data.cdi <- lapply(files.cdi, read_cdi) %>%
-  bind_rows()
+```{r cdi_import, message=FALSE, warning=FALSE, error=FALSE}
+# Lab information
+data.labs <- read_labs("data/labs.csv")
+# Participants data
+data.cdi <- list.files("data/cdi_raw/") %>%
+  map_dfr(read_cdi, save_unprocessed = T) %>%
+  mutate_at(vars(labid, subid, CDI.form, CDI.agerange, CDI.error),
+            as_factor) %>%
+  left_join(data.labs) %>%
+  drop_na(vocab_nwords) %>%
+  mutate_at(vars(labid), as_factor)
+# Check for labs that signed up but didn't send data:
+missing_labs <- setdiff(levels(data.labs$labid),
+                        levels(data.cdi$labid)) %>%
+  str_sort()
 ```
 
-# IDS Preference Data Import
+At the moment, the following labs signed up but didn't send data (or possibly sent it since last data download): `r missing_labs`.
+
+## IDS Preference Data Import
 
 We then import the (pre-processed) data from the original Many Babies study on IDS preference.
 
-```{r}
+```{r ids_import, message=FALSE, warning=FALSE, error=FALSE}
 data.ids <- read_csv("data/ids_preference_trial.csv")
 ```
 
@@ -46,6 +61,7 @@ data.ids <- read_csv("data/ids_preference_trial.csv")
 
 Finally we merge the IDS preference data into the CDI data, so that only IDS preference data from infants whose CDI score was recorded is kept in the final dataset.
 
-```{r}
+```{r data_merge, message=FALSE, warning=FALSE, error=FALSE}
 data.merged <- left_join(data.cdi, data.ids)
+write_csv(data.merged, "data/01_processed_merged.csv")
 ```

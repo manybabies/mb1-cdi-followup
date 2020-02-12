@@ -1,0 +1,2866 @@
+labid,subid,CDI.form,CDI.agerange,CDI.agedays,vocab_nwords,standardized.score.CDI,CDI.error,Notes
+babylab-lmu,4,FRAKIS,18,627,467,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,18,593,28,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,24,724,217,51-75,noerror,filled out web-based version
+babylab-lmu,6,FRAKIS,18,607,29,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,6,FRAKIS,24,730,65,11-25,noerror,filled out web-based version
+babylab-lmu,7,FRAKIS,24,730,432,76-90,noerror,filled out web-based version
+babylab-lmu,9,FRAKIS,18,589,70,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,18,601,112,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,24,729,337,51-75,noerror,filled out web-based version
+babylab-lmu,13,FRAKIS,18,605,50,26-50,error,already aged out; filled out pen-and-paper version and forgot one page
+babylab-lmu,13,FRAKIS,24,732,380,76-90,noerror,filled out web-based version
+babylab-lmu,14,FRAKIS,18,600,98,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,14,FRAKIS,24,723,207,26-50,noerror,filled out web-based version
+babylab-lmu,16,FRAKIS,18,610,30,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,16,FRAKIS,24,731,241,51-75,noerror,filled out web-based version
+babylab-lmu,18,FRAKIS,18,585,194,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,18,FRAKIS,24,726,559,91-100,noerror,filled out web-based version
+babylab-lmu,19,FRAKIS,18,601,30,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,19,FRAKIS,24,735,82,11-25,noerror,filled out web-based version
+babylab-lmu,20,FRAKIS,18,593,65,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,20,FRAKIS,24,727,311,76-90,noerror,filled out web-based version
+babylab-lmu,22,FRAKIS,18,603,39,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,22,FRAKIS,24,730,128,11-25,noerror,filled out web-based version
+babylab-lmu,23,FRAKIS,18,648,250,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,24,FRAKIS,24,721,125,26-50,noerror,filled out web-based version
+babylab-lmu,25,FRAKIS,18,641,431,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,26,FRAKIS,18,597,266,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,27,FRAKIS,24,730,248,51-75,noerror,filled out web-based version
+babylab-lmu,31,FRAKIS,18,589,25,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,31,FRAKIS,24,723,180,26-50,noerror,filled out web-based version
+babylab-lmu,32,FRAKIS,18,589,47,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,32,FRAKIS,24,723,250,26-50,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,18,535,126,91-100,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,24,695,399,76-90,error,filled out web-based version when child was too young (younger than 17;15)
+babylab-lmu,34,FRAKIS,18,589,10,11-25,error,already aged out; filled out web-based version
+babylab-lmu,34,FRAKIS,24,722,36,1-10,noerror,filled out web-based version
+babylab-lmu,35,FRAKIS,24,732,288,51-75,error,filled out web-based version but did not complete it
+babylab-lmu,35,FRAKIS,24,744,374,51-75,noerror,filled out web-based version a second time on another day and completed it
+babylab-lmu,36,FRAKIS,18,581,42,26-50,error,already aged out; filled out web-based version
+babylab-lmu,36,FRAKIS,24,733,329,76-90,noerror,filled out web-based version
+babylab-lmu,37,FRAKIS,24,722,38,1-10,noerror,filled out web-based version
+babylab-lmu,38,FRAKIS,18,571,144,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,38,FRAKIS,24,729,364,51-75,noerror,filled out web-based version
+babylab-lmu,39,FRAKIS,18,608,9,1-10,error,already aged out; filled outweb-based version
+babylab-lmu,39,FRAKIS,24,733,21,1-10,noerror,filled out web-based version
+babylab-lmu,40,FRAKIS,24,728,335,51-75,noerror,filled out web-based version
+babylab-lmu,41,FRAKIS,18,569,221,76-90,error,already aged out; filled out web-based version
+babylab-lmu,41,FRAKIS,24,734,481,91-100,noerror,filled out web-based version
+babylab-lmu,42,FRAKIS,18,570,84,51-75,error,already aged out; filled out web-based version
+babylab-lmu,42,FRAKIS,24,736,472,76-90,noerror,filled out web-based version
+babylab-lmu,44,FRAKIS,18,571,24,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,44,FRAKIS,24,723,77,11-25,noerror,filled out web-based version
+babylab-lmu,45,FRAKIS,24,736,135,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,18,550,45,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,24,729,335,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,18,554,66,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,24,711,500,91-100,error,filled out web-based version when child was too young (younger than 23;15)
+babylab-lmu,50,FRAKIS,18,567,11,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,50,FRAKIS,24,724,218,51-75,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,18,547,4,1-10,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,24,725,96,11-25,noerror,filled out web-based version
+babylab-lmu,52,FRAKIS,18,576,45,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,52,FRAKIS,24,737,259,51-75,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,18,559,24,26-50,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,24,722,263,51-75,noerror,filled out web-based version
+babylab-lmu,56,FRAKIS,18,562,37,26-50,error,already aged out; filled out web-based version
+babylab-lmu,56,FRAKIS,24,744,222,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,18,558,28,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,24,724,253,51-75,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,18,540,6,1-10,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,24,734,237,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,18,540,31,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,24,723,309,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,18,542,112,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,24,732,308,51-75,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,18,544,3,1-10,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,24,739,3,1-10,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,18,543,117,76-90,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,24,727,516,91-100,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,18,549,87,51-75,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,24,724,340,51-75,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,18,542,8,11-25,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,24,732,41,11-25,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,18,542,19,26-50,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,24,723,196,51-75,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,18,547,31,26-50,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,24,727,396,76-90,noerror,filled out web-based version
+babylab-lmu,70,FRAKIS,18,587,376,91-100,error,already aged out; filled out web-based version
+babylab-lmu,71,FRAKIS,18,553,21,26-50,noerror,filled out web-based version
+babylab-lmu,72,FRAKIS,24,732,80,11-25,noerror,filled out web-based version
+babylab-lmu,73,FRAKIS,24,732,38,1-10,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,18,544,62,51-75,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,24,730,499,91-100,noerror,filled out web-based version
+babylab-lmu,75,FRAKIS,18,576,111,76-90,error,already aged out; filled out web-based version
+babylab-lmu,76,FRAKIS,18,558,11,11-25,noerror,filled out web-based version
+babylab-lmu,76,FRAKIS,24,735,178,26-50,error,filled out web-based version but did not complete it
+babylab-lmu,76,FRAKIS,24,735,203,26-50,noerror,filled out web-based version a second time the same day and completed it
+babylab-lmu,79,FRAKIS,18,540,34,26-50,noerror,filled out web-based version
+babylab-lmu,79,FRAKIS,24,740,60,11-25,noerror,filled out web-based version
+babylab-lmu,80,FRAKIS,24,727,370,51-75,noerror,filled out web-based version
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+babylab_nijmegen,ba27_9-12,NCDI,24,730,196,28.13,noerror,NA
+babylab_nijmegen,ba29_6-9,NCDI,24,718,146,16.3,noerror,NA
+babylab_nijmegen,ba13_6-9,NCDI,24,727,467,89.58,noerror,NA
+babylab_nijmegen,ba31_9-12,NCDI,24,724,132,24.77,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba30_6-9,NCDI,24,721,465,84.12,noerror,NA
+babylab_nijmegen,ba06_9-12,NCDI,24,758,64,8.5,noerror,NA
+babylab_nijmegen,ba08_6-9,NCDI,24,722,333,69.31,noerror,NA
+babylab_nijmegen,ba25_6-9,NCDI,24,716,571,93.49,noerror,NA
+babylab_nijmegen,ba30_9-12,NCDI,24,722,71,3.14,noerror,NA
+babylab_nijmegen,ba11_9-12,NCDI,24,729,208,30.58,noerror,NA
+babylab_nijmegen,ba19_6-9,NCDI,24,741,63,8.33,noerror,NA
+babylab_nijmegen,ba02_6-9,NCDI,24,716,497,87.61,noerror,NA
+babylab_nijmegen,ba12_6-9,NCDI,24,719,495,92.79,noerror,NA
+babylab_nijmegen,ba15_9-12,NCDI,24,740,513,89.43,noerror,NA
+babylab_nijmegen,ba24_9-12,NCDI,24,720,652,99,noerror,NA
+babylab_nijmegen,ba06_6-9,NCDI,24,719,478,85.46,noerror,NA
+babylab_nijmegen,ba21_6-9,NCDI,24,717,374,70,noerror,NA
+babylab_nijmegen,ba22_6-9,NCDI,24,731,303,53.93,noerror,NA
+babylab_nijmegen,ba15_6-9,NCDI,24,728,413,78.53,noerror,NA
+babylab_nijmegen,ba16_9-12,NCDI,24,718,405,81.54,noerror,NA
+babylab_nijmegen,ba11_6-9,NCDI,24,743,113,9.11,noerror,NA
+babylab_nijmegen,ba23_6-9,NCDI,24,719,122,10.83,noerror,NA
+babylab_nijmegen,ba08_9-12,NCDI,24,728,273,60.4,noerror,NA
+babylab_nijmegen,ba18_9-12,NCDI,24,723,159,30.46,noerror,NA
+babylab_nijmegen,ba05_6-9,NCDI,24,738,80,11.67,noerror,"The DoB of the child, filled in by parents, was wrong (same year as DoT). The correct DoB is retrieved from the database and replaced manually"
+babylab_nijmegen,ba28_9-12,NCDI,24,716,176,23.33,noerror,NA
+babylab_nijmegen,ba23_9-12,NCDI,24,727,389,75,noerror,NA
+babylab_nijmegen,ba27_6-9,NCDI,24,717,455,83.14,noerror,NA
+babylab_nijmegen,ba17_6-9,NCDI,24,737,205,30,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba05_9-12,NCDI,24,733,540,99,noerror,NA
+babylab_nijmegen,ba09_6-9,NCDI,24,714,208,30.58,noerror,NA
+babylab_nijmegen,ba04_9-12,NCDI,24,725,247,54.66,noerror,NA
+babylab_nijmegen,ba21_9-12,NCDI,24,722,336,62.24,noerror,NA
+babylab_nijmegen,ba20_6-9,NCDI,24,729,487,91.86,noerror,NA
+babylab_nijmegen,ba18_6-9,NCDI,24,719,304,54.29,noerror,NA
+babylab_nijmegen,ba10_6-9,NCDI,24,717,570,99,noerror,NA
+babylab_nijmegen,ba25_9-12,NCDI,24,718,261,42.19,noerror,NA
+babylab_nijmegen,ba01_9-12,NCDI,24,732,259,41.56,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba26_6-9,NCDI,24,721,180,35.36,noerror,NA
+babylab-vuw,P01,webcdi,18,551,185,74,noerror,NA
+babylab-vuw,P01,webcdi,24,737,405,62,noerror,NA
+babylab-vuw,P02,webcdi,18,548,68,51,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,P02,webcdi,24,744,321,62,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,S01,webcdi,18,549,45,38,noerror,NA
+babylab-vuw,S01,webcdi,24,734,221,45,noerror,NA
+babylab-vuw,S05,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S05,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S11,webcdi,18,531,201,86,noerror,NA
+babylab-vuw,S11,webcdi,24,727,361,70,noerror,NA
+babylab-vuw,S07,webcdi,18,541,33,27,noerror,NA
+babylab-vuw,S07,webcdi,24,722,190,39,noerror,NA
+babylab-vuw,S09,webcdi,18,536,127,69,noerror,NA
+babylab-vuw,S09,webcdi,24,728,589,96,noerror,NA
+babylab-vuw,S12,webcdi,18,547,76,55,noerror,NA
+babylab-vuw,S12,webcdi,24,730,248,50,noerror,NA
+babylab-vuw,S04,webcdi,18,541,139,72,noerror,NA
+babylab-vuw,S04,webcdi,24,731,443,82,noerror,NA
+babylab-vuw,S06,webcdi,18,539,46,25,noerror,NA
+babylab-vuw,S06,webcdi,24,729,253,35,noerror,NA
+babylab-vuw,S02,webcdi,18,531,75,38,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S02,webcdi,24,734,516,84,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S14,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S14,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S03,webcdi,18,547,120,56,noerror,NA
+babylab-vuw,S03,webcdi,24,724,474,76,noerror,NA
+babylab-vuw,S08,webcdi,18,546,32,25,noerror,NA
+babylab-vuw,S08,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S16,webcdi,18,543,393,95,noerror,NA
+babylab-vuw,S16,webcdi,24,736,559,91,noerror,NA
+babylab-vuw,S13,webcdi,18,548,35,29,noerror,NA
+babylab-vuw,S13,webcdi,24,731,297,58,noerror,NA
+babylab-vuw,S15,webcdi,18,548,261,86,noerror,NA
+babylab-vuw,S15,webcdi,24,726,438,69,noerror,NA
+babyling-oslo,OS_002,NorCDI,18,555,23,16,noerror,Parents comment that she understands much more than she says.
+babyling-oslo,OS_002,NorCDI,24,732,120,9,noerror,NA
+babyling-oslo,OS_003,NorCDI,18,556,65,62,noerror,NA
+babyling-oslo,OS_003,NorCDI,24,733,264,50,noerror,NA
+babyling-oslo,OS_005,NorCDI,18,545,75,49,noerror,NA
+babyling-oslo,OS_005,NorCDI,24,727,178,19,noerror,NA
+babyling-oslo,OS_007,NorCDI,18,549,127,79,noerror,NA
+babyling-oslo,OS_007,NorCDI,24,732,403,74,noerror,NA
+babyling-oslo,OS_009,NorCDI,18,546,86,54,noerror,NA
+babyling-oslo,OS_009,NorCDI,24,730,542,87,noerror,NA
+babyling-oslo,OS_012,NorCDI,18,550,210,90,noerror,NA
+babyling-oslo,OS_012,NorCDI,24,728,604,97,noerror,NA
+babyling-oslo,OS_014,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_014,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_015,NorCDI,18,555,33,27,noerror,NA
+babyling-oslo,OS_015,NorCDI,24,735,193,21,noerror,NA
+babyling-oslo,OS_016,NorCDI,18,542,26,33,noerror,NA
+babyling-oslo,OS_016,NorCDI,24,732,170,33,noerror,NA
+babyling-oslo,OS_017,NorCDI,18,550,8,5,noerror,Parents used 5 min to fill out the form
+babyling-oslo,OS_017,NorCDI,24,731,139,12,noerror,NA
+babyling-oslo,OS_018,NorCDI,18,554,13,14,noerror,NA
+babyling-oslo,OS_018,NorCDI,24,731,45,2,noerror,NA
+babyling-oslo,OS_019,NorCDI,18,549,305,97,noerror,NA
+babyling-oslo,OS_019,NorCDI,24,732,704,99,noerror,NA
+babyling-oslo,OS_022,NorCDI,18,553,42,50,noerror,NA
+babyling-oslo,OS_022,NorCDI,24,729,160,16,noerror,NA
+babyling-oslo,OS_025,NorCDI,18,546,79,51,noerror,NA
+babyling-oslo,OS_025,NorCDI,24,731,247,31,noerror,NA
+babyling-oslo,OS_026,NorCDI,18,550,16,18,noerror,NA
+babyling-oslo,OS_026,NorCDI,24,733,158,31,noerror,NA
+babyling-oslo,OS_028,NorCDI,18,541,10,9,noerror,NA
+babyling-oslo,OS_028,NorCDI,24,727,160,31,noerror,NA
+babyling-oslo,OS_029,NorCDI,18,551,197,83,noerror,NA
+babyling-oslo,OS_029,NorCDI,24,734,507,81,noerror,NA
+babyling-oslo,OS_030,NorCDI,18,553,54,57,noerror,NA
+babyling-oslo,OS_030,NorCDI,24,736,170,33,noerror,NA
+babyling-oslo,OS_031,NorCDI,18,544,47,36,noerror,NA
+babyling-oslo,OS_031,NorCDI,24,729,349,49,noerror,NA
+babyling-oslo,OS_032,NorCDI,18,559,14,15,noerror,NA
+babyling-oslo,OS_032,NorCDI,24,736,148,29,noerror,NA
+babyling-oslo,OS_033,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_033,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_034,NorCDI,18,552,187,81,noerror,NA
+babyling-oslo,OS_034,NorCDI,24,730,474,75,noerror,NA
+babyling-oslo,OS_035,NorCDI,18,545,35,28,noerror,NA
+babyling-oslo,OS_035,NorCDI,24,726,150,14,noerror,NA
+babyling-oslo,OS_036,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_036,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_038,NorCDI,18,552,8,6,noerror,"Parents commented that he has not started to speak yet, and that his brother was similiar and started to speak at the age of 2"
+babyling-oslo,OS_038,NorCDI,24,NA,NA,NA,error,RA error
+babyling-oslo,OS_039,NorCDI,18,547,61,59,noerror,NA
+babyling-oslo,OS_039,NorCDI,24,731,227,43,noerror,NA
+babyling-oslo,OS_040,NorCDI,18,549,28,36,noerror,NA
+babyling-oslo,OS_040,NorCDI,24,733,91,16,noerror,NA
+babyling-oslo,OS_041,NorCDI,18,547,230,93,noerror,NA
+babyling-oslo,OS_041,NorCDI,24,736,643,99,noerror,NA
+babyling-oslo,OS_043,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_043,NorCDI,24,727,286,38,noerror,NA
+babyling-oslo,OS_048,NorCDI,18,547,33,40,noerror,NA
+babyling-oslo,OS_048,NorCDI,24,731,277,52,noerror,NA
+babyling-oslo,OS_050,NorCDI,18,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_050,NorCDI,24,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_051,NorCDI,18,547,12,13,noerror,Parents used 6 min to fill out the form
+babyling-oslo,OS_051,NorCDI,24,731,72,12,noerror,NA
+bcrl-unlv,2901,webcdi,24,792,8,1,error,"Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem"
+bcrl-unlv,2804,webcdi,24,739,99,12,noerror,NA
+bcrl-unlv,2401,webcdi,24,732,346,50,noerror,NA
+bcrl-unlv,3304,webcdi,24,721,51,11,noerror,NA
+bcrl-unlv,3103,webcdi,24,746,248,50,noerror,NA
+bcrl-unlv,802,webcdi,24,753,80,9,noerror,NA
+bcrl-unlv,2304,webcdi,24,719,225,31,noerror,NA
+bcrl-unlv,303,webcdi,24,783,124,18,noerror,NA
+bcrl-unlv,2504,webcdi,24,744,0,1,error,Participant did not complete survey
+bcrl-unlv,1204,webcdi,24,783,174,28,noerror,NA
+bcrl-unlv,404,webcdi,24,770,235,27,noerror,NA
+bcrl-unlv,101,webcdi,24,758,322,63,noerror,NA
+bcrl-unlv,1701,webcdi,24,770,117,22,noerror,NA
+bcrl-unlv,602,webcdi,24,696,210,59,noerror,MA
+bcrl-unlv,3402,webcdi,18,614,0,1,error,Participant did not complete survey
+bcrl-unlv,1902,webcdi,18,669,95,30,noerror,NA
+bcrl-unlv,1103,webcdi,24,691,353,71,noerror,NA
+bcrl-unlv,2703,webcdi,18,592,451,96,noerror,NA
+bcrl-unlv,3201,webcdi,24,793,361,38,noerror,NA
+bcrl-unlv,1504,webcdi,24,745,67,11,noerror,NA
+bcrl-unlv,1002,webcdi,24,1002,51,7,noerror,NA
+bcrl-unlv,3503,webcdi,18,601,208,81,noerror,NA
+bcrl-unlv,2804,webcdi,18,609,0,1,error,Participant did not complete survey
+bcrl-unlv,3201,webcdi,18,610,86,29,noerror,NA
+bcrl-unlv,2703,webcdi,24,743,605,95,noerror,NA
+bcrl-unlv,3002,webcdi,24,738,175,35,noerror,NA
+bcrl-unlv,2103,webcdi,24,746,50,8,noerror,NA
+bcrl-unlv,3604,webcdi,24,713,485,85,noerror,NA
+bcrl-unlv,1401,webcdi,24,769,292,49,noerror,NA
+bcrl-unlv,702,webcdi,24,833,222,23,noerror,NA
+infantcoglab-louisville,236534,webcdi,18,561,83,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,18,567,230,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,18,575,12,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,18,561,100,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,18,610,231,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,18,577,27,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,18,587,13,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,18,546,28,NA,noerror,NA
+infantcoglab-louisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236297,webcdi,18,609,17,NA,noerror,NA
+infantcoglab-louisville,237603,webcdi,18,593,103,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,24,792,496,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,24,761,46,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,24,774,26,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,24,783,507,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,24,754,204,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,24,789,198,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,N/A,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI"
+infantlanglab-utk,MB1R6_1M_S1,webcdi,24,731,367,71,noerror,NA
+infantlanglab-utk,MB1R6_3F_S5,webcdi,24,726,181,30,noerror,NA
+infantlanglab-utk,MB1R6_4F_S6,webcdi,24,729,82,12,noerror,NA
+infantlanglab-utk,MB1R6_4M_S7,webcdi,24,726,243,57,noerror,NA
+infantlanglab-utk,MB1R6_4F_S8,webcdi,24,705,533,91,noerror,NA
+infantlanglab-utk,MB1R6_1F_S11,webcdi,24,714,113,19,noerror,NA
+infantlanglab-utk,MB1R6_3F_S12,webcdi,24,706,148,25,noerror,NA
+infantlanglab-utk,MB1R7_1M_S1,webcdi,24,677,253,66,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,18,573,21,15,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,24,678,76,23,noerror,NA
+infantlanglab-utk,MB1R7_4M_S4,webcdi,24,680,393,87,noerror,NA
+infantlanglab-utk,MB1R7_1F_S5,webcdi,24,697,83,17,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,18,595,96,39,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,24,682,163,34,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,18,573,237,90,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,24,699,95,30,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,18,560,47,39,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,24,686,109,34,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,18,602,23,9,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,24,684,28,4,noerror,NA
+infantlanglab-utk,MB1R8_1F_S1,webcdi,24,692,287,58,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,18,565,139,61,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,24,710,411,73,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,18,596,34,21,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,24,699,75,17,noerror,NA
+infantlanglab-utk,MB1R8_2M_S4,webcdi,24,698,90,28,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,18,557,21,15,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,24,686,105,33,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,18,601,22,12,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,24,684,24,6,noerror,NA
+infantlanglab-utk,MB1R9_1F_S1,webcdi,24,684,270,55,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,18,583,65,41,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,24,700,137,34,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,18,576,174,72,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,24,751,444,70,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,18,591,8,3,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,24,738,19,2,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,18,561,83,58,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,24,722,334,73,noerror,NA
+infantlanglab-utk,MB1R12_3M_S5,webcdi,24,743,133,26,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,18,562,80,57,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,24,738,40,6,noerror,NA
+infantlanglab-utk,MB1R12_4M_S7,webcdi,24,728,59,13,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,18,567,45,24,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,24,727,103,17,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,18,567,90,60,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,24,727,32,4,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,24,711,134,22,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,18,552,29,15,noerror,NA
+infantlanglab-utk,MB1R13_1M_S1,webcdi,18,583,18,9,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,18,563,48,26,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,24,736,549,89,noerror,NA
+infantlanglab-utk,MB1R13_3M_S4,webcdi,18,554,159,77,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,18,562,95,47,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,24,737,377,57,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,18,577,99,49,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,24,785,19,2,noerror,NA
+infantlanglab-utk,MB1R13_3F_S8,webcdi,24,747,226,31,noerror,NA
+infantlanglab-utk,MB1R13_4M_S9,webcdi,24,754,23,4,noerror,NA
+infantlanglab-utk,MB1R13_4F_S10,webcdi,24,751,161,22,noerror,NA
+infantlanglab-utk,MB1R13_2M_S11,webcdi,24,735,379,73,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,18,565,6,4,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,24,736,20,3,noerror,NA
+infantlanglab-utk,MB1R14_1M_S2,webcdi,18,575,259,92,noerror,NA
+infantlanglab-utk,MB1R14_2M_S3,webcdi,18,585,24,13,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,18,592,50,21,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,24,759,283,40,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,18,574,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,24,746,157,21,noerror,NA
+infantlanglab-utk,MB1R14_2F_S7,webcdi,24,739,496,80,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,24,735,199,27,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,18,563,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S11,webcdi,18,597,307,86,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,18,576,106,64,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,24,752,342,67,noerror,NA
+infantlanglab-utk,MB1R14_2M_S14,webcdi,24,760,233,39,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,18,552,102,50,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,24,739,298,43,noerror,NA
+infantlanglab-utk,MB1R14_4M_S17,webcdi,18,562,209,87,noerror,NA
+infantstudies-ubc,MB_M_1,webcdi,18,559,97,62,NA,NA
+infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_3,webcdi,18,540,232,93,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,18,543,51,50,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,18,548,6,3,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_7,webcdi,18,538,79,63,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,18,540,14,12,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_10,webcdi,18,549,15,14,NA,NA
+infantstudies-ubc,MB_M_11,webcdi,18,523,118,65,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_13,webcdi,18,541,10,8,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,18,564,6,3,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_16,webcdi,18,571,19,13,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,18,526,38,27,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_19,webcdi,18,542,32,23,NA,NA
+infantstudies-ubc,MB_M_20,webcdi,18,536,28,20,NA,NA
+infantstudies-ubc,MB_M_21,webcdi,18,557,52,42,NA,NA
+infantstudies-ubc,MB_M_22,webcdi,18,533,21,14,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,18,500,77,57,NA,NA
+infantstudies-ubc,MB_M_24,webcdi,18,490,19,16,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,18,509,5,5,NA,NA
+leeds-lcdu,MB04,O-CDI,18,543,90,NA,noerror,NA
+leeds-lcdu,MB05,O-CDI,18,564,129,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,18,549,12,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,18,562,12,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,18,552,51,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,18,564,222,NA,noerror,NA
+leeds-lcdu,MB12,O-CDI,18,557,3,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,18,563,57,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,18,557,59,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,18,564,49,NA,noerror,NA
+leeds-lcdu,MB01,O-CDI,24,720,172,NA,noerror,NA
+leeds-lcdu,MB02,O-CDI,24,723,250,NA,noerror,NA
+leeds-lcdu,MB03,O-CDI,24,744,171,NA,noerror,NA
+leeds-lcdu,MB04,O-CDI,24,746,283,NA,noerror,one day out of age range (24;16) but only by a few hours
+leeds-lcdu,MB05,O-CDI,24,744,402,NA,noerror,NA
+leeds-lcdu,MB06,O-CDI,24,745,394,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,24,742,156,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,24,724,85,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,24,723,167,NA,noerror,NA
+leeds-lcdu,MB10,O-CDI,24,726,388,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,24,745,395,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,24,723,234,NA,noerror,NA
+leeds-lcdu,MB14,O-CDI,24,733,332,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,24,726,245,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,24,732,112,NA,noerror,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+lll-liv,MB010,O-CDI,18,542,152,NA,noerror,NA
+lll-liv,MB046,O-CDI,18,539,3,NA,noerror,NA
+lll-liv,MB042,O-CDI,18,555,18,NA,noerror,NA
+lll-liv,MB045,O-CDI,18,551,19,NA,noerror,NA
+lll-liv,MB017,O-CDI,18,561,147,NA,noerror,NA
+lll-liv,MB009,O-CDI,18,540,115,NA,noerror,NA
+lll-liv,MB065,O-CDI,18,542,58,NA,noerror,NA
+lll-liv,MB039,O-CDI,18,535,19,NA,noerror,NA
+lll-liv,MB005,O-CDI,18,550,32,NA,noerror,NA
+lll-liv,MB003,O-CDI,18,531,16,NA,noerror,NA
+lll-liv,MB073,O-CDI,18,546,75,NA,noerror,NA
+lll-liv,MB007,O-CDI,18,536,70,NA,noerror,NA
+lll-liv,MB075,O-CDI,18,551,39,NA,noerror,NA
+lll-liv,MB069,O-CDI,18,547,40,NA,noerror,NA
+lll-liv,MB040,O-CDI,18,541,215,NA,noerror,NA
+lll-liv,MB002,O-CDI,18,550,52,NA,noerror,NA
+lll-liv,MB071,O-CDI,18,538,55,NA,noerror,NA
+lll-liv,MB044,O-CDI,18,561,27,NA,noerror,NA
+lll-liv,MB015,O-CDI,18,561,293,NA,noerror,NA
+lll-liv,MB074,O-CDI,18,534,5,NA,noerror,NA
+lll-liv,MB010,O-CDI,24,722,361,NA,noerror,NA
+lll-liv,MB042,O-CDI,24,737,148,NA,noerror,NA
+lll-liv,MB001,O-CDI,24,727,352,NA,noerror,NA
+lll-liv,MB043,O-CDI,24,722,273,NA,noerror,NA
+lll-liv,MB009,O-CDI,24,726,393,NA,noerror,NA
+lll-liv,MB036,O-CDI,24,744,283,NA,noerror,NA
+lll-liv,MB037,O-CDI,24,722,394,NA,noerror,NA
+lll-liv,MB003,O-CDI,24,731,125,NA,noerror,NA
+lll-liv,MB007,O-CDI,24,719,245,NA,noerror,NA
+lll-liv,MB047,O-CDI,24,720,403,NA,noerror,NA
+lll-liv,MB035,O-CDI,24,717,150,NA,noerror,NA
+lll-liv,MB069,O-CDI,24,759,213,NA,noerror,NA
+lll-liv,MB040,O-CDI,24,727,367,NA,noerror,NA
+lll-liv,MB002,O-CDI,24,736,323,NA,noerror,NA
+lll-liv,MB038,O-CDI,24,746,310,NA,noerror,NA
+lll-liv,MB071,O-CDI,24,737,194,NA,noerror,NA
+lll-liv,MB044,O-CDI,24,721,340,NA,noerror,NA
+lscp-psl,4,French European,18,564,19,52.5,noerror,NA
+lscp-psl,4,French European,24,756,94,81.42,noerror,NA
+lscp-psl,10,French European,18,576,39,82.17,noerror,NA
+lscp-psl,10,French European,24,807,97,87.86,noerror,NA
+lscp-psl,11,French European,18,557,13,36.11,noerror,NA
+lscp-psl,11,French European,24,720,81,60.3,noerror,NA
+lscp-psl,13,French European,18,564,3,7.5,noerror,NA
+lscp-psl,17,French European,18,575,29,75.65,noerror,NA
+lscp-psl,17,French European,24,726,84,64.7,noerror,NA
+lscp-psl,19,French European,18,549,7,19,noerror,NA
+lscp-psl,19,French European,24,740,84,64.7,noerror,NA
+lscp-psl,21,French European,24,750,90,73.54,noerror,NA
+lscp-psl,23,French European,18,548,15,41.67,noerror,NA
+lscp-psl,23,French European,24,726,100,100,noerror,NA
+lscp-psl,24,French European,18,563,9,25,noerror,NA
+lscp-psl,24,French European,24,724,73,49.11,noerror,NA
+lscp-psl,27,French European,18,562,24,65,noerror,NA
+lscp-psl,27,French European,24,719,51,29.45,noerror,NA
+lscp-psl,29,French European,24,728,97,87.86,noerror,NA
+lscp-psl,34,French European,18,538,43,84.78,noerror,NA
+lscp-psl,34,French European,24,718,84,64.7,noerror,NA
+weescience-edinburgh,MB01,O-CDI,18,549,88,NA,noerror,NA
+weescience-edinburgh,MB01,O-CDI,24,790,346,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,18,551,164,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,24,763,365,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,18,551,19,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,24,764,253,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,18,550,20,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,24,751,198,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,18,546,49,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,24,751,264,NA,noerror,NA
+weescience-edinburgh,MB09,O-CDI,18,538,87,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,18,564,88,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,24,790,337,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,18,538,148,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,24,720,392,NA,noerror,NA
+weescience-edinburgh,MB16,O-CDI,18,562,382,NA,noerror,NA
+weescience-edinburgh,MB17,O-CDI,18,563,132,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,18,541,54,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,24,754,192,NA,noerror,NA
+weescience-edinburgh,MB19,O-CDI,24,739,199,NA,noerror,NA
+weescience-edinburgh,MB20,O-CDI,18,540,65,NA,noerror,NA
+weescience-edinburgh,MB21,O-CDI,18,532,19,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,18,538,53,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,24,752,372,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,18,536,14,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,24,751,108,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,18,568,51,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,24,765,183,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,18,540,88,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,24,799,391,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,18,536,85,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,24,784,396,NA,noerror,NA
+weescience-edinburgh,MB27,O-CDI,18,537,126,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,18,555,89,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,24,728,265,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,18,560,20,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,24,731,86,NA,noerror,NA
+weescience-edinburgh,MB31,O-CDI,24,763,206,NA,noerror,NA
+weescience-edinburgh,MB32,O-CDI,18,561,102,NA,noerror,NA
+weescience-edinburgh,MB33,O-CDI,18,557,35,NA,noerror,NA
+weescience-edinburgh,MB34,O-CDI,18,535,71,NA,noerror,NA
+weescience-edinburgh,MB35,O-CDI,18,545,32,NA,noerror,NA
+weescience-edinburgh,MB36,O-CDI,18,560,47,NA,noerror,NA
+weltentdecker-zurich,mb_13758,FROSCH,18,558,259,NA,noerror,NA
+weltentdecker-zurich,mb_13794,FROSCH,18,555,8,NA,noerror,NA
+weltentdecker-zurich,mb_12894,FROSCH,18,543,42,NA,noerror,NA
+weltentdecker-zurich,mb_13439,FROSCH,18,551,110,NA,noerror,NA
+weltentdecker-zurich,mb_14059,FROSCH,18,554,10,NA,noerror,NA
+weltentdecker-zurich,mb_14054,FROSCH,18,560,7,NA,noerror,NA
+weltentdecker-zurich,mb_13643,FROSCH,18,551,5,NA,noerror,NA
+weltentdecker-zurich,mb_13447,FROSCH,18,560,20,NA,noerror,NA
+weltentdecker-zurich,mb_12516,FROSCH,convenience,762,117,NA,noerror,NA
+weltentdecker-zurich,mb_13498,FROSCH,convenience,615,79,NA,noerror,NA
+weltentdecker-zurich,mb_12524,FROSCH,convenience,640,240,NA,noerror,NA
+weltentdecker-zurich,mb_13111,FROSCH,convenience,632,21,NA,noerror,NA
+weltentdecker-zurich,mb_13077,FROSCH,convenience,617,269,NA,noerror,NA
+weltentdecker-zurich,mb_12872,FROSCH,convenience,592,51,NA,noerror,NA
+weltentdecker-zurich,mb_12569,FROSCH,convenience,623,59,NA,noerror,NA
+weltentdecker-zurich,mb_13490,FROSCH,convenience,640,68,NA,noerror,NA
+weltentdecker-zurich,mb_13314,FROSCH,convenience,614,24,NA,noerror,NA
+weltentdecker-zurich,mb_13333,FROSCH,convenience,589,16,NA,noerror,NA
+weltentdecker-zurich,mb_13510,FROSCH,convenience,623,61,NA,noerror,NA
+weltentdecker-zurich,mb_12801,FROSCH,convenience,630,19,NA,noerror,NA
+weltentdecker-zurich,mb_12601,FROSCH,convenience,618,24,NA,noerror,NA
+weltentdecker-zurich,mb_13326,FROSCH,convenience,608,270,NA,noerror,NA
+weltentdecker-zurich,mb_13288,FROSCH,convenience,600,125,NA,noerror,NA
+weltentdecker-zurich,mb_13629,FROSCH,convenience,569,21,NA,noerror,NA
+weltentdecker-zurich,mb_13968,FROSCH,convenience,585,250,NA,noerror,NA
+weltentdecker-zurich,mb_13242,FROSCH,convenience,619,5,NA,noerror,NA
+weltentdecker-zurich,mb_13775,FROSCH,convenience,614,62,NA,noerror,NA
+weltentdecker-zurich,mb_13915,FROSCH,convenience,577,38,NA,noerror,NA
+weltentdecker-zurich,mb_13659,FROSCH,convenience,597,115,NA,noerror,NA
+weltentdecker-zurich,mb_13948,FROSCH,convenience,568,151,NA,noerror,NA
+weltentdecker-zurich,mb_12755,FROSCH,convenience,650,15,NA,noerror,NA
+weltentdecker-zurich,mb_13505,FROSCH,convenience,641,410,NA,noerror,NA
+weltentdecker-zurich,mb_12676,FROSCH,convenience,627,195,NA,noerror,NA
+weltentdecker-zurich,mb_12690,FROSCH,convenience,608,86,NA,noerror,NA
+weltentdecker-zurich,mb_13178,FROSCH,convenience,600,322,NA,noerror,NA
+babylab-lmu,4,FRAKIS,18,627,467,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,18,593,28,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,24,724,217,51-75,noerror,filled out web-based version
+babylab-lmu,6,FRAKIS,18,607,29,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,6,FRAKIS,24,730,65,11-25,noerror,filled out web-based version
+babylab-lmu,7,FRAKIS,24,730,432,76-90,noerror,filled out web-based version
+babylab-lmu,9,FRAKIS,18,589,70,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,18,601,112,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,24,729,337,51-75,noerror,filled out web-based version
+babylab-lmu,13,FRAKIS,18,605,50,26-50,error,already aged out; filled out pen-and-paper version and forgot one page
+babylab-lmu,13,FRAKIS,24,732,380,76-90,noerror,filled out web-based version
+babylab-lmu,14,FRAKIS,18,600,98,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,14,FRAKIS,24,723,207,26-50,noerror,filled out web-based version
+babylab-lmu,16,FRAKIS,18,610,30,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,16,FRAKIS,24,731,241,51-75,noerror,filled out web-based version
+babylab-lmu,18,FRAKIS,18,585,194,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,18,FRAKIS,24,726,559,91-100,noerror,filled out web-based version
+babylab-lmu,19,FRAKIS,18,601,30,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,19,FRAKIS,24,735,82,11-25,noerror,filled out web-based version
+babylab-lmu,20,FRAKIS,18,593,65,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,20,FRAKIS,24,727,311,76-90,noerror,filled out web-based version
+babylab-lmu,22,FRAKIS,18,603,39,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,22,FRAKIS,24,730,128,11-25,noerror,filled out web-based version
+babylab-lmu,23,FRAKIS,18,648,250,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,24,FRAKIS,24,721,125,26-50,noerror,filled out web-based version
+babylab-lmu,25,FRAKIS,18,641,431,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,26,FRAKIS,18,597,266,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,27,FRAKIS,24,730,248,51-75,noerror,filled out web-based version
+babylab-lmu,31,FRAKIS,18,589,25,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,31,FRAKIS,24,723,180,26-50,noerror,filled out web-based version
+babylab-lmu,32,FRAKIS,18,589,47,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,32,FRAKIS,24,723,250,26-50,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,18,535,126,91-100,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,24,695,399,76-90,error,filled out web-based version when child was too young (younger than 17;15)
+babylab-lmu,34,FRAKIS,18,589,10,11-25,error,already aged out; filled out web-based version
+babylab-lmu,34,FRAKIS,24,722,36,1-10,noerror,filled out web-based version
+babylab-lmu,35,FRAKIS,24,732,288,51-75,error,filled out web-based version but did not complete it
+babylab-lmu,35,FRAKIS,24,744,374,51-75,noerror,filled out web-based version a second time on another day and completed it
+babylab-lmu,36,FRAKIS,18,581,42,26-50,error,already aged out; filled out web-based version
+babylab-lmu,36,FRAKIS,24,733,329,76-90,noerror,filled out web-based version
+babylab-lmu,37,FRAKIS,24,722,38,1-10,noerror,filled out web-based version
+babylab-lmu,38,FRAKIS,18,571,144,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,38,FRAKIS,24,729,364,51-75,noerror,filled out web-based version
+babylab-lmu,39,FRAKIS,18,608,9,1-10,error,already aged out; filled outweb-based version
+babylab-lmu,39,FRAKIS,24,733,21,1-10,noerror,filled out web-based version
+babylab-lmu,40,FRAKIS,24,728,335,51-75,noerror,filled out web-based version
+babylab-lmu,41,FRAKIS,18,569,221,76-90,error,already aged out; filled out web-based version
+babylab-lmu,41,FRAKIS,24,734,481,91-100,noerror,filled out web-based version
+babylab-lmu,42,FRAKIS,18,570,84,51-75,error,already aged out; filled out web-based version
+babylab-lmu,42,FRAKIS,24,736,472,76-90,noerror,filled out web-based version
+babylab-lmu,44,FRAKIS,18,571,24,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,44,FRAKIS,24,723,77,11-25,noerror,filled out web-based version
+babylab-lmu,45,FRAKIS,24,736,135,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,18,550,45,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,24,729,335,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,18,554,66,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,24,711,500,91-100,error,filled out web-based version when child was too young (younger than 23;15)
+babylab-lmu,50,FRAKIS,18,567,11,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,50,FRAKIS,24,724,218,51-75,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,18,547,4,1-10,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,24,725,96,11-25,noerror,filled out web-based version
+babylab-lmu,52,FRAKIS,18,576,45,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,52,FRAKIS,24,737,259,51-75,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,18,559,24,26-50,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,24,722,263,51-75,noerror,filled out web-based version
+babylab-lmu,56,FRAKIS,18,562,37,26-50,error,already aged out; filled out web-based version
+babylab-lmu,56,FRAKIS,24,744,222,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,18,558,28,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,24,724,253,51-75,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,18,540,6,1-10,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,24,734,237,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,18,540,31,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,24,723,309,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,18,542,112,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,24,732,308,51-75,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,18,544,3,1-10,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,24,739,3,1-10,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,18,543,117,76-90,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,24,727,516,91-100,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,18,549,87,51-75,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,24,724,340,51-75,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,18,542,8,11-25,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,24,732,41,11-25,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,18,542,19,26-50,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,24,723,196,51-75,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,18,547,31,26-50,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,24,727,396,76-90,noerror,filled out web-based version
+babylab-lmu,70,FRAKIS,18,587,376,91-100,error,already aged out; filled out web-based version
+babylab-lmu,71,FRAKIS,18,553,21,26-50,noerror,filled out web-based version
+babylab-lmu,72,FRAKIS,24,732,80,11-25,noerror,filled out web-based version
+babylab-lmu,73,FRAKIS,24,732,38,1-10,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,18,544,62,51-75,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,24,730,499,91-100,noerror,filled out web-based version
+babylab-lmu,75,FRAKIS,18,576,111,76-90,error,already aged out; filled out web-based version
+babylab-lmu,76,FRAKIS,18,558,11,11-25,noerror,filled out web-based version
+babylab-lmu,76,FRAKIS,24,735,178,26-50,error,filled out web-based version but did not complete it
+babylab-lmu,76,FRAKIS,24,735,203,26-50,noerror,filled out web-based version a second time the same day and completed it
+babylab-lmu,79,FRAKIS,18,540,34,26-50,noerror,filled out web-based version
+babylab-lmu,79,FRAKIS,24,740,60,11-25,noerror,filled out web-based version
+babylab-lmu,80,FRAKIS,24,727,370,51-75,noerror,filled out web-based version
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+babylab_nijmegen,ba27_9-12,NCDI,24,730,196,28.13,noerror,NA
+babylab_nijmegen,ba29_6-9,NCDI,24,718,146,16.3,noerror,NA
+babylab_nijmegen,ba13_6-9,NCDI,24,727,467,89.58,noerror,NA
+babylab_nijmegen,ba31_9-12,NCDI,24,724,132,24.77,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba30_6-9,NCDI,24,721,465,84.12,noerror,NA
+babylab_nijmegen,ba06_9-12,NCDI,24,758,64,8.5,noerror,NA
+babylab_nijmegen,ba08_6-9,NCDI,24,722,333,69.31,noerror,NA
+babylab_nijmegen,ba25_6-9,NCDI,24,716,571,93.49,noerror,NA
+babylab_nijmegen,ba30_9-12,NCDI,24,722,71,3.14,noerror,NA
+babylab_nijmegen,ba11_9-12,NCDI,24,729,208,30.58,noerror,NA
+babylab_nijmegen,ba19_6-9,NCDI,24,741,63,8.33,noerror,NA
+babylab_nijmegen,ba02_6-9,NCDI,24,716,497,87.61,noerror,NA
+babylab_nijmegen,ba12_6-9,NCDI,24,719,495,92.79,noerror,NA
+babylab_nijmegen,ba15_9-12,NCDI,24,740,513,89.43,noerror,NA
+babylab_nijmegen,ba24_9-12,NCDI,24,720,652,99,noerror,NA
+babylab_nijmegen,ba06_6-9,NCDI,24,719,478,85.46,noerror,NA
+babylab_nijmegen,ba21_6-9,NCDI,24,717,374,70,noerror,NA
+babylab_nijmegen,ba22_6-9,NCDI,24,731,303,53.93,noerror,NA
+babylab_nijmegen,ba15_6-9,NCDI,24,728,413,78.53,noerror,NA
+babylab_nijmegen,ba16_9-12,NCDI,24,718,405,81.54,noerror,NA
+babylab_nijmegen,ba11_6-9,NCDI,24,743,113,9.11,noerror,NA
+babylab_nijmegen,ba23_6-9,NCDI,24,719,122,10.83,noerror,NA
+babylab_nijmegen,ba08_9-12,NCDI,24,728,273,60.4,noerror,NA
+babylab_nijmegen,ba18_9-12,NCDI,24,723,159,30.46,noerror,NA
+babylab_nijmegen,ba05_6-9,NCDI,24,738,80,11.67,noerror,"The DoB of the child, filled in by parents, was wrong (same year as DoT). The correct DoB is retrieved from the database and replaced manually"
+babylab_nijmegen,ba28_9-12,NCDI,24,716,176,23.33,noerror,NA
+babylab_nijmegen,ba23_9-12,NCDI,24,727,389,75,noerror,NA
+babylab_nijmegen,ba27_6-9,NCDI,24,717,455,83.14,noerror,NA
+babylab_nijmegen,ba17_6-9,NCDI,24,737,205,30,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba05_9-12,NCDI,24,733,540,99,noerror,NA
+babylab_nijmegen,ba09_6-9,NCDI,24,714,208,30.58,noerror,NA
+babylab_nijmegen,ba04_9-12,NCDI,24,725,247,54.66,noerror,NA
+babylab_nijmegen,ba21_9-12,NCDI,24,722,336,62.24,noerror,NA
+babylab_nijmegen,ba20_6-9,NCDI,24,729,487,91.86,noerror,NA
+babylab_nijmegen,ba18_6-9,NCDI,24,719,304,54.29,noerror,NA
+babylab_nijmegen,ba10_6-9,NCDI,24,717,570,99,noerror,NA
+babylab_nijmegen,ba25_9-12,NCDI,24,718,261,42.19,noerror,NA
+babylab_nijmegen,ba01_9-12,NCDI,24,732,259,41.56,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba26_6-9,NCDI,24,721,180,35.36,noerror,NA
+babylab-vuw,P01,webcdi,18,551,185,74,noerror,NA
+babylab-vuw,P01,webcdi,24,737,405,62,noerror,NA
+babylab-vuw,P02,webcdi,18,548,68,51,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,P02,webcdi,24,744,321,62,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,S01,webcdi,18,549,45,38,noerror,NA
+babylab-vuw,S01,webcdi,24,734,221,45,noerror,NA
+babylab-vuw,S05,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S05,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S11,webcdi,18,531,201,86,noerror,NA
+babylab-vuw,S11,webcdi,24,727,361,70,noerror,NA
+babylab-vuw,S07,webcdi,18,541,33,27,noerror,NA
+babylab-vuw,S07,webcdi,24,722,190,39,noerror,NA
+babylab-vuw,S09,webcdi,18,536,127,69,noerror,NA
+babylab-vuw,S09,webcdi,24,728,589,96,noerror,NA
+babylab-vuw,S12,webcdi,18,547,76,55,noerror,NA
+babylab-vuw,S12,webcdi,24,730,248,50,noerror,NA
+babylab-vuw,S04,webcdi,18,541,139,72,noerror,NA
+babylab-vuw,S04,webcdi,24,731,443,82,noerror,NA
+babylab-vuw,S06,webcdi,18,539,46,25,noerror,NA
+babylab-vuw,S06,webcdi,24,729,253,35,noerror,NA
+babylab-vuw,S02,webcdi,18,531,75,38,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S02,webcdi,24,734,516,84,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S14,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S14,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S03,webcdi,18,547,120,56,noerror,NA
+babylab-vuw,S03,webcdi,24,724,474,76,noerror,NA
+babylab-vuw,S08,webcdi,18,546,32,25,noerror,NA
+babylab-vuw,S08,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S16,webcdi,18,543,393,95,noerror,NA
+babylab-vuw,S16,webcdi,24,736,559,91,noerror,NA
+babylab-vuw,S13,webcdi,18,548,35,29,noerror,NA
+babylab-vuw,S13,webcdi,24,731,297,58,noerror,NA
+babylab-vuw,S15,webcdi,18,548,261,86,noerror,NA
+babylab-vuw,S15,webcdi,24,726,438,69,noerror,NA
+babyling-oslo,OS_002,NorCDI,18,555,23,16,noerror,Parents comment that she understands much more than she says.
+babyling-oslo,OS_002,NorCDI,24,732,120,9,noerror,NA
+babyling-oslo,OS_003,NorCDI,18,556,65,62,noerror,NA
+babyling-oslo,OS_003,NorCDI,24,733,264,50,noerror,NA
+babyling-oslo,OS_005,NorCDI,18,545,75,49,noerror,NA
+babyling-oslo,OS_005,NorCDI,24,727,178,19,noerror,NA
+babyling-oslo,OS_007,NorCDI,18,549,127,79,noerror,NA
+babyling-oslo,OS_007,NorCDI,24,732,403,74,noerror,NA
+babyling-oslo,OS_009,NorCDI,18,546,86,54,noerror,NA
+babyling-oslo,OS_009,NorCDI,24,730,542,87,noerror,NA
+babyling-oslo,OS_012,NorCDI,18,550,210,90,noerror,NA
+babyling-oslo,OS_012,NorCDI,24,728,604,97,noerror,NA
+babyling-oslo,OS_014,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_014,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_015,NorCDI,18,555,33,27,noerror,NA
+babyling-oslo,OS_015,NorCDI,24,735,193,21,noerror,NA
+babyling-oslo,OS_016,NorCDI,18,542,26,33,noerror,NA
+babyling-oslo,OS_016,NorCDI,24,732,170,33,noerror,NA
+babyling-oslo,OS_017,NorCDI,18,550,8,5,noerror,Parents used 5 min to fill out the form
+babyling-oslo,OS_017,NorCDI,24,731,139,12,noerror,NA
+babyling-oslo,OS_018,NorCDI,18,554,13,14,noerror,NA
+babyling-oslo,OS_018,NorCDI,24,731,45,2,noerror,NA
+babyling-oslo,OS_019,NorCDI,18,549,305,97,noerror,NA
+babyling-oslo,OS_019,NorCDI,24,732,704,99,noerror,NA
+babyling-oslo,OS_022,NorCDI,18,553,42,50,noerror,NA
+babyling-oslo,OS_022,NorCDI,24,729,160,16,noerror,NA
+babyling-oslo,OS_025,NorCDI,18,546,79,51,noerror,NA
+babyling-oslo,OS_025,NorCDI,24,731,247,31,noerror,NA
+babyling-oslo,OS_026,NorCDI,18,550,16,18,noerror,NA
+babyling-oslo,OS_026,NorCDI,24,733,158,31,noerror,NA
+babyling-oslo,OS_028,NorCDI,18,541,10,9,noerror,NA
+babyling-oslo,OS_028,NorCDI,24,727,160,31,noerror,NA
+babyling-oslo,OS_029,NorCDI,18,551,197,83,noerror,NA
+babyling-oslo,OS_029,NorCDI,24,734,507,81,noerror,NA
+babyling-oslo,OS_030,NorCDI,18,553,54,57,noerror,NA
+babyling-oslo,OS_030,NorCDI,24,736,170,33,noerror,NA
+babyling-oslo,OS_031,NorCDI,18,544,47,36,noerror,NA
+babyling-oslo,OS_031,NorCDI,24,729,349,49,noerror,NA
+babyling-oslo,OS_032,NorCDI,18,559,14,15,noerror,NA
+babyling-oslo,OS_032,NorCDI,24,736,148,29,noerror,NA
+babyling-oslo,OS_033,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_033,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_034,NorCDI,18,552,187,81,noerror,NA
+babyling-oslo,OS_034,NorCDI,24,730,474,75,noerror,NA
+babyling-oslo,OS_035,NorCDI,18,545,35,28,noerror,NA
+babyling-oslo,OS_035,NorCDI,24,726,150,14,noerror,NA
+babyling-oslo,OS_036,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_036,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_038,NorCDI,18,552,8,6,noerror,"Parents commented that he has not started to speak yet, and that his brother was similiar and started to speak at the age of 2"
+babyling-oslo,OS_038,NorCDI,24,NA,NA,NA,error,RA error
+babyling-oslo,OS_039,NorCDI,18,547,61,59,noerror,NA
+babyling-oslo,OS_039,NorCDI,24,731,227,43,noerror,NA
+babyling-oslo,OS_040,NorCDI,18,549,28,36,noerror,NA
+babyling-oslo,OS_040,NorCDI,24,733,91,16,noerror,NA
+babyling-oslo,OS_041,NorCDI,18,547,230,93,noerror,NA
+babyling-oslo,OS_041,NorCDI,24,736,643,99,noerror,NA
+babyling-oslo,OS_043,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_043,NorCDI,24,727,286,38,noerror,NA
+babyling-oslo,OS_048,NorCDI,18,547,33,40,noerror,NA
+babyling-oslo,OS_048,NorCDI,24,731,277,52,noerror,NA
+babyling-oslo,OS_050,NorCDI,18,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_050,NorCDI,24,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_051,NorCDI,18,547,12,13,noerror,Parents used 6 min to fill out the form
+babyling-oslo,OS_051,NorCDI,24,731,72,12,noerror,NA
+bcrl-unlv,2901,webcdi,24,792,8,1,error,"Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem"
+bcrl-unlv,2804,webcdi,24,739,99,12,noerror,NA
+bcrl-unlv,2401,webcdi,24,732,346,50,noerror,NA
+bcrl-unlv,3304,webcdi,24,721,51,11,noerror,NA
+bcrl-unlv,3103,webcdi,24,746,248,50,noerror,NA
+bcrl-unlv,802,webcdi,24,753,80,9,noerror,NA
+bcrl-unlv,2304,webcdi,24,719,225,31,noerror,NA
+bcrl-unlv,303,webcdi,24,783,124,18,noerror,NA
+bcrl-unlv,2504,webcdi,24,744,0,1,error,Participant did not complete survey
+bcrl-unlv,1204,webcdi,24,783,174,28,noerror,NA
+bcrl-unlv,404,webcdi,24,770,235,27,noerror,NA
+bcrl-unlv,101,webcdi,24,758,322,63,noerror,NA
+bcrl-unlv,1701,webcdi,24,770,117,22,noerror,NA
+bcrl-unlv,602,webcdi,24,696,210,59,noerror,MA
+bcrl-unlv,3402,webcdi,18,614,0,1,error,Participant did not complete survey
+bcrl-unlv,1902,webcdi,18,669,95,30,noerror,NA
+bcrl-unlv,1103,webcdi,24,691,353,71,noerror,NA
+bcrl-unlv,2703,webcdi,18,592,451,96,noerror,NA
+bcrl-unlv,3201,webcdi,24,793,361,38,noerror,NA
+bcrl-unlv,1504,webcdi,24,745,67,11,noerror,NA
+bcrl-unlv,1002,webcdi,24,1002,51,7,noerror,NA
+bcrl-unlv,3503,webcdi,18,601,208,81,noerror,NA
+bcrl-unlv,2804,webcdi,18,609,0,1,error,Participant did not complete survey
+bcrl-unlv,3201,webcdi,18,610,86,29,noerror,NA
+bcrl-unlv,2703,webcdi,24,743,605,95,noerror,NA
+bcrl-unlv,3002,webcdi,24,738,175,35,noerror,NA
+bcrl-unlv,2103,webcdi,24,746,50,8,noerror,NA
+bcrl-unlv,3604,webcdi,24,713,485,85,noerror,NA
+bcrl-unlv,1401,webcdi,24,769,292,49,noerror,NA
+bcrl-unlv,702,webcdi,24,833,222,23,noerror,NA
+infantcoglab-louisville,236534,webcdi,18,561,83,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,18,567,230,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,18,575,12,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,18,561,100,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,18,610,231,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,18,577,27,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,18,587,13,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,18,546,28,NA,noerror,NA
+infantcoglab-louisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236297,webcdi,18,609,17,NA,noerror,NA
+infantcoglab-louisville,237603,webcdi,18,593,103,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,24,792,496,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,24,761,46,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,24,774,26,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,24,783,507,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,24,754,204,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,24,789,198,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,N/A,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI"
+infantlanglab-utk,MB1R6_1M_S1,webcdi,24,731,367,71,noerror,NA
+infantlanglab-utk,MB1R6_3F_S5,webcdi,24,726,181,30,noerror,NA
+infantlanglab-utk,MB1R6_4F_S6,webcdi,24,729,82,12,noerror,NA
+infantlanglab-utk,MB1R6_4M_S7,webcdi,24,726,243,57,noerror,NA
+infantlanglab-utk,MB1R6_4F_S8,webcdi,24,705,533,91,noerror,NA
+infantlanglab-utk,MB1R6_1F_S11,webcdi,24,714,113,19,noerror,NA
+infantlanglab-utk,MB1R6_3F_S12,webcdi,24,706,148,25,noerror,NA
+infantlanglab-utk,MB1R7_1M_S1,webcdi,24,677,253,66,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,18,573,21,15,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,24,678,76,23,noerror,NA
+infantlanglab-utk,MB1R7_4M_S4,webcdi,24,680,393,87,noerror,NA
+infantlanglab-utk,MB1R7_1F_S5,webcdi,24,697,83,17,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,18,595,96,39,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,24,682,163,34,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,18,573,237,90,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,24,699,95,30,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,18,560,47,39,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,24,686,109,34,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,18,602,23,9,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,24,684,28,4,noerror,NA
+infantlanglab-utk,MB1R8_1F_S1,webcdi,24,692,287,58,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,18,565,139,61,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,24,710,411,73,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,18,596,34,21,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,24,699,75,17,noerror,NA
+infantlanglab-utk,MB1R8_2M_S4,webcdi,24,698,90,28,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,18,557,21,15,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,24,686,105,33,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,18,601,22,12,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,24,684,24,6,noerror,NA
+infantlanglab-utk,MB1R9_1F_S1,webcdi,24,684,270,55,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,18,583,65,41,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,24,700,137,34,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,18,576,174,72,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,24,751,444,70,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,18,591,8,3,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,24,738,19,2,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,18,561,83,58,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,24,722,334,73,noerror,NA
+infantlanglab-utk,MB1R12_3M_S5,webcdi,24,743,133,26,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,18,562,80,57,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,24,738,40,6,noerror,NA
+infantlanglab-utk,MB1R12_4M_S7,webcdi,24,728,59,13,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,18,567,45,24,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,24,727,103,17,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,18,567,90,60,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,24,727,32,4,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,24,711,134,22,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,18,552,29,15,noerror,NA
+infantlanglab-utk,MB1R13_1M_S1,webcdi,18,583,18,9,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,18,563,48,26,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,24,736,549,89,noerror,NA
+infantlanglab-utk,MB1R13_3M_S4,webcdi,18,554,159,77,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,18,562,95,47,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,24,737,377,57,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,18,577,99,49,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,24,785,19,2,noerror,NA
+infantlanglab-utk,MB1R13_3F_S8,webcdi,24,747,226,31,noerror,NA
+infantlanglab-utk,MB1R13_4M_S9,webcdi,24,754,23,4,noerror,NA
+infantlanglab-utk,MB1R13_4F_S10,webcdi,24,751,161,22,noerror,NA
+infantlanglab-utk,MB1R13_2M_S11,webcdi,24,735,379,73,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,18,565,6,4,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,24,736,20,3,noerror,NA
+infantlanglab-utk,MB1R14_1M_S2,webcdi,18,575,259,92,noerror,NA
+infantlanglab-utk,MB1R14_2M_S3,webcdi,18,585,24,13,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,18,592,50,21,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,24,759,283,40,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,18,574,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,24,746,157,21,noerror,NA
+infantlanglab-utk,MB1R14_2F_S7,webcdi,24,739,496,80,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,24,735,199,27,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,18,563,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S11,webcdi,18,597,307,86,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,18,576,106,64,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,24,752,342,67,noerror,NA
+infantlanglab-utk,MB1R14_2M_S14,webcdi,24,760,233,39,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,18,552,102,50,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,24,739,298,43,noerror,NA
+infantlanglab-utk,MB1R14_4M_S17,webcdi,18,562,209,87,noerror,NA
+infantstudies-ubc,MB_M_1,webcdi,18,559,97,62,NA,NA
+infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_3,webcdi,18,540,232,93,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,18,543,51,50,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,18,548,6,3,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_7,webcdi,18,538,79,63,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,18,540,14,12,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_10,webcdi,18,549,15,14,NA,NA
+infantstudies-ubc,MB_M_11,webcdi,18,523,118,65,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_13,webcdi,18,541,10,8,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,18,564,6,3,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_16,webcdi,18,571,19,13,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,18,526,38,27,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_19,webcdi,18,542,32,23,NA,NA
+infantstudies-ubc,MB_M_20,webcdi,18,536,28,20,NA,NA
+infantstudies-ubc,MB_M_21,webcdi,18,557,52,42,NA,NA
+infantstudies-ubc,MB_M_22,webcdi,18,533,21,14,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,18,500,77,57,NA,NA
+infantstudies-ubc,MB_M_24,webcdi,18,490,19,16,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,18,509,5,5,NA,NA
+leeds-lcdu,MB04,O-CDI,18,543,90,NA,noerror,NA
+leeds-lcdu,MB05,O-CDI,18,564,129,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,18,549,12,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,18,562,12,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,18,552,51,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,18,564,222,NA,noerror,NA
+leeds-lcdu,MB12,O-CDI,18,557,3,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,18,563,57,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,18,557,59,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,18,564,49,NA,noerror,NA
+leeds-lcdu,MB01,O-CDI,24,720,172,NA,noerror,NA
+leeds-lcdu,MB02,O-CDI,24,723,250,NA,noerror,NA
+leeds-lcdu,MB03,O-CDI,24,744,171,NA,noerror,NA
+leeds-lcdu,MB04,O-CDI,24,746,283,NA,noerror,one day out of age range (24;16) but only by a few hours
+leeds-lcdu,MB05,O-CDI,24,744,402,NA,noerror,NA
+leeds-lcdu,MB06,O-CDI,24,745,394,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,24,742,156,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,24,724,85,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,24,723,167,NA,noerror,NA
+leeds-lcdu,MB10,O-CDI,24,726,388,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,24,745,395,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,24,723,234,NA,noerror,NA
+leeds-lcdu,MB14,O-CDI,24,733,332,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,24,726,245,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,24,732,112,NA,noerror,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+lll-liv,MB010,O-CDI,18,542,152,NA,noerror,NA
+lll-liv,MB046,O-CDI,18,539,3,NA,noerror,NA
+lll-liv,MB042,O-CDI,18,555,18,NA,noerror,NA
+lll-liv,MB045,O-CDI,18,551,19,NA,noerror,NA
+lll-liv,MB017,O-CDI,18,561,147,NA,noerror,NA
+lll-liv,MB009,O-CDI,18,540,115,NA,noerror,NA
+lll-liv,MB065,O-CDI,18,542,58,NA,noerror,NA
+lll-liv,MB039,O-CDI,18,535,19,NA,noerror,NA
+lll-liv,MB005,O-CDI,18,550,32,NA,noerror,NA
+lll-liv,MB003,O-CDI,18,531,16,NA,noerror,NA
+lll-liv,MB073,O-CDI,18,546,75,NA,noerror,NA
+lll-liv,MB007,O-CDI,18,536,70,NA,noerror,NA
+lll-liv,MB075,O-CDI,18,551,39,NA,noerror,NA
+lll-liv,MB069,O-CDI,18,547,40,NA,noerror,NA
+lll-liv,MB040,O-CDI,18,541,215,NA,noerror,NA
+lll-liv,MB002,O-CDI,18,550,52,NA,noerror,NA
+lll-liv,MB071,O-CDI,18,538,55,NA,noerror,NA
+lll-liv,MB044,O-CDI,18,561,27,NA,noerror,NA
+lll-liv,MB015,O-CDI,18,561,293,NA,noerror,NA
+lll-liv,MB074,O-CDI,18,534,5,NA,noerror,NA
+lll-liv,MB010,O-CDI,24,722,361,NA,noerror,NA
+lll-liv,MB042,O-CDI,24,737,148,NA,noerror,NA
+lll-liv,MB001,O-CDI,24,727,352,NA,noerror,NA
+lll-liv,MB043,O-CDI,24,722,273,NA,noerror,NA
+lll-liv,MB009,O-CDI,24,726,393,NA,noerror,NA
+lll-liv,MB036,O-CDI,24,744,283,NA,noerror,NA
+lll-liv,MB037,O-CDI,24,722,394,NA,noerror,NA
+lll-liv,MB003,O-CDI,24,731,125,NA,noerror,NA
+lll-liv,MB007,O-CDI,24,719,245,NA,noerror,NA
+lll-liv,MB047,O-CDI,24,720,403,NA,noerror,NA
+lll-liv,MB035,O-CDI,24,717,150,NA,noerror,NA
+lll-liv,MB069,O-CDI,24,759,213,NA,noerror,NA
+lll-liv,MB040,O-CDI,24,727,367,NA,noerror,NA
+lll-liv,MB002,O-CDI,24,736,323,NA,noerror,NA
+lll-liv,MB038,O-CDI,24,746,310,NA,noerror,NA
+lll-liv,MB071,O-CDI,24,737,194,NA,noerror,NA
+lll-liv,MB044,O-CDI,24,721,340,NA,noerror,NA
+lscp-psl,4,French European,18,564,19,52.5,noerror,NA
+lscp-psl,4,French European,24,756,94,81.42,noerror,NA
+lscp-psl,10,French European,18,576,39,82.17,noerror,NA
+lscp-psl,10,French European,24,807,97,87.86,noerror,NA
+lscp-psl,11,French European,18,557,13,36.11,noerror,NA
+lscp-psl,11,French European,24,720,81,60.3,noerror,NA
+lscp-psl,13,French European,18,564,3,7.5,noerror,NA
+lscp-psl,17,French European,18,575,29,75.65,noerror,NA
+lscp-psl,17,French European,24,726,84,64.7,noerror,NA
+lscp-psl,19,French European,18,549,7,19,noerror,NA
+lscp-psl,19,French European,24,740,84,64.7,noerror,NA
+lscp-psl,21,French European,24,750,90,73.54,noerror,NA
+lscp-psl,23,French European,18,548,15,41.67,noerror,NA
+lscp-psl,23,French European,24,726,100,100,noerror,NA
+lscp-psl,24,French European,18,563,9,25,noerror,NA
+lscp-psl,24,French European,24,724,73,49.11,noerror,NA
+lscp-psl,27,French European,18,562,24,65,noerror,NA
+lscp-psl,27,French European,24,719,51,29.45,noerror,NA
+lscp-psl,29,French European,24,728,97,87.86,noerror,NA
+lscp-psl,34,French European,18,538,43,84.78,noerror,NA
+lscp-psl,34,French European,24,718,84,64.7,noerror,NA
+weescience-edinburgh,MB01,O-CDI,18,549,88,NA,noerror,NA
+weescience-edinburgh,MB01,O-CDI,24,790,346,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,18,551,164,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,24,763,365,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,18,551,19,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,24,764,253,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,18,550,20,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,24,751,198,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,18,546,49,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,24,751,264,NA,noerror,NA
+weescience-edinburgh,MB09,O-CDI,18,538,87,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,18,564,88,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,24,790,337,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,18,538,148,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,24,720,392,NA,noerror,NA
+weescience-edinburgh,MB16,O-CDI,18,562,382,NA,noerror,NA
+weescience-edinburgh,MB17,O-CDI,18,563,132,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,18,541,54,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,24,754,192,NA,noerror,NA
+weescience-edinburgh,MB19,O-CDI,24,739,199,NA,noerror,NA
+weescience-edinburgh,MB20,O-CDI,18,540,65,NA,noerror,NA
+weescience-edinburgh,MB21,O-CDI,18,532,19,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,18,538,53,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,24,752,372,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,18,536,14,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,24,751,108,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,18,568,51,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,24,765,183,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,18,540,88,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,24,799,391,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,18,536,85,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,24,784,396,NA,noerror,NA
+weescience-edinburgh,MB27,O-CDI,18,537,126,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,18,555,89,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,24,728,265,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,18,560,20,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,24,731,86,NA,noerror,NA
+weescience-edinburgh,MB31,O-CDI,24,763,206,NA,noerror,NA
+weescience-edinburgh,MB32,O-CDI,18,561,102,NA,noerror,NA
+weescience-edinburgh,MB33,O-CDI,18,557,35,NA,noerror,NA
+weescience-edinburgh,MB34,O-CDI,18,535,71,NA,noerror,NA
+weescience-edinburgh,MB35,O-CDI,18,545,32,NA,noerror,NA
+weescience-edinburgh,MB36,O-CDI,18,560,47,NA,noerror,NA
+weltentdecker-zurich,mb_13758,FROSCH,18,558,259,NA,noerror,NA
+weltentdecker-zurich,mb_13794,FROSCH,18,555,8,NA,noerror,NA
+weltentdecker-zurich,mb_12894,FROSCH,18,543,42,NA,noerror,NA
+weltentdecker-zurich,mb_13439,FROSCH,18,551,110,NA,noerror,NA
+weltentdecker-zurich,mb_14059,FROSCH,18,554,10,NA,noerror,NA
+weltentdecker-zurich,mb_14054,FROSCH,18,560,7,NA,noerror,NA
+weltentdecker-zurich,mb_13643,FROSCH,18,551,5,NA,noerror,NA
+weltentdecker-zurich,mb_13447,FROSCH,18,560,20,NA,noerror,NA
+weltentdecker-zurich,mb_12516,FROSCH,convenience,762,117,NA,noerror,NA
+weltentdecker-zurich,mb_13498,FROSCH,convenience,615,79,NA,noerror,NA
+weltentdecker-zurich,mb_12524,FROSCH,convenience,640,240,NA,noerror,NA
+weltentdecker-zurich,mb_13111,FROSCH,convenience,632,21,NA,noerror,NA
+weltentdecker-zurich,mb_13077,FROSCH,convenience,617,269,NA,noerror,NA
+weltentdecker-zurich,mb_12872,FROSCH,convenience,592,51,NA,noerror,NA
+weltentdecker-zurich,mb_12569,FROSCH,convenience,623,59,NA,noerror,NA
+weltentdecker-zurich,mb_13490,FROSCH,convenience,640,68,NA,noerror,NA
+weltentdecker-zurich,mb_13314,FROSCH,convenience,614,24,NA,noerror,NA
+weltentdecker-zurich,mb_13333,FROSCH,convenience,589,16,NA,noerror,NA
+weltentdecker-zurich,mb_13510,FROSCH,convenience,623,61,NA,noerror,NA
+weltentdecker-zurich,mb_12801,FROSCH,convenience,630,19,NA,noerror,NA
+weltentdecker-zurich,mb_12601,FROSCH,convenience,618,24,NA,noerror,NA
+weltentdecker-zurich,mb_13326,FROSCH,convenience,608,270,NA,noerror,NA
+weltentdecker-zurich,mb_13288,FROSCH,convenience,600,125,NA,noerror,NA
+weltentdecker-zurich,mb_13629,FROSCH,convenience,569,21,NA,noerror,NA
+weltentdecker-zurich,mb_13968,FROSCH,convenience,585,250,NA,noerror,NA
+weltentdecker-zurich,mb_13242,FROSCH,convenience,619,5,NA,noerror,NA
+weltentdecker-zurich,mb_13775,FROSCH,convenience,614,62,NA,noerror,NA
+weltentdecker-zurich,mb_13915,FROSCH,convenience,577,38,NA,noerror,NA
+weltentdecker-zurich,mb_13659,FROSCH,convenience,597,115,NA,noerror,NA
+weltentdecker-zurich,mb_13948,FROSCH,convenience,568,151,NA,noerror,NA
+weltentdecker-zurich,mb_12755,FROSCH,convenience,650,15,NA,noerror,NA
+weltentdecker-zurich,mb_13505,FROSCH,convenience,641,410,NA,noerror,NA
+weltentdecker-zurich,mb_12676,FROSCH,convenience,627,195,NA,noerror,NA
+weltentdecker-zurich,mb_12690,FROSCH,convenience,608,86,NA,noerror,NA
+weltentdecker-zurich,mb_13178,FROSCH,convenience,600,322,NA,noerror,NA
+babylab-lmu,4,FRAKIS,18,627,467,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,18,593,28,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,24,724,217,51-75,noerror,filled out web-based version
+babylab-lmu,6,FRAKIS,18,607,29,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,6,FRAKIS,24,730,65,11-25,noerror,filled out web-based version
+babylab-lmu,7,FRAKIS,24,730,432,76-90,noerror,filled out web-based version
+babylab-lmu,9,FRAKIS,18,589,70,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,18,601,112,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,24,729,337,51-75,noerror,filled out web-based version
+babylab-lmu,13,FRAKIS,18,605,50,26-50,error,already aged out; filled out pen-and-paper version and forgot one page
+babylab-lmu,13,FRAKIS,24,732,380,76-90,noerror,filled out web-based version
+babylab-lmu,14,FRAKIS,18,600,98,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,14,FRAKIS,24,723,207,26-50,noerror,filled out web-based version
+babylab-lmu,16,FRAKIS,18,610,30,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,16,FRAKIS,24,731,241,51-75,noerror,filled out web-based version
+babylab-lmu,18,FRAKIS,18,585,194,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,18,FRAKIS,24,726,559,91-100,noerror,filled out web-based version
+babylab-lmu,19,FRAKIS,18,601,30,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,19,FRAKIS,24,735,82,11-25,noerror,filled out web-based version
+babylab-lmu,20,FRAKIS,18,593,65,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,20,FRAKIS,24,727,311,76-90,noerror,filled out web-based version
+babylab-lmu,22,FRAKIS,18,603,39,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,22,FRAKIS,24,730,128,11-25,noerror,filled out web-based version
+babylab-lmu,23,FRAKIS,18,648,250,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,24,FRAKIS,24,721,125,26-50,noerror,filled out web-based version
+babylab-lmu,25,FRAKIS,18,641,431,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,26,FRAKIS,18,597,266,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,27,FRAKIS,24,730,248,51-75,noerror,filled out web-based version
+babylab-lmu,31,FRAKIS,18,589,25,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,31,FRAKIS,24,723,180,26-50,noerror,filled out web-based version
+babylab-lmu,32,FRAKIS,18,589,47,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,32,FRAKIS,24,723,250,26-50,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,18,535,126,91-100,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,24,695,399,76-90,error,filled out web-based version when child was too young (younger than 17;15)
+babylab-lmu,34,FRAKIS,18,589,10,11-25,error,already aged out; filled out web-based version
+babylab-lmu,34,FRAKIS,24,722,36,1-10,noerror,filled out web-based version
+babylab-lmu,35,FRAKIS,24,732,288,51-75,error,filled out web-based version but did not complete it
+babylab-lmu,35,FRAKIS,24,744,374,51-75,noerror,filled out web-based version a second time on another day and completed it
+babylab-lmu,36,FRAKIS,18,581,42,26-50,error,already aged out; filled out web-based version
+babylab-lmu,36,FRAKIS,24,733,329,76-90,noerror,filled out web-based version
+babylab-lmu,37,FRAKIS,24,722,38,1-10,noerror,filled out web-based version
+babylab-lmu,38,FRAKIS,18,571,144,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,38,FRAKIS,24,729,364,51-75,noerror,filled out web-based version
+babylab-lmu,39,FRAKIS,18,608,9,1-10,error,already aged out; filled outweb-based version
+babylab-lmu,39,FRAKIS,24,733,21,1-10,noerror,filled out web-based version
+babylab-lmu,40,FRAKIS,24,728,335,51-75,noerror,filled out web-based version
+babylab-lmu,41,FRAKIS,18,569,221,76-90,error,already aged out; filled out web-based version
+babylab-lmu,41,FRAKIS,24,734,481,91-100,noerror,filled out web-based version
+babylab-lmu,42,FRAKIS,18,570,84,51-75,error,already aged out; filled out web-based version
+babylab-lmu,42,FRAKIS,24,736,472,76-90,noerror,filled out web-based version
+babylab-lmu,44,FRAKIS,18,571,24,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,44,FRAKIS,24,723,77,11-25,noerror,filled out web-based version
+babylab-lmu,45,FRAKIS,24,736,135,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,18,550,45,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,24,729,335,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,18,554,66,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,24,711,500,91-100,error,filled out web-based version when child was too young (younger than 23;15)
+babylab-lmu,50,FRAKIS,18,567,11,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,50,FRAKIS,24,724,218,51-75,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,18,547,4,1-10,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,24,725,96,11-25,noerror,filled out web-based version
+babylab-lmu,52,FRAKIS,18,576,45,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,52,FRAKIS,24,737,259,51-75,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,18,559,24,26-50,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,24,722,263,51-75,noerror,filled out web-based version
+babylab-lmu,56,FRAKIS,18,562,37,26-50,error,already aged out; filled out web-based version
+babylab-lmu,56,FRAKIS,24,744,222,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,18,558,28,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,24,724,253,51-75,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,18,540,6,1-10,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,24,734,237,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,18,540,31,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,24,723,309,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,18,542,112,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,24,732,308,51-75,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,18,544,3,1-10,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,24,739,3,1-10,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,18,543,117,76-90,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,24,727,516,91-100,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,18,549,87,51-75,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,24,724,340,51-75,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,18,542,8,11-25,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,24,732,41,11-25,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,18,542,19,26-50,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,24,723,196,51-75,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,18,547,31,26-50,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,24,727,396,76-90,noerror,filled out web-based version
+babylab-lmu,70,FRAKIS,18,587,376,91-100,error,already aged out; filled out web-based version
+babylab-lmu,71,FRAKIS,18,553,21,26-50,noerror,filled out web-based version
+babylab-lmu,72,FRAKIS,24,732,80,11-25,noerror,filled out web-based version
+babylab-lmu,73,FRAKIS,24,732,38,1-10,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,18,544,62,51-75,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,24,730,499,91-100,noerror,filled out web-based version
+babylab-lmu,75,FRAKIS,18,576,111,76-90,error,already aged out; filled out web-based version
+babylab-lmu,76,FRAKIS,18,558,11,11-25,noerror,filled out web-based version
+babylab-lmu,76,FRAKIS,24,735,178,26-50,error,filled out web-based version but did not complete it
+babylab-lmu,76,FRAKIS,24,735,203,26-50,noerror,filled out web-based version a second time the same day and completed it
+babylab-lmu,79,FRAKIS,18,540,34,26-50,noerror,filled out web-based version
+babylab-lmu,79,FRAKIS,24,740,60,11-25,noerror,filled out web-based version
+babylab-lmu,80,FRAKIS,24,727,370,51-75,noerror,filled out web-based version
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+babylab_nijmegen,ba27_9-12,NCDI,24,730,196,28.13,noerror,NA
+babylab_nijmegen,ba29_6-9,NCDI,24,718,146,16.3,noerror,NA
+babylab_nijmegen,ba13_6-9,NCDI,24,727,467,89.58,noerror,NA
+babylab_nijmegen,ba31_9-12,NCDI,24,724,132,24.77,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba30_6-9,NCDI,24,721,465,84.12,noerror,NA
+babylab_nijmegen,ba06_9-12,NCDI,24,758,64,8.5,noerror,NA
+babylab_nijmegen,ba08_6-9,NCDI,24,722,333,69.31,noerror,NA
+babylab_nijmegen,ba25_6-9,NCDI,24,716,571,93.49,noerror,NA
+babylab_nijmegen,ba30_9-12,NCDI,24,722,71,3.14,noerror,NA
+babylab_nijmegen,ba11_9-12,NCDI,24,729,208,30.58,noerror,NA
+babylab_nijmegen,ba19_6-9,NCDI,24,741,63,8.33,noerror,NA
+babylab_nijmegen,ba02_6-9,NCDI,24,716,497,87.61,noerror,NA
+babylab_nijmegen,ba12_6-9,NCDI,24,719,495,92.79,noerror,NA
+babylab_nijmegen,ba15_9-12,NCDI,24,740,513,89.43,noerror,NA
+babylab_nijmegen,ba24_9-12,NCDI,24,720,652,99,noerror,NA
+babylab_nijmegen,ba06_6-9,NCDI,24,719,478,85.46,noerror,NA
+babylab_nijmegen,ba21_6-9,NCDI,24,717,374,70,noerror,NA
+babylab_nijmegen,ba22_6-9,NCDI,24,731,303,53.93,noerror,NA
+babylab_nijmegen,ba15_6-9,NCDI,24,728,413,78.53,noerror,NA
+babylab_nijmegen,ba16_9-12,NCDI,24,718,405,81.54,noerror,NA
+babylab_nijmegen,ba11_6-9,NCDI,24,743,113,9.11,noerror,NA
+babylab_nijmegen,ba23_6-9,NCDI,24,719,122,10.83,noerror,NA
+babylab_nijmegen,ba08_9-12,NCDI,24,728,273,60.4,noerror,NA
+babylab_nijmegen,ba18_9-12,NCDI,24,723,159,30.46,noerror,NA
+babylab_nijmegen,ba05_6-9,NCDI,24,738,80,11.67,noerror,"The DoB of the child, filled in by parents, was wrong (same year as DoT). The correct DoB is retrieved from the database and replaced manually"
+babylab_nijmegen,ba28_9-12,NCDI,24,716,176,23.33,noerror,NA
+babylab_nijmegen,ba23_9-12,NCDI,24,727,389,75,noerror,NA
+babylab_nijmegen,ba27_6-9,NCDI,24,717,455,83.14,noerror,NA
+babylab_nijmegen,ba17_6-9,NCDI,24,737,205,30,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba05_9-12,NCDI,24,733,540,99,noerror,NA
+babylab_nijmegen,ba09_6-9,NCDI,24,714,208,30.58,noerror,NA
+babylab_nijmegen,ba04_9-12,NCDI,24,725,247,54.66,noerror,NA
+babylab_nijmegen,ba21_9-12,NCDI,24,722,336,62.24,noerror,NA
+babylab_nijmegen,ba20_6-9,NCDI,24,729,487,91.86,noerror,NA
+babylab_nijmegen,ba18_6-9,NCDI,24,719,304,54.29,noerror,NA
+babylab_nijmegen,ba10_6-9,NCDI,24,717,570,99,noerror,NA
+babylab_nijmegen,ba25_9-12,NCDI,24,718,261,42.19,noerror,NA
+babylab_nijmegen,ba01_9-12,NCDI,24,732,259,41.56,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba26_6-9,NCDI,24,721,180,35.36,noerror,NA
+babylab-vuw,P01,webcdi,18,551,185,74,noerror,NA
+babylab-vuw,P01,webcdi,24,737,405,62,noerror,NA
+babylab-vuw,P02,webcdi,18,548,68,51,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,P02,webcdi,24,744,321,62,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,S01,webcdi,18,549,45,38,noerror,NA
+babylab-vuw,S01,webcdi,24,734,221,45,noerror,NA
+babylab-vuw,S05,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S05,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S11,webcdi,18,531,201,86,noerror,NA
+babylab-vuw,S11,webcdi,24,727,361,70,noerror,NA
+babylab-vuw,S07,webcdi,18,541,33,27,noerror,NA
+babylab-vuw,S07,webcdi,24,722,190,39,noerror,NA
+babylab-vuw,S09,webcdi,18,536,127,69,noerror,NA
+babylab-vuw,S09,webcdi,24,728,589,96,noerror,NA
+babylab-vuw,S12,webcdi,18,547,76,55,noerror,NA
+babylab-vuw,S12,webcdi,24,730,248,50,noerror,NA
+babylab-vuw,S04,webcdi,18,541,139,72,noerror,NA
+babylab-vuw,S04,webcdi,24,731,443,82,noerror,NA
+babylab-vuw,S06,webcdi,18,539,46,25,noerror,NA
+babylab-vuw,S06,webcdi,24,729,253,35,noerror,NA
+babylab-vuw,S02,webcdi,18,531,75,38,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S02,webcdi,24,734,516,84,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S14,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S14,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S03,webcdi,18,547,120,56,noerror,NA
+babylab-vuw,S03,webcdi,24,724,474,76,noerror,NA
+babylab-vuw,S08,webcdi,18,546,32,25,noerror,NA
+babylab-vuw,S08,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S16,webcdi,18,543,393,95,noerror,NA
+babylab-vuw,S16,webcdi,24,736,559,91,noerror,NA
+babylab-vuw,S13,webcdi,18,548,35,29,noerror,NA
+babylab-vuw,S13,webcdi,24,731,297,58,noerror,NA
+babylab-vuw,S15,webcdi,18,548,261,86,noerror,NA
+babylab-vuw,S15,webcdi,24,726,438,69,noerror,NA
+babyling-oslo,OS_002,NorCDI,18,555,23,16,noerror,Parents comment that she understands much more than she says.
+babyling-oslo,OS_002,NorCDI,24,732,120,9,noerror,NA
+babyling-oslo,OS_003,NorCDI,18,556,65,62,noerror,NA
+babyling-oslo,OS_003,NorCDI,24,733,264,50,noerror,NA
+babyling-oslo,OS_005,NorCDI,18,545,75,49,noerror,NA
+babyling-oslo,OS_005,NorCDI,24,727,178,19,noerror,NA
+babyling-oslo,OS_007,NorCDI,18,549,127,79,noerror,NA
+babyling-oslo,OS_007,NorCDI,24,732,403,74,noerror,NA
+babyling-oslo,OS_009,NorCDI,18,546,86,54,noerror,NA
+babyling-oslo,OS_009,NorCDI,24,730,542,87,noerror,NA
+babyling-oslo,OS_012,NorCDI,18,550,210,90,noerror,NA
+babyling-oslo,OS_012,NorCDI,24,728,604,97,noerror,NA
+babyling-oslo,OS_014,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_014,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_015,NorCDI,18,555,33,27,noerror,NA
+babyling-oslo,OS_015,NorCDI,24,735,193,21,noerror,NA
+babyling-oslo,OS_016,NorCDI,18,542,26,33,noerror,NA
+babyling-oslo,OS_016,NorCDI,24,732,170,33,noerror,NA
+babyling-oslo,OS_017,NorCDI,18,550,8,5,noerror,Parents used 5 min to fill out the form
+babyling-oslo,OS_017,NorCDI,24,731,139,12,noerror,NA
+babyling-oslo,OS_018,NorCDI,18,554,13,14,noerror,NA
+babyling-oslo,OS_018,NorCDI,24,731,45,2,noerror,NA
+babyling-oslo,OS_019,NorCDI,18,549,305,97,noerror,NA
+babyling-oslo,OS_019,NorCDI,24,732,704,99,noerror,NA
+babyling-oslo,OS_022,NorCDI,18,553,42,50,noerror,NA
+babyling-oslo,OS_022,NorCDI,24,729,160,16,noerror,NA
+babyling-oslo,OS_025,NorCDI,18,546,79,51,noerror,NA
+babyling-oslo,OS_025,NorCDI,24,731,247,31,noerror,NA
+babyling-oslo,OS_026,NorCDI,18,550,16,18,noerror,NA
+babyling-oslo,OS_026,NorCDI,24,733,158,31,noerror,NA
+babyling-oslo,OS_028,NorCDI,18,541,10,9,noerror,NA
+babyling-oslo,OS_028,NorCDI,24,727,160,31,noerror,NA
+babyling-oslo,OS_029,NorCDI,18,551,197,83,noerror,NA
+babyling-oslo,OS_029,NorCDI,24,734,507,81,noerror,NA
+babyling-oslo,OS_030,NorCDI,18,553,54,57,noerror,NA
+babyling-oslo,OS_030,NorCDI,24,736,170,33,noerror,NA
+babyling-oslo,OS_031,NorCDI,18,544,47,36,noerror,NA
+babyling-oslo,OS_031,NorCDI,24,729,349,49,noerror,NA
+babyling-oslo,OS_032,NorCDI,18,559,14,15,noerror,NA
+babyling-oslo,OS_032,NorCDI,24,736,148,29,noerror,NA
+babyling-oslo,OS_033,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_033,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_034,NorCDI,18,552,187,81,noerror,NA
+babyling-oslo,OS_034,NorCDI,24,730,474,75,noerror,NA
+babyling-oslo,OS_035,NorCDI,18,545,35,28,noerror,NA
+babyling-oslo,OS_035,NorCDI,24,726,150,14,noerror,NA
+babyling-oslo,OS_036,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_036,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_038,NorCDI,18,552,8,6,noerror,"Parents commented that he has not started to speak yet, and that his brother was similiar and started to speak at the age of 2"
+babyling-oslo,OS_038,NorCDI,24,NA,NA,NA,error,RA error
+babyling-oslo,OS_039,NorCDI,18,547,61,59,noerror,NA
+babyling-oslo,OS_039,NorCDI,24,731,227,43,noerror,NA
+babyling-oslo,OS_040,NorCDI,18,549,28,36,noerror,NA
+babyling-oslo,OS_040,NorCDI,24,733,91,16,noerror,NA
+babyling-oslo,OS_041,NorCDI,18,547,230,93,noerror,NA
+babyling-oslo,OS_041,NorCDI,24,736,643,99,noerror,NA
+babyling-oslo,OS_043,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_043,NorCDI,24,727,286,38,noerror,NA
+babyling-oslo,OS_048,NorCDI,18,547,33,40,noerror,NA
+babyling-oslo,OS_048,NorCDI,24,731,277,52,noerror,NA
+babyling-oslo,OS_050,NorCDI,18,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_050,NorCDI,24,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_051,NorCDI,18,547,12,13,noerror,Parents used 6 min to fill out the form
+babyling-oslo,OS_051,NorCDI,24,731,72,12,noerror,NA
+bcrl-unlv,2901,webcdi,24,792,8,1,error,"Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem"
+bcrl-unlv,2804,webcdi,24,739,99,12,noerror,NA
+bcrl-unlv,2401,webcdi,24,732,346,50,noerror,NA
+bcrl-unlv,3304,webcdi,24,721,51,11,noerror,NA
+bcrl-unlv,3103,webcdi,24,746,248,50,noerror,NA
+bcrl-unlv,802,webcdi,24,753,80,9,noerror,NA
+bcrl-unlv,2304,webcdi,24,719,225,31,noerror,NA
+bcrl-unlv,303,webcdi,24,783,124,18,noerror,NA
+bcrl-unlv,2504,webcdi,24,744,0,1,error,Participant did not complete survey
+bcrl-unlv,1204,webcdi,24,783,174,28,noerror,NA
+bcrl-unlv,404,webcdi,24,770,235,27,noerror,NA
+bcrl-unlv,101,webcdi,24,758,322,63,noerror,NA
+bcrl-unlv,1701,webcdi,24,770,117,22,noerror,NA
+bcrl-unlv,602,webcdi,24,696,210,59,noerror,MA
+bcrl-unlv,3402,webcdi,18,614,0,1,error,Participant did not complete survey
+bcrl-unlv,1902,webcdi,18,669,95,30,noerror,NA
+bcrl-unlv,1103,webcdi,24,691,353,71,noerror,NA
+bcrl-unlv,2703,webcdi,18,592,451,96,noerror,NA
+bcrl-unlv,3201,webcdi,24,793,361,38,noerror,NA
+bcrl-unlv,1504,webcdi,24,745,67,11,noerror,NA
+bcrl-unlv,1002,webcdi,24,1002,51,7,noerror,NA
+bcrl-unlv,3503,webcdi,18,601,208,81,noerror,NA
+bcrl-unlv,2804,webcdi,18,609,0,1,error,Participant did not complete survey
+bcrl-unlv,3201,webcdi,18,610,86,29,noerror,NA
+bcrl-unlv,2703,webcdi,24,743,605,95,noerror,NA
+bcrl-unlv,3002,webcdi,24,738,175,35,noerror,NA
+bcrl-unlv,2103,webcdi,24,746,50,8,noerror,NA
+bcrl-unlv,3604,webcdi,24,713,485,85,noerror,NA
+bcrl-unlv,1401,webcdi,24,769,292,49,noerror,NA
+bcrl-unlv,702,webcdi,24,833,222,23,noerror,NA
+infantcoglab-louisville,236534,webcdi,18,561,83,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,18,567,230,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,18,575,12,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,18,561,100,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,18,610,231,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,18,577,27,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,18,587,13,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,18,546,28,NA,noerror,NA
+infantcoglab-louisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236297,webcdi,18,609,17,NA,noerror,NA
+infantcoglab-louisville,237603,webcdi,18,593,103,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,24,792,496,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,24,761,46,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,24,774,26,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,24,783,507,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,24,754,204,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,24,789,198,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,N/A,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI"
+infantlanglab-utk,MB1R6_1M_S1,webcdi,24,731,367,71,noerror,NA
+infantlanglab-utk,MB1R6_3F_S5,webcdi,24,726,181,30,noerror,NA
+infantlanglab-utk,MB1R6_4F_S6,webcdi,24,729,82,12,noerror,NA
+infantlanglab-utk,MB1R6_4M_S7,webcdi,24,726,243,57,noerror,NA
+infantlanglab-utk,MB1R6_4F_S8,webcdi,24,705,533,91,noerror,NA
+infantlanglab-utk,MB1R6_1F_S11,webcdi,24,714,113,19,noerror,NA
+infantlanglab-utk,MB1R6_3F_S12,webcdi,24,706,148,25,noerror,NA
+infantlanglab-utk,MB1R7_1M_S1,webcdi,24,677,253,66,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,18,573,21,15,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,24,678,76,23,noerror,NA
+infantlanglab-utk,MB1R7_4M_S4,webcdi,24,680,393,87,noerror,NA
+infantlanglab-utk,MB1R7_1F_S5,webcdi,24,697,83,17,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,18,595,96,39,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,24,682,163,34,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,18,573,237,90,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,24,699,95,30,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,18,560,47,39,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,24,686,109,34,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,18,602,23,9,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,24,684,28,4,noerror,NA
+infantlanglab-utk,MB1R8_1F_S1,webcdi,24,692,287,58,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,18,565,139,61,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,24,710,411,73,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,18,596,34,21,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,24,699,75,17,noerror,NA
+infantlanglab-utk,MB1R8_2M_S4,webcdi,24,698,90,28,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,18,557,21,15,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,24,686,105,33,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,18,601,22,12,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,24,684,24,6,noerror,NA
+infantlanglab-utk,MB1R9_1F_S1,webcdi,24,684,270,55,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,18,583,65,41,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,24,700,137,34,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,18,576,174,72,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,24,751,444,70,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,18,591,8,3,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,24,738,19,2,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,18,561,83,58,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,24,722,334,73,noerror,NA
+infantlanglab-utk,MB1R12_3M_S5,webcdi,24,743,133,26,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,18,562,80,57,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,24,738,40,6,noerror,NA
+infantlanglab-utk,MB1R12_4M_S7,webcdi,24,728,59,13,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,18,567,45,24,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,24,727,103,17,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,18,567,90,60,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,24,727,32,4,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,24,711,134,22,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,18,552,29,15,noerror,NA
+infantlanglab-utk,MB1R13_1M_S1,webcdi,18,583,18,9,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,18,563,48,26,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,24,736,549,89,noerror,NA
+infantlanglab-utk,MB1R13_3M_S4,webcdi,18,554,159,77,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,18,562,95,47,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,24,737,377,57,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,18,577,99,49,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,24,785,19,2,noerror,NA
+infantlanglab-utk,MB1R13_3F_S8,webcdi,24,747,226,31,noerror,NA
+infantlanglab-utk,MB1R13_4M_S9,webcdi,24,754,23,4,noerror,NA
+infantlanglab-utk,MB1R13_4F_S10,webcdi,24,751,161,22,noerror,NA
+infantlanglab-utk,MB1R13_2M_S11,webcdi,24,735,379,73,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,18,565,6,4,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,24,736,20,3,noerror,NA
+infantlanglab-utk,MB1R14_1M_S2,webcdi,18,575,259,92,noerror,NA
+infantlanglab-utk,MB1R14_2M_S3,webcdi,18,585,24,13,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,18,592,50,21,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,24,759,283,40,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,18,574,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,24,746,157,21,noerror,NA
+infantlanglab-utk,MB1R14_2F_S7,webcdi,24,739,496,80,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,24,735,199,27,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,18,563,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S11,webcdi,18,597,307,86,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,18,576,106,64,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,24,752,342,67,noerror,NA
+infantlanglab-utk,MB1R14_2M_S14,webcdi,24,760,233,39,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,18,552,102,50,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,24,739,298,43,noerror,NA
+infantlanglab-utk,MB1R14_4M_S17,webcdi,18,562,209,87,noerror,NA
+infantstudies-ubc,MB_M_1,webcdi,18,559,97,62,NA,NA
+infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_3,webcdi,18,540,232,93,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,18,543,51,50,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,18,548,6,3,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_7,webcdi,18,538,79,63,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,18,540,14,12,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_10,webcdi,18,549,15,14,NA,NA
+infantstudies-ubc,MB_M_11,webcdi,18,523,118,65,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_13,webcdi,18,541,10,8,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,18,564,6,3,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_16,webcdi,18,571,19,13,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,18,526,38,27,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_19,webcdi,18,542,32,23,NA,NA
+infantstudies-ubc,MB_M_20,webcdi,18,536,28,20,NA,NA
+infantstudies-ubc,MB_M_21,webcdi,18,557,52,42,NA,NA
+infantstudies-ubc,MB_M_22,webcdi,18,533,21,14,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,18,500,77,57,NA,NA
+infantstudies-ubc,MB_M_24,webcdi,18,490,19,16,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,18,509,5,5,NA,NA
+leeds-lcdu,MB04,O-CDI,18,543,90,NA,noerror,NA
+leeds-lcdu,MB05,O-CDI,18,564,129,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,18,549,12,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,18,562,12,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,18,552,51,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,18,564,222,NA,noerror,NA
+leeds-lcdu,MB12,O-CDI,18,557,3,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,18,563,57,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,18,557,59,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,18,564,49,NA,noerror,NA
+leeds-lcdu,MB01,O-CDI,24,720,172,NA,noerror,NA
+leeds-lcdu,MB02,O-CDI,24,723,250,NA,noerror,NA
+leeds-lcdu,MB03,O-CDI,24,744,171,NA,noerror,NA
+leeds-lcdu,MB04,O-CDI,24,746,283,NA,noerror,one day out of age range (24;16) but only by a few hours
+leeds-lcdu,MB05,O-CDI,24,744,402,NA,noerror,NA
+leeds-lcdu,MB06,O-CDI,24,745,394,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,24,742,156,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,24,724,85,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,24,723,167,NA,noerror,NA
+leeds-lcdu,MB10,O-CDI,24,726,388,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,24,745,395,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,24,723,234,NA,noerror,NA
+leeds-lcdu,MB14,O-CDI,24,733,332,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,24,726,245,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,24,732,112,NA,noerror,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+lll-liv,MB010,O-CDI,18,542,152,NA,noerror,NA
+lll-liv,MB046,O-CDI,18,539,3,NA,noerror,NA
+lll-liv,MB042,O-CDI,18,555,18,NA,noerror,NA
+lll-liv,MB045,O-CDI,18,551,19,NA,noerror,NA
+lll-liv,MB017,O-CDI,18,561,147,NA,noerror,NA
+lll-liv,MB009,O-CDI,18,540,115,NA,noerror,NA
+lll-liv,MB065,O-CDI,18,542,58,NA,noerror,NA
+lll-liv,MB039,O-CDI,18,535,19,NA,noerror,NA
+lll-liv,MB005,O-CDI,18,550,32,NA,noerror,NA
+lll-liv,MB003,O-CDI,18,531,16,NA,noerror,NA
+lll-liv,MB073,O-CDI,18,546,75,NA,noerror,NA
+lll-liv,MB007,O-CDI,18,536,70,NA,noerror,NA
+lll-liv,MB075,O-CDI,18,551,39,NA,noerror,NA
+lll-liv,MB069,O-CDI,18,547,40,NA,noerror,NA
+lll-liv,MB040,O-CDI,18,541,215,NA,noerror,NA
+lll-liv,MB002,O-CDI,18,550,52,NA,noerror,NA
+lll-liv,MB071,O-CDI,18,538,55,NA,noerror,NA
+lll-liv,MB044,O-CDI,18,561,27,NA,noerror,NA
+lll-liv,MB015,O-CDI,18,561,293,NA,noerror,NA
+lll-liv,MB074,O-CDI,18,534,5,NA,noerror,NA
+lll-liv,MB010,O-CDI,24,722,361,NA,noerror,NA
+lll-liv,MB042,O-CDI,24,737,148,NA,noerror,NA
+lll-liv,MB001,O-CDI,24,727,352,NA,noerror,NA
+lll-liv,MB043,O-CDI,24,722,273,NA,noerror,NA
+lll-liv,MB009,O-CDI,24,726,393,NA,noerror,NA
+lll-liv,MB036,O-CDI,24,744,283,NA,noerror,NA
+lll-liv,MB037,O-CDI,24,722,394,NA,noerror,NA
+lll-liv,MB003,O-CDI,24,731,125,NA,noerror,NA
+lll-liv,MB007,O-CDI,24,719,245,NA,noerror,NA
+lll-liv,MB047,O-CDI,24,720,403,NA,noerror,NA
+lll-liv,MB035,O-CDI,24,717,150,NA,noerror,NA
+lll-liv,MB069,O-CDI,24,759,213,NA,noerror,NA
+lll-liv,MB040,O-CDI,24,727,367,NA,noerror,NA
+lll-liv,MB002,O-CDI,24,736,323,NA,noerror,NA
+lll-liv,MB038,O-CDI,24,746,310,NA,noerror,NA
+lll-liv,MB071,O-CDI,24,737,194,NA,noerror,NA
+lll-liv,MB044,O-CDI,24,721,340,NA,noerror,NA
+lscp-psl,4,French European,18,564,19,52.5,noerror,NA
+lscp-psl,4,French European,24,756,94,81.42,noerror,NA
+lscp-psl,10,French European,18,576,39,82.17,noerror,NA
+lscp-psl,10,French European,24,807,97,87.86,noerror,NA
+lscp-psl,11,French European,18,557,13,36.11,noerror,NA
+lscp-psl,11,French European,24,720,81,60.3,noerror,NA
+lscp-psl,13,French European,18,564,3,7.5,noerror,NA
+lscp-psl,17,French European,18,575,29,75.65,noerror,NA
+lscp-psl,17,French European,24,726,84,64.7,noerror,NA
+lscp-psl,19,French European,18,549,7,19,noerror,NA
+lscp-psl,19,French European,24,740,84,64.7,noerror,NA
+lscp-psl,21,French European,24,750,90,73.54,noerror,NA
+lscp-psl,23,French European,18,548,15,41.67,noerror,NA
+lscp-psl,23,French European,24,726,100,100,noerror,NA
+lscp-psl,24,French European,18,563,9,25,noerror,NA
+lscp-psl,24,French European,24,724,73,49.11,noerror,NA
+lscp-psl,27,French European,18,562,24,65,noerror,NA
+lscp-psl,27,French European,24,719,51,29.45,noerror,NA
+lscp-psl,29,French European,24,728,97,87.86,noerror,NA
+lscp-psl,34,French European,18,538,43,84.78,noerror,NA
+lscp-psl,34,French European,24,718,84,64.7,noerror,NA
+weescience-edinburgh,MB01,O-CDI,18,549,88,NA,noerror,NA
+weescience-edinburgh,MB01,O-CDI,24,790,346,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,18,551,164,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,24,763,365,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,18,551,19,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,24,764,253,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,18,550,20,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,24,751,198,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,18,546,49,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,24,751,264,NA,noerror,NA
+weescience-edinburgh,MB09,O-CDI,18,538,87,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,18,564,88,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,24,790,337,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,18,538,148,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,24,720,392,NA,noerror,NA
+weescience-edinburgh,MB16,O-CDI,18,562,382,NA,noerror,NA
+weescience-edinburgh,MB17,O-CDI,18,563,132,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,18,541,54,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,24,754,192,NA,noerror,NA
+weescience-edinburgh,MB19,O-CDI,24,739,199,NA,noerror,NA
+weescience-edinburgh,MB20,O-CDI,18,540,65,NA,noerror,NA
+weescience-edinburgh,MB21,O-CDI,18,532,19,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,18,538,53,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,24,752,372,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,18,536,14,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,24,751,108,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,18,568,51,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,24,765,183,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,18,540,88,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,24,799,391,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,18,536,85,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,24,784,396,NA,noerror,NA
+weescience-edinburgh,MB27,O-CDI,18,537,126,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,18,555,89,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,24,728,265,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,18,560,20,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,24,731,86,NA,noerror,NA
+weescience-edinburgh,MB31,O-CDI,24,763,206,NA,noerror,NA
+weescience-edinburgh,MB32,O-CDI,18,561,102,NA,noerror,NA
+weescience-edinburgh,MB33,O-CDI,18,557,35,NA,noerror,NA
+weescience-edinburgh,MB34,O-CDI,18,535,71,NA,noerror,NA
+weescience-edinburgh,MB35,O-CDI,18,545,32,NA,noerror,NA
+weescience-edinburgh,MB36,O-CDI,18,560,47,NA,noerror,NA
+weltentdecker-zurich,mb_13758,FROSCH,18,558,259,NA,noerror,NA
+weltentdecker-zurich,mb_13794,FROSCH,18,555,8,NA,noerror,NA
+weltentdecker-zurich,mb_12894,FROSCH,18,543,42,NA,noerror,NA
+weltentdecker-zurich,mb_13439,FROSCH,18,551,110,NA,noerror,NA
+weltentdecker-zurich,mb_14059,FROSCH,18,554,10,NA,noerror,NA
+weltentdecker-zurich,mb_14054,FROSCH,18,560,7,NA,noerror,NA
+weltentdecker-zurich,mb_13643,FROSCH,18,551,5,NA,noerror,NA
+weltentdecker-zurich,mb_13447,FROSCH,18,560,20,NA,noerror,NA
+weltentdecker-zurich,mb_12516,FROSCH,convenience,762,117,NA,noerror,NA
+weltentdecker-zurich,mb_13498,FROSCH,convenience,615,79,NA,noerror,NA
+weltentdecker-zurich,mb_12524,FROSCH,convenience,640,240,NA,noerror,NA
+weltentdecker-zurich,mb_13111,FROSCH,convenience,632,21,NA,noerror,NA
+weltentdecker-zurich,mb_13077,FROSCH,convenience,617,269,NA,noerror,NA
+weltentdecker-zurich,mb_12872,FROSCH,convenience,592,51,NA,noerror,NA
+weltentdecker-zurich,mb_12569,FROSCH,convenience,623,59,NA,noerror,NA
+weltentdecker-zurich,mb_13490,FROSCH,convenience,640,68,NA,noerror,NA
+weltentdecker-zurich,mb_13314,FROSCH,convenience,614,24,NA,noerror,NA
+weltentdecker-zurich,mb_13333,FROSCH,convenience,589,16,NA,noerror,NA
+weltentdecker-zurich,mb_13510,FROSCH,convenience,623,61,NA,noerror,NA
+weltentdecker-zurich,mb_12801,FROSCH,convenience,630,19,NA,noerror,NA
+weltentdecker-zurich,mb_12601,FROSCH,convenience,618,24,NA,noerror,NA
+weltentdecker-zurich,mb_13326,FROSCH,convenience,608,270,NA,noerror,NA
+weltentdecker-zurich,mb_13288,FROSCH,convenience,600,125,NA,noerror,NA
+weltentdecker-zurich,mb_13629,FROSCH,convenience,569,21,NA,noerror,NA
+weltentdecker-zurich,mb_13968,FROSCH,convenience,585,250,NA,noerror,NA
+weltentdecker-zurich,mb_13242,FROSCH,convenience,619,5,NA,noerror,NA
+weltentdecker-zurich,mb_13775,FROSCH,convenience,614,62,NA,noerror,NA
+weltentdecker-zurich,mb_13915,FROSCH,convenience,577,38,NA,noerror,NA
+weltentdecker-zurich,mb_13659,FROSCH,convenience,597,115,NA,noerror,NA
+weltentdecker-zurich,mb_13948,FROSCH,convenience,568,151,NA,noerror,NA
+weltentdecker-zurich,mb_12755,FROSCH,convenience,650,15,NA,noerror,NA
+weltentdecker-zurich,mb_13505,FROSCH,convenience,641,410,NA,noerror,NA
+weltentdecker-zurich,mb_12676,FROSCH,convenience,627,195,NA,noerror,NA
+weltentdecker-zurich,mb_12690,FROSCH,convenience,608,86,NA,noerror,NA
+weltentdecker-zurich,mb_13178,FROSCH,convenience,600,322,NA,noerror,NA
+babylab-lmu,4,FRAKIS,18,627,467,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,18,593,28,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,24,724,217,51-75,noerror,filled out web-based version
+babylab-lmu,6,FRAKIS,18,607,29,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,6,FRAKIS,24,730,65,11-25,noerror,filled out web-based version
+babylab-lmu,7,FRAKIS,24,730,432,76-90,noerror,filled out web-based version
+babylab-lmu,9,FRAKIS,18,589,70,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,18,601,112,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,24,729,337,51-75,noerror,filled out web-based version
+babylab-lmu,13,FRAKIS,18,605,50,26-50,error,already aged out; filled out pen-and-paper version and forgot one page
+babylab-lmu,13,FRAKIS,24,732,380,76-90,noerror,filled out web-based version
+babylab-lmu,14,FRAKIS,18,600,98,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,14,FRAKIS,24,723,207,26-50,noerror,filled out web-based version
+babylab-lmu,16,FRAKIS,18,610,30,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,16,FRAKIS,24,731,241,51-75,noerror,filled out web-based version
+babylab-lmu,18,FRAKIS,18,585,194,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,18,FRAKIS,24,726,559,91-100,noerror,filled out web-based version
+babylab-lmu,19,FRAKIS,18,601,30,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,19,FRAKIS,24,735,82,11-25,noerror,filled out web-based version
+babylab-lmu,20,FRAKIS,18,593,65,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,20,FRAKIS,24,727,311,76-90,noerror,filled out web-based version
+babylab-lmu,22,FRAKIS,18,603,39,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,22,FRAKIS,24,730,128,11-25,noerror,filled out web-based version
+babylab-lmu,23,FRAKIS,18,648,250,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,24,FRAKIS,24,721,125,26-50,noerror,filled out web-based version
+babylab-lmu,25,FRAKIS,18,641,431,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,26,FRAKIS,18,597,266,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,27,FRAKIS,24,730,248,51-75,noerror,filled out web-based version
+babylab-lmu,31,FRAKIS,18,589,25,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,31,FRAKIS,24,723,180,26-50,noerror,filled out web-based version
+babylab-lmu,32,FRAKIS,18,589,47,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,32,FRAKIS,24,723,250,26-50,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,18,535,126,91-100,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,24,695,399,76-90,error,filled out web-based version when child was too young (younger than 17;15)
+babylab-lmu,34,FRAKIS,18,589,10,11-25,error,already aged out; filled out web-based version
+babylab-lmu,34,FRAKIS,24,722,36,1-10,noerror,filled out web-based version
+babylab-lmu,35,FRAKIS,24,732,288,51-75,error,filled out web-based version but did not complete it
+babylab-lmu,35,FRAKIS,24,744,374,51-75,noerror,filled out web-based version a second time on another day and completed it
+babylab-lmu,36,FRAKIS,18,581,42,26-50,error,already aged out; filled out web-based version
+babylab-lmu,36,FRAKIS,24,733,329,76-90,noerror,filled out web-based version
+babylab-lmu,37,FRAKIS,24,722,38,1-10,noerror,filled out web-based version
+babylab-lmu,38,FRAKIS,18,571,144,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,38,FRAKIS,24,729,364,51-75,noerror,filled out web-based version
+babylab-lmu,39,FRAKIS,18,608,9,1-10,error,already aged out; filled outweb-based version
+babylab-lmu,39,FRAKIS,24,733,21,1-10,noerror,filled out web-based version
+babylab-lmu,40,FRAKIS,24,728,335,51-75,noerror,filled out web-based version
+babylab-lmu,41,FRAKIS,18,569,221,76-90,error,already aged out; filled out web-based version
+babylab-lmu,41,FRAKIS,24,734,481,91-100,noerror,filled out web-based version
+babylab-lmu,42,FRAKIS,18,570,84,51-75,error,already aged out; filled out web-based version
+babylab-lmu,42,FRAKIS,24,736,472,76-90,noerror,filled out web-based version
+babylab-lmu,44,FRAKIS,18,571,24,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,44,FRAKIS,24,723,77,11-25,noerror,filled out web-based version
+babylab-lmu,45,FRAKIS,24,736,135,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,18,550,45,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,24,729,335,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,18,554,66,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,24,711,500,91-100,error,filled out web-based version when child was too young (younger than 23;15)
+babylab-lmu,50,FRAKIS,18,567,11,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,50,FRAKIS,24,724,218,51-75,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,18,547,4,1-10,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,24,725,96,11-25,noerror,filled out web-based version
+babylab-lmu,52,FRAKIS,18,576,45,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,52,FRAKIS,24,737,259,51-75,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,18,559,24,26-50,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,24,722,263,51-75,noerror,filled out web-based version
+babylab-lmu,56,FRAKIS,18,562,37,26-50,error,already aged out; filled out web-based version
+babylab-lmu,56,FRAKIS,24,744,222,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,18,558,28,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,24,724,253,51-75,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,18,540,6,1-10,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,24,734,237,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,18,540,31,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,24,723,309,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,18,542,112,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,24,732,308,51-75,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,18,544,3,1-10,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,24,739,3,1-10,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,18,543,117,76-90,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,24,727,516,91-100,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,18,549,87,51-75,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,24,724,340,51-75,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,18,542,8,11-25,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,24,732,41,11-25,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,18,542,19,26-50,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,24,723,196,51-75,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,18,547,31,26-50,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,24,727,396,76-90,noerror,filled out web-based version
+babylab-lmu,70,FRAKIS,18,587,376,91-100,error,already aged out; filled out web-based version
+babylab-lmu,71,FRAKIS,18,553,21,26-50,noerror,filled out web-based version
+babylab-lmu,72,FRAKIS,24,732,80,11-25,noerror,filled out web-based version
+babylab-lmu,73,FRAKIS,24,732,38,1-10,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,18,544,62,51-75,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,24,730,499,91-100,noerror,filled out web-based version
+babylab-lmu,75,FRAKIS,18,576,111,76-90,error,already aged out; filled out web-based version
+babylab-lmu,76,FRAKIS,18,558,11,11-25,noerror,filled out web-based version
+babylab-lmu,76,FRAKIS,24,735,178,26-50,error,filled out web-based version but did not complete it
+babylab-lmu,76,FRAKIS,24,735,203,26-50,noerror,filled out web-based version a second time the same day and completed it
+babylab-lmu,79,FRAKIS,18,540,34,26-50,noerror,filled out web-based version
+babylab-lmu,79,FRAKIS,24,740,60,11-25,noerror,filled out web-based version
+babylab-lmu,80,FRAKIS,24,727,370,51-75,noerror,filled out web-based version
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+babylab_nijmegen,ba27_9-12,NCDI,24,730,196,28.13,noerror,NA
+babylab_nijmegen,ba29_6-9,NCDI,24,718,146,16.3,noerror,NA
+babylab_nijmegen,ba13_6-9,NCDI,24,727,467,89.58,noerror,NA
+babylab_nijmegen,ba31_9-12,NCDI,24,724,132,24.77,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba30_6-9,NCDI,24,721,465,84.12,noerror,NA
+babylab_nijmegen,ba06_9-12,NCDI,24,758,64,8.5,noerror,NA
+babylab_nijmegen,ba08_6-9,NCDI,24,722,333,69.31,noerror,NA
+babylab_nijmegen,ba25_6-9,NCDI,24,716,571,93.49,noerror,NA
+babylab_nijmegen,ba30_9-12,NCDI,24,722,71,3.14,noerror,NA
+babylab_nijmegen,ba11_9-12,NCDI,24,729,208,30.58,noerror,NA
+babylab_nijmegen,ba19_6-9,NCDI,24,741,63,8.33,noerror,NA
+babylab_nijmegen,ba02_6-9,NCDI,24,716,497,87.61,noerror,NA
+babylab_nijmegen,ba12_6-9,NCDI,24,719,495,92.79,noerror,NA
+babylab_nijmegen,ba15_9-12,NCDI,24,740,513,89.43,noerror,NA
+babylab_nijmegen,ba24_9-12,NCDI,24,720,652,99,noerror,NA
+babylab_nijmegen,ba06_6-9,NCDI,24,719,478,85.46,noerror,NA
+babylab_nijmegen,ba21_6-9,NCDI,24,717,374,70,noerror,NA
+babylab_nijmegen,ba22_6-9,NCDI,24,731,303,53.93,noerror,NA
+babylab_nijmegen,ba15_6-9,NCDI,24,728,413,78.53,noerror,NA
+babylab_nijmegen,ba16_9-12,NCDI,24,718,405,81.54,noerror,NA
+babylab_nijmegen,ba11_6-9,NCDI,24,743,113,9.11,noerror,NA
+babylab_nijmegen,ba23_6-9,NCDI,24,719,122,10.83,noerror,NA
+babylab_nijmegen,ba08_9-12,NCDI,24,728,273,60.4,noerror,NA
+babylab_nijmegen,ba18_9-12,NCDI,24,723,159,30.46,noerror,NA
+babylab_nijmegen,ba05_6-9,NCDI,24,738,80,11.67,noerror,"The DoB of the child, filled in by parents, was wrong (same year as DoT). The correct DoB is retrieved from the database and replaced manually"
+babylab_nijmegen,ba28_9-12,NCDI,24,716,176,23.33,noerror,NA
+babylab_nijmegen,ba23_9-12,NCDI,24,727,389,75,noerror,NA
+babylab_nijmegen,ba27_6-9,NCDI,24,717,455,83.14,noerror,NA
+babylab_nijmegen,ba17_6-9,NCDI,24,737,205,30,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba05_9-12,NCDI,24,733,540,99,noerror,NA
+babylab_nijmegen,ba09_6-9,NCDI,24,714,208,30.58,noerror,NA
+babylab_nijmegen,ba04_9-12,NCDI,24,725,247,54.66,noerror,NA
+babylab_nijmegen,ba21_9-12,NCDI,24,722,336,62.24,noerror,NA
+babylab_nijmegen,ba20_6-9,NCDI,24,729,487,91.86,noerror,NA
+babylab_nijmegen,ba18_6-9,NCDI,24,719,304,54.29,noerror,NA
+babylab_nijmegen,ba10_6-9,NCDI,24,717,570,99,noerror,NA
+babylab_nijmegen,ba25_9-12,NCDI,24,718,261,42.19,noerror,NA
+babylab_nijmegen,ba01_9-12,NCDI,24,732,259,41.56,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba26_6-9,NCDI,24,721,180,35.36,noerror,NA
+babylab-vuw,P01,webcdi,18,551,185,74,noerror,NA
+babylab-vuw,P01,webcdi,24,737,405,62,noerror,NA
+babylab-vuw,P02,webcdi,18,548,68,51,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,P02,webcdi,24,744,321,62,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,S01,webcdi,18,549,45,38,noerror,NA
+babylab-vuw,S01,webcdi,24,734,221,45,noerror,NA
+babylab-vuw,S05,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S05,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S11,webcdi,18,531,201,86,noerror,NA
+babylab-vuw,S11,webcdi,24,727,361,70,noerror,NA
+babylab-vuw,S07,webcdi,18,541,33,27,noerror,NA
+babylab-vuw,S07,webcdi,24,722,190,39,noerror,NA
+babylab-vuw,S09,webcdi,18,536,127,69,noerror,NA
+babylab-vuw,S09,webcdi,24,728,589,96,noerror,NA
+babylab-vuw,S12,webcdi,18,547,76,55,noerror,NA
+babylab-vuw,S12,webcdi,24,730,248,50,noerror,NA
+babylab-vuw,S04,webcdi,18,541,139,72,noerror,NA
+babylab-vuw,S04,webcdi,24,731,443,82,noerror,NA
+babylab-vuw,S06,webcdi,18,539,46,25,noerror,NA
+babylab-vuw,S06,webcdi,24,729,253,35,noerror,NA
+babylab-vuw,S02,webcdi,18,531,75,38,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S02,webcdi,24,734,516,84,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S14,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S14,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S03,webcdi,18,547,120,56,noerror,NA
+babylab-vuw,S03,webcdi,24,724,474,76,noerror,NA
+babylab-vuw,S08,webcdi,18,546,32,25,noerror,NA
+babylab-vuw,S08,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S16,webcdi,18,543,393,95,noerror,NA
+babylab-vuw,S16,webcdi,24,736,559,91,noerror,NA
+babylab-vuw,S13,webcdi,18,548,35,29,noerror,NA
+babylab-vuw,S13,webcdi,24,731,297,58,noerror,NA
+babylab-vuw,S15,webcdi,18,548,261,86,noerror,NA
+babylab-vuw,S15,webcdi,24,726,438,69,noerror,NA
+babyling-oslo,OS_002,NorCDI,18,555,23,16,noerror,Parents comment that she understands much more than she says.
+babyling-oslo,OS_002,NorCDI,24,732,120,9,noerror,NA
+babyling-oslo,OS_003,NorCDI,18,556,65,62,noerror,NA
+babyling-oslo,OS_003,NorCDI,24,733,264,50,noerror,NA
+babyling-oslo,OS_005,NorCDI,18,545,75,49,noerror,NA
+babyling-oslo,OS_005,NorCDI,24,727,178,19,noerror,NA
+babyling-oslo,OS_007,NorCDI,18,549,127,79,noerror,NA
+babyling-oslo,OS_007,NorCDI,24,732,403,74,noerror,NA
+babyling-oslo,OS_009,NorCDI,18,546,86,54,noerror,NA
+babyling-oslo,OS_009,NorCDI,24,730,542,87,noerror,NA
+babyling-oslo,OS_012,NorCDI,18,550,210,90,noerror,NA
+babyling-oslo,OS_012,NorCDI,24,728,604,97,noerror,NA
+babyling-oslo,OS_014,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_014,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_015,NorCDI,18,555,33,27,noerror,NA
+babyling-oslo,OS_015,NorCDI,24,735,193,21,noerror,NA
+babyling-oslo,OS_016,NorCDI,18,542,26,33,noerror,NA
+babyling-oslo,OS_016,NorCDI,24,732,170,33,noerror,NA
+babyling-oslo,OS_017,NorCDI,18,550,8,5,noerror,Parents used 5 min to fill out the form
+babyling-oslo,OS_017,NorCDI,24,731,139,12,noerror,NA
+babyling-oslo,OS_018,NorCDI,18,554,13,14,noerror,NA
+babyling-oslo,OS_018,NorCDI,24,731,45,2,noerror,NA
+babyling-oslo,OS_019,NorCDI,18,549,305,97,noerror,NA
+babyling-oslo,OS_019,NorCDI,24,732,704,99,noerror,NA
+babyling-oslo,OS_022,NorCDI,18,553,42,50,noerror,NA
+babyling-oslo,OS_022,NorCDI,24,729,160,16,noerror,NA
+babyling-oslo,OS_025,NorCDI,18,546,79,51,noerror,NA
+babyling-oslo,OS_025,NorCDI,24,731,247,31,noerror,NA
+babyling-oslo,OS_026,NorCDI,18,550,16,18,noerror,NA
+babyling-oslo,OS_026,NorCDI,24,733,158,31,noerror,NA
+babyling-oslo,OS_028,NorCDI,18,541,10,9,noerror,NA
+babyling-oslo,OS_028,NorCDI,24,727,160,31,noerror,NA
+babyling-oslo,OS_029,NorCDI,18,551,197,83,noerror,NA
+babyling-oslo,OS_029,NorCDI,24,734,507,81,noerror,NA
+babyling-oslo,OS_030,NorCDI,18,553,54,57,noerror,NA
+babyling-oslo,OS_030,NorCDI,24,736,170,33,noerror,NA
+babyling-oslo,OS_031,NorCDI,18,544,47,36,noerror,NA
+babyling-oslo,OS_031,NorCDI,24,729,349,49,noerror,NA
+babyling-oslo,OS_032,NorCDI,18,559,14,15,noerror,NA
+babyling-oslo,OS_032,NorCDI,24,736,148,29,noerror,NA
+babyling-oslo,OS_033,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_033,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_034,NorCDI,18,552,187,81,noerror,NA
+babyling-oslo,OS_034,NorCDI,24,730,474,75,noerror,NA
+babyling-oslo,OS_035,NorCDI,18,545,35,28,noerror,NA
+babyling-oslo,OS_035,NorCDI,24,726,150,14,noerror,NA
+babyling-oslo,OS_036,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_036,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_038,NorCDI,18,552,8,6,noerror,"Parents commented that he has not started to speak yet, and that his brother was similiar and started to speak at the age of 2"
+babyling-oslo,OS_038,NorCDI,24,NA,NA,NA,error,RA error
+babyling-oslo,OS_039,NorCDI,18,547,61,59,noerror,NA
+babyling-oslo,OS_039,NorCDI,24,731,227,43,noerror,NA
+babyling-oslo,OS_040,NorCDI,18,549,28,36,noerror,NA
+babyling-oslo,OS_040,NorCDI,24,733,91,16,noerror,NA
+babyling-oslo,OS_041,NorCDI,18,547,230,93,noerror,NA
+babyling-oslo,OS_041,NorCDI,24,736,643,99,noerror,NA
+babyling-oslo,OS_043,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_043,NorCDI,24,727,286,38,noerror,NA
+babyling-oslo,OS_048,NorCDI,18,547,33,40,noerror,NA
+babyling-oslo,OS_048,NorCDI,24,731,277,52,noerror,NA
+babyling-oslo,OS_050,NorCDI,18,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_050,NorCDI,24,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_051,NorCDI,18,547,12,13,noerror,Parents used 6 min to fill out the form
+babyling-oslo,OS_051,NorCDI,24,731,72,12,noerror,NA
+bcrl-unlv,2901,webcdi,24,792,8,1,error,"Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem"
+bcrl-unlv,2804,webcdi,24,739,99,12,noerror,NA
+bcrl-unlv,2401,webcdi,24,732,346,50,noerror,NA
+bcrl-unlv,3304,webcdi,24,721,51,11,noerror,NA
+bcrl-unlv,3103,webcdi,24,746,248,50,noerror,NA
+bcrl-unlv,802,webcdi,24,753,80,9,noerror,NA
+bcrl-unlv,2304,webcdi,24,719,225,31,noerror,NA
+bcrl-unlv,303,webcdi,24,783,124,18,noerror,NA
+bcrl-unlv,2504,webcdi,24,744,0,1,error,Participant did not complete survey
+bcrl-unlv,1204,webcdi,24,783,174,28,noerror,NA
+bcrl-unlv,404,webcdi,24,770,235,27,noerror,NA
+bcrl-unlv,101,webcdi,24,758,322,63,noerror,NA
+bcrl-unlv,1701,webcdi,24,770,117,22,noerror,NA
+bcrl-unlv,602,webcdi,24,696,210,59,noerror,MA
+bcrl-unlv,3402,webcdi,18,614,0,1,error,Participant did not complete survey
+bcrl-unlv,1902,webcdi,18,669,95,30,noerror,NA
+bcrl-unlv,1103,webcdi,24,691,353,71,noerror,NA
+bcrl-unlv,2703,webcdi,18,592,451,96,noerror,NA
+bcrl-unlv,3201,webcdi,24,793,361,38,noerror,NA
+bcrl-unlv,1504,webcdi,24,745,67,11,noerror,NA
+bcrl-unlv,1002,webcdi,24,1002,51,7,noerror,NA
+bcrl-unlv,3503,webcdi,18,601,208,81,noerror,NA
+bcrl-unlv,2804,webcdi,18,609,0,1,error,Participant did not complete survey
+bcrl-unlv,3201,webcdi,18,610,86,29,noerror,NA
+bcrl-unlv,2703,webcdi,24,743,605,95,noerror,NA
+bcrl-unlv,3002,webcdi,24,738,175,35,noerror,NA
+bcrl-unlv,2103,webcdi,24,746,50,8,noerror,NA
+bcrl-unlv,3604,webcdi,24,713,485,85,noerror,NA
+bcrl-unlv,1401,webcdi,24,769,292,49,noerror,NA
+bcrl-unlv,702,webcdi,24,833,222,23,noerror,NA
+infantcoglab-louisville,236534,webcdi,18,561,83,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,18,567,230,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,18,575,12,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,18,561,100,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,18,610,231,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,18,577,27,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,18,587,13,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,18,546,28,NA,noerror,NA
+infantcoglab-louisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236297,webcdi,18,609,17,NA,noerror,NA
+infantcoglab-louisville,237603,webcdi,18,593,103,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,24,792,496,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,24,761,46,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,24,774,26,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,24,783,507,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,24,754,204,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,24,789,198,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,N/A,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI"
+infantlanglab-utk,MB1R6_1M_S1,webcdi,24,731,367,71,noerror,NA
+infantlanglab-utk,MB1R6_3F_S5,webcdi,24,726,181,30,noerror,NA
+infantlanglab-utk,MB1R6_4F_S6,webcdi,24,729,82,12,noerror,NA
+infantlanglab-utk,MB1R6_4M_S7,webcdi,24,726,243,57,noerror,NA
+infantlanglab-utk,MB1R6_4F_S8,webcdi,24,705,533,91,noerror,NA
+infantlanglab-utk,MB1R6_1F_S11,webcdi,24,714,113,19,noerror,NA
+infantlanglab-utk,MB1R6_3F_S12,webcdi,24,706,148,25,noerror,NA
+infantlanglab-utk,MB1R7_1M_S1,webcdi,24,677,253,66,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,18,573,21,15,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,24,678,76,23,noerror,NA
+infantlanglab-utk,MB1R7_4M_S4,webcdi,24,680,393,87,noerror,NA
+infantlanglab-utk,MB1R7_1F_S5,webcdi,24,697,83,17,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,18,595,96,39,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,24,682,163,34,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,18,573,237,90,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,24,699,95,30,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,18,560,47,39,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,24,686,109,34,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,18,602,23,9,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,24,684,28,4,noerror,NA
+infantlanglab-utk,MB1R8_1F_S1,webcdi,24,692,287,58,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,18,565,139,61,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,24,710,411,73,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,18,596,34,21,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,24,699,75,17,noerror,NA
+infantlanglab-utk,MB1R8_2M_S4,webcdi,24,698,90,28,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,18,557,21,15,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,24,686,105,33,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,18,601,22,12,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,24,684,24,6,noerror,NA
+infantlanglab-utk,MB1R9_1F_S1,webcdi,24,684,270,55,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,18,583,65,41,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,24,700,137,34,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,18,576,174,72,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,24,751,444,70,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,18,591,8,3,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,24,738,19,2,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,18,561,83,58,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,24,722,334,73,noerror,NA
+infantlanglab-utk,MB1R12_3M_S5,webcdi,24,743,133,26,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,18,562,80,57,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,24,738,40,6,noerror,NA
+infantlanglab-utk,MB1R12_4M_S7,webcdi,24,728,59,13,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,18,567,45,24,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,24,727,103,17,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,18,567,90,60,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,24,727,32,4,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,24,711,134,22,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,18,552,29,15,noerror,NA
+infantlanglab-utk,MB1R13_1M_S1,webcdi,18,583,18,9,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,18,563,48,26,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,24,736,549,89,noerror,NA
+infantlanglab-utk,MB1R13_3M_S4,webcdi,18,554,159,77,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,18,562,95,47,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,24,737,377,57,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,18,577,99,49,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,24,785,19,2,noerror,NA
+infantlanglab-utk,MB1R13_3F_S8,webcdi,24,747,226,31,noerror,NA
+infantlanglab-utk,MB1R13_4M_S9,webcdi,24,754,23,4,noerror,NA
+infantlanglab-utk,MB1R13_4F_S10,webcdi,24,751,161,22,noerror,NA
+infantlanglab-utk,MB1R13_2M_S11,webcdi,24,735,379,73,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,18,565,6,4,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,24,736,20,3,noerror,NA
+infantlanglab-utk,MB1R14_1M_S2,webcdi,18,575,259,92,noerror,NA
+infantlanglab-utk,MB1R14_2M_S3,webcdi,18,585,24,13,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,18,592,50,21,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,24,759,283,40,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,18,574,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,24,746,157,21,noerror,NA
+infantlanglab-utk,MB1R14_2F_S7,webcdi,24,739,496,80,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,24,735,199,27,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,18,563,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S11,webcdi,18,597,307,86,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,18,576,106,64,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,24,752,342,67,noerror,NA
+infantlanglab-utk,MB1R14_2M_S14,webcdi,24,760,233,39,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,18,552,102,50,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,24,739,298,43,noerror,NA
+infantlanglab-utk,MB1R14_4M_S17,webcdi,18,562,209,87,noerror,NA
+infantstudies-ubc,MB_M_1,webcdi,18,559,97,62,NA,NA
+infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_3,webcdi,18,540,232,93,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,18,543,51,50,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,18,548,6,3,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_7,webcdi,18,538,79,63,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,18,540,14,12,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_10,webcdi,18,549,15,14,NA,NA
+infantstudies-ubc,MB_M_11,webcdi,18,523,118,65,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_13,webcdi,18,541,10,8,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,18,564,6,3,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_16,webcdi,18,571,19,13,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,18,526,38,27,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_19,webcdi,18,542,32,23,NA,NA
+infantstudies-ubc,MB_M_20,webcdi,18,536,28,20,NA,NA
+infantstudies-ubc,MB_M_21,webcdi,18,557,52,42,NA,NA
+infantstudies-ubc,MB_M_22,webcdi,18,533,21,14,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,18,500,77,57,NA,NA
+infantstudies-ubc,MB_M_24,webcdi,18,490,19,16,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,18,509,5,5,NA,NA
+leeds-lcdu,MB04,O-CDI,18,543,90,NA,noerror,NA
+leeds-lcdu,MB05,O-CDI,18,564,129,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,18,549,12,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,18,562,12,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,18,552,51,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,18,564,222,NA,noerror,NA
+leeds-lcdu,MB12,O-CDI,18,557,3,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,18,563,57,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,18,557,59,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,18,564,49,NA,noerror,NA
+leeds-lcdu,MB01,O-CDI,24,720,172,NA,noerror,NA
+leeds-lcdu,MB02,O-CDI,24,723,250,NA,noerror,NA
+leeds-lcdu,MB03,O-CDI,24,744,171,NA,noerror,NA
+leeds-lcdu,MB04,O-CDI,24,746,283,NA,noerror,one day out of age range (24;16) but only by a few hours
+leeds-lcdu,MB05,O-CDI,24,744,402,NA,noerror,NA
+leeds-lcdu,MB06,O-CDI,24,745,394,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,24,742,156,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,24,724,85,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,24,723,167,NA,noerror,NA
+leeds-lcdu,MB10,O-CDI,24,726,388,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,24,745,395,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,24,723,234,NA,noerror,NA
+leeds-lcdu,MB14,O-CDI,24,733,332,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,24,726,245,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,24,732,112,NA,noerror,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+lll-liv,MB010,O-CDI,18,542,152,NA,noerror,NA
+lll-liv,MB046,O-CDI,18,539,3,NA,noerror,NA
+lll-liv,MB042,O-CDI,18,555,18,NA,noerror,NA
+lll-liv,MB045,O-CDI,18,551,19,NA,noerror,NA
+lll-liv,MB017,O-CDI,18,561,147,NA,noerror,NA
+lll-liv,MB009,O-CDI,18,540,115,NA,noerror,NA
+lll-liv,MB065,O-CDI,18,542,58,NA,noerror,NA
+lll-liv,MB039,O-CDI,18,535,19,NA,noerror,NA
+lll-liv,MB005,O-CDI,18,550,32,NA,noerror,NA
+lll-liv,MB003,O-CDI,18,531,16,NA,noerror,NA
+lll-liv,MB073,O-CDI,18,546,75,NA,noerror,NA
+lll-liv,MB007,O-CDI,18,536,70,NA,noerror,NA
+lll-liv,MB075,O-CDI,18,551,39,NA,noerror,NA
+lll-liv,MB069,O-CDI,18,547,40,NA,noerror,NA
+lll-liv,MB040,O-CDI,18,541,215,NA,noerror,NA
+lll-liv,MB002,O-CDI,18,550,52,NA,noerror,NA
+lll-liv,MB071,O-CDI,18,538,55,NA,noerror,NA
+lll-liv,MB044,O-CDI,18,561,27,NA,noerror,NA
+lll-liv,MB015,O-CDI,18,561,293,NA,noerror,NA
+lll-liv,MB074,O-CDI,18,534,5,NA,noerror,NA
+lll-liv,MB010,O-CDI,24,722,361,NA,noerror,NA
+lll-liv,MB042,O-CDI,24,737,148,NA,noerror,NA
+lll-liv,MB001,O-CDI,24,727,352,NA,noerror,NA
+lll-liv,MB043,O-CDI,24,722,273,NA,noerror,NA
+lll-liv,MB009,O-CDI,24,726,393,NA,noerror,NA
+lll-liv,MB036,O-CDI,24,744,283,NA,noerror,NA
+lll-liv,MB037,O-CDI,24,722,394,NA,noerror,NA
+lll-liv,MB003,O-CDI,24,731,125,NA,noerror,NA
+lll-liv,MB007,O-CDI,24,719,245,NA,noerror,NA
+lll-liv,MB047,O-CDI,24,720,403,NA,noerror,NA
+lll-liv,MB035,O-CDI,24,717,150,NA,noerror,NA
+lll-liv,MB069,O-CDI,24,759,213,NA,noerror,NA
+lll-liv,MB040,O-CDI,24,727,367,NA,noerror,NA
+lll-liv,MB002,O-CDI,24,736,323,NA,noerror,NA
+lll-liv,MB038,O-CDI,24,746,310,NA,noerror,NA
+lll-liv,MB071,O-CDI,24,737,194,NA,noerror,NA
+lll-liv,MB044,O-CDI,24,721,340,NA,noerror,NA
+lscp-psl,4,French European,18,564,19,52.5,noerror,NA
+lscp-psl,4,French European,24,756,94,81.42,noerror,NA
+lscp-psl,10,French European,18,576,39,82.17,noerror,NA
+lscp-psl,10,French European,24,807,97,87.86,noerror,NA
+lscp-psl,11,French European,18,557,13,36.11,noerror,NA
+lscp-psl,11,French European,24,720,81,60.3,noerror,NA
+lscp-psl,13,French European,18,564,3,7.5,noerror,NA
+lscp-psl,17,French European,18,575,29,75.65,noerror,NA
+lscp-psl,17,French European,24,726,84,64.7,noerror,NA
+lscp-psl,19,French European,18,549,7,19,noerror,NA
+lscp-psl,19,French European,24,740,84,64.7,noerror,NA
+lscp-psl,21,French European,24,750,90,73.54,noerror,NA
+lscp-psl,23,French European,18,548,15,41.67,noerror,NA
+lscp-psl,23,French European,24,726,100,100,noerror,NA
+lscp-psl,24,French European,18,563,9,25,noerror,NA
+lscp-psl,24,French European,24,724,73,49.11,noerror,NA
+lscp-psl,27,French European,18,562,24,65,noerror,NA
+lscp-psl,27,French European,24,719,51,29.45,noerror,NA
+lscp-psl,29,French European,24,728,97,87.86,noerror,NA
+lscp-psl,34,French European,18,538,43,84.78,noerror,NA
+lscp-psl,34,French European,24,718,84,64.7,noerror,NA
+weescience-edinburgh,MB01,O-CDI,18,549,88,NA,noerror,NA
+weescience-edinburgh,MB01,O-CDI,24,790,346,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,18,551,164,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,24,763,365,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,18,551,19,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,24,764,253,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,18,550,20,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,24,751,198,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,18,546,49,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,24,751,264,NA,noerror,NA
+weescience-edinburgh,MB09,O-CDI,18,538,87,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,18,564,88,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,24,790,337,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,18,538,148,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,24,720,392,NA,noerror,NA
+weescience-edinburgh,MB16,O-CDI,18,562,382,NA,noerror,NA
+weescience-edinburgh,MB17,O-CDI,18,563,132,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,18,541,54,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,24,754,192,NA,noerror,NA
+weescience-edinburgh,MB19,O-CDI,24,739,199,NA,noerror,NA
+weescience-edinburgh,MB20,O-CDI,18,540,65,NA,noerror,NA
+weescience-edinburgh,MB21,O-CDI,18,532,19,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,18,538,53,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,24,752,372,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,18,536,14,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,24,751,108,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,18,568,51,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,24,765,183,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,18,540,88,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,24,799,391,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,18,536,85,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,24,784,396,NA,noerror,NA
+weescience-edinburgh,MB27,O-CDI,18,537,126,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,18,555,89,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,24,728,265,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,18,560,20,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,24,731,86,NA,noerror,NA
+weescience-edinburgh,MB31,O-CDI,24,763,206,NA,noerror,NA
+weescience-edinburgh,MB32,O-CDI,18,561,102,NA,noerror,NA
+weescience-edinburgh,MB33,O-CDI,18,557,35,NA,noerror,NA
+weescience-edinburgh,MB34,O-CDI,18,535,71,NA,noerror,NA
+weescience-edinburgh,MB35,O-CDI,18,545,32,NA,noerror,NA
+weescience-edinburgh,MB36,O-CDI,18,560,47,NA,noerror,NA
+weltentdecker-zurich,mb_13758,FROSCH,18,558,259,NA,noerror,NA
+weltentdecker-zurich,mb_13794,FROSCH,18,555,8,NA,noerror,NA
+weltentdecker-zurich,mb_12894,FROSCH,18,543,42,NA,noerror,NA
+weltentdecker-zurich,mb_13439,FROSCH,18,551,110,NA,noerror,NA
+weltentdecker-zurich,mb_14059,FROSCH,18,554,10,NA,noerror,NA
+weltentdecker-zurich,mb_14054,FROSCH,18,560,7,NA,noerror,NA
+weltentdecker-zurich,mb_13643,FROSCH,18,551,5,NA,noerror,NA
+weltentdecker-zurich,mb_13447,FROSCH,18,560,20,NA,noerror,NA
+weltentdecker-zurich,mb_12516,FROSCH,convenience,762,117,NA,noerror,NA
+weltentdecker-zurich,mb_13498,FROSCH,convenience,615,79,NA,noerror,NA
+weltentdecker-zurich,mb_12524,FROSCH,convenience,640,240,NA,noerror,NA
+weltentdecker-zurich,mb_13111,FROSCH,convenience,632,21,NA,noerror,NA
+weltentdecker-zurich,mb_13077,FROSCH,convenience,617,269,NA,noerror,NA
+weltentdecker-zurich,mb_12872,FROSCH,convenience,592,51,NA,noerror,NA
+weltentdecker-zurich,mb_12569,FROSCH,convenience,623,59,NA,noerror,NA
+weltentdecker-zurich,mb_13490,FROSCH,convenience,640,68,NA,noerror,NA
+weltentdecker-zurich,mb_13314,FROSCH,convenience,614,24,NA,noerror,NA
+weltentdecker-zurich,mb_13333,FROSCH,convenience,589,16,NA,noerror,NA
+weltentdecker-zurich,mb_13510,FROSCH,convenience,623,61,NA,noerror,NA
+weltentdecker-zurich,mb_12801,FROSCH,convenience,630,19,NA,noerror,NA
+weltentdecker-zurich,mb_12601,FROSCH,convenience,618,24,NA,noerror,NA
+weltentdecker-zurich,mb_13326,FROSCH,convenience,608,270,NA,noerror,NA
+weltentdecker-zurich,mb_13288,FROSCH,convenience,600,125,NA,noerror,NA
+weltentdecker-zurich,mb_13629,FROSCH,convenience,569,21,NA,noerror,NA
+weltentdecker-zurich,mb_13968,FROSCH,convenience,585,250,NA,noerror,NA
+weltentdecker-zurich,mb_13242,FROSCH,convenience,619,5,NA,noerror,NA
+weltentdecker-zurich,mb_13775,FROSCH,convenience,614,62,NA,noerror,NA
+weltentdecker-zurich,mb_13915,FROSCH,convenience,577,38,NA,noerror,NA
+weltentdecker-zurich,mb_13659,FROSCH,convenience,597,115,NA,noerror,NA
+weltentdecker-zurich,mb_13948,FROSCH,convenience,568,151,NA,noerror,NA
+weltentdecker-zurich,mb_12755,FROSCH,convenience,650,15,NA,noerror,NA
+weltentdecker-zurich,mb_13505,FROSCH,convenience,641,410,NA,noerror,NA
+weltentdecker-zurich,mb_12676,FROSCH,convenience,627,195,NA,noerror,NA
+weltentdecker-zurich,mb_12690,FROSCH,convenience,608,86,NA,noerror,NA
+weltentdecker-zurich,mb_13178,FROSCH,convenience,600,322,NA,noerror,NA
+babylab-lmu,4,FRAKIS,18,627,467,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,18,593,28,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,5,FRAKIS,24,724,217,51-75,noerror,filled out web-based version
+babylab-lmu,6,FRAKIS,18,607,29,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,6,FRAKIS,24,730,65,11-25,noerror,filled out web-based version
+babylab-lmu,7,FRAKIS,24,730,432,76-90,noerror,filled out web-based version
+babylab-lmu,9,FRAKIS,18,589,70,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,18,601,112,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,10,FRAKIS,24,729,337,51-75,noerror,filled out web-based version
+babylab-lmu,13,FRAKIS,18,605,50,26-50,error,already aged out; filled out pen-and-paper version and forgot one page
+babylab-lmu,13,FRAKIS,24,732,380,76-90,noerror,filled out web-based version
+babylab-lmu,14,FRAKIS,18,600,98,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,14,FRAKIS,24,723,207,26-50,noerror,filled out web-based version
+babylab-lmu,16,FRAKIS,18,610,30,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,16,FRAKIS,24,731,241,51-75,noerror,filled out web-based version
+babylab-lmu,18,FRAKIS,18,585,194,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,18,FRAKIS,24,726,559,91-100,noerror,filled out web-based version
+babylab-lmu,19,FRAKIS,18,601,30,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,19,FRAKIS,24,735,82,11-25,noerror,filled out web-based version
+babylab-lmu,20,FRAKIS,18,593,65,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,20,FRAKIS,24,727,311,76-90,noerror,filled out web-based version
+babylab-lmu,22,FRAKIS,18,603,39,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,22,FRAKIS,24,730,128,11-25,noerror,filled out web-based version
+babylab-lmu,23,FRAKIS,18,648,250,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,24,FRAKIS,24,721,125,26-50,noerror,filled out web-based version
+babylab-lmu,25,FRAKIS,18,641,431,91-100,error,already aged out; filled out pen-and-paper version
+babylab-lmu,26,FRAKIS,18,597,266,76-90,error,already aged out; filled out pen-and-paper version
+babylab-lmu,27,FRAKIS,24,730,248,51-75,noerror,filled out web-based version
+babylab-lmu,31,FRAKIS,18,589,25,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,31,FRAKIS,24,723,180,26-50,noerror,filled out web-based version
+babylab-lmu,32,FRAKIS,18,589,47,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,32,FRAKIS,24,723,250,26-50,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,18,535,126,91-100,noerror,filled out web-based version
+babylab-lmu,33,FRAKIS,24,695,399,76-90,error,filled out web-based version when child was too young (younger than 17;15)
+babylab-lmu,34,FRAKIS,18,589,10,11-25,error,already aged out; filled out web-based version
+babylab-lmu,34,FRAKIS,24,722,36,1-10,noerror,filled out web-based version
+babylab-lmu,35,FRAKIS,24,732,288,51-75,error,filled out web-based version but did not complete it
+babylab-lmu,35,FRAKIS,24,744,374,51-75,noerror,filled out web-based version a second time on another day and completed it
+babylab-lmu,36,FRAKIS,18,581,42,26-50,error,already aged out; filled out web-based version
+babylab-lmu,36,FRAKIS,24,733,329,76-90,noerror,filled out web-based version
+babylab-lmu,37,FRAKIS,24,722,38,1-10,noerror,filled out web-based version
+babylab-lmu,38,FRAKIS,18,571,144,51-75,error,already aged out; filled out pen-and-paper version
+babylab-lmu,38,FRAKIS,24,729,364,51-75,noerror,filled out web-based version
+babylab-lmu,39,FRAKIS,18,608,9,1-10,error,already aged out; filled outweb-based version
+babylab-lmu,39,FRAKIS,24,733,21,1-10,noerror,filled out web-based version
+babylab-lmu,40,FRAKIS,24,728,335,51-75,noerror,filled out web-based version
+babylab-lmu,41,FRAKIS,18,569,221,76-90,error,already aged out; filled out web-based version
+babylab-lmu,41,FRAKIS,24,734,481,91-100,noerror,filled out web-based version
+babylab-lmu,42,FRAKIS,18,570,84,51-75,error,already aged out; filled out web-based version
+babylab-lmu,42,FRAKIS,24,736,472,76-90,noerror,filled out web-based version
+babylab-lmu,44,FRAKIS,18,571,24,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,44,FRAKIS,24,723,77,11-25,noerror,filled out web-based version
+babylab-lmu,45,FRAKIS,24,736,135,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,18,550,45,26-50,noerror,filled out web-based version
+babylab-lmu,46,FRAKIS,24,729,335,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,18,554,66,51-75,noerror,filled out web-based version
+babylab-lmu,47,FRAKIS,24,711,500,91-100,error,filled out web-based version when child was too young (younger than 23;15)
+babylab-lmu,50,FRAKIS,18,567,11,11-25,error,already aged out; filled out pen-and-paper version
+babylab-lmu,50,FRAKIS,24,724,218,51-75,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,18,547,4,1-10,noerror,filled out web-based version
+babylab-lmu,51,FRAKIS,24,725,96,11-25,noerror,filled out web-based version
+babylab-lmu,52,FRAKIS,18,576,45,26-50,error,already aged out; filled out pen-and-paper version
+babylab-lmu,52,FRAKIS,24,737,259,51-75,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,18,559,24,26-50,noerror,filled out web-based version
+babylab-lmu,55,FRAKIS,24,722,263,51-75,noerror,filled out web-based version
+babylab-lmu,56,FRAKIS,18,562,37,26-50,error,already aged out; filled out web-based version
+babylab-lmu,56,FRAKIS,24,744,222,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,18,558,28,26-50,noerror,filled out web-based version
+babylab-lmu,57,FRAKIS,24,724,253,51-75,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,18,540,6,1-10,noerror,filled out web-based version
+babylab-lmu,58,FRAKIS,24,734,237,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,18,540,31,26-50,noerror,filled out web-based version
+babylab-lmu,59,FRAKIS,24,723,309,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,18,542,112,51-75,noerror,filled out web-based version
+babylab-lmu,60,FRAKIS,24,732,308,51-75,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,18,544,3,1-10,noerror,filled out web-based version
+babylab-lmu,61,FRAKIS,24,739,3,1-10,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,18,543,117,76-90,noerror,filled out web-based version
+babylab-lmu,62,FRAKIS,24,727,516,91-100,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,18,549,87,51-75,noerror,filled out web-based version
+babylab-lmu,63,FRAKIS,24,724,340,51-75,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,18,542,8,11-25,noerror,filled out web-based version
+babylab-lmu,65,FRAKIS,24,732,41,11-25,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,18,542,19,26-50,noerror,filled out web-based version
+babylab-lmu,66,FRAKIS,24,723,196,51-75,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,18,547,31,26-50,noerror,filled out web-based version
+babylab-lmu,69,FRAKIS,24,727,396,76-90,noerror,filled out web-based version
+babylab-lmu,70,FRAKIS,18,587,376,91-100,error,already aged out; filled out web-based version
+babylab-lmu,71,FRAKIS,18,553,21,26-50,noerror,filled out web-based version
+babylab-lmu,72,FRAKIS,24,732,80,11-25,noerror,filled out web-based version
+babylab-lmu,73,FRAKIS,24,732,38,1-10,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,18,544,62,51-75,noerror,filled out web-based version
+babylab-lmu,74,FRAKIS,24,730,499,91-100,noerror,filled out web-based version
+babylab-lmu,75,FRAKIS,18,576,111,76-90,error,already aged out; filled out web-based version
+babylab-lmu,76,FRAKIS,18,558,11,11-25,noerror,filled out web-based version
+babylab-lmu,76,FRAKIS,24,735,178,26-50,error,filled out web-based version but did not complete it
+babylab-lmu,76,FRAKIS,24,735,203,26-50,noerror,filled out web-based version a second time the same day and completed it
+babylab-lmu,79,FRAKIS,18,540,34,26-50,noerror,filled out web-based version
+babylab-lmu,79,FRAKIS,24,740,60,11-25,noerror,filled out web-based version
+babylab-lmu,80,FRAKIS,24,727,370,51-75,noerror,filled out web-based version
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+babylab_nijmegen,ba27_9-12,NCDI,24,730,196,28.13,noerror,NA
+babylab_nijmegen,ba29_6-9,NCDI,24,718,146,16.3,noerror,NA
+babylab_nijmegen,ba13_6-9,NCDI,24,727,467,89.58,noerror,NA
+babylab_nijmegen,ba31_9-12,NCDI,24,724,132,24.77,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba30_6-9,NCDI,24,721,465,84.12,noerror,NA
+babylab_nijmegen,ba06_9-12,NCDI,24,758,64,8.5,noerror,NA
+babylab_nijmegen,ba08_6-9,NCDI,24,722,333,69.31,noerror,NA
+babylab_nijmegen,ba25_6-9,NCDI,24,716,571,93.49,noerror,NA
+babylab_nijmegen,ba30_9-12,NCDI,24,722,71,3.14,noerror,NA
+babylab_nijmegen,ba11_9-12,NCDI,24,729,208,30.58,noerror,NA
+babylab_nijmegen,ba19_6-9,NCDI,24,741,63,8.33,noerror,NA
+babylab_nijmegen,ba02_6-9,NCDI,24,716,497,87.61,noerror,NA
+babylab_nijmegen,ba12_6-9,NCDI,24,719,495,92.79,noerror,NA
+babylab_nijmegen,ba15_9-12,NCDI,24,740,513,89.43,noerror,NA
+babylab_nijmegen,ba24_9-12,NCDI,24,720,652,99,noerror,NA
+babylab_nijmegen,ba06_6-9,NCDI,24,719,478,85.46,noerror,NA
+babylab_nijmegen,ba21_6-9,NCDI,24,717,374,70,noerror,NA
+babylab_nijmegen,ba22_6-9,NCDI,24,731,303,53.93,noerror,NA
+babylab_nijmegen,ba15_6-9,NCDI,24,728,413,78.53,noerror,NA
+babylab_nijmegen,ba16_9-12,NCDI,24,718,405,81.54,noerror,NA
+babylab_nijmegen,ba11_6-9,NCDI,24,743,113,9.11,noerror,NA
+babylab_nijmegen,ba23_6-9,NCDI,24,719,122,10.83,noerror,NA
+babylab_nijmegen,ba08_9-12,NCDI,24,728,273,60.4,noerror,NA
+babylab_nijmegen,ba18_9-12,NCDI,24,723,159,30.46,noerror,NA
+babylab_nijmegen,ba05_6-9,NCDI,24,738,80,11.67,noerror,"The DoB of the child, filled in by parents, was wrong (same year as DoT). The correct DoB is retrieved from the database and replaced manually"
+babylab_nijmegen,ba28_9-12,NCDI,24,716,176,23.33,noerror,NA
+babylab_nijmegen,ba23_9-12,NCDI,24,727,389,75,noerror,NA
+babylab_nijmegen,ba27_6-9,NCDI,24,717,455,83.14,noerror,NA
+babylab_nijmegen,ba17_6-9,NCDI,24,737,205,30,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba05_9-12,NCDI,24,733,540,99,noerror,NA
+babylab_nijmegen,ba09_6-9,NCDI,24,714,208,30.58,noerror,NA
+babylab_nijmegen,ba04_9-12,NCDI,24,725,247,54.66,noerror,NA
+babylab_nijmegen,ba21_9-12,NCDI,24,722,336,62.24,noerror,NA
+babylab_nijmegen,ba20_6-9,NCDI,24,729,487,91.86,noerror,NA
+babylab_nijmegen,ba18_6-9,NCDI,24,719,304,54.29,noerror,NA
+babylab_nijmegen,ba10_6-9,NCDI,24,717,570,99,noerror,NA
+babylab_nijmegen,ba25_9-12,NCDI,24,718,261,42.19,noerror,NA
+babylab_nijmegen,ba01_9-12,NCDI,24,732,259,41.56,noerror,"Agedays is calculated on the enddate of the survey i.o. the DoT in by parents, because this date (the day the questionnaire was filled in) was not valid"
+babylab_nijmegen,ba26_6-9,NCDI,24,721,180,35.36,noerror,NA
+babylab-vuw,P01,webcdi,18,551,185,74,noerror,NA
+babylab-vuw,P01,webcdi,24,737,405,62,noerror,NA
+babylab-vuw,P02,webcdi,18,548,68,51,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,P02,webcdi,24,744,321,62,error,"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
+babylab-vuw,S01,webcdi,18,549,45,38,noerror,NA
+babylab-vuw,S01,webcdi,24,734,221,45,noerror,NA
+babylab-vuw,S05,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S05,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S11,webcdi,18,531,201,86,noerror,NA
+babylab-vuw,S11,webcdi,24,727,361,70,noerror,NA
+babylab-vuw,S07,webcdi,18,541,33,27,noerror,NA
+babylab-vuw,S07,webcdi,24,722,190,39,noerror,NA
+babylab-vuw,S09,webcdi,18,536,127,69,noerror,NA
+babylab-vuw,S09,webcdi,24,728,589,96,noerror,NA
+babylab-vuw,S12,webcdi,18,547,76,55,noerror,NA
+babylab-vuw,S12,webcdi,24,730,248,50,noerror,NA
+babylab-vuw,S04,webcdi,18,541,139,72,noerror,NA
+babylab-vuw,S04,webcdi,24,731,443,82,noerror,NA
+babylab-vuw,S06,webcdi,18,539,46,25,noerror,NA
+babylab-vuw,S06,webcdi,24,729,253,35,noerror,NA
+babylab-vuw,S02,webcdi,18,531,75,38,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S02,webcdi,24,734,516,84,noerror,"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
+babylab-vuw,S14,webcdi,18,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S14,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S03,webcdi,18,547,120,56,noerror,NA
+babylab-vuw,S03,webcdi,24,724,474,76,noerror,NA
+babylab-vuw,S08,webcdi,18,546,32,25,noerror,NA
+babylab-vuw,S08,webcdi,24,NA,NA,NA,error,did not complete within timeframe.
+babylab-vuw,S16,webcdi,18,543,393,95,noerror,NA
+babylab-vuw,S16,webcdi,24,736,559,91,noerror,NA
+babylab-vuw,S13,webcdi,18,548,35,29,noerror,NA
+babylab-vuw,S13,webcdi,24,731,297,58,noerror,NA
+babylab-vuw,S15,webcdi,18,548,261,86,noerror,NA
+babylab-vuw,S15,webcdi,24,726,438,69,noerror,NA
+babyling-oslo,OS_002,NorCDI,18,555,23,16,noerror,Parents comment that she understands much more than she says.
+babyling-oslo,OS_002,NorCDI,24,732,120,9,noerror,NA
+babyling-oslo,OS_003,NorCDI,18,556,65,62,noerror,NA
+babyling-oslo,OS_003,NorCDI,24,733,264,50,noerror,NA
+babyling-oslo,OS_005,NorCDI,18,545,75,49,noerror,NA
+babyling-oslo,OS_005,NorCDI,24,727,178,19,noerror,NA
+babyling-oslo,OS_007,NorCDI,18,549,127,79,noerror,NA
+babyling-oslo,OS_007,NorCDI,24,732,403,74,noerror,NA
+babyling-oslo,OS_009,NorCDI,18,546,86,54,noerror,NA
+babyling-oslo,OS_009,NorCDI,24,730,542,87,noerror,NA
+babyling-oslo,OS_012,NorCDI,18,550,210,90,noerror,NA
+babyling-oslo,OS_012,NorCDI,24,728,604,97,noerror,NA
+babyling-oslo,OS_014,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_014,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_015,NorCDI,18,555,33,27,noerror,NA
+babyling-oslo,OS_015,NorCDI,24,735,193,21,noerror,NA
+babyling-oslo,OS_016,NorCDI,18,542,26,33,noerror,NA
+babyling-oslo,OS_016,NorCDI,24,732,170,33,noerror,NA
+babyling-oslo,OS_017,NorCDI,18,550,8,5,noerror,Parents used 5 min to fill out the form
+babyling-oslo,OS_017,NorCDI,24,731,139,12,noerror,NA
+babyling-oslo,OS_018,NorCDI,18,554,13,14,noerror,NA
+babyling-oslo,OS_018,NorCDI,24,731,45,2,noerror,NA
+babyling-oslo,OS_019,NorCDI,18,549,305,97,noerror,NA
+babyling-oslo,OS_019,NorCDI,24,732,704,99,noerror,NA
+babyling-oslo,OS_022,NorCDI,18,553,42,50,noerror,NA
+babyling-oslo,OS_022,NorCDI,24,729,160,16,noerror,NA
+babyling-oslo,OS_025,NorCDI,18,546,79,51,noerror,NA
+babyling-oslo,OS_025,NorCDI,24,731,247,31,noerror,NA
+babyling-oslo,OS_026,NorCDI,18,550,16,18,noerror,NA
+babyling-oslo,OS_026,NorCDI,24,733,158,31,noerror,NA
+babyling-oslo,OS_028,NorCDI,18,541,10,9,noerror,NA
+babyling-oslo,OS_028,NorCDI,24,727,160,31,noerror,NA
+babyling-oslo,OS_029,NorCDI,18,551,197,83,noerror,NA
+babyling-oslo,OS_029,NorCDI,24,734,507,81,noerror,NA
+babyling-oslo,OS_030,NorCDI,18,553,54,57,noerror,NA
+babyling-oslo,OS_030,NorCDI,24,736,170,33,noerror,NA
+babyling-oslo,OS_031,NorCDI,18,544,47,36,noerror,NA
+babyling-oslo,OS_031,NorCDI,24,729,349,49,noerror,NA
+babyling-oslo,OS_032,NorCDI,18,559,14,15,noerror,NA
+babyling-oslo,OS_032,NorCDI,24,736,148,29,noerror,NA
+babyling-oslo,OS_033,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_033,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_034,NorCDI,18,552,187,81,noerror,NA
+babyling-oslo,OS_034,NorCDI,24,730,474,75,noerror,NA
+babyling-oslo,OS_035,NorCDI,18,545,35,28,noerror,NA
+babyling-oslo,OS_035,NorCDI,24,726,150,14,noerror,NA
+babyling-oslo,OS_036,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_036,NorCDI,24,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_038,NorCDI,18,552,8,6,noerror,"Parents commented that he has not started to speak yet, and that his brother was similiar and started to speak at the age of 2"
+babyling-oslo,OS_038,NorCDI,24,NA,NA,NA,error,RA error
+babyling-oslo,OS_039,NorCDI,18,547,61,59,noerror,NA
+babyling-oslo,OS_039,NorCDI,24,731,227,43,noerror,NA
+babyling-oslo,OS_040,NorCDI,18,549,28,36,noerror,NA
+babyling-oslo,OS_040,NorCDI,24,733,91,16,noerror,NA
+babyling-oslo,OS_041,NorCDI,18,547,230,93,noerror,NA
+babyling-oslo,OS_041,NorCDI,24,736,643,99,noerror,NA
+babyling-oslo,OS_043,NorCDI,18,NA,NA,NA,error,Did not respond
+babyling-oslo,OS_043,NorCDI,24,727,286,38,noerror,NA
+babyling-oslo,OS_048,NorCDI,18,547,33,40,noerror,NA
+babyling-oslo,OS_048,NorCDI,24,731,277,52,noerror,NA
+babyling-oslo,OS_050,NorCDI,18,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_050,NorCDI,24,NA,NA,NA,error,Did not want to be contacted
+babyling-oslo,OS_051,NorCDI,18,547,12,13,noerror,Parents used 6 min to fill out the form
+babyling-oslo,OS_051,NorCDI,24,731,72,12,noerror,NA
+bcrl-unlv,2901,webcdi,24,792,8,1,error,"Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem"
+bcrl-unlv,2804,webcdi,24,739,99,12,noerror,NA
+bcrl-unlv,2401,webcdi,24,732,346,50,noerror,NA
+bcrl-unlv,3304,webcdi,24,721,51,11,noerror,NA
+bcrl-unlv,3103,webcdi,24,746,248,50,noerror,NA
+bcrl-unlv,802,webcdi,24,753,80,9,noerror,NA
+bcrl-unlv,2304,webcdi,24,719,225,31,noerror,NA
+bcrl-unlv,303,webcdi,24,783,124,18,noerror,NA
+bcrl-unlv,2504,webcdi,24,744,0,1,error,Participant did not complete survey
+bcrl-unlv,1204,webcdi,24,783,174,28,noerror,NA
+bcrl-unlv,404,webcdi,24,770,235,27,noerror,NA
+bcrl-unlv,101,webcdi,24,758,322,63,noerror,NA
+bcrl-unlv,1701,webcdi,24,770,117,22,noerror,NA
+bcrl-unlv,602,webcdi,24,696,210,59,noerror,MA
+bcrl-unlv,3402,webcdi,18,614,0,1,error,Participant did not complete survey
+bcrl-unlv,1902,webcdi,18,669,95,30,noerror,NA
+bcrl-unlv,1103,webcdi,24,691,353,71,noerror,NA
+bcrl-unlv,2703,webcdi,18,592,451,96,noerror,NA
+bcrl-unlv,3201,webcdi,24,793,361,38,noerror,NA
+bcrl-unlv,1504,webcdi,24,745,67,11,noerror,NA
+bcrl-unlv,1002,webcdi,24,1002,51,7,noerror,NA
+bcrl-unlv,3503,webcdi,18,601,208,81,noerror,NA
+bcrl-unlv,2804,webcdi,18,609,0,1,error,Participant did not complete survey
+bcrl-unlv,3201,webcdi,18,610,86,29,noerror,NA
+bcrl-unlv,2703,webcdi,24,743,605,95,noerror,NA
+bcrl-unlv,3002,webcdi,24,738,175,35,noerror,NA
+bcrl-unlv,2103,webcdi,24,746,50,8,noerror,NA
+bcrl-unlv,3604,webcdi,24,713,485,85,noerror,NA
+bcrl-unlv,1401,webcdi,24,769,292,49,noerror,NA
+bcrl-unlv,702,webcdi,24,833,222,23,noerror,NA
+infantcoglab-louisville,236534,webcdi,18,561,83,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,18,567,230,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,18,575,12,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,18,561,100,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,18,610,231,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,18,577,27,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,18,587,13,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,18,546,28,NA,noerror,NA
+infantcoglab-louisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville,236297,webcdi,18,609,17,NA,noerror,NA
+infantcoglab-louisville,237603,webcdi,18,593,103,NA,noerror,NA
+infantcoglab-louisville,237624,webcdi,24,792,496,NA,noerror,NA
+infantcoglab-louisville,237148,webcdi,24,761,46,NA,noerror,NA
+infantcoglab-louisville,236527,webcdi,24,774,26,NA,noerror,NA
+infantcoglab-louisville,236582,webcdi,24,783,507,NA,noerror,NA
+infantcoglab-louisville,238338,webcdi,24,754,204,NA,noerror,NA
+infantcoglab-louisville,237157,webcdi,24,789,198,NA,noerror,NA
+infantcoglab-louisville,238332,webcdi,N/A,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI"
+infantlanglab-utk,MB1R6_1M_S1,webcdi,24,731,367,71,noerror,NA
+infantlanglab-utk,MB1R6_3F_S5,webcdi,24,726,181,30,noerror,NA
+infantlanglab-utk,MB1R6_4F_S6,webcdi,24,729,82,12,noerror,NA
+infantlanglab-utk,MB1R6_4M_S7,webcdi,24,726,243,57,noerror,NA
+infantlanglab-utk,MB1R6_4F_S8,webcdi,24,705,533,91,noerror,NA
+infantlanglab-utk,MB1R6_1F_S11,webcdi,24,714,113,19,noerror,NA
+infantlanglab-utk,MB1R6_3F_S12,webcdi,24,706,148,25,noerror,NA
+infantlanglab-utk,MB1R7_1M_S1,webcdi,24,677,253,66,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,18,573,21,15,noerror,NA
+infantlanglab-utk,MB1R7_2M_S2,webcdi,24,678,76,23,noerror,NA
+infantlanglab-utk,MB1R7_4M_S4,webcdi,24,680,393,87,noerror,NA
+infantlanglab-utk,MB1R7_1F_S5,webcdi,24,697,83,17,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,18,595,96,39,noerror,NA
+infantlanglab-utk,MB1R7_2F_S7,webcdi,24,682,163,34,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,18,573,237,90,noerror,NA
+infantlanglab-utk,MB1R7_2M_S9,webcdi,24,699,95,30,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,18,560,47,39,noerror,NA
+infantlanglab-utk,MB1R7_1M_S10,webcdi,24,686,109,34,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,18,602,23,9,noerror,NA
+infantlanglab-utk,MB1R7_3F_S12,webcdi,24,684,28,4,noerror,NA
+infantlanglab-utk,MB1R8_1F_S1,webcdi,24,692,287,58,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,18,565,139,61,noerror,NA
+infantlanglab-utk,MB1R8_2F_S2,webcdi,24,710,411,73,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,18,596,34,21,noerror,NA
+infantlanglab-utk,MB1R8_1M_S3,webcdi,24,699,75,17,noerror,NA
+infantlanglab-utk,MB1R8_2M_S4,webcdi,24,698,90,28,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,18,557,21,15,noerror,NA
+infantlanglab-utk,MB1R8_3M_S5,webcdi,24,686,105,33,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,18,601,22,12,noerror,NA
+infantlanglab-utk,MB1R9_4M_S2,webcdi,24,684,24,6,noerror,NA
+infantlanglab-utk,MB1R9_1F_S1,webcdi,24,684,270,55,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,18,583,65,41,noerror,NA
+infantlanglab-utk,MB1R8_4M_S10,webcdi,24,700,137,34,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,18,576,174,72,noerror,NA
+infantlanglab-utk,MB1R12_1F_S1,webcdi,24,751,444,70,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,18,591,8,3,noerror,NA
+infantlanglab-utk,MB1R12_2F_S2,webcdi,24,738,19,2,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,18,561,83,58,noerror,NA
+infantlanglab-utk,MB1R12_1M_S3,webcdi,24,722,334,73,noerror,NA
+infantlanglab-utk,MB1R12_3M_S5,webcdi,24,743,133,26,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,18,562,80,57,noerror,NA
+infantlanglab-utk,MB1R12_4M_S6,webcdi,24,738,40,6,noerror,NA
+infantlanglab-utk,MB1R12_4M_S7,webcdi,24,728,59,13,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,18,567,45,24,noerror,NA
+infantlanglab-utk,MB1R12_3F_S8,webcdi,24,727,103,17,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,18,567,90,60,noerror,NA
+infantlanglab-utk,MB1R12_4F_S9,webcdi,24,727,32,4,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,24,711,134,22,noerror,NA
+infantlanglab-utk,MB1R12_1F_S10,webcdi,18,552,29,15,noerror,NA
+infantlanglab-utk,MB1R13_1M_S1,webcdi,18,583,18,9,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,18,563,48,26,noerror,NA
+infantlanglab-utk,MB1R13_1F_S3,webcdi,24,736,549,89,noerror,NA
+infantlanglab-utk,MB1R13_3M_S4,webcdi,18,554,159,77,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,18,562,95,47,noerror,NA
+infantlanglab-utk,MB1R13_2F_S5,webcdi,24,737,377,57,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,18,577,99,49,noerror,NA
+infantlanglab-utk,MB1R13_3F_S6,webcdi,24,785,19,2,noerror,NA
+infantlanglab-utk,MB1R13_3F_S8,webcdi,24,747,226,31,noerror,NA
+infantlanglab-utk,MB1R13_4M_S9,webcdi,24,754,23,4,noerror,NA
+infantlanglab-utk,MB1R13_4F_S10,webcdi,24,751,161,22,noerror,NA
+infantlanglab-utk,MB1R13_2M_S11,webcdi,24,735,379,73,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,18,565,6,4,noerror,NA
+infantlanglab-utk,MB1R13_3M_S12,webcdi,24,736,20,3,noerror,NA
+infantlanglab-utk,MB1R14_1M_S2,webcdi,18,575,259,92,noerror,NA
+infantlanglab-utk,MB1R14_2M_S3,webcdi,18,585,24,13,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,18,592,50,21,noerror,NA
+infantlanglab-utk,MB1R14_4F_S4,webcdi,24,759,283,40,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,18,574,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S5,webcdi,24,746,157,21,noerror,NA
+infantlanglab-utk,MB1R14_2F_S7,webcdi,24,739,496,80,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,24,735,199,27,noerror,NA
+infantlanglab-utk,MB1R14_4F_S8,webcdi,18,563,53,29,noerror,NA
+infantlanglab-utk,MB1R14_3F_S11,webcdi,18,597,307,86,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,18,576,106,64,noerror,NA
+infantlanglab-utk,MB1R14_4M_S12,webcdi,24,752,342,67,noerror,NA
+infantlanglab-utk,MB1R14_2M_S14,webcdi,24,760,233,39,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,18,552,102,50,noerror,NA
+infantlanglab-utk,MB1R14_4F_S15,webcdi,24,739,298,43,noerror,NA
+infantlanglab-utk,MB1R14_4M_S17,webcdi,18,562,209,87,noerror,NA
+infantstudies-ubc,MB_M_1,webcdi,18,559,97,62,NA,NA
+infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_3,webcdi,18,540,232,93,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,18,543,51,50,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,18,548,6,3,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_7,webcdi,18,538,79,63,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,18,540,14,12,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_10,webcdi,18,549,15,14,NA,NA
+infantstudies-ubc,MB_M_11,webcdi,18,523,118,65,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_13,webcdi,18,541,10,8,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,18,564,6,3,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_16,webcdi,18,571,19,13,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,18,526,38,27,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_19,webcdi,18,542,32,23,NA,NA
+infantstudies-ubc,MB_M_20,webcdi,18,536,28,20,NA,NA
+infantstudies-ubc,MB_M_21,webcdi,18,557,52,42,NA,NA
+infantstudies-ubc,MB_M_22,webcdi,18,533,21,14,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,18,500,77,57,NA,NA
+infantstudies-ubc,MB_M_24,webcdi,18,490,19,16,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,18,509,5,5,NA,NA
+leeds-lcdu,MB04,O-CDI,18,543,90,NA,noerror,NA
+leeds-lcdu,MB05,O-CDI,18,564,129,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,18,549,12,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,18,562,12,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,18,552,51,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,18,564,222,NA,noerror,NA
+leeds-lcdu,MB12,O-CDI,18,557,3,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,18,563,57,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,18,557,59,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,18,564,49,NA,noerror,NA
+leeds-lcdu,MB01,O-CDI,24,720,172,NA,noerror,NA
+leeds-lcdu,MB02,O-CDI,24,723,250,NA,noerror,NA
+leeds-lcdu,MB03,O-CDI,24,744,171,NA,noerror,NA
+leeds-lcdu,MB04,O-CDI,24,746,283,NA,noerror,one day out of age range (24;16) but only by a few hours
+leeds-lcdu,MB05,O-CDI,24,744,402,NA,noerror,NA
+leeds-lcdu,MB06,O-CDI,24,745,394,NA,noerror,NA
+leeds-lcdu,MB07,O-CDI,24,742,156,NA,noerror,NA
+leeds-lcdu,MB08,O-CDI,24,724,85,NA,noerror,NA
+leeds-lcdu,MB09,O-CDI,24,723,167,NA,noerror,NA
+leeds-lcdu,MB10,O-CDI,24,726,388,NA,noerror,NA
+leeds-lcdu,MB11,O-CDI,24,745,395,NA,noerror,NA
+leeds-lcdu,MB13,O-CDI,24,723,234,NA,noerror,NA
+leeds-lcdu,MB14,O-CDI,24,733,332,NA,noerror,NA
+leeds-lcdu,MB15,O-CDI,24,726,245,NA,noerror,NA
+leeds-lcdu,MB16,O-CDI,24,732,112,NA,noerror,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA
+lll-liv,MB010,O-CDI,18,542,152,NA,noerror,NA
+lll-liv,MB046,O-CDI,18,539,3,NA,noerror,NA
+lll-liv,MB042,O-CDI,18,555,18,NA,noerror,NA
+lll-liv,MB045,O-CDI,18,551,19,NA,noerror,NA
+lll-liv,MB017,O-CDI,18,561,147,NA,noerror,NA
+lll-liv,MB009,O-CDI,18,540,115,NA,noerror,NA
+lll-liv,MB065,O-CDI,18,542,58,NA,noerror,NA
+lll-liv,MB039,O-CDI,18,535,19,NA,noerror,NA
+lll-liv,MB005,O-CDI,18,550,32,NA,noerror,NA
+lll-liv,MB003,O-CDI,18,531,16,NA,noerror,NA
+lll-liv,MB073,O-CDI,18,546,75,NA,noerror,NA
+lll-liv,MB007,O-CDI,18,536,70,NA,noerror,NA
+lll-liv,MB075,O-CDI,18,551,39,NA,noerror,NA
+lll-liv,MB069,O-CDI,18,547,40,NA,noerror,NA
+lll-liv,MB040,O-CDI,18,541,215,NA,noerror,NA
+lll-liv,MB002,O-CDI,18,550,52,NA,noerror,NA
+lll-liv,MB071,O-CDI,18,538,55,NA,noerror,NA
+lll-liv,MB044,O-CDI,18,561,27,NA,noerror,NA
+lll-liv,MB015,O-CDI,18,561,293,NA,noerror,NA
+lll-liv,MB074,O-CDI,18,534,5,NA,noerror,NA
+lll-liv,MB010,O-CDI,24,722,361,NA,noerror,NA
+lll-liv,MB042,O-CDI,24,737,148,NA,noerror,NA
+lll-liv,MB001,O-CDI,24,727,352,NA,noerror,NA
+lll-liv,MB043,O-CDI,24,722,273,NA,noerror,NA
+lll-liv,MB009,O-CDI,24,726,393,NA,noerror,NA
+lll-liv,MB036,O-CDI,24,744,283,NA,noerror,NA
+lll-liv,MB037,O-CDI,24,722,394,NA,noerror,NA
+lll-liv,MB003,O-CDI,24,731,125,NA,noerror,NA
+lll-liv,MB007,O-CDI,24,719,245,NA,noerror,NA
+lll-liv,MB047,O-CDI,24,720,403,NA,noerror,NA
+lll-liv,MB035,O-CDI,24,717,150,NA,noerror,NA
+lll-liv,MB069,O-CDI,24,759,213,NA,noerror,NA
+lll-liv,MB040,O-CDI,24,727,367,NA,noerror,NA
+lll-liv,MB002,O-CDI,24,736,323,NA,noerror,NA
+lll-liv,MB038,O-CDI,24,746,310,NA,noerror,NA
+lll-liv,MB071,O-CDI,24,737,194,NA,noerror,NA
+lll-liv,MB044,O-CDI,24,721,340,NA,noerror,NA
+lscp-psl,4,French European,18,564,19,52.5,noerror,NA
+lscp-psl,4,French European,24,756,94,81.42,noerror,NA
+lscp-psl,10,French European,18,576,39,82.17,noerror,NA
+lscp-psl,10,French European,24,807,97,87.86,noerror,NA
+lscp-psl,11,French European,18,557,13,36.11,noerror,NA
+lscp-psl,11,French European,24,720,81,60.3,noerror,NA
+lscp-psl,13,French European,18,564,3,7.5,noerror,NA
+lscp-psl,17,French European,18,575,29,75.65,noerror,NA
+lscp-psl,17,French European,24,726,84,64.7,noerror,NA
+lscp-psl,19,French European,18,549,7,19,noerror,NA
+lscp-psl,19,French European,24,740,84,64.7,noerror,NA
+lscp-psl,21,French European,24,750,90,73.54,noerror,NA
+lscp-psl,23,French European,18,548,15,41.67,noerror,NA
+lscp-psl,23,French European,24,726,100,100,noerror,NA
+lscp-psl,24,French European,18,563,9,25,noerror,NA
+lscp-psl,24,French European,24,724,73,49.11,noerror,NA
+lscp-psl,27,French European,18,562,24,65,noerror,NA
+lscp-psl,27,French European,24,719,51,29.45,noerror,NA
+lscp-psl,29,French European,24,728,97,87.86,noerror,NA
+lscp-psl,34,French European,18,538,43,84.78,noerror,NA
+lscp-psl,34,French European,24,718,84,64.7,noerror,NA
+weescience-edinburgh,MB01,O-CDI,18,549,88,NA,noerror,NA
+weescience-edinburgh,MB01,O-CDI,24,790,346,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,18,551,164,NA,noerror,NA
+weescience-edinburgh,MB02,O-CDI,24,763,365,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,18,551,19,NA,noerror,NA
+weescience-edinburgh,MB03,O-CDI,24,764,253,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,18,550,20,NA,noerror,NA
+weescience-edinburgh,MB06,O-CDI,24,751,198,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,18,546,49,NA,noerror,NA
+weescience-edinburgh,MB07,O-CDI,24,751,264,NA,noerror,NA
+weescience-edinburgh,MB09,O-CDI,18,538,87,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,18,564,88,NA,noerror,NA
+weescience-edinburgh,MB12,O-CDI,24,790,337,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,18,538,148,NA,noerror,NA
+weescience-edinburgh,MB14,O-CDI,24,720,392,NA,noerror,NA
+weescience-edinburgh,MB16,O-CDI,18,562,382,NA,noerror,NA
+weescience-edinburgh,MB17,O-CDI,18,563,132,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,18,541,54,NA,noerror,NA
+weescience-edinburgh,MB18,O-CDI,24,754,192,NA,noerror,NA
+weescience-edinburgh,MB19,O-CDI,24,739,199,NA,noerror,NA
+weescience-edinburgh,MB20,O-CDI,18,540,65,NA,noerror,NA
+weescience-edinburgh,MB21,O-CDI,18,532,19,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,18,538,53,NA,noerror,NA
+weescience-edinburgh,MB22,O-CDI,24,752,372,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,18,536,14,NA,noerror,NA
+weescience-edinburgh,MB23,O-CDI,24,751,108,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,18,568,51,NA,noerror,NA
+weescience-edinburgh,MB24,O-CDI,24,765,183,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,18,540,88,NA,noerror,NA
+weescience-edinburgh,MB25,O-CDI,24,799,391,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,18,536,85,NA,noerror,NA
+weescience-edinburgh,MB26,O-CDI,24,784,396,NA,noerror,NA
+weescience-edinburgh,MB27,O-CDI,18,537,126,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,18,555,89,NA,noerror,NA
+weescience-edinburgh,MB28,O-CDI,24,728,265,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,18,560,20,NA,noerror,NA
+weescience-edinburgh,MB30,O-CDI,24,731,86,NA,noerror,NA
+weescience-edinburgh,MB31,O-CDI,24,763,206,NA,noerror,NA
+weescience-edinburgh,MB32,O-CDI,18,561,102,NA,noerror,NA
+weescience-edinburgh,MB33,O-CDI,18,557,35,NA,noerror,NA
+weescience-edinburgh,MB34,O-CDI,18,535,71,NA,noerror,NA
+weescience-edinburgh,MB35,O-CDI,18,545,32,NA,noerror,NA
+weescience-edinburgh,MB36,O-CDI,18,560,47,NA,noerror,NA
+weltentdecker-zurich,mb_13758,FROSCH,18,558,259,NA,noerror,NA
+weltentdecker-zurich,mb_13794,FROSCH,18,555,8,NA,noerror,NA
+weltentdecker-zurich,mb_12894,FROSCH,18,543,42,NA,noerror,NA
+weltentdecker-zurich,mb_13439,FROSCH,18,551,110,NA,noerror,NA
+weltentdecker-zurich,mb_14059,FROSCH,18,554,10,NA,noerror,NA
+weltentdecker-zurich,mb_14054,FROSCH,18,560,7,NA,noerror,NA
+weltentdecker-zurich,mb_13643,FROSCH,18,551,5,NA,noerror,NA
+weltentdecker-zurich,mb_13447,FROSCH,18,560,20,NA,noerror,NA
+weltentdecker-zurich,mb_12516,FROSCH,convenience,762,117,NA,noerror,NA
+weltentdecker-zurich,mb_13498,FROSCH,convenience,615,79,NA,noerror,NA
+weltentdecker-zurich,mb_12524,FROSCH,convenience,640,240,NA,noerror,NA
+weltentdecker-zurich,mb_13111,FROSCH,convenience,632,21,NA,noerror,NA
+weltentdecker-zurich,mb_13077,FROSCH,convenience,617,269,NA,noerror,NA
+weltentdecker-zurich,mb_12872,FROSCH,convenience,592,51,NA,noerror,NA
+weltentdecker-zurich,mb_12569,FROSCH,convenience,623,59,NA,noerror,NA
+weltentdecker-zurich,mb_13490,FROSCH,convenience,640,68,NA,noerror,NA
+weltentdecker-zurich,mb_13314,FROSCH,convenience,614,24,NA,noerror,NA
+weltentdecker-zurich,mb_13333,FROSCH,convenience,589,16,NA,noerror,NA
+weltentdecker-zurich,mb_13510,FROSCH,convenience,623,61,NA,noerror,NA
+weltentdecker-zurich,mb_12801,FROSCH,convenience,630,19,NA,noerror,NA
+weltentdecker-zurich,mb_12601,FROSCH,convenience,618,24,NA,noerror,NA
+weltentdecker-zurich,mb_13326,FROSCH,convenience,608,270,NA,noerror,NA
+weltentdecker-zurich,mb_13288,FROSCH,convenience,600,125,NA,noerror,NA
+weltentdecker-zurich,mb_13629,FROSCH,convenience,569,21,NA,noerror,NA
+weltentdecker-zurich,mb_13968,FROSCH,convenience,585,250,NA,noerror,NA
+weltentdecker-zurich,mb_13242,FROSCH,convenience,619,5,NA,noerror,NA
+weltentdecker-zurich,mb_13775,FROSCH,convenience,614,62,NA,noerror,NA
+weltentdecker-zurich,mb_13915,FROSCH,convenience,577,38,NA,noerror,NA
+weltentdecker-zurich,mb_13659,FROSCH,convenience,597,115,NA,noerror,NA
+weltentdecker-zurich,mb_13948,FROSCH,convenience,568,151,NA,noerror,NA
+weltentdecker-zurich,mb_12755,FROSCH,convenience,650,15,NA,noerror,NA
+weltentdecker-zurich,mb_13505,FROSCH,convenience,641,410,NA,noerror,NA
+weltentdecker-zurich,mb_12676,FROSCH,convenience,627,195,NA,noerror,NA
+weltentdecker-zurich,mb_12690,FROSCH,convenience,608,86,NA,noerror,NA
+weltentdecker-zurich,mb_13178,FROSCH,convenience,600,322,NA,noerror,NA
