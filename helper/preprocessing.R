@@ -19,8 +19,12 @@ read_cdi <- function(filename, save_unprocessed = F, verbose = F){
   )
   # Read file
   df <- switch(filetype,
-               csv = read_csv(paste0("data/cdi_raw/", filename), col_types = col_types),
-               tsv = read_tsv(paste0("data/cdi_raw/", filename), col_types = col_types)) %>%
+               csv = read_csv(paste0("data/cdi_raw/", filename),
+                              col_types = col_types,
+                              na = c("", "NA", "N/A")),
+               tsv = read_tsv(paste0("data/cdi_raw/", filename),
+                              col_types = col_types,
+                              na = c("", "NA", "N/A"))) %>%
     as_tibble(.name_repair = "universal") # Replaces "-" by "." in column names
   # Save unprocessed data into global file if needed (typically for the first run)
   if(save_unprocessed){

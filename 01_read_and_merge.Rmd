@@ -51,17 +51,31 @@ At the moment, the following labs signed up but didn't send data (or possibly se
 
 ## IDS Preference Data Import
 
-We then import the (pre-processed) data from the original Many Babies study on IDS preference.
+We then import the (pre-processed) data from the original Many Babies study on IDS preference, and chech for consistency of coding for `labid` and `subid`.
 
 ```{r ids_import, message=FALSE, warning=FALSE, error=FALSE}
-data.ids <- read_csv("data/ids_preference_trial.csv")
+# Import IDS data, rename variables, change column types
+data.ids <- read_csv("data/ids_preference_trial.csv") %>%
+  rename(labid = lab) %>%
+  mutate_at(vars(labid, subid), as_factor)
+# Check for labid present in CDI but not IDS (i.e. differently named)
+changed_labid <- setdiff(data.cdi$labid,
+                         data.ids$labid)
+# By hand, we see that the names seem to be the same but with "-" or "_" added in data.cdi
+# Only exception: leeds-lcdu in data.cdi should be lcduleeds
+data.cdi <- data.cdi %>%
+  mutate(labid = case_when(labid == "leeds-lcdu" ~ "lcduleeds",
+                           T ~ str_remove(labid, "-|_")))
+# We check again for safety
+changed_labid <- setdiff(data.cdi$labid,
+                         data.ids$labid)
 ```
 
 # Merge
 
 Finally we merge the IDS preference data into the CDI data, so that only IDS preference data from infants whose CDI score was recorded is kept in the final dataset.
 
-```{r data_merge, message=FALSE, warning=FALSE, error=FALSE}
+```{r data_merge}
 data.merged <- left_join(data.cdi, data.ids)
 write_csv(data.merged, "data/01_processed_merged.csv")
 ```
