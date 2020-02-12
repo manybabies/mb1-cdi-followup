@@ -1,0 +1,84 @@
+---
+title: "MB1 CDI Follow-up Exclusions and Data Manipulations"
+author: "The ManyBabies Analysis Team"
+date: '`r format(Sys.time(), "%a %b %d %X %Y")`'
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: yes
+---
+
+
+# Intro
+
+This script implements and documents exclusion criteria. We first read the full merged dataset produced by the first script `01_read_and_merge.Rmd`.
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+# Define column types
+col_types <- cols(
+  labid = col_factor(),
+  subid = col_factor(),
+  CDI.form = col_factor(),
+  CDI.agerange = col_factor(),
+  CDI.agedays = col_integer(),
+  vocab_nwords = col_integer(),
+  standardized.score.CDI = col_number(),
+  CDI.error = col_factor(),
+  Notes = col_character(),
+  language = col_factor(),
+  language_zone = col_factor(),
+  subid_unique = col_factor(),
+  trial_order = col_factor(),
+  trial_num = col_factor(),
+  trial_type = col_factor(),
+  stimulus_num = col_factor(),
+  method = col_factor(),
+  age_days = col_integer(),
+  age_mo = col_number(),
+  age_group = col_factor(),
+  nae = col_logical(),
+  gender = col_factor(),
+  second_session = col_logical(),
+  looking_time = col_number(),
+  missing = col_logical()
+)
+# Read data
+df <- read_csv("data/01_processed_merged.csv", col_types = col_types)
+```
+
+# Exclusions
+
+## Infants Outside Age Range
+
+We first exclude all infants who are outside the age range described in the data collection protocol. These are:
+
+* for the North American sample, 16 to 20 months and 22 to 26 months for the 18mo and 24mo age groups respectively;
+* for all other participants sample, 17.5 to 18.5 months and 23.5 to 24.5 months.
+
+```{r age_range}
+# Age ranges
+exclusions.age <- df %>%
+  subset(CDI.agerange %in% c("18", "24")) %>% # Already remove "convenience" data
+  mutate(CDI.agemin = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
+                               ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365/12)),
+         CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
+                               ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365/12))) %>%
+  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
+  droplevels()
+```
+
+After this first exclusion, we are left with `r length(levels(exclusions.age$subid_unique))` participants out of `r length(levels(df$subid_unique))`.
+
+## Infants excluded from MB1 IDS
+
+Labs sometimes recorded CDI scores regardless of the inclusion of the IDS data in the original study. Those infants and only those will have `NA` values for columns such as `trial_order`, `trial_num`, `trial_type`.
+
+```{r IDS_exculsion}
+exclusions.ids <- exclusions.age %>%
+  drop_na(trial_order) %>%
+  droplevels()
+```
+
+Our dataset is now reduced from `r length(levels(exclusions.age$subid_unique))` participants to `r length(levels(exclusions.ids$subid_unique))`.
