@@ -98,7 +98,8 @@ unused_subid <- setdiff(data.ids$subid_unique,
                         data.cdi$subid_unique)
 check_subid <- changed_subid_labs %>%
   map(~list(CDI = str_subset(changed_subid, .x) %>% str_sort(),
-            IDS = str_subset(unused_subid, .x) %>% str_sort()))
+            IDS = str_subset(unused_subid, .x) %>% str_sort())) %>%
+  setNames(changed_subid_labs)
 # Fix formatting issues, update subid_unique
 data.cdi <- data.cdi %>%
   mutate_at(vars(subid), as.character) %>%
@@ -117,11 +118,13 @@ changed_subid <- setdiff(data.cdi$subid_unique,
                          data.ids$subid_unique)
 unused_subid <- setdiff(data.ids$subid_unique,
                         data.cdi$subid_unique)
-check_subid <- changed_subid %>%
+changed_subid_labs <- changed_subid %>%
   str_match("[a-z]+") %>%
   unique() %>%
+check_subid <- changed_subid_labs %>%
   map(~list(CDI = str_subset(changed_subid, .x) %>% str_sort(),
-            IDS = str_subset(unused_subid, .x) %>% str_sort()))
+            IDS = str_subset(unused_subid, .x) %>% str_sort())) %>%
+  setNames(changed_subid_labs)
 ```
 
 If most of these resulted from formatting issues, some resulted from infants in the CDI data having been previously excluded from the IDS data for exclusion criteria documented in the corresponding paper. However, dealing with this issue is not the scope of the current script.
