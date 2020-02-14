@@ -4791,326 +4791,465 @@ bcrlunlv,mb0702,webcdi,24,833,222,23,noerror,NA,bcrlunlv:mb0702,American English
 bcrlunlv,mb0702,webcdi,24,833,222,23,noerror,NA,bcrlunlv:mb0702,American English,NAE,2,14,IDS,7,singlescreen,416,13.66735112936345,12-15 mo,TRUE,M,FALSE,13.13,FALSE
 bcrlunlv,mb0702,webcdi,24,833,222,23,noerror,NA,bcrlunlv:mb0702,American English,NAE,2,15,IDS,8,singlescreen,416,13.66735112936345,12-15 mo,TRUE,M,FALSE,5.467,FALSE
 bcrlunlv,mb0702,webcdi,24,833,222,23,noerror,NA,bcrlunlv:mb0702,American English,NAE,2,16,ADS,8,singlescreen,416,13.66735112936345,12-15 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,1,ADS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,16.256,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,2,IDS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.328,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,3,ADS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,9.52,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,4,IDS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,5.832,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,5,IDS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.992,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,6,ADS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.96,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,7,ADS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,8,IDS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.832,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,9,IDS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.584,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,10,ADS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,12.384,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,11,IDS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.768,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,12,ADS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,11.128,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,13,ADS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.832,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,14,IDS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,2.32,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,15,IDS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.24,FALSE
-infantcoglablouisville,236534,webcdi,18,561,83,NA,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,16,ADS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,14.16,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,1,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.248,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,2,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.904,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,3,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,8.76,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,4,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.848,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,5,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,9.552,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,6,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.96,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,7,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,17.544,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,8,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.712,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,9,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.744,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,10,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.696,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,11,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.592,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,12,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.616,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,13,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,2.672,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,14,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,3.4,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,15,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.376,FALSE
-infantcoglablouisville,236582,webcdi,18,567,230,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,16,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.224,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,1,ADS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.552,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,2,IDS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.272,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,3,IDS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.832,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,4,ADS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,5,IDS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,6,ADS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.176,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,7,IDS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.144,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,8,ADS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,9,IDS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.384,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,10,ADS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.32,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,11,ADS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.208,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,12,IDS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.032,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,13,ADS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.096,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,14,IDS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.08,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,15,ADS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,6.976,FALSE
-infantcoglablouisville,236527,webcdi,18,575,12,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,16,IDS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.016,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,1,IDS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,17.208,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,2,ADS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,3,IDS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,6.368,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,4,ADS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.224,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,5,ADS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,6,IDS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.024,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,7,IDS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,8,ADS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,9,ADS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,8.072,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,10,IDS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.92,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,11,ADS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,12,IDS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,13,IDS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.088,FALSE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,14,ADS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,15,ADS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,18,561,100,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,16,IDS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.048,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,1,IDS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,2,ADS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.192,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,3,IDS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,4,ADS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,3.896,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,5,ADS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,5.04,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,6,IDS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.072,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,7,IDS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.944,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,8,ADS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,9,ADS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,10,IDS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,4.616,FALSE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,11,ADS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,12,IDS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,13,IDS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,14,ADS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,15,ADS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,18,610,231,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,16,IDS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,1,ADS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,2,IDS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.192,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,3,ADS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.8,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,4,IDS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.368,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,5,IDS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.847,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,6,ADS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,5.552,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,7,ADS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.88,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,8,IDS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.6,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,9,IDS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.328,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,10,ADS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,2.864,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,11,IDS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.28,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,12,ADS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.32,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,13,ADS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.768,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,14,IDS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.128,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,15,IDS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,9.375,FALSE
-infantcoglablouisville,237148,webcdi,18,577,27,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,16,ADS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.04,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,1,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.76,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,2,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,3,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,8.248,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,4,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.312,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,5,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.256,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,6,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,7,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,8,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,9,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,10,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,11,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,5.368,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,12,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,13,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,4.64,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,14,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,15,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.408,FALSE
-infantcoglablouisville,238332,webcdi,18,587,13,NA,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,16,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,1,ADS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,5.688,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,2,IDS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.96,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,3,IDS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.064,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,4,ADS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,5,IDS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,6,ADS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.896,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,7,IDS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,2.896,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,8,ADS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.088,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,9,IDS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,10,ADS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,10.216,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,11,ADS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,12,IDS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,13,ADS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,14,IDS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,7.152,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,15,ADS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.76,FALSE
-infantcoglablouisville,238338,webcdi,18,546,28,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,16,IDS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,1,ADS,5,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.592,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,2,IDS,5,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.376,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,3,IDS,7,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,6.128,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,4,ADS,7,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.752,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,5,IDS,1,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,6,ADS,1,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,7,IDS,3,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,3.408,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,8,ADS,3,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,16.208,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,9,IDS,2,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,3.36,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,10,ADS,2,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,3.744,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,11,ADS,4,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,7.4,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,12,IDS,4,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,13,ADS,6,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,14,IDS,6,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.144,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,15,ADS,8,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,2.816,FALSE
-infantcoglablouisville,237604,webcdi,18,649,47,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,16,IDS,8,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,1,IDS,1,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,2,ADS,1,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,3,IDS,2,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,4,ADS,2,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,5,ADS,3,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,2.28,FALSE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,6,IDS,3,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,7,IDS,4,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,8,ADS,4,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,9,ADS,5,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,5.032,FALSE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,10,IDS,5,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,4.392,FALSE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,11,ADS,6,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,12,IDS,6,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,13,IDS,7,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,14,ADS,7,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,15,ADS,8,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,236097,webcdi,18,594,44,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,16,IDS,8,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,17.733,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,1,IDS,5,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,2.656,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,2,ADS,5,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,2.296,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,3,ADS,7,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,14.152,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,4,IDS,7,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,2.776,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,5,ADS,1,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.368,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,6,IDS,1,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,7.568,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,7,ADS,3,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.496,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,8,IDS,3,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,11.568,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,9,ADS,2,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,6.64,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,10,IDS,2,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.192,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,11,IDS,4,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,12,ADS,4,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,17.312,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,13,IDS,6,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.168,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,14,ADS,6,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,7.336,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,15,IDS,8,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,6.624,FALSE
-infantcoglablouisville,236172,webcdi,18,599,6,NA,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,16,ADS,8,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,1,IDS,5,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,8.064,FALSE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,2,ADS,5,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,2.128,FALSE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,3,ADS,7,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,4,IDS,7,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,5,ADS,1,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,6,IDS,1,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,7,ADS,3,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,4.72,FALSE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,8,IDS,3,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,9,ADS,2,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,4.448,FALSE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,10,IDS,2,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,11,IDS,4,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,12,ADS,4,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,13,IDS,6,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,14,ADS,6,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,2.592,FALSE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,15,IDS,8,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236297,webcdi,18,609,17,NA,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,16,ADS,8,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,1,ADS,1,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,15.616,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,2,IDS,1,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,14.048,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,3,ADS,2,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,7.384,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,4,IDS,2,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,10.392,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,5,IDS,3,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,17.128,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,6,ADS,3,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.984,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,7,ADS,4,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,17.641,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,8,IDS,4,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,6.096,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,9,IDS,5,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,6.912,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,10,ADS,5,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.64,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,11,IDS,6,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.36,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,12,ADS,6,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,3.104,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,13,ADS,7,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,11.12,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,14,IDS,7,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.096,FALSE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,15,IDS,8,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237603,webcdi,18,593,103,NA,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,16,ADS,8,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,1,IDS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,2,ADS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.192,FALSE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,3,IDS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,4,ADS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,3.896,FALSE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,5,ADS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,5.04,FALSE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,6,IDS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.072,FALSE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,7,IDS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.944,FALSE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,8,ADS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,9,ADS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,10,IDS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,4.616,FALSE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,11,ADS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,12,IDS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,13,IDS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,14,ADS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,15,ADS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237624,webcdi,24,792,496,NA,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,16,IDS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,1,ADS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,2,IDS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.192,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,3,ADS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.8,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,4,IDS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.368,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,5,IDS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.847,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,6,ADS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,5.552,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,7,ADS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.88,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,8,IDS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.6,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,9,IDS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.328,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,10,ADS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,2.864,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,11,IDS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.28,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,12,ADS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.32,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,13,ADS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.768,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,14,IDS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.128,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,15,IDS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,9.375,FALSE
-infantcoglablouisville,237148,webcdi,24,761,46,NA,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,16,ADS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.04,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,1,ADS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.552,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,2,IDS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.272,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,3,IDS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.832,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,4,ADS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,5,IDS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,6,ADS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.176,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,7,IDS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.144,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,8,ADS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,9,IDS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.384,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,10,ADS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.32,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,11,ADS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.208,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,12,IDS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.032,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,13,ADS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.096,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,14,IDS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.08,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,15,ADS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,6.976,FALSE
-infantcoglablouisville,236527,webcdi,24,774,26,NA,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,16,IDS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.016,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,1,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.248,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,2,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.904,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,3,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,8.76,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,4,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.848,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,5,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,9.552,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,6,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.96,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,7,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,17.544,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,8,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.712,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,9,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.744,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,10,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.696,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,11,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.592,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,12,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.616,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,13,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,2.672,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,14,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,3.4,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,15,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.376,FALSE
-infantcoglablouisville,236582,webcdi,24,783,507,NA,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,16,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.224,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,1,ADS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,5.688,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,2,IDS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.96,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,3,IDS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.064,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,4,ADS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,5,IDS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,6,ADS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.896,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,7,IDS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,2.896,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,8,ADS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.088,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,9,IDS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,10,ADS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,10.216,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,11,ADS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,12,IDS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,13,ADS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,14,IDS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,7.152,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,15,ADS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.76,FALSE
-infantcoglablouisville,238338,webcdi,24,754,204,NA,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,16,IDS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,1,IDS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,17.208,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,2,ADS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,3,IDS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,6.368,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,4,ADS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.224,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,5,ADS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,6,IDS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.024,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,7,IDS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,8,ADS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,9,ADS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,8.072,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,10,IDS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.92,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,11,ADS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,12,IDS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,13,IDS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.088,FALSE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,14,ADS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,15,ADS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
-infantcoglablouisville,237157,webcdi,24,789,198,NA,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,16,IDS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.048,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,1,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.76,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,2,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,3,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,8.248,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,4,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.312,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,5,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.256,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,6,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,7,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,8,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,9,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,10,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,11,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,5.368,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,12,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,13,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,4.64,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,14,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,15,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.408,FALSE
-infantcoglablouisville,238332,webcdi,NA,805,342,NA,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,16,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+chosunbaby,hc01,K-webcdi,18,557,NA,NA,noerror,NA,chosunbaby:hc01,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc02,K-webcdi,18,571,NA,NA,noerror,NA,chosunbaby:hc02,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc03,K-webcdi,18,554,NA,NA,noerror,NA,chosunbaby:hc03,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc04,K-webcdi,18,552,NA,NA,noerror,NA,chosunbaby:hc04,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc05,K-webcdi,18,559,NA,NA,noerror,NA,chosunbaby:hc05,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc06,K-webcdi,18,550,NA,NA,noerror,NA,chosunbaby:hc06,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc07,K-webcdi,18,559,NA,NA,noerror,NA,chosunbaby:hc07,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc08,K-webcdi,18,551,NA,NA,noerror,NA,chosunbaby:hc08,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc09,K-webcdi,24,735,NA,NA,noerror,NA,chosunbaby:hc09,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc10,K-webcdi,24,753,NA,NA,noerror,NA,chosunbaby:hc10,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc11,K-webcdi,18,547,NA,NA,noerror,NA,chosunbaby:hc11,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc12,K-webcdi,18,549,NA,NA,noerror,NA,chosunbaby:hc12,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc13,K-webcdi,18,546,NA,NA,noerror,NA,chosunbaby:hc13,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc15,K-webcdi,24,734,NA,NA,noerror,NA,chosunbaby:hc15,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc16,K-webcdi,18,547,NA,NA,noerror,NA,chosunbaby:hc16,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc17,K-webcdi,18,561,NA,NA,noerror,NA,chosunbaby:hc17,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc18,K-webcdi,18,578,NA,NA,noerror,NA,chosunbaby:hc18,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc19,K-webcdi,24,761,NA,NA,noerror,NA,chosunbaby:hc19,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc20,K-webcdi,18,574,NA,NA,noerror,NA,chosunbaby:hc20,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc21,K-webcdi,18,565,NA,NA,noerror,NA,chosunbaby:hc21,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc22,K-webcdi,18,548,NA,NA,noerror,NA,chosunbaby:hc22,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc23,K-webcdi,18,547,NA,NA,noerror,NA,chosunbaby:hc23,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc24,K-webcdi,18,550,NA,NA,noerror,NA,chosunbaby:hc24,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc25,K-webcdi,18,573,NA,NA,noerror,NA,chosunbaby:hc25,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc26,K-webcdi,18,550,NA,NA,noerror,NA,chosunbaby:hc26,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc27,K-webcdi,18,549,NA,NA,noerror,NA,chosunbaby:hc27,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc28,K-webcdi,18,563,NA,NA,noerror,NA,chosunbaby:hc28,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc29,K-webcdi,18,566,NA,NA,noerror,NA,chosunbaby:hc29,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc30,K-webcdi,18,549,NA,NA,noerror,NA,chosunbaby:hc30,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc31,K-webcdi,24,735,NA,NA,noerror,NA,chosunbaby:hc31,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc32,K-webcdi,18,549,NA,NA,noerror,NA,chosunbaby:hc32,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc33,K-webcdi,18,550,NA,NA,noerror,NA,chosunbaby:hc33,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc34,K-webcdi,18,571,NA,NA,noerror,NA,chosunbaby:hc34,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc35,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc35,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc36,K-webcdi,24,747,NA,NA,noerror,NA,chosunbaby:hc36,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc38,K-webcdi,18,574,NA,NA,noerror,NA,chosunbaby:hc38,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc39,K-webcdi,24,758,NA,NA,noerror,NA,chosunbaby:hc39,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc40,K-webcdi,18,564,NA,NA,noerror,NA,chosunbaby:hc40,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc41,K-webcdi,18,551,NA,NA,noerror,NA,chosunbaby:hc41,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc42,K-webcdi,18,577,NA,NA,noerror,NA,chosunbaby:hc42,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc43,K-webcdi,18,549,NA,NA,noerror,NA,chosunbaby:hc43,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0301,K-webcdi,24,735,NA,NA,noerror,NA,chosunbaby:hc0301,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0202,K-webcdi,24,753,NA,NA,noerror,NA,chosunbaby:hc0202,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc44,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc44,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc45,K-webcdi,18,575,NA,NA,noerror,NA,chosunbaby:hc45,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0103,K-webcdi,24,760,NA,NA,noerror,NA,chosunbaby:hc0103,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc46,K-webcdi,18,566,NA,NA,noerror,NA,chosunbaby:hc46,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0704,K-webcdi,24,747,NA,NA,noerror,NA,chosunbaby:hc0704,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc47,K-webcdi,24,757,NA,NA,noerror,NA,chosunbaby:hc47,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0405,K-webcdi,24,758,NA,NA,noerror,NA,chosunbaby:hc0405,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc48,K-webcdi,24,744,NA,NA,noerror,NA,chosunbaby:hc48,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0506,K-webcdi,24,758,NA,NA,noerror,NA,chosunbaby:hc0506,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0807,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc0807,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc49,K-webcdi,24,732,NA,NA,noerror,NA,chosunbaby:hc49,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc0608,K-webcdi,24,759,NA,NA,noerror,NA,chosunbaby:hc0608,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc50,K-webcdi,24,758,NA,NA,noerror,NA,chosunbaby:hc50,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc51,K-webcdi,18,576,NA,NA,noerror,NA,chosunbaby:hc51,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc52,K-webcdi,24,758,NA,NA,noerror,NA,chosunbaby:hc52,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc53,K-webcdi,18,563,NA,NA,noerror,NA,chosunbaby:hc53,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc1309,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc1309,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc1110,K-webcdi,24,747,NA,NA,noerror,NA,chosunbaby:hc1110,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2011,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc2011,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc1812,K-webcdi,24,738,NA,NA,noerror,NA,chosunbaby:hc1812,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc1713,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc1713,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc1614,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc1614,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc1215,K-webcdi,24,761,NA,NA,noerror,NA,chosunbaby:hc1215,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2916,K-webcdi,24,734,NA,NA,noerror,NA,chosunbaby:hc2916,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2217,K-webcdi,24,731,NA,NA,noerror,NA,chosunbaby:hc2217,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc55,K-webcdi,24,737,NA,NA,noerror,NA,chosunbaby:hc55,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc3418,K-webcdi,24,738,NA,NA,noerror,NA,chosunbaby:hc3418,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc56,K-webcdi,18,575,NA,NA,noerror,NA,chosunbaby:hc56,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2719,K-webcdi,24,736,NA,NA,noerror,Dad also answered with similar result,chosunbaby:hc2719,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc3020,K-webcdi,24,732,NA,NA,noerror,NA,chosunbaby:hc3020,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc57,K-webcdi,18,551,NA,NA,noerror,NA,chosunbaby:hc57,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2121,K-webcdi,24,763,NA,NA,noerror,NA,chosunbaby:hc2121,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc3222,K-webcdi,24,733,NA,NA,noerror,NA,chosunbaby:hc3222,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc3323,K-webcdi,24,734,NA,NA,noerror,NA,chosunbaby:hc3323,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2424,K-webcdi,24,755,NA,NA,noerror,NA,chosunbaby:hc2424,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc2325,K-webcdi,24,757,NA,NA,noerror,NA,chosunbaby:hc2325,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc4026,K-webcdi,24,748,NA,NA,noerror,NA,chosunbaby:hc4026,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc62,K-webcdi,18,549,NA,NA,noerror,NA,chosunbaby:hc62,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc4627,K-webcdi,24,753,NA,NA,noerror,delayed speech,chosunbaby:hc4627,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+chosunbaby,hc5728,K-webcdi,24,738,NA,NA,noerror,NA,chosunbaby:hc5728,Korean,Other,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53792,webcdi,23,725,214,36,noerror,NA,InfantCogUBC:53792,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53610,webcdi,23,708,163,27,noerror,NA,InfantCogUBC:53610,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53139,webcdi,23,725,477,91,noerror,NA,InfantCogUBC:53139,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,54079,webcdi,24,734,368,71,noerror,NA,InfantCogUBC:54079,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53613,webcdi,24,735,493,88,noerror,NA,InfantCogUBC:53613,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52929,webcdi,24,731,49,8,noerror,NA,InfantCogUBC:52929,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52907,webcdi,24,743,382,58,noerror,NA,InfantCogUBC:52907,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52838,webcdi,24,733,419,65,noerror,NA,InfantCogUBC:52838,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52825,webcdi,23,721,377,66,noerror,NA,InfantCogUBC:52825,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53118,webcdi,23,719,227,38,noerror,NA,InfantCogUBC:53118,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52790,webcdi,23,712,589,98,noerror,NA,InfantCogUBC:52790,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52592,webcdi,23,723,270,61,noerror,NA,InfantCogUBC:52592,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52504,webcdi,24,732,423,65,noerror,NA,InfantCogUBC:52504,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52411,webcdi,24,733,114,22,noerror,NA,InfantCogUBC:52411,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53082,webcdi,23,727,241,57,noerror,NA,InfantCogUBC:53082,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52318,webcdi,23,729,136,23,noerror,NA,InfantCogUBC:52318,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52677,webcdi,23,727,408,83,noerror,NA,InfantCogUBC:52677,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52113,webcdi,24,732,488,79,noerror,NA,InfantCogUBC:52113,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51864,webcdi,23,718,118,29,noerror,NA,InfantCogUBC:51864,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51902,webcdi,23,720,425,75,noerror,NA,InfantCogUBC:51902,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51744,webcdi,24,745,115,22,noerror,NA,InfantCogUBC:51744,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50515,webcdi,25,781,85,7,noerror,NA,InfantCogUBC:50515,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50825,webcdi,18,548,90,60,noerror,NA,InfantCogUBC:50825,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52845,webcdi,18,550,50,27,noerror,NA,InfantCogUBC:52845,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50712,webcdi,18,555,12,5,noerror,NA,InfantCogUBC:50712,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50967,webcdi,18,549,53,42,noerror,NA,InfantCogUBC:50967,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50177,webcdi,19,579,242,86,noerror,NA,InfantCogUBC:50177,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50515,webcdi,18,549,67,35,noerror,NA,InfantCogUBC:50515,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51438,webcdi,17,546,24,16,noerror,NA,InfantCogUBC:51438,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,54254,webcdi,17,546,25,27,noerror,NA,InfantCogUBC:54254,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51544,webcdi,17,545,27,29,noerror,NA,InfantCogUBC:51544,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52411,webcdi,19,599,29,17,noerror,NA,InfantCogUBC:52411,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50757,webcdi,17,547,42,30,noerror,NA,InfantCogUBC:50757,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50787,webcdi,17,545,25,17,noerror,NA,InfantCogUBC:50787,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50775,webcdi,17,545,18,18,noerror,NA,InfantCogUBC:50775,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50832,webcdi,18,549,89,60,noerror,NA,InfantCogUBC:50832,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51902,webcdi,18,550,128,58,noerror,NA,InfantCogUBC:51902,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53118,webcdi,19,581,156,57,noerror,NA,InfantCogUBC:53118,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52790,webcdi,19,595,263,88,noerror,NA,InfantCogUBC:52790,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52032,webcdi,17,542,44,44,noerror,NA,InfantCogUBC:52032,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52113,webcdi,17,538,101,58,noerror,Age in days was calculated based on when survey was sent out.,InfantCogUBC:52113,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53610,webcdi,18,555,11,5,noerror,NA,InfantCogUBC:53610,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53794,webcdi,18,571,0,1,noerror,NA,InfantCogUBC:53794,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53792,webcdi,18,572,37,20,noerror,NA,InfantCogUBC:53792,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52838,webcdi,19,587,160,58,noerror,NA,InfantCogUBC:52838,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,53613,webcdi,18,575,273,93,noerror,NA,InfantCogUBC:53613,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,54254,webcdi,24,744,470,85,noerror,NA,InfantCogUBC:54254,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51438,webcdi,24,745,192,26,noerror,NA,InfantCogUBC:51438,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52738,webcdi,19,602,73,44,noerror,NA,InfantCogUBC:52738,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50712,webcdi,25,762,138,14,noerror,NA,InfantCogUBC:50712,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50775,webcdi,24,750,60,10,noerror,NA,InfantCogUBC:50775,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50757,webcdi,24,752,358,53,noerror,NA,InfantCogUBC:50757,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,50787,webcdi,24,750,183,25,noerror,NA,InfantCogUBC:50787,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,52108,webcdi,23,716,106,17,noerror,NA,InfantCogUBC:52108,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,54254,webcdi,23,744,289,65,noerror,NA,InfantCogUBC:54254,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+InfantCogUBC,51544,webcdi,23,729,244,57,noerror,NA,InfantCogUBC:51544,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,1,ADS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,16.256,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,2,IDS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.328,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,3,ADS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,9.52,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,4,IDS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,5.832,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,5,IDS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.992,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,6,ADS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.96,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,7,ADS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,8,IDS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.832,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,9,IDS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.584,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,10,ADS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,12.384,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,11,IDS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.768,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,12,ADS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,11.128,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,13,ADS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.832,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,14,IDS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,2.32,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,15,IDS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.24,FALSE
+infantcoglablouisville,236534,webcdi,18,561,83,42,noerror,NA,infantcoglablouisville:236534,American English,NAE,2,16,ADS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,14.16,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,1,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.248,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,2,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.904,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,3,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,8.76,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,4,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.848,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,5,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,9.552,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,6,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.96,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,7,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,17.544,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,8,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.712,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,9,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.744,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,10,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.696,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,11,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.592,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,12,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.616,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,13,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,2.672,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,14,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,3.4,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,15,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.376,FALSE
+infantcoglablouisville,236582,webcdi,18,567,230,82,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,16,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.224,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,1,ADS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.552,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,2,IDS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.272,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,3,IDS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.832,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,4,ADS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,5,IDS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,6,ADS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.176,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,7,IDS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.144,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,8,ADS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,9,IDS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.384,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,10,ADS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.32,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,11,ADS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.208,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,12,IDS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.032,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,13,ADS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.096,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,14,IDS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.08,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,15,ADS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,6.976,FALSE
+infantcoglablouisville,236527,webcdi,18,575,12,8,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,16,IDS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.016,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,1,IDS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,17.208,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,2,ADS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,3,IDS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,6.368,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,4,ADS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.224,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,5,ADS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,6,IDS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.024,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,7,IDS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,8,ADS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,9,ADS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,8.072,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,10,IDS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.92,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,11,ADS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,12,IDS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,13,IDS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.088,FALSE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,14,ADS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,15,ADS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,18,561,100,49,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,16,IDS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.048,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,1,IDS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,2,ADS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.192,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,3,IDS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,4,ADS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,3.896,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,5,ADS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,5.04,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,6,IDS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.072,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,7,IDS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.944,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,8,ADS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,9,ADS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,10,IDS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,4.616,FALSE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,11,ADS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,12,IDS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,13,IDS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,14,ADS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,15,ADS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,18,610,231,66,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,16,IDS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,1,ADS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,2,IDS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.192,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,3,ADS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.8,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,4,IDS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.368,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,5,IDS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.847,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,6,ADS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,5.552,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,7,ADS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.88,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,8,IDS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.6,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,9,IDS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.328,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,10,ADS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,2.864,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,11,IDS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.28,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,12,ADS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.32,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,13,ADS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.768,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,14,IDS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.128,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,15,IDS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,9.375,FALSE
+infantcoglablouisville,237148,webcdi,18,577,27,14,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,16,ADS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.04,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,1,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.76,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,2,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,3,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,8.248,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,4,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.312,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,5,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.256,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,6,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,7,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,8,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,9,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,10,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,11,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,5.368,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,12,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,13,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,4.64,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,14,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,15,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.408,FALSE
+infantcoglablouisville,238332,webcdi,18,587,13,7,noerror,NA,infantcoglablouisville:238332,American English,NAE,3,16,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,1,ADS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,5.688,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,2,IDS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.96,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,3,IDS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.064,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,4,ADS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,5,IDS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,6,ADS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.896,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,7,IDS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,2.896,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,8,ADS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.088,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,9,IDS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,10,ADS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,10.216,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,11,ADS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,12,IDS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,13,ADS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,14,IDS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,7.152,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,15,ADS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.76,FALSE
+infantcoglablouisville,238338,webcdi,18,546,28,20,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,16,IDS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,1,ADS,5,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.592,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,2,IDS,5,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.376,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,3,IDS,7,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,6.128,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,4,ADS,7,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.752,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,5,IDS,1,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,6,ADS,1,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,7,IDS,3,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,3.408,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,8,ADS,3,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,16.208,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,9,IDS,2,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,3.36,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,10,ADS,2,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,3.744,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,11,ADS,4,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,7.4,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,12,IDS,4,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,13,ADS,6,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,14,IDS,6,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,5.144,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,15,ADS,8,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,2.816,FALSE
+infantcoglablouisville,237604,webcdi,18,649,47,17,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:237604,American English,NAE,4,16,IDS,8,singlescreen,338,11.104722792607802,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,1,IDS,1,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,2,ADS,1,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,3,IDS,2,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,4,ADS,2,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,5,ADS,3,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,2.28,FALSE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,6,IDS,3,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,7,IDS,4,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,8,ADS,4,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,9,ADS,5,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,5.032,FALSE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,10,IDS,5,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,4.392,FALSE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,11,ADS,6,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,12,IDS,6,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,13,IDS,7,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,14,ADS,7,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,15,ADS,8,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,236097,webcdi,18,594,44,18,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236097,American English,NAE,1,16,IDS,8,singlescreen,281,9.232032854209445,9-12 mo,TRUE,F,FALSE,17.733,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,1,IDS,5,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,2.656,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,2,ADS,5,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,2.296,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,3,ADS,7,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,14.152,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,4,IDS,7,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,2.776,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,5,ADS,1,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.368,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,6,IDS,1,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,7.568,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,7,ADS,3,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.496,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,8,IDS,3,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,11.568,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,9,ADS,2,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,6.64,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,10,IDS,2,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.192,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,11,IDS,4,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,12,ADS,4,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,17.312,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,13,IDS,6,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,3.168,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,14,ADS,6,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,7.336,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,15,IDS,8,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,6.624,FALSE
+infantcoglablouisville,236172,webcdi,18,599,6,37,error,"original data was lost due to experimenter error, parents filled out web CDI a second time",infantcoglablouisville:236172,American English,NAE,3,16,ADS,8,singlescreen,319,10.480492813141684,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,1,IDS,5,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,8.064,FALSE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,2,ADS,5,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,2.128,FALSE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,3,ADS,7,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,4,IDS,7,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,5,ADS,1,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,6,IDS,1,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,7,ADS,3,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,4.72,FALSE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,8,IDS,3,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,9,ADS,2,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,4.448,FALSE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,10,IDS,2,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,11,IDS,4,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,12,ADS,4,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,13,IDS,6,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,14,ADS,6,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,2.592,FALSE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,15,IDS,8,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236297,webcdi,18,609,17,7,noerror,NA,infantcoglablouisville:236297,American English,NAE,3,16,ADS,8,singlescreen,313,10.283367556468173,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,1,ADS,1,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,15.616,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,2,IDS,1,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,14.048,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,3,ADS,2,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,7.384,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,4,IDS,2,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,10.392,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,5,IDS,3,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,17.128,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,6,ADS,3,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.984,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,7,ADS,4,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,17.641,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,8,IDS,4,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,6.096,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,9,IDS,5,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,6.912,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,10,ADS,5,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.64,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,11,IDS,6,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.36,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,12,ADS,6,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,3.104,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,13,ADS,7,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,11.12,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,14,IDS,7,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,4.096,FALSE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,15,IDS,8,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237603,webcdi,18,593,103,57,noerror,NA,infantcoglablouisville:237603,American English,NAE,2,16,ADS,8,singlescreen,311,10.217659137577002,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,1,IDS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,2,ADS,1,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.192,FALSE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,3,IDS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,4,ADS,2,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,3.896,FALSE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,5,ADS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,5.04,FALSE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,6,IDS,3,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.072,FALSE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,7,IDS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,2.944,FALSE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,8,ADS,4,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,9,ADS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,10,IDS,5,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,4.616,FALSE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,11,ADS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,12,IDS,6,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,13,IDS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,14,ADS,7,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,15,ADS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237624,webcdi,24,792,496,72,noerror,NA,infantcoglablouisville:237624,American English,NAE,1,16,IDS,8,singlescreen,316,10.381930184804927,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,1,ADS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,2,IDS,1,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.192,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,3,ADS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.8,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,4,IDS,2,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,4.368,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,5,IDS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.847,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,6,ADS,3,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,5.552,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,7,ADS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.88,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,8,IDS,4,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,8.6,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,9,IDS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,3.328,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,10,ADS,5,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,2.864,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,11,IDS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.28,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,12,ADS,6,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.32,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,13,ADS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.768,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,14,IDS,7,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,7.128,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,15,IDS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,9.375,FALSE
+infantcoglablouisville,237148,webcdi,24,761,46,4,noerror,NA,infantcoglablouisville:237148,American English,NAE,2,16,ADS,8,singlescreen,305,10.020533880903491,9-12 mo,TRUE,F,FALSE,6.04,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,1,ADS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.552,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,2,IDS,5,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.272,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,3,IDS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.832,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,4,ADS,7,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,5,IDS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,6,ADS,1,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.176,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,7,IDS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,3.144,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,8,ADS,3,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,9,IDS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.384,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,10,ADS,2,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.32,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,11,ADS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,4.208,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,12,IDS,4,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.032,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,13,ADS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.096,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,14,IDS,6,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.08,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,15,ADS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,6.976,FALSE
+infantcoglablouisville,236527,webcdi,24,774,26,3,noerror,NA,infantcoglablouisville:236527,American English,NAE,4,16,IDS,8,singlescreen,302,9.921971252566735,9-12 mo,TRUE,M,FALSE,2.016,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,1,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.248,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,2,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.904,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,3,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,8.76,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,4,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.848,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,5,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,9.552,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,6,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,7.96,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,7,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,17.544,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,8,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.712,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,9,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,6.744,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,10,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.696,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,11,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.592,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,12,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.616,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,13,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,2.672,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,14,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,3.4,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,15,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,4.376,FALSE
+infantcoglablouisville,236582,webcdi,24,783,507,74,noerror,NA,infantcoglablouisville:236582,American English,NAE,4,16,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,F,FALSE,5.224,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,1,ADS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,5.688,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,2,IDS,5,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.96,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,3,IDS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.064,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,4,ADS,7,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,5,IDS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,6,ADS,1,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.896,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,7,IDS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,2.896,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,8,ADS,3,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,6.088,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,9,IDS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,10,ADS,2,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,10.216,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,11,ADS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,12,IDS,4,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,13,ADS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,14,IDS,6,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,7.152,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,15,ADS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,3.76,FALSE
+infantcoglablouisville,238338,webcdi,24,754,204,28,noerror,NA,infantcoglablouisville:238338,American English,NAE,4,16,IDS,8,singlescreen,294,9.659137577002053,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,1,IDS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,17.208,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,2,ADS,1,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,3,IDS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,6.368,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,4,ADS,2,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.224,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,5,ADS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,6,IDS,3,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.024,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,7,IDS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,8,ADS,4,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,9,ADS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,8.072,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,10,IDS,5,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,3.92,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,11,ADS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,12,IDS,6,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,13,IDS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.088,FALSE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,14,ADS,7,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,15,ADS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,NA,TRUE
+infantcoglablouisville,237157,webcdi,24,789,198,22,noerror,NA,infantcoglablouisville:237157,American English,NAE,1,16,IDS,8,singlescreen,317,10.414784394250514,9-12 mo,TRUE,F,FALSE,4.048,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,1,IDS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.76,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,2,ADS,5,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,3,ADS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,8.248,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,4,IDS,7,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.312,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,5,ADS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,3.256,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,6,IDS,1,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,7,ADS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,8,IDS,3,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,9,ADS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,10,IDS,2,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,11,IDS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,5.368,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,12,ADS,4,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,13,IDS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,4.64,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,14,ADS,6,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,15,IDS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,2.408,FALSE
+infantcoglablouisville,238332,webcdi,NA,805,342,50,error,"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI",infantcoglablouisville:238332,American English,NAE,3,16,ADS,8,singlescreen,330,10.841889117043122,9-12 mo,TRUE,M,FALSE,NA,TRUE
 infantlanglabutk,mb1r61ms1,webcdi,24,731,367,71,noerror,NA,infantlanglabutk:mb1r61ms1,American English,NAE,1,1,IDS,1,hpp,189,6.209445585215605,6-9 mo,TRUE,M,FALSE,6.599,FALSE
 infantlanglabutk,mb1r61ms1,webcdi,24,731,367,71,noerror,NA,infantlanglabutk:mb1r61ms1,American English,NAE,1,2,ADS,1,hpp,189,6.209445585215605,6-9 mo,TRUE,M,FALSE,17.747,FALSE
 infantlanglabutk,mb1r61ms1,webcdi,24,731,367,71,noerror,NA,infantlanglabutk:mb1r61ms1,American English,NAE,1,3,IDS,2,hpp,189,6.209445585215605,6-9 mo,TRUE,M,FALSE,15.448,FALSE
@@ -7437,6 +7576,70 @@ lscppsl,34lscppsl,French European,24,718,84,64.7,noerror,NA,lscppsl:34lscppsl,Fr
 lscppsl,34lscppsl,French European,24,718,84,64.7,noerror,NA,lscppsl:34lscppsl,French,Other,2,14,ADS,6,eyetracking,378,12.41889117043121,12-15 mo,FALSE,F,FALSE,4.656,FALSE
 lscppsl,34lscppsl,French European,24,718,84,64.7,noerror,NA,lscppsl:34lscppsl,French,Other,2,15,ADS,7,eyetracking,378,12.41889117043121,12-15 mo,FALSE,F,FALSE,NA,TRUE
 lscppsl,34lscppsl,French European,24,718,84,64.7,noerror,NA,lscppsl:34lscppsl,French,Other,2,16,IDS,7,eyetracking,378,12.41889117043121,12-15 mo,FALSE,F,FALSE,NA,TRUE
+princetonbabylab,mb001,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb001,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb002,webcdi,18,559,103,NA,NA,NA,princetonbabylab:mb002,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb003,webcdi,18,542,9,NA,NA,NA,princetonbabylab:mb003,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb004,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb004,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb005,webcdi,18,560,97,NA,NA,NA,princetonbabylab:mb005,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb006,webcdi,18,563,27,NA,NA,NA,princetonbabylab:mb006,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb007,webcdi,18,538,9,NA,NA,NA,princetonbabylab:mb007,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb008,webcdi,18,526,41,NA,NA,NA,princetonbabylab:mb008,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb009,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb009,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb010,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb010,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb011,webcdi,18,563,19,NA,NA,NA,princetonbabylab:mb011,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb012,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb012,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb013,webcdi,18,559,57,NA,NA,NA,princetonbabylab:mb013,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb014,webcdi,18,587,61,NA,NA,NA,princetonbabylab:mb014,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb015,webcdi,18,531,75,NA,NA,NA,princetonbabylab:mb015,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb016,webcdi,18,539,21,NA,NA,NA,princetonbabylab:mb016,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb001,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb001,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb002,webcdi,24,804,502,NA,NA,NA,princetonbabylab:mb002,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb003,webcdi,24,745,258,NA,NA,NA,princetonbabylab:mb003,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb004,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb004,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb005,webcdi,24,770,359,NA,NA,NA,princetonbabylab:mb005,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb006,webcdi,24,725,400,NA,NA,NA,princetonbabylab:mb006,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb007,webcdi,24,727,249,NA,NA,NA,princetonbabylab:mb007,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb008,webcdi,24,719,310,NA,NA,NA,princetonbabylab:mb008,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb009,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb009,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb010,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb010,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb011,webcdi,24,693,14,NA,NA,NA,princetonbabylab:mb011,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb012,webcdi,24,711,245,NA,NA,NA,princetonbabylab:mb012,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb013,webcdi,24,744,341,NA,NA,NA,princetonbabylab:mb013,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb014,webcdi,24,724,483,NA,NA,NA,princetonbabylab:mb014,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb015,webcdi,24,720,585,NA,NA,NA,princetonbabylab:mb015,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb016,webcdi,24,749,205,NA,NA,NA,princetonbabylab:mb016,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb017,webcdi,18,547,30,NA,NA,NA,princetonbabylab:mb017,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb018,webcdi,18,536,649,NA,NA,NA,princetonbabylab:mb018,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb019,webcdi,18,538,19,NA,NA,NA,princetonbabylab:mb019,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb020,webcdi,18,540,77,NA,NA,NA,princetonbabylab:mb020,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb021,webcdi,18,539,46,NA,NA,NA,princetonbabylab:mb021,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb022,webcdi,18,534,41,NA,NA,NA,princetonbabylab:mb022,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb023,webcdi,18,540,29,NA,NA,NA,princetonbabylab:mb023,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb024,webcdi,18,532,66,NA,NA,NA,princetonbabylab:mb024,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb025,webcdi,18,540,7,NA,NA,NA,princetonbabylab:mb025,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb026,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb026,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb027,webcdi,18,541,64,NA,NA,NA,princetonbabylab:mb027,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb028,webcdi,18,NA,NA,NA,error,NC,princetonbabylab:mb028,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb029,webcdi,18,539,107,NA,NA,NA,princetonbabylab:mb029,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb030,webcdi,18,532,33,NA,NA,NA,princetonbabylab:mb030,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb031,webcdi,18,538,88,NA,NA,NA,princetonbabylab:mb031,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb032,webcdi,18,545,138,NA,NA,NA,princetonbabylab:mb032,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb017,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb017,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb018,webcdi,24,697,675,NA,NA,NA,princetonbabylab:mb018,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb019,webcdi,24,720,127,NA,NA,NA,princetonbabylab:mb019,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb020,webcdi,24,733,316,NA,NA,NA,princetonbabylab:mb020,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb021,webcdi,24,733,334,NA,NA,NA,princetonbabylab:mb021,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb022,webcdi,24,752,430,NA,NA,NA,princetonbabylab:mb022,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb023,webcdi,24,771,251,NA,NA,NA,princetonbabylab:mb023,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb024,webcdi,24,722,293,NA,NA,NA,princetonbabylab:mb024,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb025,webcdi,24,761,5,NA,NA,NA,princetonbabylab:mb025,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb026,webcdi,24,733,252,NA,NA,NA,princetonbabylab:mb026,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb027,webcdi,24,718,288,NA,NA,NA,princetonbabylab:mb027,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb028,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb028,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb029,webcdi,24,725,390,NA,NA,NA,princetonbabylab:mb029,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb030,webcdi,24,753,189,NA,NA,NA,princetonbabylab:mb030,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb031,webcdi,24,720,484,NA,NA,NA,princetonbabylab:mb031,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+princetonbabylab,mb032,webcdi,24,NA,NA,NA,error,NC,princetonbabylab:mb032,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 purdueinfantspeech,4211,webcdi,18,620,3,2,noerror,NA,purdueinfantspeech:4211,American English,NAE,4,1,ADS,5,hpp,408,13.404517453798768,12-15 mo,TRUE,M,FALSE,13.51,FALSE
 purdueinfantspeech,4211,webcdi,18,620,3,2,noerror,NA,purdueinfantspeech:4211,American English,NAE,4,2,IDS,5,hpp,408,13.404517453798768,12-15 mo,TRUE,M,FALSE,4.02,FALSE
 purdueinfantspeech,4211,webcdi,18,620,3,2,noerror,NA,purdueinfantspeech:4211,American English,NAE,4,3,IDS,7,hpp,408,13.404517453798768,12-15 mo,TRUE,M,FALSE,15.76,FALSE

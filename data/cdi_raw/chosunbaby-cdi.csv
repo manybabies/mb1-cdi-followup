@@ -1,0 +1,84 @@
+﻿labid,subid,gender,CDI-form,CDI-agerange,CDI-agedays,vocab_nwords(=raw score),vocab_percentile,standardized-score-CDI,CDI-error,Notes
+chosunbaby,HC01,M,K-webcdi,18,557,81,50~75,NA,noerror,NA
+chosunbaby,HC02,F,K-webcdi,18,571,19,under 10,NA,noerror,NA
+chosunbaby,HC03,M,K-webcdi,18,554,118,75~90,NA,noerror,NA
+chosunbaby,HC04,F,K-webcdi,18,552,122,50~75,NA,noerror,NA
+chosunbaby,HC05,M,K-webcdi,18,559,17,10~25,NA,noerror,NA
+chosunbaby,HC06,F,K-webcdi,18,550,19,under 10,NA,noerror,NA
+chosunbaby,HC07,M,K-webcdi,18,559,24,10~25,NA,noerror,NA
+chosunbaby,HC08,F,K-webcdi,18,551,116,50~75,NA,noerror,NA
+chosunbaby,HC09,F,K-webcdi,24,735,137,10~25,NA,noerror,NA
+chosunbaby,HC10,F,K-webcdi,24,753,418,75~90,NA,noerror,NA
+chosunbaby,HC11,F,K-webcdi,18,547,134,75~90,NA,noerror,NA
+chosunbaby,HC12,M,K-webcdi,18,549,49,25~50,NA,noerror,NA
+chosunbaby,HC13,F,K-webcdi,18,546,17,10~25,NA,noerror,NA
+chosunbaby,HC15,F,K-webcdi,24,734,225,25~50,NA,noerror,NA
+chosunbaby,HC16,F,K-webcdi,18,547,44,10~25,NA,noerror,NA
+chosunbaby,HC17,M,K-webcdi,18,561,53,25~50,NA,noerror,NA
+chosunbaby,HC18,F,K-webcdi,18,578,84,25~50,NA,noerror,NA
+chosunbaby,HC19,F,K-webcdi,24,761,293,50~75,NA,noerror,NA
+chosunbaby,HC20,M,K-webcdi,18,574,99,75~90,NA,noerror,NA
+chosunbaby,HC21,F,K-webcdi,18,565,21,10,NA,noerror,NA
+chosunbaby,HC22,M,K-webcdi,18,548,56,25~50,NA,noerror,NA
+chosunbaby,HC23,F,K-webcdi,18,547,36,10~25,NA,noerror,NA
+chosunbaby,HC24,M,K-webcdi,18,550,34,25~50,NA,noerror,NA
+chosunbaby,HC25,F,K-webcdi,18,573,9,under 10,NA,noerror,NA
+chosunbaby,HC26,M,K-webcdi,18,550,8,under 10,NA,noerror,NA
+chosunbaby,HC27,F,K-webcdi,18,549,59,25~50,NA,noerror,NA
+chosunbaby,HC28,M,K-webcdi,18,563,20,10~25,NA,noerror,NA
+chosunbaby,HC29,F,K-webcdi,18,566,91,50~75,NA,noerror,NA
+chosunbaby,HC30,M,K-webcdi,18,549,174,over 90,NA,noerror,NA
+chosunbaby,HC31,M,K-webcdi,24,735,101,25~50,NA,noerror,NA
+chosunbaby,HC32,F,K-webcdi,18,549,80,25~50,NA,noerror,NA
+chosunbaby,HC33,F,K-webcdi,18,550,127,75~90,NA,noerror,NA
+chosunbaby,HC34,M,K-webcdi,18,571,37,25~50,NA,noerror,NA
+chosunbaby,HC35,F,K-webcdi,24,731,469,75~90,NA,noerror,NA
+chosunbaby,HC36,F,K-webcdi,24,747,125,10~25,NA,noerror,NA
+chosunbaby,HC38,F,K-webcdi,18,574,1,under 10,NA,noerror,NA
+chosunbaby,HC39,F,K-webcdi,24,758,74,10~25,NA,noerror,NA
+chosunbaby,HC40,M,K-webcdi,18,564,16,10~25,NA,noerror,NA
+chosunbaby,HC41,F,K-webcdi,18,551,38,10~25,NA,noerror,NA
+chosunbaby,HC42,M,K-webcdi,18,577,16,10~25,NA,noerror,NA
+chosunbaby,HC43,M,K-webcdi,18,549,76,50~75,NA,noerror,NA
+chosunbaby,HC03-01,M,K-webcdi,24,735,246,50~75,NA,noerror,NA
+chosunbaby,HC02-02,F,K-webcdi,24,753,93,10~25,NA,noerror,NA
+chosunbaby,HC44,M,K-webcdi,24,731,114,25~50,NA,noerror,NA
+chosunbaby,HC45,M,K-webcdi,18,575,67,50~75,NA,noerror,NA
+chosunbaby,HC01-03,M,K-webcdi,24,760,216,50~75,NA,noerror,NA
+chosunbaby,HC46,M,K-webcdi,18,566,6,under 10,NA,noerror,NA
+chosunbaby,HC07-04,M,K-webcdi,24,747,126,25~50,NA,noerror,NA
+chosunbaby,HC47,F,K-webcdi,24,757,301,50~75,NA,noerror,NA
+chosunbaby,HC04-05,F,K-webcdi,24,758,158,25~50,NA,noerror,NA
+chosunbaby,HC48,F,K-webcdi,24,744,195,25~50,NA,noerror,NA
+chosunbaby,HC05-06,M,K-webcdi,24,758,29,10~25,NA,noerror,NA
+chosunbaby,HC08-07,F,K-webcdi,24,731,351,50~75,NA,noerror,NA
+chosunbaby,HC49,F,K-webcdi,24,732,251,50~75,NA,noerror,NA
+chosunbaby,HC06-08,F,K-webcdi,24,759,129,10~25,NA,noerror,NA
+chosunbaby,HC50,F,K-webcdi,24,758,309,50~75,NA,noerror,NA
+chosunbaby,HC51,M,K-webcdi,18,576,91,75~90,NA,noerror,NA
+chosunbaby,HC52,M,K-webcdi,24,758,225,50~75,NA,noerror,NA
+chosunbaby,HC53,M,K-webcdi,18,563,85,50~75,NA,noerror,NA
+chosunbaby,HC13-09,F,K-webcdi,24,731,44,10~25,NA,noerror,NA
+chosunbaby,HC11-10,F,K-webcdi,24,747,209,25~50,NA,noerror,NA
+chosunbaby,HC20-11,M,K-webcdi,24,731,228,50~75,NA,noerror,NA
+chosunbaby,HC18-12,F,K-webcdi,24,738,254,50~75,NA,noerror,NA
+chosunbaby,HC17-13,M,K-webcdi,24,731,155,25~50,NA,noerror,NA
+chosunbaby,HC16-14,F,K-webcdi,24,731,178,25~50,NA,noerror,NA
+chosunbaby,HC12-15,M,K-webcdi,24,761,158,25~50,NA,noerror,NA
+chosunbaby,HC29-16,F,K-webcdi,24,734,228,25~50,NA,noerror,NA
+chosunbaby,HC22-17,M,K-webcdi,24,731,124,25~50,NA,noerror,NA
+chosunbaby,HC55,F,K-webcdi,24,737,137,10~25,NA,noerror,NA
+chosunbaby,HC34-18,M,K-webcdi,24,738,184,50~75,NA,noerror,NA
+chosunbaby,HC56,M,K-webcdi,18,575,129,75~90,NA,noerror,NA
+chosunbaby,HC27-19,F,K-webcdi,24,736,187,25~50,NA,noerror,Dad also answered with similar result
+chosunbaby,HC30-20,M,K-webcdi,24,732,224,50~75,NA,noerror,NA
+chosunbaby,HC57,F,K-webcdi,18,551,55,25~50,NA,noerror,NA
+chosunbaby,HC21-21,F,K-webcdi,24,763,221,25~50,NA,noerror,NA
+chosunbaby,HC32-22,F,K-webcdi,24,733,230,25~50,NA,noerror,NA
+chosunbaby,HC33-23,F,K-webcdi,24,734,182,25~50,NA,noerror,NA
+chosunbaby,HC24-24,M,K-webcdi,24,755,72,10~25,NA,noerror,NA
+chosunbaby,HC23-25,F,K-webcdi,24,757,174,25~50,NA,noerror,NA
+chosunbaby,HC40-26,M,K-webcdi,24,748,129,25~50,NA,noerror,NA
+chosunbaby,HC62,M,K-webcdi,18,549,3,under 10,NA,noerror,NA
+chosunbaby,HC46-27,M,K-webcdi,24,753,9,under 10,NA,noerror,delayed speech
+chosunbaby,HC57-28,F,K-webcdi,24,738,240,25~50,NA,noerror,NA

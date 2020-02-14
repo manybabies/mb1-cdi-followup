@@ -72,6 +72,8 @@ changed_labid <- setdiff(data.cdi$labid,
 # Only exception: leeds-lcdu in data.cdi should be lcduleeds
 data.cdi <- data.cdi %>%
   mutate(labid = case_when(labid == "leeds-lcdu" ~ "lcduleeds",
+                           labid == "InfantCogUBC" ~ "infantcogubc",
+                           labid == "princetonbabylab" ~ "babylabprinceton",
                            T ~ str_remove_all(labid, "-|_")))
 # We check again for safety
 changed_labid <- setdiff(data.cdi$labid,
@@ -103,6 +105,8 @@ data.cdi <- data.cdi %>%
   mutate(subid = case_when(labid == "babylabbrookes" ~ str_replace(subid, "brookes-", "mb"),
                            labid == "bcrlunlv" ~ paste0("mb", str_pad(subid, 4, pad = 0)),
                            labid == "lscppsl" ~ paste0(subid, "lscppsl"),
+                           labid == "babylabprinceton" ~ str_replace(subid, "mb",
+                                                                     "manybabies"),
                            labid %in% changed_subid_labs ~
                              str_remove_all(subid, "-|_") %>% str_to_lower(),
                            T ~ subid),
