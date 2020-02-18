@@ -130,6 +130,8 @@ check_subid.tibble <- check_subid %>%
   gather(key = "dataset", value = "subids", -labid) %>%
   unnest(subids) %>%
   mutate(subids = str_remove(subids, "[a-z]+:")) %>%
+  mutate_all(as_factor)
+check_subid.tibble %>%
   nest(-labid) %>%
   pwalk(~ write_csv(.y, paste0("data/subids/", .x, ".csv")))
 ```
