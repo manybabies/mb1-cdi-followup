@@ -13,7 +13,7 @@ read_cdi <- function(filename, save_unprocessed = F, verbose = F){
     `CDI-agerange` = col_character(),
     `CDI-agedays` = col_integer(),
     vocab_nwords = col_integer(),
-    `standardized-score-CDI` = col_guess(),
+    `standardized-score-CDI` = col_character(),
     `CDI-error` = col_character(),
     Notes = col_character()
   )
@@ -45,10 +45,6 @@ read_cdi <- function(filename, save_unprocessed = F, verbose = F){
     }
     ## Append data
     write_csv(df, unprocessed, append = T)
-  }
-  # Check standardized-score-CDI for input error
-  if(!is_double(df$standardized.score.CDI)){
-    df$standardized.score.CDI <- NA
   }
   return(df)
 }

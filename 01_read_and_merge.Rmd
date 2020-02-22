@@ -29,7 +29,7 @@ The only other issues were:
 
 * a misnamed column in `infantlanglab-utk.ts`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
-* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in an unprocessed data file (`data/cdi/unprocessed_merge.csv`).
+* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NAs.
 
 ```{r cdi_import, message=FALSE, warning=FALSE, error=FALSE}
 # Lab information
@@ -38,11 +38,13 @@ data.labs <- read_labs("data/labs.csv")
 data.cdi <- list.files("data/cdi_raw/") %>%
   map_dfr(read_cdi, save_unprocessed = !file.exists("data/unprocessed_cdi_merged.csv")) %>%
   drop_na(labid) %>%
-  mutate(subid_unique = paste(labid, subid, sep = ":")) %>%
-  mutate_at(vars(labid, subid, CDI.form, CDI.agerange, CDI.error),
+  mutate(subid_unique = paste(labid, subid, sep = ":"),
+         standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0")) %>%
+  mutate_at(vars(subid, CDI.form, CDI.agerange, CDI.error),
             as_factor) %>%
   left_join(data.labs) %>%
-  mutate_at(vars(labid), as_factor)
+  mutate_at(vars(labid), as_factor) %>%
+  mutate_at(vars(standardized.score.CDI.num), as.numeric)
 # Check for labs that signed up but didn't send data:
 missing_labs <- setdiff(levels(data.labs$labid),
                         levels(data.cdi$labid)) %>%
