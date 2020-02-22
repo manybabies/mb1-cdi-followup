@@ -109,7 +109,7 @@ data.cdi <- data.cdi %>%
   mutate(subid = case_when(labid == "babylabbrookes" ~ str_replace(subid, "brookes-", "mb"),
                            labid == "bcrlunlv" ~ paste0("mb", str_pad(subid, 4, pad = 0)),
                            labid == "lscppsl" ~ paste0(subid, "lscppsl"),
-                           labid == "babylabprinceton" ~ str_replace(subid, "mb",
+                           labid == "babylabprinceton" ~ str_replace(subid, "MB",
                                                                      "manybabies"),
                            labid %in% changed_subid_labs ~
                              str_remove_all(subid, "-|_") %>% str_to_lower(),
@@ -134,9 +134,6 @@ check_subid.tibble <- check_subid %>%
   unnest(subids) %>%
   mutate(subids = str_remove(subids, "[a-z]+:")) %>%
   mutate_all(as_factor)
-check_subid.tibble.full %>%
-  nest(data = c(dataset, subids)) %>%
-  pwalk(~ write_csv(.y, paste0("data/subids/", .x, ".csv")))
 ```
 
 Even after correcting formatting issues in subids, there `r sum(check_subid.tibble$dataset == "CDI")` subids in the CDI data that do not have a match in the preprocessed IDS data. This is most likely due to the fact that some infants were excluded from the IDS analysis but still had their CDI scores recorded. We check that this is the case bellow.
@@ -169,7 +166,7 @@ check_subid.tibble.full <- check_subid.full %>%
   mutate(subids = str_remove(subids, "[a-z]+:")) %>%
   mutate_all(as_factor)
 # Save problematic labs' unmatched subids
-check_subid.tibble %>%
+check_subid.tibble.full %>%
   nest(data = c(dataset, subids)) %>%
   pwalk(~ write_csv(.y, paste0("data/subids/", .x, ".csv")))
 ```
