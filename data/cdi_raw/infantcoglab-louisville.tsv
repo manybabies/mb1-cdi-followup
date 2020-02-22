@@ -1,21 +1,21 @@
 labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
-infantcoglab-louisville	236534	webcdi	18	561	83	42	noerror	
-infantcoglab-louisville	236582	webcdi	18	567	230	82	noerror	
-infantcoglab-louisville	236527	webcdi	18	575	12	8	noerror	
-infantcoglab-louisville	237157	webcdi	18	561	100	49	noerror	
-infantcoglab-louisville	237624	webcdi	18	610	231	66	noerror	
-infantcoglab-louisville	237148	webcdi	18	577	27	14	noerror	
-infantcoglab-louisville	238332	webcdi	18	587	13	7	noerror	
-infantcoglab-louisville	238338	webcdi	18	546	28	20	noerror	
-infantcoglab-louisville	237604	webcdi	18	649	47	17	error	"original data was lost due to experimenter error, parents filled out web CDI a second time"
 infantcoglab-louisville	236097	webcdi	18	594	44	18	error	"original data was lost due to experimenter error, parents filled out web CDI a second time"
-infantcoglab-louisville	236172	webcdi	18	599	6	37	error	"original data was lost due to experimenter error, parents filled out web CDI a second time"
-infantcoglab-louisville	236297	webcdi	18	609	17	7	noerror	
-infantcoglab-louisville	237603	webcdi	18	593	103	57	noerror	
-infantcoglab-louisville	237624	webcdi	24	792	496	72	noerror	
-infantcoglab-louisville	237148	webcdi	24	761	46	4	noerror	
-infantcoglab-louisville	236527	webcdi	24	774	26	3	noerror	
-infantcoglab-louisville	236582	webcdi	24	783	507	74	noerror	
-infantcoglab-louisville	238338	webcdi	24	754	204	28	noerror	
-infantcoglab-louisville	237157	webcdi	24	789	198	22	noerror	
-infantcoglab-louisville	238332	webcdi	N/A	805	342	50	error	"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI"
+infantcoglab-louisville	236172	webcdi	18	599	6	36	error	"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville	236297	webcdi	18	609	17	6	noerror	
+infantcoglab-louisville	236527	webcdi	18	575	12	7	noerror	
+infantcoglab-louisville	236527	webcdi	24	774	26	2	noerror	
+infantcoglab-louisville	236534	webcdi	18	561	83	42	noerror	
+infantcoglab-louisville	236582	webcdi	18	567	230	81	noerror	
+infantcoglab-louisville	236582	webcdi	24	783	507	73	noerror	
+infantcoglab-louisville	237148	webcdi	18	577	27	13	noerror	
+infantcoglab-louisville	237148	webcdi	24	761	46	3	noerror	
+infantcoglab-louisville	237157	webcdi	18	561	100	48	noerror	
+infantcoglab-louisville	237157	webcdi	24	789	198	21	noerror	
+infantcoglab-louisville	237603	webcdi	18	593	103	56	noerror	
+infantcoglab-louisville	237604	webcdi	18	649	47	16	error	"original data was lost due to experimenter error, parents filled out web CDI a second time"
+infantcoglab-louisville	237624	webcdi	18	610	231	65	noerror	
+infantcoglab-louisville	237624	webcdi	24	792	496	71	noerror	
+infantcoglab-louisville	238332	webcdi	18	587	13	6	noerror	
+infantcoglab-louisville	238332	webcdi	N/A	805	342	49	error	"parents did not fill out the webCDI after initial contact, infant aged out of 24-month range, then parents contacted us and asked to fill out the webCDI when they were 26-months"
+infantcoglab-louisville	238338	webcdi	18	546	28	19	noerror	
+infantcoglab-louisville	238338	webcdi	24	754	204	27	noerror	

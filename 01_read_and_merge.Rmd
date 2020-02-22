@@ -74,9 +74,10 @@ changed_labid <- setdiff(data.cdi$labid,
 # Only exception: leeds-lcdu in data.cdi should be lcduleeds
 data.cdi <- data.cdi %>%
   mutate(labid = case_when(labid == "leeds-lcdu" ~ "lcduleeds",
-                           labid == "InfantCogUBC" ~ "infantcogubc",
-                           labid == "princetonbabylab" ~ "babylabprinceton",
-                           T ~ str_remove_all(labid, "-|_")))
+                           labid == "InfantCog-UBC" ~ "infantcogubc",
+                           labid == "princeton-babylab" ~ "babylabprinceton",
+                           T ~ str_remove_all(labid, "-|_"))) %>%
+  mutate_at(vars(labid), as_factor)
 # We check again for safety
 changed_labid <- setdiff(data.cdi$labid,
                          data.ids$labid)
@@ -133,12 +134,47 @@ check_subid.tibble <- check_subid %>%
   unnest(subids) %>%
   mutate(subids = str_remove(subids, "[a-z]+:")) %>%
   mutate_all(as_factor)
-check_subid.tibble %>%
-  nest(-labid) %>%
+check_subid.tibble.full %>%
+  nest(data = c(dataset, subids)) %>%
   pwalk(~ write_csv(.y, paste0("data/subids/", .x, ".csv")))
 ```
 
-If most of these resulted from formatting issues, some resulted from infants in the CDI data having been previously excluded from the IDS data for exclusion criteria documented in the corresponding paper. However, dealing with this issue is not the scope of the current script.
+Even after correcting formatting issues in subids, there `r sum(check_subid.tibble$dataset == "CDI")` subids in the CDI data that do not have a match in the preprocessed IDS data. This is most likely due to the fact that some infants were excluded from the IDS analysis but still had their CDI scores recorded. We check that this is the case bellow.
+
+```{r subid_exclusion_check, message=FALSE, warning=FALSE}
+# Import subids from all participants in IDS (before exculsion) for labs that provided CDI data
+data.ids.full.subids <- read_csv("data/ids_full.csv",
+                                 col_types = cols_only(
+                                   lab = col_character(),
+                                   subid_unique = col_character()
+                                   )) %>%
+  rename(labid = lab) %>%
+  subset(labid %in% levels(data.cdi$labid))
+# Compare to subids in CDI
+changed_subid.full <- setdiff(data.cdi$subid_unique,
+                              data.ids.full.subids$subid_unique)
+unused_subid.full <- setdiff(data.ids.full.subids$subid_unique,
+                        data.cdi$subid_unique)
+changed_subid_labs.full <- changed_subid.full %>%
+  str_match("[a-z]+") %>%
+  unique()
+check_subid.full <- changed_subid_labs.full %>%
+  map(~list(CDI = str_subset(changed_subid.full, .x) %>% str_sort(),
+            IDS = str_subset(unused_subid.full, .x) %>% str_sort())) %>%
+  setNames(changed_subid_labs.full)
+check_subid.tibble.full <- check_subid.full %>%
+  map_dfr(~tibble(CDI = list(.x[["CDI"]]), IDS = list(.x[["IDS"]])), .id = "labid") %>%
+  gather(key = "dataset", value = "subids", -labid) %>%
+  unnest(subids) %>%
+  mutate(subids = str_remove(subids, "[a-z]+:")) %>%
+  mutate_all(as_factor)
+# Save problematic labs' unmatched subids
+check_subid.tibble %>%
+  nest(data = c(dataset, subids)) %>%
+  pwalk(~ write_csv(.y, paste0("data/subids/", .x, ".csv")))
+```
+
+Here we see that `r sum(check_subid.tibble.full$dataset == "CDI")` subids from the CDI data still have no match even in the unprocessed IDS data. Those might have resulted from typos when entering data, and thus need to be handchecked with the corresponding labs.
 
 # Merge
 

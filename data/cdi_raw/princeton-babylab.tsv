@@ -1,65 +1,65 @@
 labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
 princeton-babylab	MB001	webcdi	18				error	NC
-princeton-babylab	MB002	webcdi	18	559	103	56		NA
-princeton-babylab	MB003	webcdi	18	542	9	4		NA
+princeton-babylab	MB002	webcdi	18	559	103	49		NA
+princeton-babylab	MB003	webcdi	18	542	9	3		NA
 princeton-babylab	MB004	webcdi	18				error	NC
-princeton-babylab	MB005	webcdi	18	560	97	54		NA
-princeton-babylab	MB006	webcdi	18	563	27	16		NA
-princeton-babylab	MB007	webcdi	18	538	9	5		NA
-princeton-babylab	MB008	webcdi	18	526	41	35		NA
+princeton-babylab	MB005	webcdi	18	560	97	61		NA
+princeton-babylab	MB006	webcdi	18	563	27	20		NA
+princeton-babylab	MB007	webcdi	18	538	9	7		NA
+princeton-babylab	MB008	webcdi	18	526	41	41		NA
 princeton-babylab	MB009	webcdi	18				error	NC
 princeton-babylab	MB010	webcdi	18				error	NC
-princeton-babylab	MB011	webcdi	18	563	19	11		NA
+princeton-babylab	MB011	webcdi	18	563	19	13		NA
 princeton-babylab	MB012	webcdi	18				error	NC
-princeton-babylab	MB013	webcdi	18	559	57	36		NA
-princeton-babylab	MB014	webcdi	18	587	61	31		NA
-princeton-babylab	MB015	webcdi	18	531	75	53		NA
-princeton-babylab	MB016	webcdi	18	539	21	16		NA
+princeton-babylab	MB013	webcdi	18	559	57	44		NA
+princeton-babylab	MB014	webcdi	18	587	61	25		NA
+princeton-babylab	MB015	webcdi	18	531	75	60		NA
+princeton-babylab	MB016	webcdi	18	539	21	13		NA
 princeton-babylab	MB001	webcdi	24				error	NC
-princeton-babylab	MB002	webcdi	24	804	502	71		NA
-princeton-babylab	MB003	webcdi	24	745	258	43		NA
+princeton-babylab	MB002	webcdi	24	804	502	63		NA
+princeton-babylab	MB003	webcdi	24	745	258	35		NA
 princeton-babylab	MB004	webcdi	24				error	NC
-princeton-babylab	MB005	webcdi	24	770	359	52		NA
-princeton-babylab	MB006	webcdi	24	725	400	75		NA
-princeton-babylab	MB007	webcdi	24	727	249	41		NA
-princeton-babylab	MB008	webcdi	24	719	310	61		NA
+princeton-babylab	MB005	webcdi	24	770	359	60		NA
+princeton-babylab	MB006	webcdi	24	725	400	81		NA
+princeton-babylab	MB007	webcdi	24	727	249	49		NA
+princeton-babylab	MB008	webcdi	24	719	310	68		NA
 princeton-babylab	MB009	webcdi	24				error	NC
 princeton-babylab	MB010	webcdi	24				error	NC
-princeton-babylab	MB011	webcdi	24	693	14	2		NA
-princeton-babylab	MB012	webcdi	24	711	245	48		NA
-princeton-babylab	MB013	webcdi	24	744	341	58		NA
-princeton-babylab	MB014	webcdi	24	724	483	87		NA
-princeton-babylab	MB015	webcdi	24	720	585	95		NA
-princeton-babylab	MB016	webcdi	24	749	205	34		NA
-princeton-babylab	MB017	webcdi	18	547	30	18		NA
-princeton-babylab	MB018	webcdi	18	536	649	99		NA
-princeton-babylab	MB019	webcdi	18	538	19	15		NA
-princeton-babylab	MB020	webcdi	18	540	77	54		NA
-princeton-babylab	MB021	webcdi	18	539	46	38		NA
-princeton-babylab	MB022	webcdi	18	534	41	35		NA
-princeton-babylab	MB023	webcdi	18	540	29	18		NA
-princeton-babylab	MB024	webcdi	18	532	66	49		NA
+princeton-babylab	MB011	webcdi	24	693	14	3		NA
+princeton-babylab	MB012	webcdi	24	711	245	41		NA
+princeton-babylab	MB013	webcdi	24	744	341	65		NA
+princeton-babylab	MB014	webcdi	24	724	483	84		NA
+princeton-babylab	MB015	webcdi	24	720	585	97		NA
+princeton-babylab	MB016	webcdi	24	749	205	27		NA
+princeton-babylab	MB017	webcdi	18	547	30	15		NA
+princeton-babylab	MB018	webcdi	18	536	641	99		NA
+princeton-babylab	MB019	webcdi	18	538	19	18		NA
+princeton-babylab	MB020	webcdi	18	540	77	66		NA
+princeton-babylab	MB021	webcdi	18	539	46	31		NA
+princeton-babylab	MB022	webcdi	18	534	41	28		NA
+princeton-babylab	MB023	webcdi	18	540	29	14		NA
+princeton-babylab	MB024	webcdi	18	532	66	43		NA
 princeton-babylab	MB025	webcdi	18	540	7	5		NA
 princeton-babylab	MB026	webcdi	18				error	NC
-princeton-babylab	MB027	webcdi	18	541	64	48		NA
+princeton-babylab	MB027	webcdi	18	541	64	41		NA
 princeton-babylab	MB028	webcdi	18				error	NC
-princeton-babylab	MB029	webcdi	18	539	107	65		NA
-princeton-babylab	MB030	webcdi	18	532	33	29		NA
-princeton-babylab	MB031	webcdi	18	538	88	58		NA
-princeton-babylab	MB032	webcdi	18	545	138	75		NA
+princeton-babylab	MB029	webcdi	18	539	107	70		NA
+princeton-babylab	MB030	webcdi	18	532	33	35		NA
+princeton-babylab	MB031	webcdi	18	538	88	52		NA
+princeton-babylab	MB032	webcdi	18	545	138	80		NA
 princeton-babylab	MB017	webcdi	24				error	NC
 princeton-babylab	MB018	webcdi	24	697	675	99		NA
-princeton-babylab	MB019	webcdi	24	720	127	25		NA
-princeton-babylab	MB020	webcdi	24	733	316	53		NA
-princeton-babylab	MB021	webcdi	24	733	334	56		NA
-princeton-babylab	MB022	webcdi	24	752	430	73		NA
-princeton-babylab	MB023	webcdi	24	771	251	34		NA
-princeton-babylab	MB024	webcdi	24	722	293	57		NA
+princeton-babylab	MB019	webcdi	24	720	127	31		NA
+princeton-babylab	MB020	webcdi	24	733	316	61		NA
+princeton-babylab	MB021	webcdi	24	733	334	48		NA
+princeton-babylab	MB022	webcdi	24	752	430	66		NA
+princeton-babylab	MB023	webcdi	24	771	251	28		NA
+princeton-babylab	MB024	webcdi	24	722	293	49		NA
 princeton-babylab	MB025	webcdi	24	761	5	<1		NA
-princeton-babylab	MB026	webcdi	24	733	252	42		NA
-princeton-babylab	MB027	webcdi	24	718	288	57		NA
+princeton-babylab	MB026	webcdi	24	733	252	50		NA
+princeton-babylab	MB027	webcdi	24	718	288	48		NA
 princeton-babylab	MB028	webcdi	24				error	NC
-princeton-babylab	MB029	webcdi	24	725	390	74		NA
-princeton-babylab	MB030	webcdi	24	753	189	31		NA
-princeton-babylab	MB031	webcdi	24	720	484	87		NA
+princeton-babylab	MB029	webcdi	24	725	390	80		NA
+princeton-babylab	MB030	webcdi	24	753	189	37		NA
+princeton-babylab	MB031	webcdi	24	720	484	84		NA
 princeton-babylab	MB032	webcdi	24				error	NC
