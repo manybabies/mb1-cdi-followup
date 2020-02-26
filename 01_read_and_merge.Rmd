@@ -27,11 +27,12 @@ We first import the newly collected CDI data and useful lab information. Origina
 
 The only other issues were:
 
-* a misnamed column in `infantlanglab-utk.ts`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
+* a misnamed column in `infantlanglab-utk.tsv`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
+* a misnamed column in `chosunbaby-cdi.csv`, `vocab_nwords(=raw score)` instead of `vocab_nwords`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
 * standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NAs.
 
-```{r cdi_import, message=FALSE, warning=FALSE, error=FALSE}
+```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information
 data.labs <- read_labs("data/labs.csv")
 # Participants data
@@ -64,24 +65,35 @@ data.ids <- read_csv("data/ids_preference_trial.csv") %>%
   mutate_at(vars(labid, subid), as_factor)
 ```
 
-We can now start checking that the merge is possible, first with respect to the coding of `labid`.
+## Compatibility Check
+
+We can now start checking that the merge is possible.
+
+### Coding of `labid`
+
+We first check that the coding of `labid` is consistent between the original IDS data and the new CDI data.
 
 ```{r labid_check}
-# Check for labid present in CDI but not IDS (i.e. differently named)
+# Check for labid present in CDI but not IDS (i.e. differently named), and vice versa
 changed_labid <- setdiff(data.cdi$labid,
                          data.ids$labid)
+unused_labid <- setdiff(data.ids$labid,
+                        data.cdi$labid)
 # By hand, we see that the names seem to be the same but with "-" or "_" added in data.cdi
 # Only exception: leeds-lcdu in data.cdi should be lcduleeds
 data.cdi <- data.cdi %>%
   mutate(labid = case_when(labid == "leeds-lcdu" ~ "lcduleeds",
                            labid == "InfantCog-UBC" ~ "infantcogubc",
                            labid == "princeton-babylab" ~ "babylabprinceton",
+                           labid == "um_babylanguagelab" ~ "bllumanitoba",
                            T ~ str_remove_all(labid, "-|_"))) %>%
   mutate_at(vars(labid), as_factor)
 # We check again for safety
 changed_labid <- setdiff(data.cdi$labid,
                          data.ids$labid)
 ```
+
+### Coding of `subid`
 
 Now that we have consistent coding for `labid`, we can update the new `data.cdi$subid_unique` and check for consistency at that level (if there is a new `subid_unique` that does not correspond to an old one, then the corresponding `subid` is faulty or the participant is missing from `data.ids`).
 
@@ -136,7 +148,7 @@ check_subid.tibble <- check_subid %>%
   mutate_all(as_factor)
 ```
 
-Even after correcting formatting issues in subids, there `r sum(check_subid.tibble$dataset == "CDI")` subids in the CDI data that do not have a match in the preprocessed IDS data. This is most likely due to the fact that some infants were excluded from the IDS analysis but still had their CDI scores recorded. We check that this is the case bellow.
+Even after correcting formatting issues in subids, there are `r sum(check_subid.tibble$dataset == "CDI")` subids in the CDI data that do not have a match in the preprocessed IDS data. This is most likely due to the fact that some infants were excluded from the IDS analysis but still had their CDI scores recorded. We check that this is the case bellow.
 
 ```{r subid_exclusion_check, message=FALSE, warning=FALSE}
 # Import subids from all participants in IDS (before exculsion) for labs that provided CDI data

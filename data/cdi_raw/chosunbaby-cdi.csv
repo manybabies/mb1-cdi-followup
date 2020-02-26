@@ -1,4 +1,4 @@
-﻿labid,subid,gender,CDI-form,CDI-agerange,CDI-agedays,vocab_nwords(=raw score),vocab_percentile,standardized-score-CDI,CDI-error,Notes
+﻿labid,subid,gender,CDI-form,CDI-agerange,CDI-agedays,vocab_nwords,vocab_percentile,standardized-score-CDI,CDI-error,Notes
 chosunbaby,HC01,M,K-webcdi,18,557,81,50~75,NA,noerror,NA
 chosunbaby,HC02,F,K-webcdi,18,571,19,under 10,NA,noerror,NA
 chosunbaby,HC03,M,K-webcdi,18,554,118,75~90,NA,noerror,NA
