@@ -91,10 +91,12 @@ For analysis purposes, we consider pairs of ADS/IDS trials, and as such exclude 
 
 ```{r trial_pairs}
 exclusions.pairs <- exclusions.ids %>%
-  group_by(subid_unique, stimulus_num) %>%
-  mutate(pair_complete = !any(missing)) %>%
+  subset(!missing, select = -missing) %>%
+  # We have to add vocab_nwords as some infants have multiple data points for filling the CDI twice (processed further down)
+  group_by(subid_unique, CDI.agerange, vocab_nwords, stimulus_num) %>%
+  mutate(pair_complete = (n() == 2)) %>%
   ungroup() %>%
-  subset(pair_complete == T,
+  subset(pair_complete,
          select = -pair_complete) %>%
   droplevels()
 ```
@@ -117,7 +119,7 @@ errors_check <- exclusions.pairs %>%
 (levels(errors_check$Notes))
 ```
 
-We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, `r last(levels(errors_check$Notes))`, does not seem to indicate an issue with the data itself, and can therefore be ignored.
+We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and these error can therefore be ignored.
 
 ```{r cdi_errors_exclusions}
 exclusions.errors <- exclusions.pairs %>%
@@ -138,3 +140,33 @@ write_csv(exclusions.errors, "data/02a_exclusions.csv")
 ```
 
 # New Variables
+
+We want to create a new variable for the standardized mean preference for IDS `z_IDS_pref`. To do so, we first need to compute the IDS preference for each pair of trials for each infants. We also need to compute the average looking time across both ADS and IDS trials.
+
+```{r ids_preference}
+df.final <- exclusions.errors %>%
+  select(-trial_num) %>% # Not relevant, we only want the pair number
+  pivot_wider(names_from = trial_type, values_from = looking_time) %>%
+  mutate(IDS_pref = IDS - ADS,
+         mean_pair = (IDS + ADS) / 2)
+```
+
+We then need to compute the mean preference for IDS for each infant, and the mean looking time across trials for each infant, to finally get our standardized preference score for IDS.
+
+```{r z_ids_preference}
+df.final <- df.final %>%
+  group_by(subid_unique) %>%
+  mutate(mean_IDS_pref = mean(IDS_pref),
+         mean_LT = mean(mean_pair),
+         z_IDS_pref = mean_IDS_pref / mean_LT) %>%
+  ungroup() %>%
+  select(-c(stimulus_num, IDS, ADS, IDS_pref, mean_pair, mean_IDS_pref, mean_LT)) %>%
+  unique()
+```
+
+In the end, our dataset consists of `r length(levels(df.final$subid_unique))` infants and `r nrow(df.final)` CDI scores at 18 or 24 months.
+
+```{r data_summary}
+write_csv(df.final, "data/02b_processed.csv")
+df.final %>% count(CDI.agerange)
+```
