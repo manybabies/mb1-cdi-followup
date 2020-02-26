@@ -25,7 +25,7 @@ source("helper/preprocessing.R")
 
 We first import the newly collected CDI data and useful lab information. Original data file names did not always convey encoding type (e.g. `.txt` for tab separated data), hence those were first manually renamed to facilitate automated data reading.
 
-The only other issues were:
+Other notable issues at data import were:
 
 * a misnamed column in `infantlanglab-utk.tsv`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
 * a misnamed column in `chosunbaby-cdi.csv`, `vocab_nwords(=raw score)` instead of `vocab_nwords`, corrected by hand;
@@ -53,6 +53,33 @@ missing_labs <- setdiff(levels(data.labs$labid),
 ```
 
 At the moment, the following labs signed up but didn't send data (or possibly sent it since last data download): `r missing_labs`.
+
+We expect to have no more than one data point per unique participant per age range (18 or 24 months):
+
+```{r cdi_check, message=FALSE, warning=FALSE}
+# Count data points, print cases were we have more than expected
+data.cdi %>%
+  count(subid_unique, CDI.agerange) %>%
+  subset(n != 1)
+# Only a few issues, let's check if they are subid typos or duplicate entries
+data.cdi %>%
+  group_by(subid_unique, CDI.agerange) %>%
+  summarise(n = n(), n_unique = n_distinct(vocab_nwords)) %>%
+  subset(n != 1)
+```
+
+Cases in which we have two data points but a single unique value for `vocab_nwords` are pure duplicate entries. Checking by hand, we realise that the two duplicate data points for `babylablmu` result from a first entry with an error, and a second valid entry. However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. They might instead result from an incorrect `subid` for one of the two entries.
+
+Although the scope of this script is not to exclude data points, we remove the pure duplicates and `babylablmu` "error duplicates" here while we know about them:
+
+```{r cdi_fix_babylablmu, message=FALSE, warning=FALSE}
+data.cdi <- data.cdi %>%
+  subset(!(subid_unique %in% c("babylab-lmu:35", "babylab-lmu:76") &
+             CDI.error == "error")) %>%
+  unique()
+```
+
+However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. They might instead result from an incorrect `subid` for one of the two entries.
 
 ## IDS Preference Data Import
 
