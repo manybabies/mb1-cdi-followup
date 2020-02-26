@@ -40,8 +40,9 @@ data.cdi <- list.files("data/cdi_raw/") %>%
   map_dfr(read_cdi, save_unprocessed = !file.exists("data/unprocessed_cdi_merged.csv")) %>%
   drop_na(labid) %>%
   mutate(subid_unique = paste(labid, subid, sep = ":"),
-         standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0")) %>%
-  mutate_at(vars(subid, CDI.form, CDI.agerange, CDI.error),
+         standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0"),
+         CDI.error = (CDI.error == "error")) %>%
+  mutate_at(vars(subid, CDI.form, CDI.agerange),
             as_factor) %>%
   left_join(data.labs) %>%
   mutate_at(vars(labid), as_factor) %>%

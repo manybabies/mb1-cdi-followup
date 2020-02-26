@@ -26,7 +26,7 @@ col_types <- cols(
   vocab_nwords = col_integer(),
   standardized.score.CDI = col_character(),
   standardized.score.CDI.num = col_number(),
-  CDI.error = col_factor(),
+  CDI.error = col_logical(),
   Notes = col_character(),
   language = col_factor(),
   language_zone = col_factor(),
@@ -66,13 +66,14 @@ exclusions.age <- df %>%
                                ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365/12)),
          CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
                                ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365/12))) %>%
-  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
+  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax),
+         select = -c(CDI.agemin, CDI.agemax)) %>%
   droplevels()
 ```
 
 After this first exclusion, we are left with `r length(levels(exclusions.age$subid_unique))` participants out of `r length(levels(df$subid_unique))`.
 
-## Infants excluded from MB1 IDS
+## Infants Excluded from MB1 IDS
 
 Labs sometimes recorded CDI scores regardless of the inclusion of the IDS data in the original study. Those infants and only those will have `NA` values for columns such as `trial_order`, `trial_num`, `trial_type`.
 
@@ -83,3 +84,57 @@ exclusions.ids <- exclusions.age %>%
 ```
 
 Our dataset is now reduced from `r length(levels(exclusions.age$subid_unique))` participants to `r length(levels(exclusions.ids$subid_unique))`.
+
+## Incomplete IDS/ADS pairs
+
+For analysis purposes, we consider pairs of ADS/IDS trials, and as such exclude any pairs in which one of the trials is missing.
+
+```{r trial_pairs}
+exclusions.pairs <- exclusions.ids %>%
+  group_by(subid_unique, stimulus_num) %>%
+  mutate(pair_complete = !any(missing)) %>%
+  ungroup() %>%
+  subset(pair_complete == T,
+         select = -pair_complete) %>%
+  droplevels()
+```
+
+Our dataset is now reduced from `r length(levels(exclusions.ids$subid_unique))` participants to `r length(levels(exclusions.pairs$subid_unique))`.
+
+## Reported errors
+
+Other than the exclusion criteria reported above, labs reported errors relating to the CDI data gathering. We treat those errors here by hand.
+
+```{r cdi_errors_check}
+# Check the different kinds of errors with notes added
+errors_check <- exclusions.pairs %>%
+  subset(CDI.error) %>%
+  select(labid:language_zone) %>%
+  mutate_at(vars(Notes), as_factor)
+# Are there any errors for which we don't have notes?
+(anyNA(errors_check$Notes))
+# What kind of errors do we have?
+(levels(errors_check$Notes))
+```
+
+We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, `r last(levels(errors_check$Notes))`, does not seem to indicate an issue with the data itself, and can therefore be ignored.
+
+```{r cdi_errors_exclusions}
+exclusions.errors <- exclusions.pairs %>%
+  subset(!(Notes %in% c("Opened and did not complete the questionnaire",
+                        "filled out web-based version but did not complete it",
+                        "Participant did not complete survey"))) %>%
+  droplevels()
+```
+
+Our dataset is now reduced from `r length(levels(exclusions.pairs$subid_unique))` participants to `r length(levels(exclusions.errors$subid_unique))`.
+
+## Final dataset
+
+We now have a full dataset with only participants that matched the inclusion criteria defined in our manuscript. We save this dataset, and move on to computing new variables that are needed for our analysis plan.
+
+```{r save_exclusions}
+write_csv(exclusions.errors, "data/02a_exclusions.csv")
+```
+
+# New Variables
