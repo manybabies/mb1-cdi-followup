@@ -28,7 +28,7 @@ read_cdi <- function(filename, save_unprocessed = F, verbose = F){
     as_tibble(.name_repair = "universal") # Replaces "-" by "." in column names
   # Save unprocessed data into global file if needed (typically for the first run)
   if(save_unprocessed){
-    unprocessed <- "data/unprocessed_cdi_merged.csv"
+    unprocessed <- "data/00_unprocessed_cdi_merged.csv"
     if(!file.exists(unprocessed)){
       ## Initialise unprocessed merge file (types don't matter)
       tibble(labid = character(),

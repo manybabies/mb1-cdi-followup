@@ -37,7 +37,7 @@ Other notable issues at data import were:
 data.labs <- read_labs("data/labs.csv")
 # Participants data
 data.cdi <- list.files("data/cdi_raw/") %>%
-  map_dfr(read_cdi, save_unprocessed = !file.exists("data/unprocessed_cdi_merged.csv")) %>%
+  map_dfr(read_cdi, save_unprocessed = !file.exists("data/00_unprocessed_cdi_merged.csv")) %>%
   drop_na(labid) %>%
   mutate(subid_unique = paste(labid, subid, sep = ":"),
          standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0"),
