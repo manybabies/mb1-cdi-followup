@@ -20,7 +20,7 @@ In this script, we go through all the pre-registered proposed analyses. As a rem
 We first present the main "sample theory based" analyses (also known as frequentist), separately on the North American and UK samples in parallel to answer our first two research questions, then on the total dataset to answer our third research question. We then provide additional Bayesian statistics where a null effect was found, as specified in the pre-registration.
 
 ```{r setup, message=FALSE, warning=FALSE}
-# Library imports, general settings
+# Library imports, general settings ==============
 library(tidyverse); library(egg)
 library(lme4); library(simr)
 library(brms); library(rstan)
@@ -28,7 +28,7 @@ library(brms); library(rstan)
 theme_set(theme_bw())
 knitr::opts_chunk$set(cache = TRUE)
 
-# Read data
+# Read data ======================================
 col_types <- cols(
   labid = col_factor(),
   subid = col_factor(),
@@ -66,7 +66,7 @@ data.other <- data.total %>% subset(language_zone == "Other") %>% droplevels()
 First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson's product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample.
 
 ```{r simple_correlation}
-# Statistics
+# Statistics =====================================
 ## North American Sample
 test.pearson.nae <- cor.test(data.nae$IDS_pref,
                              data.nae$standardized.score.CDI.num,
@@ -75,7 +75,7 @@ test.pearson.nae <- cor.test(data.nae$IDS_pref,
 test.pearson.uk <- cor.test(data.uk$IDS_pref,
                             data.uk$vocab_nwords,
                             alternative = "two.sided", method = "pearson")
-# Plots
+# Plots ==========================================
 ## North American Sample
 ### Get correlation value for annotation
 cor_text <- "paste(italic(R)^2, \" =\")"
@@ -107,14 +107,14 @@ We see no obvious direct link between IDS prefernce and CDI score here. However,
 Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model bellow, simplifying the random effects structure until it converges.
 
 ```{r full_lmer}
-# Setup appropriate contrasts for factors
+# Setup appropriate contrasts for factors ========
 ## NAE
 contrasts(data.nae$gender) <- contr.sum(2)
 contrasts(data.nae$method) <- contr.sum(2)
 ## UK
 contrasts(data.uk$gender) <- contr.sum(2)
 contrasts(data.uk$method) <- contr.sum(2)
-# Run models
+# Run models =====================================
 ## NAE
 lmer.full.nae <- lmer(z_standardized_CDI ~ gender + CDI.z_age_months + IDS_pref +
                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
