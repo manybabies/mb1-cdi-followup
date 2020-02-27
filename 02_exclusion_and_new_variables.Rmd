@@ -150,8 +150,8 @@ We want to create a new variable for the standardized mean preference for IDS `z
 df.final <- exclusions.errors %>%
   select(-trial_num) %>% # Not relevant, we only want the pair number
   pivot_wider(names_from = trial_type, values_from = looking_time) %>%
-  mutate(IDS_pref = IDS - ADS,
-         mean_pair = (IDS + ADS) / 2)
+  mutate(IDS_pref_pair = IDS - ADS,
+         mean_LT_pair = (IDS + ADS) / 2)
 ```
 
 We then need to compute the mean preference for IDS for each infant, and the mean looking time across trials for each infant, to finally get our standardized preference score for IDS.
@@ -159,11 +159,11 @@ We then need to compute the mean preference for IDS for each infant, and the mea
 ```{r z_ids_preference}
 df.final <- df.final %>%
   group_by(subid_unique) %>%
-  mutate(mean_IDS_pref = mean(IDS_pref),
-         mean_LT = mean(mean_pair),
-         z_IDS_pref = mean_IDS_pref / mean_LT) %>%
+  mutate(mean_IDS_pref = mean(IDS_pref_pair),
+         mean_LT = mean(mean_LT_pair),
+         IDS_pref = mean_IDS_pref / mean_LT) %>%
   ungroup() %>%
-  select(-c(stimulus_num, IDS, ADS, IDS_pref, mean_pair, mean_IDS_pref, mean_LT)) %>%
+  select(-c(stimulus_num, IDS, ADS, IDS_pref_pair, mean_LT_pair, mean_IDS_pref, mean_LT)) %>%
   unique()
 ```
 
@@ -177,9 +177,15 @@ df.final <- df.final %>%
          CDI.z_age_months = scale(CDI.agedays, scale = F)/365*12)
 ```
 
-## `z_standardised_CDI`, `z_vocab_nwords`
+## `z_standardized_CDI`, `z_vocab_nwords`
 
-Centering and scaling is good for DVs too! (`TODO`)
+We discussed above the interest of scaling numerical variables. In our case, our dependant variables are also numerical with high values and wide spreads, so scaling and centring them can sensibly improve model convergence and model fit.
+
+```{r z_CDI_scores}
+df.final <- df.final %>%
+  mutate(z_standardized_CDI = scale(standardized.score.CDI.num),
+         z_vocab_nwords = scale(vocab_nwords))
+```
 
 # Conclusion
 

@@ -39,7 +39,7 @@ col_types <- cols(
   vocab_nwords = col_integer(),
   standardized.score.CDI = col_character(),
   standardized.score.CDI.num = col_number(),
-  z_IDS_pref = col_number(),
+  IDS_pref = col_number(),
   language = col_factor(),
   language_zone = col_factor(),
   CDI.error = col_logical(),
@@ -68,11 +68,11 @@ First, we want to assess quickly if there is a direct correlation between IDS pr
 ```{r simple_correlation}
 # Statistics
 ## North American Sample
-test.pearson.nae <- cor.test(data.nae$z_IDS_pref,
+test.pearson.nae <- cor.test(data.nae$IDS_pref,
                              data.nae$standardized.score.CDI.num,
                              alternative = "two.sided", method = "pearson")
 ## UK Sample
-test.pearson.uk <- cor.test(data.uk$z_IDS_pref,
+test.pearson.uk <- cor.test(data.uk$IDS_pref,
                             data.uk$vocab_nwords,
                             alternative = "two.sided", method = "pearson")
 # Plots
@@ -82,7 +82,7 @@ cor_text <- "paste(italic(R)^2, \" =\")"
 cor_value <- round(test.pearson.nae$estimate, 3)
 ### Build plot
 plot.pearson.nae <- data.nae %>%
-  ggplot(aes(x = z_IDS_pref,
+  ggplot(aes(x = IDS_pref,
              y = standardized.score.CDI.num)) +
   geom_point() +
   geom_smooth(method = lm) +
@@ -91,7 +91,7 @@ plot.pearson.nae <- data.nae %>%
 ## UK Sample
 cor_value <- round(test.pearson.uk$estimate, 3)
 plot.pearson.uk <- data.uk %>%
-  ggplot(aes(x = z_IDS_pref,
+  ggplot(aes(x = IDS_pref,
              y = vocab_nwords)) +
   geom_point() +
   geom_smooth(method = lm) +
@@ -116,19 +116,19 @@ contrasts(data.uk$gender) <- contr.sum(2)
 contrasts(data.uk$method) <- contr.sum(2)
 # Run models
 ## NAE
-lmer.full.nae <- lmer(standardized.score.CDI.num ~ gender + CDI.z_age_months + z_IDS_pref +
-                        z_IDS_pref:method + z_IDS_pref:CDI.z_age_months + z_IDS_pref:z_age_months +
-                        (1 + gender + CDI.z_age_months + z_IDS_pref + z_IDS_pref:method +
-                           z_IDS_pref:CDI.z_age_months + z_IDS_pref:z_age_months | labid),
+lmer.full.nae <- lmer(z_standardized_CDI ~ gender + CDI.z_age_months + IDS_pref +
+                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                        (1 + gender + CDI.z_age_months + IDS_pref + IDS_pref:method +
+                           IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
                       data = data.nae)
 # Sequentially removed random effects:
 # [list here]
 ## UK
-lmer.full.uk <- lmer(vocab_nwords ~ gender + CDI.z_age_months + z_IDS_pref +
-                        z_IDS_pref:method + z_IDS_pref:CDI.z_age_months + z_IDS_pref:z_age_months +
-                        (1 + gender + CDI.z_age_months + z_IDS_pref + z_IDS_pref:method +
-                           z_IDS_pref:CDI.z_age_months + z_IDS_pref:z_age_months | labid),
-                      data = data.uk)
+lmer.full.uk <- lmer(z_vocab_nwords ~ gender + CDI.z_age_months + IDS_pref +
+                       IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                       (1 + gender + CDI.z_age_months + IDS_pref + IDS_pref:method +
+                          IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
+                     data = data.uk)
 # Sequentially removed random effects:
 # [list here]
 ```
