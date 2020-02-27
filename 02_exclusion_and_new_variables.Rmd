@@ -16,6 +16,7 @@ This script implements and documents exclusion criteria. We first read the full 
 
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
+knitr::opts_chunk$set(cache = TRUE)
 # Define column types
 col_types <- cols(
   labid = col_factor(),
@@ -141,6 +142,8 @@ write_csv(exclusions.errors, "data/02a_exclusions.csv")
 
 # New Variables
 
+## z_IDS_pref
+
 We want to create a new variable for the standardized mean preference for IDS `z_IDS_pref`. To do so, we first need to compute the IDS preference for each pair of trials for each infants. We also need to compute the average looking time across both ADS and IDS trials.
 
 ```{r ids_preference}
@@ -163,6 +166,22 @@ df.final <- df.final %>%
   select(-c(stimulus_num, IDS, ADS, IDS_pref, mean_pair, mean_IDS_pref, mean_LT)) %>%
   unique()
 ```
+
+## `CDI.z_age_months`, `z_age_months`
+
+A common way to get better computational models both in terms of estimate precision and convergence is to center and scale numerical variables, particularly ones that have relatively large values and/or large spreads. In our case, age in days are such variables. However, for better interpretation and generalisation of the results, we choose to center those values, but instead of scaling them we simply convert them to ages in months.
+
+```{r z_age_days}
+df.final <- df.final %>%
+  mutate(z_age_months = scale(age_days, scale = F)/365*12,
+         CDI.z_age_months = scale(CDI.agedays, scale = F)/365*12)
+```
+
+## `z_standardised_CDI`, `z_vocab_nwords`
+
+Centering and scaling is good for DVs too! (`TODO`)
+
+# Conclusion
 
 In the end, our dataset consists of `r length(levels(df.final$subid_unique))` infants and `r nrow(df.final)` CDI scores at 18 or 24 months.
 

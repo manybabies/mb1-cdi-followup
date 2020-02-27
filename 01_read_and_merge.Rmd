@@ -17,6 +17,7 @@ Data import functions are factored into a helper functions file.
 
 ```{r setup, message=FALSE, warning=FALSE, error=FALSE}
 source("helper/preprocessing.R")
+knitr::opts_chunk$set(cache = TRUE)
 ```
 
 # Data Import
@@ -90,7 +91,8 @@ We then import the (pre-processed) data from the original Many Babies study on I
 # Import IDS data, rename variables, change column types
 data.ids <- read_csv("data/ids_preference_trial.csv") %>%
   rename(labid = lab) %>%
-  mutate_at(vars(labid, subid), as_factor)
+  mutate_at(vars(labid, subid), as_factor) %>%
+  mutate(gender = str_sub(gender, 1, 1)) # Some data coded as "(FE)MALE" instead of F/M
 ```
 
 ## Compatibility Check
