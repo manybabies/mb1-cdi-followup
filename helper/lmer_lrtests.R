@@ -30,13 +30,23 @@ lr_tests.lmer <- function(model){
                          .x, NA_character_)) %>%
       discard(is.na)
     ## Combine into formula update
-    remove.fe.formula <- str_c(remove.fe, collapse = " - ")
-    remove.re.formula <- str_c(remove.re, collapse = " + ")
-    remove.formula <- paste0("~ - ", remove.fe.formula, " - (", remove.re.formula, " | labid)") %>%
+    update.fe.formula <- remove.fe %>%
+      prepend("~ .") %>%
+      str_c(collapse = " - ")
+    remove.re.formula <- re %>%
+      prepend("- (1") %>%
+      str_c(collapse = " + ") %>%
+      str_c(" | labid)")
+    add.re.formula <- setdiff(re, remove.re) %>%
+      prepend("+ (1") %>%
+      str_c(collapse = " + ") %>%
+      str_c(" | labid)")
+    remove.formula <- paste(update.fe.formula, remove.re.formula, add.re.formula) %>%
       formula()
     return(remove.formula)
   }
   # Run and compare models =======================
   lr <- 1:length(fe) %>%
-    future_map(~ update(model, update.term_delete(.x)))
+    map(~ update(model, update.term_delete(.x)))
+  return(exec(anova, !!!lr))
 }

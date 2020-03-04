@@ -159,7 +159,13 @@ lmer.full.uk <- lmer(vocab_nwords ~ gender + CDI.z_age_months + IDS_pref +
 # [list here]
 ```
 
-We then 
+We then compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function.
+
+```{r anova_lmer}
+source("helper/lmer_lrtests.R")
+lmer.lr.nae <- lr_tests.lmer(lmer.full.nae)
+lmer.lr.uk <- lr_tests.lmer(lmer.full.uk)
+```
 
 ## Combined Sample
 
