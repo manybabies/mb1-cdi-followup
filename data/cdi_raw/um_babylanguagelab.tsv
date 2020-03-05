@@ -59,7 +59,7 @@ um_babylanguagelab	3004	webCDI	24	721	24	18	noerror
 um_babylanguagelab	3052	webCDI	18	545	335	78	noerror	
 um_babylanguagelab	3052	webCDI	24	693	98	67	noerror	
 um_babylanguagelab	3092	webCDI	24	741	435	67	noerror	
-um_babylanguagelab	3120	webCDI	18		42	22	noerror	
+um_babylanguagelab	3120	webCDI	18		42	22	error	participant not identifiable - possibly test data?
 um_babylanguagelab	3137	webCDI	18	540	438	68	noerror	
 um_babylanguagelab	3137	webCDI	24	728	241	87	noerror	
 um_babylanguagelab	3645	webCDI	18	545	17	10	noerror	
@@ -74,7 +74,6 @@ um_babylanguagelab	3949	webCDI	18	536	367	61	noerror
 um_babylanguagelab	3949	webCDI	24	772	21	21	noerror	
 um_babylanguagelab	4022	webCDI	18	538	361	76	noerror	
 um_babylanguagelab	4022	webCDI	24	723	38	40	noerror	
-um_babylanguagelab	4030	webCDI					error	webCDI sent but not completed
 um_babylanguagelab	4041	webCDI	24	687	202	56	noerror	
 um_babylanguagelab	4048	webCDI	18	570	101	62	noerror	
 um_babylanguagelab	4051	webCDI	24	703	76	10	noerror	

@@ -142,7 +142,7 @@ write_csv(exclusions.errors, "data/02a_exclusions.csv")
 
 # New Variables
 
-## z_IDS_pref
+## `IDS_pref`
 
 We want to create a new variable for the standardized mean preference for IDS `z_IDS_pref`. To do so, we first need to compute the IDS preference for each pair of trials for each infants. We also need to compute the average looking time across both ADS and IDS trials.
 

@@ -1,35 +1,35 @@
-labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
-babylab-vuw	P01	webcdi	18	551	185	74	noerror	NA
-babylab-vuw	P01	webcdi	24	737	405	62	noerror	NA
-babylab-vuw	P02	webcdi	18	548	68	51	error	"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
-babylab-vuw	P02	webcdi	24	744	321	62	error	"after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)"
-babylab-vuw	S01	webcdi	18	549	45	38	noerror	NA
-babylab-vuw	S01	webcdi	24	734	221	45	noerror	NA
-babylab-vuw	S05	webcdi	18	NA	NA	NA	error	did not complete within timeframe. 
-babylab-vuw	S05	webcdi	24	NA	NA	NA	error	did not complete within timeframe. 
-babylab-vuw	S11	webcdi	18	531	201	86	noerror	NA
-babylab-vuw	S11	webcdi	24	727	361	70	noerror	NA
-babylab-vuw	S07	webcdi	18	541	33	27	noerror	NA
-babylab-vuw	S07	webcdi	24	722	190	39	noerror	NA
-babylab-vuw	S09	webcdi	18	536	127	69	noerror	NA
-babylab-vuw	S09	webcdi	24	728	589	96	noerror	NA
-babylab-vuw	S12	webcdi	18	547	76	55	noerror	NA
-babylab-vuw	S12	webcdi	24	730	248	50	noerror	NA
-babylab-vuw	S04	webcdi	18	541	139	72	noerror	NA
-babylab-vuw	S04	webcdi	24	731	443	82	noerror	NA
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	total_produced_percentile_sex	CDI-error	Notes
+babylab-vuw	P01	webcdi	18	551	185	71	noerror	NA
+babylab-vuw	P01	webcdi	24	737	405	71	noerror	NA
+babylab-vuw	P02	webcdi	18	548	68	43	error	after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)
+babylab-vuw	P02	webcdi	24	744	321	57	error	after completing CDI, parent noted 25% exposure to another language ( scattered words for about 6 hours per day, 7 days per week)
+babylab-vuw	S01	webcdi	18	549	45	30	noerror	NA
+babylab-vuw	S01	webcdi	24	734	221	42	noerror	NA
+babylab-vuw	S02	webcdi	18	531	75	43	noerror	after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language.
+babylab-vuw	S02	webcdi	24	734	516	78	noerror	after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language.
+babylab-vuw	S03	webcdi	18	547	120	60	noerror	NA
+babylab-vuw	S03	webcdi	24	724	474	80	noerror	NA
+babylab-vuw	S04	webcdi	18	541	139	76	noerror	NA
+babylab-vuw	S04	webcdi	24	731	443	83	noerror	NA
+babylab-vuw	S05	webcdi	18	NA	NA	NA	error	did not complete within timeframe.
+babylab-vuw	S05	webcdi	24	NA	NA	NA	error	did not complete within timeframe.
 babylab-vuw	S06	webcdi	18	539	46	25	noerror	NA
-babylab-vuw	S06	webcdi	24	729	253	35	noerror	NA
-babylab-vuw	S02	webcdi	18	531	75	38	noerror	"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
-babylab-vuw	S02	webcdi	24	734	516	84	noerror	"after completeing CDI, parent noted 20% exposure to another language at daycare (7 hours per day, 5 days per week). This is likely to be some Maori words included in English sentences, rather than speaking sentences in another language."
-babylab-vuw	S14	webcdi	18	NA	NA	NA	error	did not complete within timeframe. 
-babylab-vuw	S14	webcdi	24	NA	NA	NA	error	did not complete within timeframe. 
-babylab-vuw	S03	webcdi	18	547	120	56	noerror	NA
-babylab-vuw	S03	webcdi	24	724	474	76	noerror	NA
-babylab-vuw	S08	webcdi	18	546	32	25	noerror	NA
-babylab-vuw	S08	webcdi	24	NA	NA	NA	error	did not complete within timeframe. 
-babylab-vuw	S16	webcdi	18	543	393	95	noerror	NA
-babylab-vuw	S16	webcdi	24	736	559	91	noerror	NA
-babylab-vuw	S13	webcdi	18	548	35	29	noerror	NA
-babylab-vuw	S13	webcdi	24	731	297	58	noerror	NA
-babylab-vuw	S15	webcdi	18	548	261	86	noerror	NA
-babylab-vuw	S15	webcdi	24	726	438	69	noerror	NA
+babylab-vuw	S06	webcdi	24	729	253	40	noerror	NA
+babylab-vuw	S07	webcdi	18	541	33	25	noerror	NA
+babylab-vuw	S07	webcdi	24	722	190	43	noerror	NA
+babylab-vuw	S08	webcdi	18	546	32	22	noerror	NA
+babylab-vuw	S08	webcdi	24	NA	NA	NA	error	did not complete within timeframe.
+babylab-vuw	S09	webcdi	18	536	127	72	noerror	NA
+babylab-vuw	S09	webcdi	24	728	589	96	noerror	NA
+babylab-vuw	S11	webcdi	18	531	201	89	noerror	NA
+babylab-vuw	S11	webcdi	24	727	361	72	noerror	NA
+babylab-vuw	S12	webcdi	18	547	76	57	noerror	NA
+babylab-vuw	S12	webcdi	24	730	248	55	noerror	NA
+babylab-vuw	S13	webcdi	18	548	35	20	noerror	NA
+babylab-vuw	S13	webcdi	24	731	297	55	noerror	NA
+babylab-vuw	S14	webcdi	18	NA	NA	NA	error	did not complete within timeframe.
+babylab-vuw	S14	webcdi	24	NA	NA	NA	error	did not complete within timeframe.
+babylab-vuw	S15	webcdi	18	548	261	88	noerror	NA
+babylab-vuw	S15	webcdi	24	726	438	72	noerror	NA
+babylab-vuw	S16	webcdi	18	543	393	96	noerror	NA
+babylab-vuw	S16	webcdi	24	736	559	85	noerror	NA

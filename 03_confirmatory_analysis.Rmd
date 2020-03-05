@@ -81,7 +81,7 @@ contrasts(data.total$method) <- contr.sum(3)
 ## NAE
 data.nae <- data.total %>% subset(language_zone == "NAE") %>% droplevels()
 contrasts(data.nae$gender) <- contr.sum(2)
-contrasts(data.nae$method) <- contr.sum(2)
+contrasts(data.nae$method) <- contr.sum(3)
 ## UK
 data.uk <- data.total %>% subset(language_zone == "British") %>% droplevels()
 contrasts(data.uk$gender) <- contr.sum(2)
