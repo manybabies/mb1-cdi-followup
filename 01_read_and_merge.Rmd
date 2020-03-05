@@ -215,6 +215,9 @@ check_subid.tibble.full %>%
 
 Here we see that `r sum(check_subid.tibble.full$dataset == "CDI")` subids from the CDI data still have no match even in the unprocessed IDS data. Those might have resulted from typos when entering data, and thus need to be handchecked with the corresponding labs.
 
+* For `weltentdeckerzurich`, the unmatched CDI subids were confirmed to be infants that were not included in the IDS analysis (see [issue #2](https://github.com/manybabies/mb1-cdi-followup/issues/2)).
+* Similarly for `babylabbrookes`, those were infants that were not included in the IDS analysis (see [issue #3](https://github.com/manybabies/mb1-cdi-followup/issues/3)). Notably participants `mb43` in our dataset should have been `mb143`, but this does not matter given that we do not keep their data.
+
 # Merge
 
 Finally we merge the IDS preference data into the CDI data, so that only IDS preference data from infants whose CDI score was recorded is kept in the final dataset.
