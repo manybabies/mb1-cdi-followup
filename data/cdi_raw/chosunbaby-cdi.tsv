@@ -1,4 +1,4 @@
-labid	subid	gender	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords(=raw score)	standardized-score-CDI	CDI-error	Notes
+labid	subid	gender	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
 chosunbaby	H15_Y12	M	K-CDI	18	557	81	NA	noerror	NA
 chosunbaby	H02_Y01	F	K-CDI	18	571	19	NA	noerror	NA
 chosunbaby	H14_Y11	M	K-CDI	18	554	118	NA	noerror	NA

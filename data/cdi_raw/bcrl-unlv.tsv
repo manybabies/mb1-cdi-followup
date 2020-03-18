@@ -1,31 +1,31 @@
 labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
-bcrl-unlv	2901	webcdi	24	792	8	1	error	Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem
-bcrl-unlv	2804	webcdi	24	739	99	12	noerror	NA
+bcrl-unlv	2901	webcdi	24	792	8	<1	error	"Much lower number of words produced than other babies, unsure if parent misunderstood directions or if other problem"
+bcrl-unlv	2804	webcdi	24	739	99	11	noerror	NA
 bcrl-unlv	2401	webcdi	24	732	346	50	noerror	NA
-bcrl-unlv	3304	webcdi	24	721	51	11	noerror	NA
-bcrl-unlv	3103	webcdi	24	746	248	50	noerror	NA
-bcrl-unlv	802	webcdi	24	753	80	9	noerror	NA
-bcrl-unlv	2304	webcdi	24	719	225	31	noerror	NA
+bcrl-unlv	3304	webcdi	24	721	51	10	noerror	NA
+bcrl-unlv	3103	webcdi	24	746	248	49	noerror	NA
+bcrl-unlv	802	webcdi	24	753	80	8	noerror	NA
+bcrl-unlv	2304	webcdi	24	719	225	37	noerror	NA
 bcrl-unlv	303	webcdi	24	783	124	18	noerror	NA
-bcrl-unlv	2504	webcdi	24	744	0	1	error	Participant did not complete survey
-bcrl-unlv	1204	webcdi	24	783	174	28	noerror	NA
-bcrl-unlv	404	webcdi	24	770	235	27	noerror	NA
-bcrl-unlv	101	webcdi	24	758	322	63	noerror	NA
-bcrl-unlv	1701	webcdi	24	770	117	22	noerror	NA
-bcrl-unlv	602	webcdi	24	696	210	59	noerror	MA
-bcrl-unlv	3402	webcdi	18	614	0	1	error	Participant did not complete survey
-bcrl-unlv	1902	webcdi	18	669	95	30	noerror	NA
-bcrl-unlv	1103	webcdi	24	691	353	71	noerror	NA
-bcrl-unlv	2703	webcdi	18	592	451	96	noerror	NA
-bcrl-unlv	3201	webcdi	24	793	361	38	noerror	NA
-bcrl-unlv	1504	webcdi	24	745	67	11	noerror	NA
-bcrl-unlv	1002	webcdi	24	1002	51	7	noerror	NA
-bcrl-unlv	3503	webcdi	18	601	208	81	noerror	NA
-bcrl-unlv	2804	webcdi	18	609	0	1	error	Participant did not complete survey
-bcrl-unlv	3201	webcdi	18	610	86	29	noerror	NA
-bcrl-unlv	2703	webcdi	24	743	605	95	noerror	NA
-bcrl-unlv	3002	webcdi	24	738	175	35	noerror	NA
-bcrl-unlv	2103	webcdi	24	746	50	8	noerror	NA
-bcrl-unlv	3604	webcdi	24	713	485	85	noerror	NA
-bcrl-unlv	1401	webcdi	24	769	292	49	noerror	NA
-bcrl-unlv	702	webcdi	24	833	222	23	noerror	NA
+bcrl-unlv	2504	webcdi	24	744			error	Participant did not complete survey
+bcrl-unlv	1204	webcdi	24	783	174	27	noerror	NA
+bcrl-unlv	404	webcdi	24	770	235	32	noerror	NA
+bcrl-unlv	101	webcdi	24	758	322	62	noerror	NA
+bcrl-unlv	1701	webcdi	24	770	117	16	noerror	NA
+bcrl-unlv	602	webcdi	24	696	210	58	noerror	MA
+bcrl-unlv	3402	webcdi	18	614			error	Participant did not complete survey
+bcrl-unlv	1902	webcdi	18	669	95	29	noerror	NA
+bcrl-unlv	1103	webcdi	24	691	353	61	noerror	NA
+bcrl-unlv	2703	webcdi	18	592	451	95	noerror	NA
+bcrl-unlv	3201	webcdi	24	793	361	37	noerror	NA
+bcrl-unlv	1504	webcdi	24	745	67	10	noerror	NA
+bcrl-unlv	1002	webcdi	24	1002	51	6	noerror	NA
+bcrl-unlv	3503	webcdi	18	601	208	80	noerror	NA
+bcrl-unlv	2804	webcdi	18	609			error	Participant did not complete survey
+bcrl-unlv	3201	webcdi	18	610	86	34	noerror	NA
+bcrl-unlv	2703	webcdi	24	743	605	94	noerror	NA
+bcrl-unlv	3002	webcdi	24	738	175	34	noerror	NA
+bcrl-unlv	2103	webcdi	24	746	50	7	noerror	NA
+bcrl-unlv	3604	webcdi	24	713	485	84	noerror	NA
+bcrl-unlv	1401	webcdi	24	769	292	48	noerror	NA
+bcrl-unlv	702	webcdi	24	833	222	36	noerror	NA
