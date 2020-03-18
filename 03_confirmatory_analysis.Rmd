@@ -173,7 +173,7 @@ We now want to check the statistical power of significant effects, and discard a
 lmer.pwr.nae <- lmer.lr.nae %>%
   rownames_to_column(var = "Parameter") %>%
   subset(`Pr(>Chisq)` < .05) %>%
-  mutate(pwr = powerSim(lmer.lr.nae, test = fixed(Parameter, method = "lr")))
+  mutate(pwr = powerSim(lmer.lr.nae, test = fixed(Parameter, method = "lr")) %>% {.$x/.$n})
 lmer.pwr.uk <- lmer.lr.uk %>%
   rownames_to_column(var = "Parameter") %>%
   subset(`Pr(>Chisq)` < .05) %>%
