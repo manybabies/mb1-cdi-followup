@@ -47,6 +47,7 @@ lr_tests.lmer <- function(model){
   }
   # Run and compare models =======================
   lr <- 1:length(fe) %>%
-    map(~ update(model, update.term_delete(.x)))
-  return(exec(anova, !!!lr))
+    map(~ update(model, update.term_delete(.x))) %>%
+    prepend(model)
+  return(exec(anova, !!!lr, model.names = c(fe, "Intercept")))
 }
