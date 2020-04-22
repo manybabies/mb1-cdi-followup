@@ -71,14 +71,18 @@ data.cdi %>%
   subset(n != 1)
 ```
 
-Cases in which we have two data points but a single unique value for `vocab_nwords` are pure duplicate entries. Checking by hand, we realise that the two duplicate data points for `babylablmu` result from a first entry with an error, and a second valid entry. However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. They might instead result from an incorrect `subid` for one of the two entries.
+Cases in which we have two data points but a single unique value for `vocab_nwords` are pure duplicate entries.
 
-Although the scope of this script is not to exclude data points, we remove the pure duplicates and `babylablmu` "error duplicates" here while we know about them:
+Checking by hand, we realise that the two duplicate data points for `babylablmu` result from a first entry with an error, and a second valid entry. The duplicate point for `unlv-musiclab` results from a similar error.
+
+However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. They might instead result from an incorrect `subid` for one of the two entries.
+
+Although the scope of this script is not to exclude data points, we remove the pure duplicates and `babylablmu` and `unlv-musiclab` "error duplicates" here while we know about them:
 
 ```{r cdi_fix_babylablmu, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%
-  subset(!(subid_unique %in% c("babylab-lmu:35", "babylab-lmu:76") &
-             CDI.error == "error")) %>%
+  subset(!(subid_unique %in% c("babylab-lmu:35", "babylab-lmu:76", "unlv-musiclab:MB021") &
+             CDI.error %in% c("error", TRUE))) %>%
   unique()
 ```
 

@@ -1082,17 +1082,6 @@ babylablmu,34,FRAKIS,24,722,36,1-10,FALSE,filled out web-based version,babylablm
 babylablmu,34,FRAKIS,24,722,36,1-10,FALSE,filled out web-based version,babylablmu:34,NA,German,Other,1,8,ADS,4,eyetracking,360,11.827515400410677,9-12 mo,FALSE,M,FALSE,5.24,FALSE
 babylablmu,34,FRAKIS,24,722,36,1-10,FALSE,filled out web-based version,babylablmu:34,NA,German,Other,1,9,ADS,5,eyetracking,360,11.827515400410677,9-12 mo,FALSE,M,FALSE,3.86,FALSE
 babylablmu,34,FRAKIS,24,722,36,1-10,FALSE,filled out web-based version,babylablmu:34,NA,German,Other,1,10,IDS,5,eyetracking,360,11.827515400410677,9-12 mo,FALSE,M,FALSE,NA,TRUE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,1,IDS,1,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,13.05,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,2,ADS,1,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,13.16,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,3,IDS,2,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,11.08,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,4,ADS,2,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,6.18,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,5,ADS,3,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,6.13,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,6,IDS,3,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,10.46,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,7,IDS,4,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,3.84,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,8,ADS,4,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,NA,TRUE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,9,ADS,5,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,11.19,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,10,IDS,5,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,8.93,FALSE
-babylablmu,35,FRAKIS,24,732,288,51-75,TRUE,filled out web-based version but did not complete it,babylablmu:35,NA,German,Other,1,11,ADS,6,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,5.08,FALSE
 babylablmu,35,FRAKIS,24,744,374,51-75,FALSE,filled out web-based version a second time on another day and completed it,babylablmu:35,NA,German,Other,1,1,IDS,1,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,13.05,FALSE
 babylablmu,35,FRAKIS,24,744,374,51-75,FALSE,filled out web-based version a second time on another day and completed it,babylablmu:35,NA,German,Other,1,2,ADS,1,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,13.16,FALSE
 babylablmu,35,FRAKIS,24,744,374,51-75,FALSE,filled out web-based version a second time on another day and completed it,babylablmu:35,NA,German,Other,1,3,IDS,2,eyetracking,391,12.845995893223819,12-15 mo,FALSE,F,FALSE,11.08,FALSE
@@ -1532,8 +1521,6 @@ babylablmu,75,FRAKIS,18,576,111,76-90,TRUE,already aged out; filled out web-base
 babylablmu,75,FRAKIS,18,576,111,76-90,TRUE,already aged out; filled out web-based version,babylablmu:75,NA,German,Other,4,7,IDS,3,eyetracking,300,9.856262833675565,9-12 mo,FALSE,M,FALSE,NA,TRUE
 babylablmu,76,FRAKIS,18,558,11,11-25,FALSE,filled out web-based version,babylablmu:76,NA,German,Other,1,1,IDS,1,eyetracking,426,13.995893223819301,12-15 mo,FALSE,F,FALSE,4.56,FALSE
 babylablmu,76,FRAKIS,18,558,11,11-25,FALSE,filled out web-based version,babylablmu:76,NA,German,Other,1,2,ADS,1,eyetracking,426,13.995893223819301,12-15 mo,FALSE,F,FALSE,NA,TRUE
-babylablmu,76,FRAKIS,24,735,178,26-50,TRUE,filled out web-based version but did not complete it,babylablmu:76,NA,German,Other,1,1,IDS,1,eyetracking,426,13.995893223819301,12-15 mo,FALSE,F,FALSE,4.56,FALSE
-babylablmu,76,FRAKIS,24,735,178,26-50,TRUE,filled out web-based version but did not complete it,babylablmu:76,NA,German,Other,1,2,ADS,1,eyetracking,426,13.995893223819301,12-15 mo,FALSE,F,FALSE,NA,TRUE
 babylablmu,76,FRAKIS,24,735,203,26-50,FALSE,filled out web-based version a second time the same day and completed it,babylablmu:76,NA,German,Other,1,1,IDS,1,eyetracking,426,13.995893223819301,12-15 mo,FALSE,F,FALSE,4.56,FALSE
 babylablmu,76,FRAKIS,24,735,203,26-50,FALSE,filled out web-based version a second time the same day and completed it,babylablmu:76,NA,German,Other,1,2,ADS,1,eyetracking,426,13.995893223819301,12-15 mo,FALSE,F,FALSE,NA,TRUE
 babylablmu,79,FRAKIS,18,540,34,26-50,FALSE,filled out web-based version,babylablmu:79,NA,German,Other,3,1,IDS,5,eyetracking,303,9.95482546201232,9-12 mo,FALSE,M,FALSE,NA,TRUE
@@ -12243,8 +12230,6 @@ unlvmusiclab,run023,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run023,NA,Am
 unlvmusiclab,run023,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run023,NA,American English,NAE,3,14,ADS,6,singlescreen,131,4.303901437371663,3-6 mo,TRUE,M,FALSE,17.363,FALSE
 unlvmusiclab,run023,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run023,NA,American English,NAE,3,15,IDS,8,singlescreen,131,4.303901437371663,3-6 mo,TRUE,M,FALSE,17.344,FALSE
 unlvmusiclab,run023,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run023,NA,American English,NAE,3,16,ADS,8,singlescreen,131,4.303901437371663,3-6 mo,TRUE,M,FALSE,6.872,FALSE
-unlvmusiclab,run021,webcdi,24,768,39,24,TRUE,incomplete,unlvmusiclab:run021,24,American English,NAE,1,1,ADS,1,singlescreen,105,3.4496919917864477,3-6 mo,TRUE,F,FALSE,17.378,FALSE
-unlvmusiclab,run021,webcdi,24,768,39,24,TRUE,incomplete,unlvmusiclab:run021,24,American English,NAE,1,2,IDS,1,singlescreen,105,3.4496919917864477,3-6 mo,TRUE,F,FALSE,17.056,FALSE
 unlvmusiclab,run024,webcdi,24,717,429,80,FALSE,NA,unlvmusiclab:run024,80,American English,NAE,4,1,ADS,5,singlescreen,128,4.205338809034908,3-6 mo,TRUE,M,FALSE,17.198,FALSE
 unlvmusiclab,run024,webcdi,24,717,429,80,FALSE,NA,unlvmusiclab:run024,80,American English,NAE,4,2,IDS,5,singlescreen,128,4.205338809034908,3-6 mo,TRUE,M,FALSE,17.524,FALSE
 unlvmusiclab,run024,webcdi,24,717,429,80,FALSE,NA,unlvmusiclab:run024,80,American English,NAE,4,3,IDS,7,singlescreen,128,4.205338809034908,3-6 mo,TRUE,M,FALSE,17.558,FALSE
