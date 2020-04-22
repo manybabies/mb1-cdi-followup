@@ -173,8 +173,10 @@ A common way to get better computational models both in terms of estimate precis
 
 ```{r z_age_days}
 df.final <- df.final %>%
-  mutate(z_age_months = scale(age_days, scale = F)/365*12,
-         CDI.z_age_months = scale(CDI.agedays, scale = F)/365*12)
+  mutate(z_age_months = as.numeric(scale(age_days, scale = F)/365*12)) %>%
+  group_by(CDI.agerange) %>%
+  mutate(CDI.z_age_months = scale(CDI.agedays, scale = F)/365*12) %>%
+  ungroup()
 ```
 
 ## `z_standardized_CDI`, `z_vocab_nwords`

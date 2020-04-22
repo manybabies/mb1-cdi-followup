@@ -64,10 +64,10 @@ First, we run a Kappa test on the possibility of colinearity between `z_age_mont
 
 ```{r colinearity_check}
 # Run kappa test
-c.age_months <- model.matrix(~ z_age_months + CDI.z_age_months, data = data.total) %>% kappa()
+k.age_months <- model.matrix(~ z_age_months + CDI.z_age_months, data = data.total) %>% kappa()
 ```
 
-With a value of `r c.age_months`, we do not have a colinearity issue and can proceed with the data analysis as planned.
+With a value of `r k.age_months`, we do not have a colinearity issue and can proceed with the data analysis as planned.
 
 ## Contrast Setups
 
@@ -102,11 +102,11 @@ First, we want to assess quickly if there is a direct correlation between IDS pr
 # Statistics =====================================
 ## North American Sample
 test.pearson.nae <- cor.test(data.nae$IDS_pref,
-                             data.nae$standardized.score.CDI.num,
+                             data.nae$z_standardized_CDI,
                              alternative = "two.sided", method = "pearson")
 ## UK Sample
 test.pearson.uk <- cor.test(data.uk$IDS_pref,
-                            data.uk$vocab_nwords,
+                            data.uk$z_vocab_nwords,
                             alternative = "two.sided", method = "pearson")
 # Plots ==========================================
 ## North American Sample
@@ -142,18 +142,26 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 ```{r full_lmer}
 # Run models =====================================
 ## NAE
-lmer.full.nae <- lmer(standardized.score.CDI.num ~ gender + CDI.z_age_months + IDS_pref +
-                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                        (1 + gender + CDI.z_age_months + IDS_pref + IDS_pref:method +
-                           IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
+lmer.full.nae <- lmer(z_standardized_CDI ~ gender + CDI.agerange + CDI.z_age_months +
+                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
+                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
+                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months +
+                        (1 + gender + CDI.agerange + CDI.z_age_months +
+                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
+                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
+                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months | labid),
                       data = data.nae)
 # Sequentially removed random effects:
 # [list here]
 ## UK
-lmer.full.uk <- lmer(vocab_nwords ~ gender + CDI.z_age_months + IDS_pref +
-                       IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                       (1 + gender + CDI.z_age_months + IDS_pref + IDS_pref:method +
-                          IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
+lmer.full.uk <- lmer(z_vocab_nwords ~ gender + CDI.agerange + CDI.z_age_months +
+                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
+                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
+                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months +
+                        (1 + gender + CDI.agerange + CDI.z_age_months +
+                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
+                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
+                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months | labid),
                      data = data.uk)
 # Sequentially removed random effects:
 # [list here]
