@@ -30,8 +30,9 @@ Other notable issues at data import were:
 
 * a misnamed column in `infantlanglab-utk.tsv`, `CDI_agerange` instead of `CDI-agerange`, corrected by hand;
 * a misnamed column in `chosunbaby-cdi.csv`, `vocab_nwords(=raw score)` instead of `vocab_nwords`, corrected by hand;
+* a misnamed column in `infantstudies-ubc.tsv`, `subject_id` instead of `subid`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
-* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NAs.
+* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA.
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information
@@ -153,6 +154,7 @@ data.cdi <- data.cdi %>%
                            labid == "lscppsl" ~ paste0(subid, "lscppsl"),
                            labid == "babylabprinceton" ~ str_replace(subid, "MB",
                                                                      "manybabies"),
+                           labid == "unlvmusiclab" ~ str_replace(subid, "MB", "run"),
                            labid %in% changed_subid_labs ~
                              str_remove_all(subid, "-|_") %>% str_to_lower(),
                            T ~ subid),

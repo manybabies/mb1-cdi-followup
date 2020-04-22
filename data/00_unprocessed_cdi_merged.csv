@@ -639,31 +639,56 @@ infantlanglab-utk,MB1R14_4F_S8,webcdi,24,735,199,27,noerror,NA
 infantlanglab-utk,MB1R14_4M_S12,webcdi,24,752,342,66,noerror,NA
 infantlanglab-utk,MB1R14_2M_S14,webcdi,24,760,233,46,noerror,NA
 infantlanglab-utk,MB1R14_4F_S15,webcdi,24,739,298,42,noerror,NA
-infantstudies-ubc,MB_M_1,webcdi,18,559,97,62,NA,NA
-infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,NA,CDI not completed
-infantstudies-ubc,MB_M_3,webcdi,18,540,232,93,NA,NA
-infantstudies-ubc,MB_M_4,webcdi,18,543,51,50,NA,NA
-infantstudies-ubc,MB_M_5,webcdi,18,548,6,3,NA,NA
-infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,NA,CDI not completed
-infantstudies-ubc,MB_M_7,webcdi,18,538,79,63,NA,NA
-infantstudies-ubc,MB_M_8,webcdi,18,540,14,12,NA,NA
-infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,NA,CDI not completed
-infantstudies-ubc,MB_M_10,webcdi,18,549,15,14,NA,NA
-infantstudies-ubc,MB_M_11,webcdi,18,523,118,65,NA,NA
-infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,NA,CDI not completed
-infantstudies-ubc,MB_M_13,webcdi,18,541,10,8,NA,NA
-infantstudies-ubc,MB_M_14,webcdi,18,564,6,3,NA,NA
-infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,NA,CDI not completed
-infantstudies-ubc,MB_M_16,webcdi,18,571,19,13,NA,NA
-infantstudies-ubc,MB_M_17,webcdi,18,526,38,27,NA,NA
-infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,NA,CDI not completed
-infantstudies-ubc,MB_M_19,webcdi,18,542,32,23,NA,NA
-infantstudies-ubc,MB_M_20,webcdi,18,536,28,20,NA,NA
-infantstudies-ubc,MB_M_21,webcdi,18,557,52,42,NA,NA
-infantstudies-ubc,MB_M_22,webcdi,18,533,21,14,NA,NA
-infantstudies-ubc,MB_M_23,webcdi,18,500,77,57,NA,NA
-infantstudies-ubc,MB_M_24,webcdi,18,490,19,16,NA,NA
-infantstudies-ubc,MB_M_25,webcdi,18,509,5,5,NA,NA
+infantstudies-ubc,MB_M_1,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_2,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_3,webcdi,24,702,507,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,24,725,247,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,24,708,32,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,24,701,498,NA,NA
+infantstudies-ubc,MB_M_7,webcdi,24,700,417,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,24,668,36,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,24,669,153,NA,NA
+infantstudies-ubc,MB_M_10,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_11,webcdi,24,667,457,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_13,webcdi,24,711,30,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,24,703,7,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_16,webcdi,24,705,180,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,24,674,133,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_19,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_20,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_21,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_22,webcdi,24,719,588,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_24,webcdi,24,693,146,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,24,NA,NA,NA,not completed
+infantstudies-ubc,MB_M_1,webcdi,18,559,97,NA,NA
+infantstudies-ubc,MB_M_2,webcdi,18,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_3,webcdi,18,540,232,NA,NA
+infantstudies-ubc,MB_M_4,webcdi,18,543,51,NA,NA
+infantstudies-ubc,MB_M_5,webcdi,18,548,6,NA,NA
+infantstudies-ubc,MB_M_6,webcdi,18,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_7,webcdi,18,538,79,NA,NA
+infantstudies-ubc,MB_M_8,webcdi,18,540,14,NA,NA
+infantstudies-ubc,MB_M_9,webcdi,18,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_10,webcdi,18,549,15,NA,NA
+infantstudies-ubc,MB_M_11,webcdi,18,523,118,NA,NA
+infantstudies-ubc,MB_M_12,webcdi,18,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_13,webcdi,18,541,10,NA,NA
+infantstudies-ubc,MB_M_14,webcdi,18,564,6,NA,NA
+infantstudies-ubc,MB_M_15,webcdi,18,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_16,webcdi,18,571,19,NA,NA
+infantstudies-ubc,MB_M_17,webcdi,18,526,38,NA,NA
+infantstudies-ubc,MB_M_18,webcdi,18,NA,NA,NA,CDI not completed
+infantstudies-ubc,MB_M_19,webcdi,18,542,32,NA,NA
+infantstudies-ubc,MB_M_20,webcdi,18,536,28,NA,NA
+infantstudies-ubc,MB_M_21,webcdi,18,557,52,NA,NA
+infantstudies-ubc,MB_M_22,webcdi,18,533,21,NA,NA
+infantstudies-ubc,MB_M_23,webcdi,18,500,77,NA,NA
+infantstudies-ubc,MB_M_24,webcdi,18,490,19,NA,NA
+infantstudies-ubc,MB_M_25,webcdi,18,509,5,NA,NA
 leeds-lcdu,MB04,O-CDI,18,543,90,NA,noerror,NA
 leeds-lcdu,MB05,O-CDI,18,564,129,NA,noerror,NA
 leeds-lcdu,MB07,O-CDI,18,549,12,NA,noerror,NA
@@ -988,6 +1013,41 @@ um_babylanguagelab,4790,webCDI,18,557,523,77,noerror,NA
 um_babylanguagelab,4790,webCDI,24,768,91,45,noerror,NA
 um_babylanguagelab,4901,webCDI,18,585,312,91,noerror,NA
 um_babylanguagelab,4901,webCDI,NA,NA,NA,NA,error,webCDI sent but not completed
+unlv-musiclab,MB021,webcdi,24,777,85,9,noerror,NA
+unlv-musiclab,MB023,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB023,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB023,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB021,webcdi,24,768,39,24,error,incomplete
+unlv-musiclab,MB024,webcdi,24,717,429,80,noerror,NA
+unlv-musiclab,MB014,webcdi,24,724,131,17,noerror,NA
+unlv-musiclab,MB017,webcdi,NA,NA,0,NA,error,incomplete
+unlv-musiclab,MB018,webcdi,24,728,121,23,noerror,NA
+unlv-musiclab,MB019,webcdi,24,714,628,97,noerror,NA
+unlv-musiclab,MB015,webcdi,24,708,202,28,noerror,NA
+unlv-musiclab,MB006,webcdi,24,713,73,13,noerror,NA
+unlv-musiclab,MB014,webcdi,18,540,8,4,noerror,NA
+unlv-musiclab,MB018,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB005,webcdi,18,547,78,40,noerror,NA
+unlv-musiclab,MB007,webcdi,18,525,11,5,noerror,NA
+unlv-musiclab,MB006,webcdi,18,551,21,15,noerror,NA
+unlv-musiclab,MB001,webcdi,24,737,376,56,noerror,NA
+unlv-musiclab,MB012,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB004,webcdi,18,546,146,64,noerror,NA
+unlv-musiclab,MB002,webcdi,18,547,6,3,noerror,NA
+unlv-musiclab,MB001,webcdi,18,577,166,70,noerror,NA
+unlv-musiclab,MB019,webcdi,18,518,51,28,noerror,NA
+unlv-musiclab,MB009,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB015,webcdi,18,549,22,11,noerror,NA
+unlv-musiclab,MB024,webcdi,18,528,120,68,noerror,NA
+unlv-musiclab,MB008,webcdi,18,558,17,11,noerror,NA
+unlv-musiclab,MB008,webcdi,24,707,130,17,noerror,NA
+unlv-musiclab,MB013,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB017,webcdi,18,602,93,61,noerror,NA
+unlv-musiclab,MB004,webcdi,NA,NA,NA,NA,error,incomplete
+unlv-musiclab,MB021,webcdi,18,531,150,65,noerror,NA
+unlv-musiclab,MB023,webcdi,18,578,93,61,noerror,NA
+unlv-musiclab,MB005,webcdi,24,753,133,18,noerror,NA
+unlv-musiclab,MB007,webcdi,24,716,52,5,noerror,NA
 weescience-edinburgh,MB01,O-CDI,18,549,88,NA,noerror,NA
 weescience-edinburgh,MB01,O-CDI,24,790,346,NA,noerror,NA
 weescience-edinburgh,MB02,O-CDI,18,551,164,NA,noerror,NA

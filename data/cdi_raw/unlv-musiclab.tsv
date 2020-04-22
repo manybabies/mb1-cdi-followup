@@ -1,0 +1,36 @@
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
+unlv-musiclab	MB021	webcdi	24	777	85	9	noerror	
+unlv-musiclab	MB023	webcdi					error	incomplete
+unlv-musiclab	MB023	webcdi					error	incomplete
+unlv-musiclab	MB023	webcdi					error	incomplete
+unlv-musiclab	MB021	webcdi	24	768	39	24	error	incomplete
+unlv-musiclab	MB024	webcdi	24	717	429	80	noerror	
+unlv-musiclab	MB014	webcdi	24	724	131	17	noerror	
+unlv-musiclab	MB017	webcdi			0		error	incomplete
+unlv-musiclab	MB018	webcdi	24	728	121	23	noerror	
+unlv-musiclab	MB019	webcdi	24	714	628	97	noerror	
+unlv-musiclab	MB015	webcdi	24	708	202	28	noerror	
+unlv-musiclab	MB006	webcdi	24	713	73	13	noerror	
+unlv-musiclab	MB014	webcdi	18	540	8	4	noerror	
+unlv-musiclab	MB018	webcdi					error	incomplete
+unlv-musiclab	MB005	webcdi	18	547	78	40	noerror	
+unlv-musiclab	MB007	webcdi	18	525	11	5	noerror	
+unlv-musiclab	MB006	webcdi	18	551	21	15	noerror	
+unlv-musiclab	MB001	webcdi	24	737	376	56	noerror	
+unlv-musiclab	MB012	webcdi					error	incomplete
+unlv-musiclab	MB004	webcdi	18	546	146	64	noerror	
+unlv-musiclab	MB002	webcdi	18	547	6	3	noerror	
+unlv-musiclab	MB001	webcdi	18	577	166	70	noerror	
+unlv-musiclab	MB019	webcdi	18	518	51	28	noerror	
+unlv-musiclab	MB009	webcdi					error	incomplete
+unlv-musiclab	MB015	webcdi	18	549	22	11	noerror	
+unlv-musiclab	MB024	webcdi	18	528	120	68	noerror	
+unlv-musiclab	MB008	webcdi	18	558	17	11	noerror	
+unlv-musiclab	MB008	webcdi	24	707	130	17	noerror	
+unlv-musiclab	MB013	webcdi					error	incomplete
+unlv-musiclab	MB017	webcdi	18	602	93	61	noerror	
+unlv-musiclab	MB004	webcdi					error	incomplete
+unlv-musiclab	MB021	webcdi	18	531	150	65	noerror	
+unlv-musiclab	MB023	webcdi	18	578	93	61	noerror	
+unlv-musiclab	MB005	webcdi	24	753	133	18	noerror	
+unlv-musiclab	MB007	webcdi	24	716	52	5	noerror	
