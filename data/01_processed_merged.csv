@@ -6121,7 +6121,6 @@ infantcogubc,sl05,webcdi,18,549,67,34,FALSE,NA,infantcogubc:sl05,34,Canadian Eng
 infantcogubc,sl05,webcdi,18,549,67,34,FALSE,NA,infantcogubc:sl05,34,Canadian English,NAE,2,14,IDS,7,eyetracking,231,7.5893223819301845,6-9 mo,TRUE,F,FALSE,NA,TRUE
 infantcogubc,sl05,webcdi,18,549,67,34,FALSE,NA,infantcogubc:sl05,34,Canadian English,NAE,2,15,IDS,8,eyetracking,231,7.5893223819301845,6-9 mo,TRUE,F,FALSE,NA,TRUE
 infantcogubc,sl05,webcdi,18,549,67,34,FALSE,NA,infantcogubc:sl05,34,Canadian English,NAE,2,16,ADS,8,eyetracking,231,7.5893223819301845,6-9 mo,TRUE,F,FALSE,NA,TRUE
-infantcogubc,tp13,webcdi,18,546,25,26,FALSE,NA,infantcogubc:tp13,26,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 infantcogubc,am19,webcdi,18,599,29,16,FALSE,NA,infantcogubc:am19,16,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 infantcogubc,mk06,webcdi,18,545,18,17,FALSE,NA,infantcogubc:mk06,17,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 infantcogubc,kw21,webcdi,18,550,128,57,FALSE,NA,infantcogubc:kw21,57,Canadian English,NAE,2,1,ADS,1,singlescreen,145,4.763860369609857,3-6 mo,TRUE,F,FALSE,11.3,FALSE
@@ -6223,7 +6222,6 @@ infantcogubc,os32,webcdi,18,575,273,92,FALSE,NA,infantcogubc:os32,92,Canadian En
 infantcogubc,os32,webcdi,18,575,273,92,FALSE,NA,infantcogubc:os32,92,Canadian English,NAE,1,12,IDS,6,singlescreen,104,3.4168377823408624,3-6 mo,TRUE,M,FALSE,6.26,FALSE
 infantcogubc,os32,webcdi,18,575,273,92,FALSE,NA,infantcogubc:os32,92,Canadian English,NAE,1,13,IDS,7,singlescreen,104,3.4168377823408624,3-6 mo,TRUE,M,FALSE,7.91,FALSE
 infantcogubc,os32,webcdi,18,575,273,92,FALSE,NA,infantcogubc:os32,92,Canadian English,NAE,1,14,ADS,7,singlescreen,104,3.4168377823408624,3-6 mo,TRUE,M,FALSE,12.57,FALSE
-infantcogubc,tp13,webcdi,24,744,470,84,FALSE,NA,infantcogubc:tp13,84,Canadian English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 infantcogubc,hv36,webcdi,18,602,73,43,FALSE,NA,infantcogubc:hv36,43,Canadian English,NAE,1,1,IDS,1,singlescreen,151,4.960985626283367,3-6 mo,TRUE,M,FALSE,3.33,FALSE
 infantcogubc,hv36,webcdi,18,602,73,43,FALSE,NA,infantcogubc:hv36,43,Canadian English,NAE,1,2,ADS,1,singlescreen,151,4.960985626283367,3-6 mo,TRUE,M,FALSE,6.22,FALSE
 infantcogubc,hv36,webcdi,18,602,73,43,FALSE,NA,infantcogubc:hv36,43,Canadian English,NAE,1,3,IDS,2,singlescreen,151,4.960985626283367,3-6 mo,TRUE,M,FALSE,7.09,FALSE
@@ -12422,7 +12420,7 @@ unlvmusiclab,run006,webcdi,18,551,21,15,FALSE,NA,unlvmusiclab:run006,15,American
 unlvmusiclab,run006,webcdi,18,551,21,15,FALSE,NA,unlvmusiclab:run006,15,American English,NAE,2,14,IDS,7,singlescreen,175,5.749486652977413,3-6 mo,TRUE,M,FALSE,2.858,FALSE
 unlvmusiclab,run006,webcdi,18,551,21,15,FALSE,NA,unlvmusiclab:run006,15,American English,NAE,2,15,IDS,8,singlescreen,175,5.749486652977413,3-6 mo,TRUE,M,FALSE,10.064,FALSE
 unlvmusiclab,run006,webcdi,18,551,21,15,FALSE,NA,unlvmusiclab:run006,15,American English,NAE,2,16,ADS,8,singlescreen,175,5.749486652977413,3-6 mo,TRUE,M,FALSE,10.439,FALSE
-unlvmusiclab,run001,webcdi,24,737,376,56,FALSE,NA,unlvmusiclab:run001,56,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+unlvmusiclab,run001pilot,webcdi,24,737,376,56,FALSE,NA,unlvmusiclab:run001pilot,56,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 unlvmusiclab,run012,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run012,NA,American English,NAE,1,1,IDS,1,singlescreen,173,5.683778234086242,3-6 mo,TRUE,M,FALSE,13.313,FALSE
 unlvmusiclab,run012,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run012,NA,American English,NAE,1,2,ADS,1,singlescreen,173,5.683778234086242,3-6 mo,TRUE,M,FALSE,13.409,FALSE
 unlvmusiclab,run012,webcdi,NA,NA,NA,NA,TRUE,incomplete,unlvmusiclab:run012,NA,American English,NAE,1,3,IDS,2,singlescreen,173,5.683778234086242,3-6 mo,TRUE,M,FALSE,8.84,FALSE
@@ -12455,7 +12453,7 @@ unlvmusiclab,run002,webcdi,18,547,6,3,FALSE,NA,unlvmusiclab:run002,3,American En
 unlvmusiclab,run002,webcdi,18,547,6,3,FALSE,NA,unlvmusiclab:run002,3,American English,NAE,2,13,ADS,7,singlescreen,169,5.552361396303901,3-6 mo,TRUE,F,FALSE,13.655,FALSE
 unlvmusiclab,run002,webcdi,18,547,6,3,FALSE,NA,unlvmusiclab:run002,3,American English,NAE,2,14,IDS,7,singlescreen,169,5.552361396303901,3-6 mo,TRUE,F,FALSE,7.447,FALSE
 unlvmusiclab,run002,webcdi,18,547,6,3,FALSE,NA,unlvmusiclab:run002,3,American English,NAE,2,15,IDS,8,singlescreen,169,5.552361396303901,3-6 mo,TRUE,F,FALSE,8.823,FALSE
-unlvmusiclab,run001,webcdi,18,577,166,70,FALSE,NA,unlvmusiclab:run001,70,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+unlvmusiclab,run001pilot,webcdi,18,577,166,70,FALSE,NA,unlvmusiclab:run001pilot,70,American English,NAE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 unlvmusiclab,run019,webcdi,18,518,51,28,FALSE,NA,unlvmusiclab:run019,28,American English,NAE,3,1,IDS,5,singlescreen,175,5.749486652977413,3-6 mo,TRUE,F,FALSE,16.88,FALSE
 unlvmusiclab,run019,webcdi,18,518,51,28,FALSE,NA,unlvmusiclab:run019,28,American English,NAE,3,2,ADS,5,singlescreen,175,5.749486652977413,3-6 mo,TRUE,F,FALSE,11.064,FALSE
 unlvmusiclab,run019,webcdi,18,518,51,28,FALSE,NA,unlvmusiclab:run019,28,American English,NAE,3,3,ADS,7,singlescreen,175,5.749486652977413,3-6 mo,TRUE,F,FALSE,9.536,FALSE

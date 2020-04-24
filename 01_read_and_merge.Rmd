@@ -75,7 +75,7 @@ Cases in which we have two data points but a single unique value for `vocab_nwor
 
 Checking by hand, we realise that the two duplicate data points for `babylablmu` result from a first entry with an error, and a second valid entry. The duplicate point for `unlv-musiclab` results from a similar error.
 
-However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. They might instead result from an incorrect `subid` for one of the two entries.
+However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. This was checked with the lab, this was one participants that filled in the web questionnaire twice; here, we decide to keep the first entry, with `vocab_nwords == 289` (see [issue #7](https://github.com/manybabies/mb1-cdi-followup/issues/7)).
 
 Although the scope of this script is not to exclude data points, we remove the pure duplicates and `babylablmu` and `unlv-musiclab` "error duplicates" here while we know about them:
 
@@ -83,6 +83,7 @@ Although the scope of this script is not to exclude data points, we remove the p
 data.cdi <- data.cdi %>%
   subset(!(subid_unique %in% c("babylab-lmu:35", "babylab-lmu:76", "unlv-musiclab:MB021") &
              CDI.error %in% c("error", TRUE))) %>%
+  subset(!(subid_unique == "InfantCog-UBC:tp13" & vocab_nwords != 289)) %>%
   unique()
 ```
 
@@ -224,11 +225,16 @@ Here we see that `r sum(check_subid.tibble.full$dataset == "CDI")` subids from t
 * For `weltentdeckerzurich`, the unmatched CDI subids were confirmed to be infants that were not included in the IDS analysis (see [issue #2](https://github.com/manybabies/mb1-cdi-followup/issues/2)).
 * Similarly for `babylabbrookes`, those were infants that were not included in the IDS analysis (see [issue #3](https://github.com/manybabies/mb1-cdi-followup/issues/3)). Notably participant `mb43` in our dataset should have been `mb143`, but this does not matter given that we do not keep their data.
 * For `chosunbaby`, the only remaining issue was a typo, corrected bellow, where participant `h71y23` should be `h71o23`, (see [issue #4](https://github.com/manybabies/mb1-cdi-followup/issues/4)).
+* For `infantlanglabutk`, those were infants for whom there was no IDS data available (see [issue #5](https://github.com/manybabies/mb1-cdi-followup/issues/5)).
+* For `unlvmusiclab` the only mismatch stems from the participant having beed a pilot infant for the IDS analysis. We correct its subiid here for consistency, but this participant will be exclude in script 02 (see [issue #6](https://github.com/manybabies/mb1-cdi-followup/issues/6)).
 
 ```{r subid_handcheck, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%
-  mutate(subid = str_replace(subid, "h71y23", "h71o23"),
-         subid_unique = paste(labid, subid, sep = ":"))
+  mutate(subid = case_when(labid == "chosunbaby" ~ str_replace(subid, "h71y23", "h71o23"),
+                           labid == "unlvmusiclab" ~ str_replace(subid, "run001", "run001pilot"),
+                           T ~ as.character(subid)),
+         subid_unique = paste(labid, subid, sep = ":")) %>%
+  mutate_at(vars(subid, subid_unique), as_factor)
 ```
 
 # Merge
