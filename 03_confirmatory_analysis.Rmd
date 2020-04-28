@@ -146,25 +146,38 @@ lmer.full.nae <- lmer(z_standardized_CDI ~ gender + CDI.agerange + CDI.z_age_mon
                         CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
                         IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
                         IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months +
-                        (1 + gender + CDI.agerange + CDI.z_age_months +
-                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
-                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
-                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months | labid),
+                        (1 | labid),
                       data = data.nae)
 # Sequentially removed random effects:
-# [list here]
+# IDS_pref:CDI.agerange:CDI.z_age_months
+# IDS_pref:z_age_months
+# IDS_pref:CDI.z_age_months
+# IDS_pref:CDI.agerange
+# IDS_pref:method
+# IDS_pref
+# CDI.agerange:CDI.z_age_months
+# CDI.z_age_months
+# CDI.agerange
+# gender
 ## UK
 lmer.full.uk <- lmer(z_vocab_nwords ~ gender + CDI.agerange + CDI.z_age_months +
                         CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
                         IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
                         IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months +
-                        (1 + gender + CDI.agerange + CDI.z_age_months +
-                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
-                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
-                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months | labid),
+                        (1 | labid),
                      data = data.uk)
 # Sequentially removed random effects:
-# [list here]
+# IDS_pref:CDI.agerange:CDI.z_age_months
+# IDS_pref:z_age_months
+# IDS_pref:CDI.z_age_months
+# IDS_pref:CDI.agerange
+# IDS_pref:method
+# IDS_pref
+# CDI.agerange:CDI.z_age_months
+# CDI.z_age_months
+# CDI.agerange
+# gender
+# Minimal model is still singular
 ```
 
 We then compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function.
@@ -173,19 +186,22 @@ We then compute *p*-vlues from model comparisons via likelihood ratio tests. The
 source("helper/lmer_lrtests.R")
 lmer.lr.nae <- lr_tests.lmer(lmer.full.nae)
 lmer.lr.uk <- lr_tests.lmer(lmer.full.uk)
+# Models with terms removed are all singular, for both NAE and UK samples
 ```
 
 We now want to check the statistical power of significant effects, and discard any models with significant effects that do not reach 80% power.
 
 ```{r pwr_lmer}
 lmer.pwr.nae <- lmer.lr.nae %>%
-  rownames_to_column(var = "Parameter") %>%
+  as_tibble(rownames = "Parameter") %>%
   subset(`Pr(>Chisq)` < .05) %>%
-  mutate(pwr = powerSim(lmer.lr.nae, test = fixed(Parameter, method = "lr")) %>% {.$x/.$n})
+  mutate(pwr = map_dbl(Parameter,
+                       ~ powerSim(lmer.full.nae, test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
 lmer.pwr.uk <- lmer.lr.uk %>%
-  rownames_to_column(var = "Parameter") %>%
+  as_tibble(rownames = "Parameter") %>%
   subset(`Pr(>Chisq)` < .05) %>%
-  mutate(pwr = powerSim(lmer.full.uk, test = fixed(Parameter, method = "lr")) %>% {.$x/.$n})
+  mutate(pwr = map_dbl(Parameter,
+                       ~ powerSim(lmer.full.uk, test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
 ```
 
 ## Combined Sample
