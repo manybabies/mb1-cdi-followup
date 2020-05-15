@@ -22,6 +22,7 @@ We first present the main "sample theory based" analyses (also known as frequent
 ```{r setup, message=FALSE, warning=FALSE}
 # Library imports, general settings ==============
 library(tidyverse); library(egg)
+library(knitr)
 library(lme4); library(simr)
 library(brms); library(rstan)
 
@@ -90,6 +91,48 @@ contrasts(data.uk$method) <- contr.sum(2)
 data.other <- data.total %>% subset(language_zone == "Other") %>% droplevels()
 contrasts(data.other$gender) <- contr.sum(2)
 contrasts(data.other$method) <- contr.sum(3)
+```
+
+# Descriptive Statistics
+
+We first assess the amount of data we have overall per condition and their shape overall.
+
+```{r desc_total}
+data.total %>%
+  group_by(language_zone, CDI.agerange, method, gender) %>%
+  summarise(N = n(), age = mean(CDI.agedays), sd = sd(CDI.agedays)) %>%
+  kable()
+```
+
+We then assess the data per lab in terms of sample size and CDI score (vocabulary size, for consistency between language zones).
+
+```{r desc_by_lab}
+by_lab <- data.total %>%
+  group_by(labid, language_zone, CDI.agerange) %>%
+  mutate(tested = n_distinct(subid_unique)) %>%
+  select(labid, language_zone, CDI.agerange, tested, vocab_nwords) %>%
+  nest(scores = vocab_nwords) %>%
+  mutate(model = map(scores, ~ lm(vocab_nwords ~ 1, data = .x)),
+         ci = map(model, confint)) %>%
+  transmute(tested = tested,
+            mean = map_dbl(model, ~ coefficients(.x)[[1]]),
+            ci_lower = map_dbl(ci, 1),
+            ci_upper = map_dbl(ci, 2)) %>%
+  arrange(language_zone) %>%
+  rownames_to_column()
+
+# TODO: find a way to group by language zone?
+ggplot(by_lab,
+       aes(x = labid, colour = language_zone,
+           y = mean, ymin = ci_lower, ymax = ci_upper)) + 
+  geom_linerange() + 
+  geom_point(aes(size = tested)) + 
+  facet_grid(cols = vars(CDI.agerange), scales = "free") + coord_flip(ylim = c(0, 500)) +
+  xlab("Lab") + ylab("Vocabulary size") +
+  scale_colour_brewer(palette = "Dark2", name = "Language zone",
+                      breaks = c("British", "NAE", "Other")) +
+  scale_size_continuous(name = "N", breaks = function(x) c(min(x), mean(x), max(x))) +
+  theme(legend.position = "bottom")
 ```
 
 # Sample Theory Based Statistics
