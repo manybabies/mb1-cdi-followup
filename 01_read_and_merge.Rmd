@@ -32,7 +32,8 @@ Other notable issues at data import were:
 * a misnamed column in `chosunbaby-cdi.csv`, `vocab_nwords(=raw score)` instead of `vocab_nwords`, corrected by hand;
 * a misnamed column in `infantstudies-ubc.tsv`, `subject_id` instead of `subid`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
-* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA.
+* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA;
+* inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded for problematic cases as whether the participant was younger (18) or older (24) than the middle 21-months-old.
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information
@@ -43,6 +44,9 @@ data.cdi <- list.files("data/cdi_raw/") %>%
   drop_na(labid) %>%
   mutate(subid_unique = paste(labid, subid, sep = ":"),
          standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0"),
+         CDI.agerange = case_when(!(CDI.agerange %in% c("18", "24")) ~
+                                      if_else(CDI.agedays < 21*365.25/12, "18", "24"),
+                                  T ~ as.character(CDI.agerange)),
          CDI.error = (CDI.error == "error")) %>%
   mutate_at(vars(subid, CDI.form, CDI.agerange),
             as_factor) %>%
@@ -75,19 +79,17 @@ Cases in which we have two data points but a single unique value for `vocab_nwor
 
 Checking by hand, we realise that the two duplicate data points for `babylablmu` result from a first entry with an error, and a second valid entry. The duplicate point for `unlv-musiclab` results from a similar error.
 
-However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. This was checked with the lab, this was one participants that filled in the web questionnaire twice; here, we decide to keep the first entry, with `vocab_nwords == 289` (see [issue #7](https://github.com/manybabies/mb1-cdi-followup/issues/7)).
+However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. This was checked with the lab, this was one participants that filled in the web questionnaire twice; the correct entry was the one where `vocab_nwords == 470` (see [issue #7](https://github.com/manybabies/mb1-cdi-followup/issues/7)).
 
-Although the scope of this script is not to exclude data points, we remove the pure duplicates and `babylablmu` and `unlv-musiclab` "error duplicates" here while we know about them:
+Although the scope of this script is not to exclude data points, we remove the pure duplicates and `babylablmu`, `unlv-musiclab`, and `infantcogubc` "error duplicates" here while we know about them:
 
 ```{r cdi_fix_babylablmu, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%
   subset(!(subid_unique %in% c("babylab-lmu:35", "babylab-lmu:76", "unlv-musiclab:MB021") &
              CDI.error %in% c("error", TRUE))) %>%
-  subset(!(subid_unique == "InfantCog-UBC:tp13" & vocab_nwords != 289)) %>%
+  subset(!(subid_unique == "InfantCog-UBC:tp13" & vocab_nwords != 470)) %>%
   unique()
 ```
-
-However, the duplicate for `infantcogubc` seems to be constituted of two distinct measures with no indication of an error that would allow us to discard one of them. They might instead result from an incorrect `subid` for one of the two entries.
 
 ## IDS Preference Data Import
 

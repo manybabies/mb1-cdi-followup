@@ -185,22 +185,17 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 ```{r full_lmer}
 # Run models =====================================
 ## NAE
-lmer.full.nae <- lmer(z_standardized_CDI ~ gender + CDI.agerange + CDI.z_age_months +
-                        CDI.agerange:CDI.z_age_months + IDS_pref + IDS_pref:method +
-                        IDS_pref:CDI.agerange + IDS_pref:CDI.z_age_months +
-                        IDS_pref:z_age_months + IDS_pref:CDI.agerange:CDI.z_age_months +
+lmer.full.nae <- lmer(standardized.score.CDI.num ~ gender + CDI.z_age_months +
+                        IDS_pref + IDS_pref:method + IDS_pref:CDI.z_age_months +
+                        IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
 # Sequentially removed random effects:
-# IDS_pref:CDI.agerange:CDI.z_age_months
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
-# IDS_pref:CDI.agerange
 # IDS_pref:method
 # IDS_pref
-# CDI.agerange:CDI.z_age_months
 # CDI.z_age_months
-# CDI.agerange
 # gender
 ## UK
 lmer.full.uk <- lmer(z_vocab_nwords ~ gender + CDI.agerange + CDI.z_age_months +

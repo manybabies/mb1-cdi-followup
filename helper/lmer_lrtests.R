@@ -17,7 +17,7 @@ lr_tests.lmer <- function(model){
     attributes() %>%
     pluck("term.labels") %>%              # Gets each group of random effects
     str_split(" [+|] ", simplify = T) %>% # Get separate effects (we only have one group)
-    {.[2:(length(.)-1)]}                  # Remove Intercept (first) and grouping variable (last)
+    {.[-c(1, length(.))]}                 # Remove Intercept (first) and grouping variable (last)
   # Define model update function =================
   update.term_delete <- function(n_terms){
     ## Get fixed effects to remove

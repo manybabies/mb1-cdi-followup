@@ -62,11 +62,10 @@ We first exclude all infants who are outside the age range described in the data
 ```{r age_range}
 # Age ranges
 exclusions.age <- df %>%
-  subset(CDI.agerange %in% c("18", "24")) %>% # Already remove "convenience" data
   mutate(CDI.agemin = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
-                               ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365/12)),
+                               ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365.25/12)),
          CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
-                               ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365/12))) %>%
+                               ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365.25/12))) %>%
   subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax),
          select = -c(CDI.agemin, CDI.agemax)) %>%
   droplevels()
@@ -167,15 +166,16 @@ df.final <- df.final %>%
   unique()
 ```
 
-## `CDI.z_age_months`, `z_age_months`
+## `z_age_months`, `CDI.z_age_months`, `CDI.grouped.z_age_months`
 
-A common way to get better computational models both in terms of estimate precision and convergence is to center and scale numerical variables, particularly ones that have relatively large values and/or large spreads. In our case, age in days are such variables. However, for better interpretation and generalisation of the results, we choose to center those values, but instead of scaling them we simply convert them to ages in months.
+A common way to get better computational models both in terms of estimate precision and convergence is to center and scale numerical variables, particularly ones that have relatively large values and/or large spreads. In our case, age in days are such variables. However, for better interpretation and generalisation of the results, we choose to center those values, but instead of scaling them we simply convert them to ages in months. Here, we further create variables to center `CDI.agedays` either overall or for each age group defined by `CDI.agerange`.
 
 ```{r z_age_days}
 df.final <- df.final %>%
-  mutate(z_age_months = as.numeric(scale(age_days, scale = F)/365*12)) %>%
+  mutate(z_age_months = scale(age_days, scale = F)/365.25*12,
+         CDI.z_age_months = scale(CDI.agedays, scale = F)/365.25*12) %>%
   group_by(CDI.agerange) %>%
-  mutate(CDI.z_age_months = scale(CDI.agedays, scale = F)/365*12) %>%
+  mutate(CDI.grouped.z_age_months = scale(CDI.agedays, scale = F)/365.25*12) %>%
   ungroup()
 ```
 
