@@ -186,31 +186,31 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 # Run models =====================================
 ## NAE
 lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-                        IDS_pref + IDS_pref:method + IDS_pref:CDI.z_age_months +
-                        IDS_pref:z_age_months +
+                        IDS_pref + z_age_months +
+                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
 # IDS_pref:method
+# z_age_months
 # IDS_pref
 # gender
 # CDI.z_age_months
 ## UK
-lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
-                       IDS_pref + IDS_pref:method + IDS_pref:CDI.z_age_months +
-                       IDS_pref:z_age_months +
+lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender + IDS_pref + z_age_months +
+                       IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                        (1 | labid),
                      data = data.uk)
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
 # IDS_pref:method
+# z_age_months
 # IDS_pref
 # gender
 # CDI.z_age_months
-# Minimal model is still singular
 ```
 
 We then compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function.
