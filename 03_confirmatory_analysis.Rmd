@@ -186,7 +186,7 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 # Run models =====================================
 ## NAE
 lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-                        IDS_pref + z_age_months +
+                        z_age_months + IDS_pref +
                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
@@ -194,12 +194,13 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
 # IDS_pref:method
-# z_age_months
 # IDS_pref
+# z_age_months
 # gender
 # CDI.z_age_months
 ## UK
-lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender + IDS_pref + z_age_months +
+lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
+                       z_age_months + IDS_pref +
                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                        (1 | labid),
                      data = data.uk)
@@ -207,8 +208,8 @@ lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender + IDS_pref + z_a
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
 # IDS_pref:method
-# z_age_months
 # IDS_pref
+# z_age_months
 # gender
 # CDI.z_age_months
 ```
