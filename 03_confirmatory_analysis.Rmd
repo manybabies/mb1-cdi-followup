@@ -26,7 +26,7 @@ library(knitr)
 library(lme4); library(simr)
 library(brms); library(rstan)
 
-theme_set(theme_bw())
+theme_set(theme_bw(base_size = 10))
 knitr::opts_chunk$set(cache = TRUE)
 
 # Read data ======================================
@@ -160,6 +160,7 @@ cor_value <- round(test.pearson.nae$estimate, 3)
 plot.pearson.nae <- data.nae %>%
   ggplot(aes(x = IDS_pref,
              y = standardized.score.CDI.num)) +
+  xlab("IDS preference") + ylab("Standardized CDI score") +
   geom_point() +
   geom_smooth(method = lm) +
   annotate("text", x = -.9, y = 51, parse = T, size = 4,
@@ -169,14 +170,38 @@ cor_value <- round(test.pearson.uk$estimate, 3)
 plot.pearson.uk <- data.uk %>%
   ggplot(aes(x = IDS_pref,
              y = vocab_nwords)) +
+  xlab("IDS preference") + ylab("Vocabulary size (in words)") +
   geom_point() +
   geom_smooth(method = lm) +
   annotate("text", x = .8, y = 150, parse = T, size = 4,
            label = paste(cor_text, cor_value, sep = "~"))
-ggarrange(plot.pearson.nae, plot.pearson.uk, ncol = 2)
+# Global plot
+plot.pearson <- ggarrange(plot.pearson.nae, plot.pearson.uk, ncol = 2)
+ggsave("plots/scatter_pearson.pdf", plot.pearson,
+       units = "mm", width = 180, height = 100, dpi = 1000)
+(plot.pearson)
 ```
 
-We see no obvious direct link between IDS prefernce and CDI score here. However, an effect might appear once we take into account various factors that might interact with IDS preference and/or CDI score.
+We see no obvious direct link between IDS prefernce and CDI score here. However, an effect might appear once we take into account various factors that might interact with IDS preference and/or CDI score. We can also first enhance these plots with information about the age group at which infants were tested (18- or 24-month-old), using vocabulary size to better compare the NAE and UK samples.
+
+```{r plot_by_age}
+plot.age_group <- data.total %>%
+  subset(language_zone != "Other") %>%
+  droplevels() %>%
+  ggplot(aes(x = IDS_pref,
+             y = vocab_nwords,
+             colour = CDI.agerange)) +
+  facet_wrap(vars(language_zone)) +
+  xlab("IDS prefence") + ylab("Vocabulary size (in words)") + theme(legend.position = "top") +
+  geom_point() +
+  geom_smooth(method = lm) +
+  scale_colour_brewer(palette = "Dark2", name = "Age group",
+                      breaks = c("18", "24"),
+                      labels = c("18mo", "24m"))
+ggsave("plots/scatter_age.pdf", plot.age_group,
+       units = "mm", width = 180, height = 100, dpi = 1000)
+(plot.age_group)
+```
 
 ## Mixed-Effects Model
 
