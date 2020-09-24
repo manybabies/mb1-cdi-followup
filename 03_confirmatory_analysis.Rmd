@@ -192,7 +192,7 @@ plot.age_group <- data.total %>%
              y = vocab_nwords,
              colour = CDI.agerange)) +
   facet_wrap(vars(language_zone)) +
-  xlab("IDS prefence") + ylab("Vocabulary size (in words)") + theme(legend.position = "top") +
+  xlab("Standardized IDS prefence score") + ylab("Vocabulary size (in words)") + theme(legend.position = "top") +
   geom_point() +
   geom_smooth(method = lm) +
   scale_colour_brewer(palette = "Dark2", name = "Age group",
