@@ -66,8 +66,7 @@ exclusions.age <- df %>%
                                ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365.25/12)),
          CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
                                ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365.25/12))) %>%
-  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax),
-         select = -c(CDI.agemin, CDI.agemax)) %>%
+  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
   droplevels()
 ```
 

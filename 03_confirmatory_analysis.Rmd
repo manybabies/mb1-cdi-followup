@@ -37,6 +37,8 @@ col_types <- cols(
   CDI.form = col_factor(),
   CDI.agerange = col_factor(),
   CDI.agedays = col_integer(),
+  CDI.agemin = col_integer(),
+  CDI.agemax = col_integer(),
   vocab_nwords = col_integer(),
   standardized.score.CDI = col_character(),
   standardized.score.CDI.num = col_number(),
@@ -270,7 +272,21 @@ lmer.pwr.uk <- lmer.lr.uk %>%
 For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±1.5 months).
 
 ```{r NAE_agerange}
-# TODO
+# Create dataset with British and NAE only
+data.uk_nae <- data.total %>%
+  subset(language_zone %in% c("British", "NAE")) %>%
+  mutate(CDI.agemin = ifelse(language_zone == "NAE",
+                             CDI.agemin + round(.5*365.25/12),
+                             CDI.agemin),
+         CDI.agemax = ifelse(language_zone == "NAE",
+                             CDI.agemax - round(.5*365.25/12),
+                             CDI.agemax)) %>%
+  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
+  droplevels()
+# Create contrasts for analysis
+#contrasts(data.uk_nae$gender) <- contr.sum(2)
+#contrasts(data.uk_nae$method) <- contr.sum(3)
+#contrasts(data.uk_nae$language_zone) <- contr.sum(2)
 ```
 
 We can then run the planned combined analysis adding the main effect and interactions of `language_zone`.
@@ -280,7 +296,7 @@ lmer.full.combined <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + langu
                              z_age_months + IDS_pref + IDS_pref:language_zone +
                              IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                              (1 | labid),
-                           data = data.nae)
+                           data = data.uk_nae)
 ```
 
 # Bayesian Statistics
