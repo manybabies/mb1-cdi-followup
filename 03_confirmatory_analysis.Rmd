@@ -205,7 +205,7 @@ ggsave("plots/scatter_age.pdf", plot.age_group,
 (plot.age_group)
 ```
 
-## Mixed-Effects Model
+## Mixed-Effects Model by Language Zone
 
 Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model bellow, simplifying the random effects structure until it converges.
 
@@ -266,5 +266,21 @@ lmer.pwr.uk <- lmer.lr.uk %>%
 ```
 
 ## Combined Sample
+
+For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±1.5 months).
+
+```{r NAE_agerange}
+# TODO
+```
+
+We can then run the planned combined analysis adding the main effect and interactions of `language_zone`.
+
+```{r combined_lmer}
+lmer.full.combined <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + language_zone + gender +
+                             z_age_months + IDS_pref + IDS_pref:language_zone +
+                             IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                             (1 | labid),
+                           data = data.nae)
+```
 
 # Bayesian Statistics

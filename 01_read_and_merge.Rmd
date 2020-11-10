@@ -33,7 +33,8 @@ Other notable issues at data import were:
 * a misnamed column in `infantstudies-ubc.tsv`, `subject_id` instead of `subid`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
 * standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA;
-* inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded for problematic cases as whether the participant was younger (18) or older (24) than the middle 21-months-old.
+* inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded for problematic cases as whether the participant was younger (18) or older (24) than the middle 21-months-old;
+* inconstitencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information
@@ -47,6 +48,7 @@ data.cdi <- list.files("data/cdi_raw/") %>%
          CDI.agerange = case_when(!(CDI.agerange %in% c("18", "24")) ~
                                       if_else(CDI.agedays < 21*365.25/12, "18", "24"),
                                   T ~ as.character(CDI.agerange)),
+         CDI.form = str_replace(CDI.form, "webcdi", "webCDI"),
          CDI.error = (CDI.error == "error")) %>%
   mutate_at(vars(subid, CDI.form, CDI.agerange),
             as_factor) %>%

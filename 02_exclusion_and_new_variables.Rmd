@@ -166,6 +166,22 @@ df.final <- df.final %>%
   unique()
 ```
 
+## `CDI.nwords`, `CDI.prop`
+
+For our 3rd reseqrch question, we need to compute the proportional CDI scores as the raw score (number of words produced) divided by the total number of words in the CDI used.
+
+```{r CDI.prop}
+CDI.nwords.list <- tribble(
+  ~CDI.form, ~CDI.nwords,
+  "O-CDI", 416,
+  "webCDI", 680
+)
+
+df.final <- df.final %>%
+  left_join(CDI.nwords.list) %>%
+  mutate_at(vars(CDI.form), as_factor)
+```
+
 ## `z_age_months`, `CDI.z_age_months`, `CDI.grouped.z_age_months`
 
 A common way to get better computational models both in terms of estimate precision and convergence is to center and scale numerical variables, particularly ones that have relatively large values and/or large spreads. In our case, age in days are such variables. However, for better interpretation and generalisation of the results, we choose to center those values, but instead of scaling them we simply convert them to ages in months. Here, we further create variables to center `CDI.agedays` either overall or for each age group defined by `CDI.agerange`.
