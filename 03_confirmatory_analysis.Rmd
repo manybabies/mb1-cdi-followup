@@ -35,6 +35,8 @@ col_types <- cols(
   subid = col_factor(),
   subid_unique = col_factor(),
   CDI.form = col_factor(),
+  CDI.nwords = col_integer(),
+  CDI.prop = col_number(),
   CDI.agerange = col_factor(),
   CDI.agedays = col_integer(),
   CDI.agemin = col_integer(),
@@ -284,19 +286,44 @@ data.uk_nae <- data.total %>%
   subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
   droplevels()
 # Create contrasts for analysis
-#contrasts(data.uk_nae$gender) <- contr.sum(2)
-#contrasts(data.uk_nae$method) <- contr.sum(3)
-#contrasts(data.uk_nae$language_zone) <- contr.sum(2)
+contrasts(data.uk_nae$gender) <- contr.sum(2)
+contrasts(data.uk_nae$method) <- contr.sum(3)
+contrasts(data.uk_nae$language_zone) <- contr.sum(2)
 ```
 
 We can then run the planned combined analysis adding the main effect and interactions of `language_zone`.
 
-```{r combined_lmer}
-lmer.full.combined <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + language_zone + gender +
-                             z_age_months + IDS_pref + IDS_pref:language_zone +
-                             IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                             (1 | labid),
-                           data = data.uk_nae)
+```{r uk_nae_lmer}
+lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+                           z_age_months + IDS_pref + IDS_pref:language_zone +
+                           IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                           (1 + CDI.z_age_months | labid),
+                         data = data.uk_nae)
+# Sequentially removed random effects:
+# IDS_pref:z_age_months
+# IDS_pref:CDI.z_age_months
+# IDS_pref:method
+# IDS_pref:language_zone
+# IDS_pref
+# z_age_months
+# gender
+# language_zone
+```
+
+We then compute $p$-values and power estimates for those $p$-values as above.
+
+```{r uk_nae_statistics}
+# Model comparions
+lmer.lr.uk_nae <- lr_tests.lmer(lmer.full.uk_nae)
+# Models with effects removed are singular or fail to converge
+
+# Power estimates
+lmer.pwr.uk_nae <- lmer.lr.uk_nae %>%
+  as_tibble(rownames = "Parameter") %>%
+  subset(`Pr(>Chisq)` < .05) %>%
+  mutate(pwr = map_dbl(Parameter,
+                       ~ powerSim(lmer.full.uk_nae,
+                                  test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
 ```
 
 # Bayesian Statistics

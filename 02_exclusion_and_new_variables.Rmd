@@ -52,6 +52,14 @@ df <- read_csv("data/01_processed_merged.csv", col_types = col_types)
 
 # Exclusions
 
+Before excluding participants based on the exclusion criteria reported in our manuscript, we exclude participants for which we don't have a raw score.
+
+```{r remove_na}
+exclusions.na <- df %>%
+  drop_na(vocab_nwords) %>%
+  droplevels()
+```
+
 ## Infants Outside Age Range
 
 We first exclude all infants who are outside the age range described in the data collection protocol. These are:
@@ -61,7 +69,7 @@ We first exclude all infants who are outside the age range described in the data
 
 ```{r age_range}
 # Age ranges
-exclusions.age <- df %>%
+exclusions.age <- exclusions.na %>%
   mutate(CDI.agemin = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
                                ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365.25/12)),
          CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
@@ -178,7 +186,8 @@ CDI.nwords.list <- tribble(
 
 df.final <- df.final %>%
   left_join(CDI.nwords.list) %>%
-  mutate_at(vars(CDI.form), as_factor)
+  mutate_at(vars(CDI.form), as_factor) %>%
+  mutate(CDI.prop = vocab_nwords/CDI.nwords)
 ```
 
 ## `z_age_months`, `CDI.z_age_months`, `CDI.grouped.z_age_months`
