@@ -126,7 +126,7 @@ errors_check <- exclusions.pairs %>%
 (levels(errors_check$Notes))
 ```
 
-We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and these error can therefore be ignored.
+We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and this error can therefore be ignored.
 
 ```{r cdi_errors_exclusions}
 exclusions.errors <- exclusions.pairs %>%
@@ -175,7 +175,7 @@ df.final <- df.final %>%
 
 ## `CDI.nwords`, `CDI.prop`
 
-For our 3rd reseqrch question, we need to compute the proportional CDI scores as the raw score (number of words produced) divided by the total number of words in the CDI used.
+For our 3rd research question, we need to compute the proportional CDI scores as the raw score (number of words produced) divided by the total number of words in the CDI used.
 
 ```{r CDI.prop}
 CDI.nwords.list <- tribble(

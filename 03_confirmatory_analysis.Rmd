@@ -76,7 +76,7 @@ With a value of `r k.age_months`, we do not have a colinearity issue and can pro
 
 ## Contrast Setups
 
-We need `gender` as an effect-coded factor, and `method` as a deviation-coded factor. This is achieved in R by using the `contr.sum()` function with the number of levels for each factor. Notably, when subsetting the NAE and UK samples, only two levels of `method` out of the three in total were left.
+We need `gender` as an effect-coded factor, and `method` as a deviation-coded factor. This is achieved in R by using the `contr.sum()` function with the number of levels for each factor. Notably, when subsetting the NAE and UK samples, only two levels of `method` out of the three in total were left. [NOTE FROM MELANIE: I think you mean just the UK sample? NAE has all three]
 
 ```{r contrasts}
 # Set contrasts on the total dataset =============
@@ -143,7 +143,7 @@ ggplot(by_lab,
 
 ## Simple Correlation
 
-First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson's product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample.
+First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson's product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. [NOTE FROM MELANIE: I'm not sure this makes sense to do with the raw UK scores - since we're collapsing across 18 and 24 month data and the data aren't standardized by age.].
 
 ```{r simple_correlation}
 # Statistics =====================================
