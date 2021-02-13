@@ -35,8 +35,12 @@ col_types <- cols(
   subid = col_factor(),
   subid_unique = col_factor(),
   CDI.form = col_factor(),
+  CDI.nwords = col_integer(),
+  CDI.prop = col_number(),
   CDI.agerange = col_factor(),
   CDI.agedays = col_integer(),
+  CDI.agemin = col_integer(),
+  CDI.agemax = col_integer(),
   vocab_nwords = col_integer(),
   standardized.score.CDI = col_character(),
   standardized.score.CDI.num = col_number(),
@@ -72,7 +76,7 @@ With a value of `r k.age_months`, we do not have a colinearity issue and can pro
 
 ## Contrast Setups
 
-We need `gender` as an effect-coded factor, and `method` as a deviation-coded factor. This is achieved in R by using the `contr.sum()` function with the number of levels for each factor. Notably, when subsetting the NAE and UK samples, only two levels of `method` out of the three in total were left.
+We need `gender` as an effect-coded factor, and `method` as a deviation-coded factor. This is achieved in R by using the `contr.sum()` function with the number of levels for each factor. Notably, when subsetting the NAE and UK samples, only two levels of `method` out of the three in total were left. [NOTE FROM MELANIE: I think you mean just the UK sample? NAE has all three]
 
 ```{r contrasts}
 # Set contrasts on the total dataset =============
@@ -139,7 +143,7 @@ ggplot(by_lab,
 
 ## Simple Correlation
 
-First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson's product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample.
+First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson's product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. [NOTE FROM MELANIE: I'm not sure this makes sense to do with the raw UK scores - since we're collapsing across 18 and 24 month data and the data aren't standardized by age.].
 
 ```{r simple_correlation}
 # Statistics =====================================
@@ -205,7 +209,7 @@ ggsave("plots/scatter_age.pdf", plot.age_group,
 (plot.age_group)
 ```
 
-## Mixed-Effects Model
+## Mixed-Effects Model by Language Zone
 
 Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model bellow, simplifying the random effects structure until it converges.
 
@@ -266,5 +270,60 @@ lmer.pwr.uk <- lmer.lr.uk %>%
 ```
 
 ## Combined Sample
+
+For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±1.5 months).
+
+```{r NAE_agerange}
+# Create dataset with British and NAE only
+data.uk_nae <- data.total %>%
+  subset(language_zone %in% c("British", "NAE")) %>%
+  mutate(CDI.agemin = ifelse(language_zone == "NAE",
+                             CDI.agemin + round(.5*365.25/12),
+                             CDI.agemin),
+         CDI.agemax = ifelse(language_zone == "NAE",
+                             CDI.agemax - round(.5*365.25/12),
+                             CDI.agemax)) %>%
+  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
+  droplevels()
+# Create contrasts for analysis
+contrasts(data.uk_nae$gender) <- contr.sum(2)
+contrasts(data.uk_nae$method) <- contr.sum(3)
+contrasts(data.uk_nae$language_zone) <- contr.sum(2)
+```
+
+We can then run the planned combined analysis adding the main effect and interactions of `language_zone`.
+
+```{r uk_nae_lmer}
+lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+                           z_age_months + IDS_pref + IDS_pref:language_zone +
+                           IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                           (1 + CDI.z_age_months | labid),
+                         data = data.uk_nae)
+# Sequentially removed random effects:
+# IDS_pref:z_age_months
+# IDS_pref:CDI.z_age_months
+# IDS_pref:method
+# IDS_pref:language_zone
+# IDS_pref
+# z_age_months
+# gender
+# language_zone
+```
+
+We then compute $p$-values and power estimates for those $p$-values as above.
+
+```{r uk_nae_statistics}
+# Model comparions
+lmer.lr.uk_nae <- lr_tests.lmer(lmer.full.uk_nae)
+# Models with effects removed are singular or fail to converge
+
+# Power estimates
+lmer.pwr.uk_nae <- lmer.lr.uk_nae %>%
+  as_tibble(rownames = "Parameter") %>%
+  subset(`Pr(>Chisq)` < .05) %>%
+  mutate(pwr = map_dbl(Parameter,
+                       ~ powerSim(lmer.full.uk_nae,
+                                  test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
+```
 
 # Bayesian Statistics

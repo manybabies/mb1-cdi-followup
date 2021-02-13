@@ -52,6 +52,14 @@ df <- read_csv("data/01_processed_merged.csv", col_types = col_types)
 
 # Exclusions
 
+Before excluding participants based on the exclusion criteria reported in our manuscript, we exclude participants for which we don't have a raw score.
+
+```{r remove_na}
+exclusions.na <- df %>%
+  drop_na(vocab_nwords) %>%
+  droplevels()
+```
+
 ## Infants Outside Age Range
 
 We first exclude all infants who are outside the age range described in the data collection protocol. These are:
@@ -61,13 +69,12 @@ We first exclude all infants who are outside the age range described in the data
 
 ```{r age_range}
 # Age ranges
-exclusions.age <- df %>%
+exclusions.age <- exclusions.na %>%
   mutate(CDI.agemin = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
                                ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365.25/12)),
          CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
                                ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365.25/12))) %>%
-  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax),
-         select = -c(CDI.agemin, CDI.agemax)) %>%
+  subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
   droplevels()
 ```
 
@@ -119,7 +126,7 @@ errors_check <- exclusions.pairs %>%
 (levels(errors_check$Notes))
 ```
 
-We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and these error can therefore be ignored.
+We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and this error can therefore be ignored.
 
 ```{r cdi_errors_exclusions}
 exclusions.errors <- exclusions.pairs %>%
@@ -164,6 +171,23 @@ df.final <- df.final %>%
   ungroup() %>%
   select(-c(stimulus_num, IDS, ADS, IDS_pref_pair, mean_LT_pair, mean_IDS_pref, mean_LT)) %>%
   unique()
+```
+
+## `CDI.nwords`, `CDI.prop`
+
+For our 3rd research question, we need to compute the proportional CDI scores as the raw score (number of words produced) divided by the total number of words in the CDI used.
+
+```{r CDI.prop}
+CDI.nwords.list <- tribble(
+  ~CDI.form, ~CDI.nwords,
+  "O-CDI", 416,
+  "webCDI", 680
+)
+
+df.final <- df.final %>%
+  left_join(CDI.nwords.list) %>%
+  mutate_at(vars(CDI.form), as_factor) %>%
+  mutate(CDI.prop = vocab_nwords/CDI.nwords)
 ```
 
 ## `z_age_months`, `CDI.z_age_months`, `CDI.grouped.z_age_months`
