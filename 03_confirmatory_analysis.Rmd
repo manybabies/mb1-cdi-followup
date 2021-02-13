@@ -191,7 +191,9 @@ plot.age_group <- data.total %>%
   ggplot(aes(x = IDS_pref,
              y = vocab_nwords,
              colour = CDI.agerange)) +
-  facet_wrap(vars(language_zone)) +
+  facet_wrap(vars(language_zone),
+             labeller = as_labeller(c("British" = "UK samples",
+                                      "NAE" = "North Amercian samples"))) +
   xlab("Standardized IDS prefence score") + ylab("Vocabulary size (in words)") + theme(legend.position = "top") +
   geom_point() +
   geom_smooth(method = lm) +
