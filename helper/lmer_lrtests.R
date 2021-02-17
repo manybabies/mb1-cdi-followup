@@ -5,7 +5,7 @@ plan(multiprocess, workers = 4)
 
 # LR_TESTS.LMER
 # Perform likelihood ratio tests by sequential term deletion and anova model comparison
-lr_tests.lmer <- function(model){
+lr_tests.lmer <- function(model, verbose = F){
   # Extract fixed and random effects =============
   fe <- formula(model, fixed.only = T) %>%
     terms.formula(keep.order = T) %>%
@@ -46,6 +46,12 @@ lr_tests.lmer <- function(model){
     return(remove.formula)
   }
   # Run and compare models =======================
+  if(verbose){
+    lr.verbose <- 1:length(fe) %>%
+      map(quietly(~ update(model, update.term_delete(.x)))) %>%
+      prepend(model)
+    return(lr.verbose)
+  }
   lr <- 1:length(fe) %>%
     map(~ update(model, update.term_delete(.x))) %>%
     prepend(model)
