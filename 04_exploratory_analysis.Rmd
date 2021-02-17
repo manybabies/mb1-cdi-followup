@@ -1,0 +1,14 @@
+---
+title: "MB1 CDI Follow-up Confirmatory Analysis"
+author: "The ManyBabies Analysis Team"
+date: '`r format(Sys.time(), "%a %b %d %X %Y")`'
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: yes
+---
+
+# Introduction
+
+Blablabla
