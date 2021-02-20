@@ -23,8 +23,8 @@ library(egg)
 library(knitr)
 library(lme4)
 library(lmerTest)
-library(brms)
-library(rstan)
+# library(brms)
+# library(rstan)
 
 theme_set(theme_bw(base_size = 10))
 knitr::opts_chunk$set(cache = TRUE)
@@ -130,7 +130,7 @@ ggplot(by_lab,
 
 Here, we run a mixed-effects model like what the RR stated with a slightly differently approach. Instead of controlling main effect of the method, IDS test age in the model that we predict CDI scores. We would like to create a residuals that control the effects of the "method" and "IDS test age" and create this residuals in the model.
 
-```{r full_lmer}
+```{r }
 # Run models =====================================
 ## NAE
 ### First, create the residuals for the IDS preference model
@@ -138,13 +138,16 @@ lm_IDS_pref <- lm(IDS_pref ~ method + z_age_months, data = data.nae)
 
 data.nae$lm_IDS_pref_resid <- residuals(lm_IDS_pref)
 
-lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months +
                         lm_IDS_pref_resid + lm_IDS_pref_resid:CDI.z_age_months +
                         (1 | labid),
                       data = data.nae)
 
 summary(lmer.full.nae)
+```
 
+
+```{r}
 ## UK
 ### Create the residuals for the IDS preference model for the UK sample
 lm_IDS_pref_UK <- lm(IDS_pref ~ method + z_age_months, data = data.uk)
@@ -159,3 +162,46 @@ lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
 summary(lmer.full.uk)
 
 ```
+
+
+## Exploratory picture based on residuals
+
+```{r}
+resid_mod <- lm(IDS_pref ~ method + z_age_months, 
+                                 data = data.total)
+
+summary(resid_mod)
+data.total$ids_resid <- resid(resid_mod)
+```
+
+```{r}
+hist(data.total$ids_resid)
+```
+
+```{r}
+ggplot(data.total, 
+       aes(x = ids_resid, y = vocab_nwords, col = CDI.agerange)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  facet_wrap(~language_zone) + 
+  langcog::theme_mikabr() + 
+  langcog::scale_color_solarized(name = "Age group (months)") + 
+  ylab("Number of words produced") + 
+  xlab("Age- and Method-residualized IDS preference") + 
+  theme(legend.position = "bottom")
+```
+Just for kicks, let's use IDS preference. 
+
+```{r}
+ggplot(data.total, 
+       aes(x = IDS_pref, y = vocab_nwords, col = CDI.agerange)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  facet_wrap(~language_zone) + 
+  langcog::theme_mikabr() + 
+  langcog::scale_color_solarized(name = "Age group (months)") + 
+  ylab("Number of words produced") + 
+  xlab("IDS preference") + 
+  theme(legend.position = "bottom")
+```
+
