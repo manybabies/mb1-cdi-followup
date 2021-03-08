@@ -1,25 +1,40 @@
 library(tidyverse)
 library(lme4)
-library(furrr)
-plan(multiprocess, workers = 4)
+library(brms); library(rstan); library(bridgesampling)
+library(future); library(future.apply); library(furrr)
+plan(multisession, workers = 8)
 
 # LR_TESTS.LMER
 # Perform likelihood ratio tests by sequential term deletion and anova model comparison
-lr_tests.lmer <- function(model, verbose = F){
+nested_models <- function(model, re_strat, verbose = F){
+  # Extract formula (necessary for brmsfit) ======
+  f <- formula(model)
+  if(is.list(f)){
+    f <- f$formula
+  }
+  f %<>% deparse() %>%
+    str_c(collapse = "") %>%
+    str_split("~|\\(|\\)", simplify = T) %>%
+    str_trim() %>%
+    discard(~ str_length(.x) == 0) %>%
+    {.[-1]}
+  fe.raw <- f[1]
+  re.raw <- f[-1]
   # Extract fixed and random effects =============
-  fe <- formula(model, fixed.only = T) %>%
-    terms.formula(keep.order = T) %>%
-    attributes() %>%
-    pluck("term.labels") %>%
+  # TODO: extract terms directly by hand, following the output of terms.formula if possible
+  fe <- fe.raw %>%
+    str_split("\\+", simplify = T) %>%
+    str_trim() %>%
+    discard(~ str_length(.x) == 0) %>%
     rev() # Put the first effect to remove first
-  re <- formula(model, random.only = T) %>%
-    terms.formula(keep.order = T) %>%
-    attributes() %>%
-    pluck("term.labels") %>%              # Gets each group of random effects
-    str_split(" [+|] ", simplify = T) %>% # Get separate effects (we only have one group)
+  re <- re.raw %>%
+    pluck(1) %>%                          # Treat the first group of random effects only (for now)
+    str_split(" [+|] ", simplify = T) %>% # Get separate effects
+    str_trim() %>%
+    discard(~ str_length(.x) == 0) %>%
     {.[-c(1, length(.))]}                 # Remove Intercept (first) and grouping variable (last)
   # Define model update function =================
-  update.term_delete <- function(n_terms){
+  update.term_delete <- function(n_terms, fe, re){
     ## Get fixed effects to remove
     remove.fe <- fe[1:n_terms]
     ## Add any corresponding random effects
@@ -45,15 +60,41 @@ lr_tests.lmer <- function(model, verbose = F){
       formula()
     return(remove.formula)
   }
-  # Run and compare models =======================
+  # Run models ===================================
   if(verbose){
     lr.verbose <- 1:length(fe) %>%
-      map(quietly(~ update(model, update.term_delete(.x)))) %>%
+      map(quietly(~ update(model, update.term_delete(.x, fe, re)))) %>%
       prepend(model)
     return(lr.verbose)
   }
-  lr <- 1:length(fe) %>%
-    map(~ update(model, update.term_delete(.x))) %>%
+  nested_m <- 1:length(fe) %>%
+    map(~ update(model, update.term_delete(.x, fe, re))) %>%
     prepend(model)
-  return(exec(anova, !!!lr, model.names = c(fe, "Intercept")))
+  m_names <- c(fe, "Intercept") # if removing re together with fe
+  return(list("models" = nested_m, "names" = m_names))
+}
+
+lr_tests.merMod <- function(model, re_strat, verbose = F){
+  # Get (updated) nested models to compate, in descending order, and model names for summary
+  nested <- nested_models(model, re_strat, verbose)
+  nested_m <- nested[["models"]]
+  m_names <- nested[["names"]]
+  # Return model comparison with useful names
+  return(exec(anova, !!!nested_m, model.names = m_names))
+}
+
+lr_tests.brmsfit <- function(model, re_strat, verbose = F){
+  # Get (updated) nested models to compate, in descending order, and model names for summary
+  nested <- nested_models(model, re_strat, verbose)
+  nested_m <- nested[["models"]]
+  m_names <- nested[["names"]][1:length(nested["m_names"])-1] # Remove "Intercept" from list
+  # Bridge sample posteriors
+  nested_bridges <- nested_m %>%
+    future_map(bridge_sampler, silent = T)
+  # Compare posteriors to compute Bayes factors
+  bfs <- future_map2_dbl(nested_bridges[1:length(nested_bridges)-1],
+                         nested_bridges[2:length(nested_bridges)],
+                         ~ bayes_factor(.x, .y)$bf)
+  # Create tibble to return Bayes factors and model names
+  return(tibble(m_name = m_names, bf = bfs))
 }

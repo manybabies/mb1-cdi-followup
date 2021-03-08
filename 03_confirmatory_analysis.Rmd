@@ -25,6 +25,11 @@ library(tidyverse); library(egg)
 library(knitr)
 library(lme4); library(simr)
 library(brms); library(rstan)
+library(future)
+plan(multisession, workers = 8)
+
+# Deal with package priority issues
+select <- dplyr::select
 
 theme_set(theme_bw(base_size = 10))
 knitr::opts_chunk$set(cache = TRUE)
@@ -217,7 +222,7 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 # Run models =====================================
 ## NAE
 lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-                        z_age_months + IDS_pref +
+                        z_age_months + method + IDS_pref +
                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
@@ -226,12 +231,13 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
 # IDS_pref:CDI.z_age_months
 # IDS_pref:method
 # IDS_pref
+# method
 # z_age_months
 # gender
 # CDI.z_age_months
 ## UK
 lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
-                       z_age_months + IDS_pref +
+                       z_age_months + method + IDS_pref +
                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                        (1 | labid),
                      data = data.uk)
@@ -240,6 +246,7 @@ lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
 # IDS_pref:CDI.z_age_months
 # IDS_pref:method
 # IDS_pref
+# method
 # z_age_months
 # gender
 # CDI.z_age_months
@@ -249,24 +256,29 @@ We then compute *p*-vlues from model comparisons via likelihood ratio tests. The
 
 ```{r anova_lmer}
 source("helper/lmer_lrtests.R")
-lmer.lr.nae <- lr_tests.lmer(lmer.full.nae)
-lmer.lr.uk <- lr_tests.lmer(lmer.full.uk)
+lmer.lr.nae <- lr_tests.merMod(lmer.full.nae)
+lmer.lr.uk <- lr_tests.merMod(lmer.full.uk)
 # Models with terms removed are all singular, for both NAE and UK samples
 ```
 
-We now want to check the statistical power of significant effects, and discard any models with significant effects that do not reach 80% power.
+We now want to check the statistical power of significant effects, and discard any models with significant effects that do not reach 80% power. This however leads to too many warnings of singularity issues on the model updates inherent to the `simr` power simulations, hence we cannot obtain satisfactory power estimates as pre-registered.
 
 ```{r pwr_lmer}
-lmer.pwr.nae <- lmer.lr.nae %>%
-  as_tibble(rownames = "Parameter") %>%
-  subset(`Pr(>Chisq)` < .05) %>%
-  mutate(pwr = map_dbl(Parameter,
-                       ~ powerSim(lmer.full.nae, test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
-lmer.pwr.uk <- lmer.lr.uk %>%
-  as_tibble(rownames = "Parameter") %>%
-  subset(`Pr(>Chisq)` < .05) %>%
-  mutate(pwr = map_dbl(Parameter,
-                       ~ powerSim(lmer.full.uk, test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
+# Running power simulations generates singularity warnings
+# To check the simulations however, please update the variable below
+check_pwr <- F
+if(check_pwr){
+  lmer.pwr.nae <- lmer.lr.nae %>%
+    as_tibble(rownames = "Parameter") %>%
+    subset(`Pr(>Chisq)` < .05) %>%
+    mutate(pwr = map_dbl(Parameter,
+                         ~ powerSim(lmer.full.nae, test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
+  lmer.pwr.uk <- lmer.lr.uk %>%
+    as_tibble(rownames = "Parameter") %>%
+    subset(`Pr(>Chisq)` < .05) %>%
+    mutate(pwr = map_dbl(Parameter,
+                         ~ powerSim(lmer.full.uk, test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
+}
 ```
 
 ## Combined Sample
@@ -295,7 +307,7 @@ We can then run the planned combined analysis adding the main effect and interac
 
 ```{r uk_nae_lmer}
 lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-                           z_age_months + IDS_pref + IDS_pref:language_zone +
+                           z_age_months + method + IDS_pref + IDS_pref:language_zone +
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                            (1 + CDI.z_age_months | labid),
                          data = data.uk_nae)
@@ -305,25 +317,45 @@ lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
 # IDS_pref:method
 # IDS_pref:language_zone
 # IDS_pref
+# method
 # z_age_months
 # gender
 # language_zone
 ```
 
-We then compute $p$-values and power estimates for those $p$-values as above.
+We then compute $p$-values, but leave out power estimates for those $p$-values as above.
 
 ```{r uk_nae_statistics}
 # Model comparions
-lmer.lr.uk_nae <- lr_tests.lmer(lmer.full.uk_nae)
+lmer.lr.uk_nae <- lr_tests.merMod(lmer.full.uk_nae)
 # Models with effects removed are singular or fail to converge
 
 # Power estimates
-lmer.pwr.uk_nae <- lmer.lr.uk_nae %>%
-  as_tibble(rownames = "Parameter") %>%
-  subset(`Pr(>Chisq)` < .05) %>%
-  mutate(pwr = map_dbl(Parameter,
-                       ~ powerSim(lmer.full.uk_nae,
-                                  test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
+## This also gives out singularity issue warnings and is not computed by default
+check_pwr <- F
+if(check_pwr){
+  lmer.pwr.uk_nae <- lmer.lr.uk_nae %>%
+    as_tibble(rownames = "Parameter") %>%
+    subset(`Pr(>Chisq)` < .05) %>%
+    mutate(pwr = map_dbl(Parameter,
+                         ~ powerSim(lmer.full.uk_nae,
+                                    test = fixed(.x, method = "lr")) %>% {.$x/.$n}))
+}
 ```
 
 # Bayesian Statistics
+
+Given that the `frequentist' tests above did not discover any expected significant effects, we now run a Bayesian analysis, specifically Bayes factors (or $b$-values) from model comparisons, to determine whether our data provide evidence for a true null effect or merely fail to provide evidence either way.
+
+```{r bayesian}
+brm.full.uk_nae <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+                         z_age_months + method + IDS_pref + IDS_pref:language_zone +
+                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                         (1 + CDI.z_age_months | labid),
+                       data = data.uk_nae, family = gaussian,
+                       iter = 10000, future = T, refresh = 0,
+                       save_pars = save_pars(all = T),
+                       control = list(adapt_delta = .9999,
+                                      max_treedepth = 20))
+bf <- lr_tests.brmsfit(brm.full.uk_nae)
+```
