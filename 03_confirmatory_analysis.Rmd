@@ -32,7 +32,8 @@ plan(multisession, workers = 8)
 select <- dplyr::select
 
 theme_set(theme_bw(base_size = 10))
-knitr::opts_chunk$set(cache = TRUE)
+options("future" = T)
+#knitr::opts_chunk$set(cache = TRUE)
 
 # Read data ======================================
 col_types <- cols(
@@ -64,6 +65,7 @@ col_types <- cols(
   second_session = col_logical()
 )
 data.total <- read_csv("data/02b_processed.csv", col_types = col_types)
+# TODO: add saved results
 ```
 
 Before moving on with the analysis, we have to ready the data by (a) checking for colinearity between `z_age_months` and `CDI.z_age_months` and correcting this if necessary, and (b) setting up the contrasts described in our data analysis.
@@ -351,9 +353,11 @@ Given that the `frequentist' tests above did not discover any expected significa
 brm.full.uk_nae <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
                          z_age_months + method + IDS_pref + IDS_pref:language_zone +
                          IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                         (1 + CDI.z_age_months | labid),
+                         (1 + CDI.z_age_months + language_zone + gender + z_age_months + method +
+                            IDS_pref + IDS_pref:language_zone + IDS_pref:method +
+                            IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
                        data = data.uk_nae, family = gaussian,
-                       iter = 10000, future = T, refresh = 0,
+                       iter = 1000, refresh = 0,
                        save_pars = save_pars(all = T),
                        control = list(adapt_delta = .9999,
                                       max_treedepth = 20))

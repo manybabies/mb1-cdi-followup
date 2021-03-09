@@ -3,6 +3,7 @@ library(lme4)
 library(brms); library(rstan); library(bridgesampling)
 library(future); library(future.apply); library(furrr)
 plan(multisession, workers = 8)
+options("future" = T)
 
 # LR_TESTS.LMER
 # Perform likelihood ratio tests by sequential term deletion and anova model comparison
@@ -67,9 +68,16 @@ nested_models <- function(model, re_strat, verbose = F){
       prepend(model)
     return(lr.verbose)
   }
-  nested_m <- 1:length(fe) %>%
-    map(~ update(model, update.term_delete(.x, fe, re))) %>%
-    prepend(model)
+  nested_m <- 
+  if(is.brmsfit(model)){
+    nested_m <- 1:length(fe) %>%
+      map(~ update(model, update.term_delete(.x, fe, re), refresh = 0)) %>%
+      prepend(list(model))
+  }else{
+    nested_m <- 1:length(fe) %>%
+      map(~ update(model, update.term_delete(.x, fe, re))) %>%
+      prepend(model)
+  }
   m_names <- c(fe, "Intercept") # if removing re together with fe
   return(list("models" = nested_m, "names" = m_names))
 }
@@ -87,7 +95,7 @@ lr_tests.brmsfit <- function(model, re_strat, verbose = F){
   # Get (updated) nested models to compate, in descending order, and model names for summary
   nested <- nested_models(model, re_strat, verbose)
   nested_m <- nested[["models"]]
-  m_names <- nested[["names"]][1:length(nested["m_names"])-1] # Remove "Intercept" from list
+  m_names <- nested[["names"]][1:length(nested[["m_names"]])-1] # Remove "Intercept" from list
   # Bridge sample posteriors
   nested_bridges <- nested_m %>%
     future_map(bridge_sampler, silent = T)
