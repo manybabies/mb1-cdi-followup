@@ -95,7 +95,8 @@ lr_tests.brmsfit <- function(model, re_strat, verbose = F){
   # Get (updated) nested models to compate, in descending order, and model names for summary
   nested <- nested_models(model, re_strat, verbose)
   nested_m <- nested[["models"]]
-  m_names <- nested[["names"]][1:length(nested[["m_names"]])-1] # Remove "Intercept" from list
+  m_names <- nested[["names"]] %>%
+    discard(identical, "Intercept") # Remove "Intercept" from list
   # Bridge sample posteriors
   nested_bridges <- nested_m %>%
     future_map(bridge_sampler, silent = T)

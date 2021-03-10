@@ -257,7 +257,7 @@ lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
 We then compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function.
 
 ```{r anova_lmer}
-source("helper/lmer_lrtests.R")
+source("helper/lrtests.R")
 lmer.lr.nae <- lr_tests.merMod(lmer.full.nae)
 lmer.lr.uk <- lr_tests.merMod(lmer.full.uk)
 # Models with terms removed are all singular, for both NAE and UK samples
@@ -349,17 +349,80 @@ if(check_pwr){
 
 Given that the `frequentist' tests above did not discover any expected significant effects, we now run a Bayesian analysis, specifically Bayes factors (or $b$-values) from model comparisons, to determine whether our data provide evidence for a true null effect or merely fail to provide evidence either way.
 
-```{r bayesian}
-brm.full.uk_nae <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-                         z_age_months + method + IDS_pref + IDS_pref:language_zone +
-                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                         (1 + CDI.z_age_months + language_zone + gender + z_age_months + method +
-                            IDS_pref + IDS_pref:language_zone + IDS_pref:method +
-                            IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
-                       data = data.uk_nae, family = gaussian,
-                       iter = 1000, refresh = 0,
-                       save_pars = save_pars(all = T),
-                       control = list(adapt_delta = .9999,
-                                      max_treedepth = 20))
-bf <- lr_tests.brmsfit(brm.full.uk_nae)
+We first run models on the separate UK and NAE samples.
+
+```{r bayesian_uk_nae}
+# NAE sample
+run_models <- F
+if(run_models){
+  # Run the full model
+  brm.full.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender + z_age_months +
+                        method + IDS_pref + IDS_pref:method +
+                        IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                        (1 + CDI.z_age_months + gender + z_age_months + method + IDS_pref +
+                           IDS_pref:method + IDS_pref:CDI.z_age_months +
+                           IDS_pref:z_age_months | labid),
+                      data = data.nae, family = gaussian,
+                      iter = 1000, refresh = 0,
+                      save_pars = save_pars(all = T),
+                      control = list(adapt_delta = .9999,
+                                     max_treedepth = 20))
+  # Run model comparisons
+  bf.nae <- lr_tests.brmsfit(brm.full.nae)
+  # Save full model and Bayes factors
+  write_csv(bf.nae, file = "results/registered/bf_nae.csv")
+  # TODO: save full model? Estimates only?
+}else{
+  bf.nae <- read_csv(file = "results/registered/bf_nae.csv")
+}
+# UK sample
+run_models <- F
+if(run_models){
+  # Run the full model
+  brm.full.uk <- brm(z_vocab_nwords ~ CDI.z_age_months + gender + z_age_months +
+                        method + IDS_pref + IDS_pref:method +
+                        IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                        (1 + CDI.z_age_months + gender + z_age_months + method + IDS_pref +
+                           IDS_pref:method + IDS_pref:CDI.z_age_months +
+                           IDS_pref:z_age_months | labid),
+                      data = data.uk, family = gaussian,
+                      iter = 1000, refresh = 0,
+                      save_pars = save_pars(all = T),
+                      control = list(adapt_delta = .9999,
+                                     max_treedepth = 20))
+  # Run model comparisons
+  bf.uk <- lr_tests.brmsfit(brm.full.uk)
+  # Save full model and Bayes factors
+  write_csv(bf.uk, file = "results/registered/bf_uk.csv")
+  # TODO: save full model? Estimates only?
+}else{
+  bf.uk <- read_csv(file = "results/registered/bf_uk.csv")
+}
+```
+
+We now run the Bayesian model on the combined UK and NAE sample.
+
+```{r bayesian_uk-nae}
+run_models <- F
+if(run_models){
+  # Run the full model
+  brm.full.uk_nae <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+                           z_age_months + method + IDS_pref + IDS_pref:language_zone +
+                           IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                           (1 + CDI.z_age_months + language_zone + gender + z_age_months + method +
+                              IDS_pref + IDS_pref:language_zone + IDS_pref:method +
+                              IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
+                         data = data.uk_nae, family = gaussian,
+                         iter = 1000, refresh = 0,
+                         save_pars = save_pars(all = T),
+                         control = list(adapt_delta = .9999,
+                                        max_treedepth = 20))
+  # Run model comparisons
+  bf.uk_nae <- lr_tests.brmsfit(brm.full.uk_nae)
+  # Save full model and Bayes factors
+  write_csv(bf.uk_nae, file = "results/registered/bf_uk-nae.csv")
+  # TODO: save full model? Estimates only?
+}else{
+  bf.uk_nae <- read_csv(file = "results/registered/bf_uk-nae.csv")
+}
 ```
