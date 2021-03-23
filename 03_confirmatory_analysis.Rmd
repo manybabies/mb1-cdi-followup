@@ -76,7 +76,8 @@ First, we run a Kappa test on the possibility of colinearity between `z_age_mont
 
 ```{r colinearity_check}
 # Run kappa test
-k.age_months <- model.matrix(~ z_age_months + CDI.z_age_months, data = data.total) %>% kappa()
+k.age_months <- model.matrix(~ z_age_months + CDI.z_age_months, data = data.total) %>%
+  kappa(exact = T)
 ```
 
 With a value of `r k.age_months`, we do not have a colinearity issue and can proceed with the data analysis as planned.
