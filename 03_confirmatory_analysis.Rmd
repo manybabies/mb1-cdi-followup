@@ -23,10 +23,11 @@ We first present the main "sample theory based" analyses (also known as frequent
 # Library imports, general settings ==============
 library(tidyverse); library(egg)
 library(knitr)
-library(lme4); library(simr)
+library(lme4); library(lmerTest); library(simr)
+# As in our discussion with Mike, we will use lmerTest for calculating p values
+# in the mixed-effects models (noted as a deviation) 
 library(brms); library(rstan)
 library(future)
-library(lmerTest) #as in our discussion with Mike, we will use lmerTest for calculating p values in the mixed effect (noted as a deviation) 
 plan(multisession, workers = 8)
 
 # Deal with package priority issues
@@ -282,13 +283,17 @@ lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
 # CDI.z_age_months
 ```
 
-We then compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function.
+We wanted to compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function. However, model comparison led to singularity issues, thus we instead use a Type I anova with Satterthwaitte's method for ddfs from the `lmerTest` package.
 
 ```{r anova_lmer}
-source("helper/lrtests.R")
-lmer.lr.nae <- lr_tests.merMod(lmer.full.nae)
-lmer.lr.uk <- lr_tests.merMod(lmer.full.uk)
-# Models with terms removed are all singular, for both NAE and UK samples
+check_lrtest <- F
+if(check_lrtest){
+  source("helper/lrtests.R")
+  lmer.lr.nae <- lr_tests.merMod(lmer.full.nae)
+  lmer.lr.uk <- lr_tests.merMod(lmer.full.uk)
+}
+(lmer.aov.nae <- anova(lmer.full.nae, type = "I"))
+(lmer.aov.uk <- anova(lmer.full.uk, type = "I"))
 ```
 
 We now want to check the statistical power of significant effects, and discard any models with significant effects that do not reach 80% power. This however leads to too many warnings of singularity issues on the model updates inherent to the `simr` power simulations, hence we cannot obtain satisfactory power estimates as pre-registered.
@@ -356,9 +361,12 @@ lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
 We then compute $p$-values, but leave out power estimates for those $p$-values as above.
 
 ```{r uk_nae_statistics}
-# Model comparions
-lmer.lr.uk_nae <- lr_tests.merMod(lmer.full.uk_nae)
-# Models with effects removed are singular or fail to converge
+# p-values
+check_lrtest <- F
+if(check_lrtest){
+  lmer.lr.uk_nae <- lr_tests.merMod(lmer.full.uk_nae)
+}
+(lmer.aov.uk_nae <- anova(lmer.full.uk_nae, type = "I"))
 
 # Power estimates
 ## This also gives out singularity issue warnings and is not computed by default
@@ -387,9 +395,7 @@ if(run_models){
   brm.full.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender + z_age_months +
                         method + IDS_pref + IDS_pref:method +
                         IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                        (1 + CDI.z_age_months + gender + z_age_months + method + IDS_pref +
-                           IDS_pref:method + IDS_pref:CDI.z_age_months +
-                           IDS_pref:z_age_months | labid),
+                        (1 | labid),
                       data = data.nae, family = gaussian,
                       iter = 1000, refresh = 0,
                       save_pars = save_pars(all = T),
@@ -407,12 +413,10 @@ if(run_models){
 run_models <- F
 if(run_models){
   # Run the full model
-  brm.full.uk <- brm(z_vocab_nwords ~ CDI.z_age_months + gender + z_age_months +
+  brm.full.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender + z_age_months +
                         method + IDS_pref + IDS_pref:method +
                         IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                        (1 + CDI.z_age_months + gender + z_age_months + method + IDS_pref +
-                           IDS_pref:method + IDS_pref:CDI.z_age_months +
-                           IDS_pref:z_age_months | labid),
+                        (1 | labid),
                       data = data.uk, family = gaussian,
                       iter = 1000, refresh = 0,
                       save_pars = save_pars(all = T),
@@ -437,9 +441,7 @@ if(run_models){
   brm.full.uk_nae <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
                            z_age_months + method + IDS_pref + IDS_pref:language_zone +
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                           (1 + CDI.z_age_months + language_zone + gender + z_age_months + method +
-                              IDS_pref + IDS_pref:language_zone + IDS_pref:method +
-                              IDS_pref:CDI.z_age_months + IDS_pref:z_age_months | labid),
+                           (1 + CDI.z_age_months | labid),
                          data = data.uk_nae, family = gaussian,
                          iter = 1000, refresh = 0,
                          save_pars = save_pars(all = T),
