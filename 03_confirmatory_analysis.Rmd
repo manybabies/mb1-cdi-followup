@@ -26,6 +26,7 @@ library(knitr)
 library(lme4); library(simr)
 library(brms); library(rstan)
 library(future)
+library(lmerTest) #as in our discussion with Mike, we will use lmerTest for calculating p values in the mixed effect (noted as a deviation) 
 plan(multisession, workers = 8)
 
 # Deal with package priority issues
@@ -79,25 +80,28 @@ First, we run a Kappa test on the possibility of colinearity between `z_age_mont
 k.age_months <- model.matrix(~ z_age_months + CDI.z_age_months, data = data.total) %>% kappa()
 ```
 
-With a value of `r k.age_months`, we do not have a colinearity issue and can proceed with the data analysis as planned.
+With a value of `r k.age_months`, we do not have a colinearity issue and can proceed with the data analysis as planned (The criteria of indicating colinearity is that kappa > 10). 
 
 ## Contrast Setups
 
-We need `gender` as an effect-coded factor, and `method` as a deviation-coded factor. This is achieved in R by using the `contr.sum()` function with the number of levels for each factor. Notably, when subsetting the NAE and UK samples, only two levels of `method` out of the three in total were left. [NOTE FROM MELANIE: I think you mean just the UK sample? NAE has all three]
+We need `gender` as an effect-coded factor, and `method` as a deviation-coded factor. This is achieved in R by using the `contr.sum()` function with the number of levels for each factor. Notably, when subsetting the UK sample, only two levels of `method` out of the three in total were left. 
 
 ```{r contrasts}
 # Set contrasts on the total dataset =============
 contrasts(data.total$gender) <- contr.sum(2)
 contrasts(data.total$method) <- contr.sum(3)
+
 # Create sub-datasets, with contrasts ============
 ## NAE
 data.nae <- data.total %>% subset(language_zone == "NAE") %>% droplevels()
 contrasts(data.nae$gender) <- contr.sum(2)
 contrasts(data.nae$method) <- contr.sum(3)
+
 ## UK
 data.uk <- data.total %>% subset(language_zone == "British") %>% droplevels()
 contrasts(data.uk$gender) <- contr.sum(2)
-contrasts(data.uk$method) <- contr.sum(2)
+contrasts(data.uk$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+
 ## Other
 data.other <- data.total %>% subset(language_zone == "Other") %>% droplevels()
 contrasts(data.other$gender) <- contr.sum(2)
@@ -113,6 +117,28 @@ data.total %>%
   group_by(language_zone, CDI.agerange, method, gender) %>%
   summarise(N = n(), age = mean(CDI.agedays), sd = sd(CDI.agedays)) %>%
   kable()
+```
+More detailed information about Descriptive Statistics
+```{r}
+#number of lab
+data.total %>% 
+  select(labid, language_zone) %>% 
+  unique() %>% 
+  group_by(language_zone) %>% 
+  count()
+
+data.total %>% 
+  group_by(language_zone, CDI.agerange) %>% 
+  summarize(N = n())
+
+# age range in each age group and language zone
+data.total %>% 
+  select(subid, language_zone, CDI.agedays, CDI.agerange) %>% 
+  unique() %>% 
+  group_by(language_zone, CDI.agerange) %>% 
+  summarize(age_min = (min(CDI.agedays)/365.25*12),
+            age_max = (max(CDI.agedays)/365.25*12))
+
 ```
 
 We then assess the data per lab in terms of sample size and CDI score (vocabulary size, for consistency between language zones).
@@ -220,6 +246,7 @@ ggsave("plots/scatter_age.pdf", plot.age_group,
 
 Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model bellow, simplifying the random effects structure until it converges.
 
+AST: we should not use z_vocab_nwords as the DV for the UK model as in the RR, we stated that we will use raw vocab for non-NAE model.
 ```{r full_lmer}
 # Run models =====================================
 ## NAE
@@ -238,11 +265,11 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
 # gender
 # CDI.z_age_months
 ## UK
-lmer.full.uk <- lmer(z_vocab_nwords ~ CDI.z_age_months + gender +
+lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
                        z_age_months + method + IDS_pref +
                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                        (1 | labid),
-                     data = data.uk)
+                     data = data.uk) #AST: change it back to raw number of vocab words
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
