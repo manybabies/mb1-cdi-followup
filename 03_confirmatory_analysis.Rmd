@@ -30,6 +30,9 @@ library(brms); library(rstan)
 library(future)
 plan(multisession, workers = 8)
 
+# Load model comparison functions
+source("helper/lrtests.R")
+
 # Deal with package priority issues
 select <- dplyr::select
 
@@ -257,6 +260,7 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
+# ==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -266,12 +270,21 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
 # z_age_months
 # gender
 # CDI.z_age_months
+#==========
+# Get printable results summary
+(lmer.coef.nae <- lmer.full.nae %>%
+    summary() %>%
+    pluck("coefficients") %>%
+    as_tibble(rownames = "Parameter") %>%
+    select(-c("t value", "Pr(>|t|)")))
+
 ## UK
 lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
                        z_age_months + method + IDS_pref +
                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                        (1 | labid),
                      data = data.uk) #AST: change it back to raw number of vocab words
+#==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -281,17 +294,25 @@ lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
 # z_age_months
 # gender
 # CDI.z_age_months
+#==========
+# Get printable results summary
+(lmer.coef.uk <- lmer.full.uk %>%
+    summary() %>%
+    pluck("coefficients") %>%
+    as_tibble(rownames = "Parameter") %>%
+    select(-c("t value", "Pr(>|t|)")))
 ```
 
 We wanted to compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function. However, model comparison led to singularity issues, thus we instead use a Type I anova with Satterthwaitte's method for ddfs from the `lmerTest` package.
 
 ```{r anova_lmer}
+# Model comparison dropped from the analysis
 check_lrtest <- F
 if(check_lrtest){
-  source("helper/lrtests.R")
   lmer.lr.nae <- lr_tests.merMod(lmer.full.nae)
   lmer.lr.uk <- lr_tests.merMod(lmer.full.uk)
 }
+# Get p-values with lmerTest::anova()
 (lmer.aov.nae <- anova(lmer.full.nae, type = "I"))
 (lmer.aov.uk <- anova(lmer.full.uk, type = "I"))
 ```
@@ -346,6 +367,7 @@ lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                            (1 + CDI.z_age_months | labid),
                          data = data.uk_nae)
+#==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -356,6 +378,13 @@ lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
 # z_age_months
 # gender
 # language_zone
+#==========
+# Get printable results summary
+(lmer.coef.uk_nae <- lmer.full.uk_nae %>%
+    summary() %>%
+    pluck("coefficients") %>%
+    as_tibble(rownames = "Parameter") %>%
+    select(-c("t value", "Pr(>|t|)")))
 ```
 
 We then compute $p$-values, but leave out power estimates for those $p$-values as above.
@@ -389,7 +418,7 @@ We first run models on the separate UK and NAE samples.
 
 ```{r bayesian_uk_nae}
 # NAE sample
-run_models <- F
+run_models <- T
 if(run_models){
   # Run the full model
   brm.full.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender + z_age_months +
@@ -397,7 +426,7 @@ if(run_models){
                         IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae, family = gaussian,
-                      iter = 1000, refresh = 0,
+                      iter = 10000, refresh = 0,
                       save_pars = save_pars(all = T),
                       control = list(adapt_delta = .9999,
                                      max_treedepth = 20))
@@ -410,7 +439,7 @@ if(run_models){
   bf.nae <- read_csv(file = "results/registered/bf_nae.csv")
 }
 # UK sample
-run_models <- F
+run_models <- T
 if(run_models){
   # Run the full model
   brm.full.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender + z_age_months +
@@ -418,7 +447,7 @@ if(run_models){
                         IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.uk, family = gaussian,
-                      iter = 1000, refresh = 0,
+                      iter = 10000, refresh = 0,
                       save_pars = save_pars(all = T),
                       control = list(adapt_delta = .9999,
                                      max_treedepth = 20))
@@ -435,7 +464,7 @@ if(run_models){
 We now run the Bayesian model on the combined UK and NAE sample.
 
 ```{r bayesian_uk-nae}
-run_models <- F
+run_models <- T
 if(run_models){
   # Run the full model
   brm.full.uk_nae <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
@@ -443,7 +472,7 @@ if(run_models){
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                            (1 + CDI.z_age_months | labid),
                          data = data.uk_nae, family = gaussian,
-                         iter = 1000, refresh = 0,
+                         iter = 10000, refresh = 0,
                          save_pars = save_pars(all = T),
                          control = list(adapt_delta = .9999,
                                         max_treedepth = 20))
