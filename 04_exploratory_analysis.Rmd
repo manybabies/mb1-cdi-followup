@@ -126,7 +126,7 @@ ggplot(by_lab,
   theme(legend.position = "bottom")
 ```
 
-## Mixed-Effects Model by Language Zone
+# Mixed-Effects Model by Language Zone
 
 Here, we run a mixed-effects model like what the RR stated with a slightly differently approach. Instead of controlling main effect of the method, IDS test age in the model that we predict CDI scores. We would like to create a residuals that control the effects of the "method" and "IDS test age" and create this residuals in the model.
 
@@ -184,8 +184,8 @@ ggplot(data.total,
   geom_point() + 
   geom_smooth(method = "lm") + 
   facet_wrap(~language_zone) + 
-  langcog::theme_mikabr() + 
-  langcog::scale_color_solarized(name = "Age group (months)") + 
+  #langcog::theme_mikabr() + 
+  #langcog::scale_color_solarized(name = "Age group (months)") + 
   ylab("Number of words produced") + 
   xlab("Age- and Method-residualized IDS preference") + 
   theme(legend.position = "bottom")
@@ -198,10 +198,36 @@ ggplot(data.total,
   geom_point() + 
   geom_smooth(method = "lm") + 
   facet_wrap(~language_zone) + 
-  langcog::theme_mikabr() + 
-  langcog::scale_color_solarized(name = "Age group (months)") + 
+  #langcog::theme_mikabr() + 
+  #langcog::scale_color_solarized(name = "Age group (months)") + 
   ylab("Number of words produced") + 
   xlab("IDS preference") + 
   theme(legend.position = "bottom")
 ```
 
+# Daily CDI percentiles
+
+## Reliable languages only
+
+## All languages
+
+# IDS trial-based analyses
+
+## Exclusions based on number of trials completed
+
+Need 280+ babies that have > 4 trial pairs in the best case scenario (in terms of reliability of IDS and CDI and the possible predictive effect of IDS on CDI). Based on a power analysis by Krista Byers-Heinlein.
+
+Reliabilities and results with more completed trial pairs? Comparison table of different results we could get? In this table, number of trials completed, number of infants included, result obtained overall (correlation? handpicked significant effect(s)?).
+
+## Taking all trials
+
+Looking time per trial as a DV.
+Looking at CDI, trial number, and trial type (IDS/ADS) as predictors.
+
+Might not be a good pragnatic choice as it is difficult to explain to the reviewers.
+
+# Other exploratory analyses
+
+## CDI reliability
+
+Correlation between 18- and 24-month-old measure per infant. Helps with the power simulations to know what to expect based on our sample size and estimated predictive effect.
