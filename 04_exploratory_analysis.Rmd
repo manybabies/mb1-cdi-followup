@@ -23,6 +23,7 @@ library(egg)
 library(knitr)
 library(lme4)
 library(lmerTest)
+library(psych)
 # library(brms)
 # library(rstan)
 
@@ -58,7 +59,67 @@ col_types <- cols(
   gender = col_factor(),
   second_session = col_logical()
 )
-data.total <- read_csv("data/02b_processed.csv", col_types = col_types)
+
+data.total <- read_csv("data/02b_processed.csv", col_types = col_types) %>% 
+  mutate(subid_long = paste(labid, subid, sep = "_"))
+
+cdi_subid <- data.total %>% 
+  select(subid_long)
+
+# Read Mb1 data for reliability check==============
+mb1_git <- read_csv("https://github.com/manybabies/mb1-analysis-public/raw/master/processed_data/03_data_diff_main.csv") %>%
+select(lab, subid, diff, stimulus_num, method, age_group) %>%
+mutate(subid = paste(lab, subid, sep = "_"))
+
+write.csv(mb1_git, "mb1.csv")
+
+# Read in archived MB1 data
+
+mb1 <- read_csv("mb1.csv")
+rm(mb1_git)
+
+
+# Create a dataframe that indicates how many paired trials each infant has in MB1
+mb1_num_pair <- mb1 %>% 
+  select(-X1) %>% 
+  filter(!is.na(diff)) %>% 
+  group_by(lab, subid) %>% 
+  summarize(n = n())
+
+mb1_excl4 <- mb1_num_pair %>% 
+  filter(n >= 4)
+
+mb1_excl6 <- mb1_num_pair %>% 
+  filter(n >= 6)
+
+mb1_excl8 <- mb1_num_pair %>% 
+  filter(n >= 8)
+
+# Must have data in wide dataframe (one row per participant, observations across columns), rather than long dataframe
+
+mb1_wide_excl2 <- mb1 %>%
+  filter(subid %in% cdi_subid$subid_long) %>% 
+  filter(!is.na(diff)) %>% # Removes NA values that were causing problems
+  pivot_wider(id_cols = c(lab, subid, method, age_group), names_from = stimulus_num, values_from = diff)
+
+mb1_wide_excl4 <- mb1 %>%
+  filter(subid %in% mb1_excl4$subid) %>% 
+  filter(subid %in% cdi_subid$subid_long) %>% 
+  filter(!is.na(diff)) %>% # Removes NA values that were causing problems
+  pivot_wider(id_cols = c(lab, subid, method, age_group), names_from = stimulus_num, values_from = diff)
+  
+mb1_wide_excl6 <- mb1 %>%
+  filter(subid %in% mb1_excl6$subid) %>% 
+  filter(subid %in% cdi_subid$subid_long) %>% 
+  filter(!is.na(diff)) %>% # Removes NA values that were causing problems
+  pivot_wider(id_cols = c(lab, subid, method, age_group), names_from = stimulus_num, values_from = diff)
+
+mb1_wide_excl8 <- mb1 %>%
+  filter(subid %in% mb1_excl8$subid) %>% 
+  filter(subid %in% cdi_subid$subid_long) %>% 
+  filter(!is.na(diff)) %>% # Removes NA values that were causing problems
+  pivot_wider(id_cols = c(lab, subid, method, age_group), names_from = stimulus_num, values_from = diff)  
+  
 ```
 
 ## Contrast Setups
@@ -203,5 +264,36 @@ ggplot(data.total,
   ylab("Number of words produced") + 
   xlab("IDS preference") + 
   theme(legend.position = "bottom")
+```
+
+# Reliability check
+We will compute ICC3k using psych package. In the following, we will examine the reliability in different exclusion criteria
+
+```{r}
+# Must remove all factor columns (lab, studyid, method, age_group), leaving just matrix of values needed to compute ICC
+
+mb1_excl2_icc <- mb1_wide_excl2 %>%
+select(-lab, -subid, -method, -age_group)
+
+mb1_excl4_icc <- mb1_wide_excl4 %>%
+select(-lab, -subid, -method, -age_group)
+
+mb1_excl6_icc <- mb1_wide_excl6 %>%
+select(-lab, -subid, -method, -age_group)
+
+mb1_excl8_icc <- mb1_wide_excl8 %>%
+select(-lab, -subid, -method, -age_group)
+```
+
+Compute ICC values.
+
+```{r}
+ICC(mb1_excl2_icc, missing = FALSE, lmer = TRUE)
+
+ICC(mb1_excl4_icc, missing = FALSE, lmer = TRUE)
+
+ICC(mb1_excl6_icc, missing = FALSE, lmer = TRUE)
+
+ICC(mb1_excl8_icc, missing = FALSE, lmer = TRUE)
 ```
 
