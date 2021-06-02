@@ -68,7 +68,6 @@ nested_models <- function(model, re_strat, verbose = F){
       prepend(model)
     return(lr.verbose)
   }
-  nested_m <- 
   if(is.brmsfit(model)){
     nested_m <- 1:length(fe) %>%
       map(~ update(model, update.term_delete(.x, fe, re), refresh = 0)) %>%

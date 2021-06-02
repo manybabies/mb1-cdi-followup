@@ -13,7 +13,7 @@ output:
 
 In this script, we go through all the pre-registered proposed analyses. As a reminder, the main research questions where as follows:
 
-1. To what extent does infants' preference for IDS as measured in a laboratory setting predict their vocabulary at 18 and 24 months?
+1. To what extent does infants#' preference for IDS as measured in a laboratory setting predict their vocabulary at 18 and 24 months?
 2. Does the relation between IDS preference and vocabulary size change over development?
 3. Are there systematic differences in the strength of this relationship across the language communities in our sample?
 
@@ -28,7 +28,10 @@ library(lme4); library(lmerTest); library(simr)
 # in the mixed-effects models (noted as a deviation) 
 library(brms); library(rstan)
 library(future)
-plan(multisession, workers = 8)
+plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
+
+# Load model comparison functions
+source("helper/lrtests.R")
 
 # Deal with package priority issues
 select <- dplyr::select
@@ -178,7 +181,7 @@ ggplot(by_lab,
 
 ## Simple Correlation
 
-First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson's product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. [NOTE FROM MELANIE: I'm not sure this makes sense to do with the raw UK scores - since we're collapsing across 18 and 24 month data and the data aren't standardized by age.].
+First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson#'s product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. [NOTE FROM MELANIE: I'm not sure this makes sense to do with the raw UK scores - since we're collapsing across 18 and 24 month data and the data aren#'t standardized by age.].
 
 ```{r simple_correlation}
 # Statistics =====================================
@@ -257,6 +260,7 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
                         IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
+# ==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -266,12 +270,21 @@ lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
 # z_age_months
 # gender
 # CDI.z_age_months
+#==========
+# Get printable results summary
+(lmer.coef.nae <- lmer.full.nae %>%
+    summary() %>%
+    pluck("coefficients") %>%
+    as_tibble(rownames = "Parameter") %>%
+    select(-c("t value", "Pr(>|t|)")))
+
 ## UK
 lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
                        z_age_months + method + IDS_pref +
                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                        (1 | labid),
                      data = data.uk) #AST: change it back to raw number of vocab words
+#==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -281,19 +294,27 @@ lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
 # z_age_months
 # gender
 # CDI.z_age_months
+#==========
+# Get printable results summary
+(lmer.coef.uk <- lmer.full.uk %>%
+    summary() %>%
+    pluck("coefficients") %>%
+    as_tibble(rownames = "Parameter") %>%
+    select(-c("t value", "Pr(>|t|)")))
 ```
 
-We wanted to compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function. However, model comparison led to singularity issues, thus we instead use a Type I anova with Satterthwaitte's method for ddfs from the `lmerTest` package.
+We wanted to compute *p*-vlues from model comparisons via likelihood ratio tests. The sequential term deletion and likelihood ratio tests are encapsulated in a helper function. However, model comparison led to singularity issues, thus we instead use a Type I anova with Satterthwaitte#'s method for ddfs from the `lmerTest` package.
 
 ```{r anova_lmer}
+# Model comparison dropped from the analysis
 check_lrtest <- F
 if(check_lrtest){
-  source("helper/lrtests.R")
   lmer.lr.nae <- lr_tests.merMod(lmer.full.nae)
   lmer.lr.uk <- lr_tests.merMod(lmer.full.uk)
 }
-(lmer.aov.nae <- anova(lmer.full.nae, type = "I"))
-(lmer.aov.uk <- anova(lmer.full.uk, type = "I"))
+# Get p-values with lmerTest::anova()
+(lmer.aov.nae <- anova(lmer.full.nae, type = "III"))
+(lmer.aov.uk <- anova(lmer.full.uk, type = "III"))
 ```
 
 We now want to check the statistical power of significant effects, and discard any models with significant effects that do not reach 80% power. This however leads to too many warnings of singularity issues on the model updates inherent to the `simr` power simulations, hence we cannot obtain satisfactory power estimates as pre-registered.
@@ -346,6 +367,7 @@ lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                            (1 + CDI.z_age_months | labid),
                          data = data.uk_nae)
+#==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -356,6 +378,13 @@ lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
 # z_age_months
 # gender
 # language_zone
+#==========
+# Get printable results summary
+(lmer.coef.uk_nae <- lmer.full.uk_nae %>%
+    summary() %>%
+    pluck("coefficients") %>%
+    as_tibble(rownames = "Parameter") %>%
+    select(-c("t value", "Pr(>|t|)")))
 ```
 
 We then compute $p$-values, but leave out power estimates for those $p$-values as above.
@@ -366,7 +395,7 @@ check_lrtest <- F
 if(check_lrtest){
   lmer.lr.uk_nae <- lr_tests.merMod(lmer.full.uk_nae)
 }
-(lmer.aov.uk_nae <- anova(lmer.full.uk_nae, type = "I"))
+(lmer.aov.uk_nae <- anova(lmer.full.uk_nae, type = "III"))
 
 # Power estimates
 ## This also gives out singularity issue warnings and is not computed by default
@@ -383,13 +412,13 @@ if(check_pwr){
 
 # Bayesian Statistics
 
-Given that the `frequentist' tests above did not discover any expected significant effects, we now run a Bayesian analysis, specifically Bayes factors (or $b$-values) from model comparisons, to determine whether our data provide evidence for a true null effect or merely fail to provide evidence either way.
+Given that the `frequentist#' tests above did not discover any expected significant effects, we now run a Bayesian analysis, specifically Bayes factors (or $b$-values) from model comparisons, to determine whether our data provide evidence for a true null effect or merely fail to provide evidence either way.
 
 We first run models on the separate UK and NAE samples.
 
 ```{r bayesian_uk_nae}
 # NAE sample
-run_models <- F
+run_models <- T
 if(run_models){
   # Run the full model
   brm.full.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender + z_age_months +
@@ -397,20 +426,42 @@ if(run_models){
                         IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae, family = gaussian,
-                      iter = 1000, refresh = 0,
+                      iter = 10000, refresh = 0,
                       save_pars = save_pars(all = T),
                       control = list(adapt_delta = .9999,
                                      max_treedepth = 20))
   # Run model comparisons
-  bf.nae <- lr_tests.brmsfit(brm.full.nae)
+  # TODO: update lr_tests.brmsfit function to allow for automated Type III comparisons
+  #bf.nae <- lr_tests.brmsfit(brm.full.nae) # Runs a sequential (Type I) model comparison
+  ## Initialise bf list and parameters lists
+  bf.nae <- list()
+  two_ways.nae <- list("IDS_pref:method", "IDS_pref:CDI.z_age_months", "IDS_pref:z_age_months")
+  one_ways.nae <- list("CDI.z_age_months", "gender", "z_age_months", "method", "IDS_pref")
+  ## Two-way interactions
+  bridge.full.nae <- bridge_sampler(brm.full.nae, silent = T)
+  for(term in two_ways.nae){
+    brm.two_way.nae <- update(brm.full.nae, formula(paste("~ . -", term)))
+    bridge.two_way.nae <- bridge_sampler(brm.two_way.nae, silent = T)
+    bf.nae[term] <- bayes_factor(bridge.full.nae, bridge.two_way.nae)$bf
+  }
+  ## One-way interactions
+  brm.two_way.nae <- update(brm.full.nae,
+                            ~ . - IDS_pref:method - IDS_pref:CDI.z_age_months - IDS_pref:z_age_months)
+  bridge.two_way.nae <- bridge_sampler(brm.two_way.nae, silent = T)
+  for(term in one_ways.nae){
+    brm.one_way.nae <- update(brm.two_way.nae, formula(paste("~ . -", term)))
+    bridge.one_way.nae <- bridge_sampler(brm.one_way.nae, silent = T)
+    bf.nae[term] <- bayes_factor(bridge.two_way.nae, bridge.one_way.nae)$bf
+  }
   # Save full model and Bayes factors
+  bf.nae %<>% unlist() %>% as_tibble(rownames = "m_name")
   write_csv(bf.nae, file = "results/registered/bf_nae.csv")
   # TODO: save full model? Estimates only?
 }else{
   bf.nae <- read_csv(file = "results/registered/bf_nae.csv")
 }
 # UK sample
-run_models <- F
+run_models <- T
 if(run_models){
   # Run the full model
   brm.full.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender + z_age_months +
@@ -418,13 +469,34 @@ if(run_models){
                         IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.uk, family = gaussian,
-                      iter = 1000, refresh = 0,
+                      iter = 10000, refresh = 0,
                       save_pars = save_pars(all = T),
                       control = list(adapt_delta = .9999,
                                      max_treedepth = 20))
   # Run model comparisons
-  bf.uk <- lr_tests.brmsfit(brm.full.uk)
+  #bf.uk <- lr_tests.brmsfit(brm.full.uk)
+  ## Initialise bf list and parameters lists
+  bf.uk <- list()
+  two_ways.uk <- list("IDS_pref:method", "IDS_pref:CDI.z_age_months", "IDS_pref:z_age_months")
+  one_ways.uk <- list("CDI.z_age_months", "gender", "z_age_months", "method", "IDS_pref")
+  ## Two-way interactions
+  bridge.full.uk <- bridge_sampler(brm.full.uk, silent = T)
+  for(term in two_ways.uk){
+    brm.two_way.uk <- update(brm.full.uk, formula(paste("~ . -", term)))
+    bridge.two_way.uk <- bridge_sampler(brm.two_way.uk, silent = T)
+    bf.uk[term] <- bayes_factor(bridge.full.uk, bridge.two_way.uk)$bf
+  }
+  ## One-way interactions
+  brm.two_way.uk <- update(brm.full.uk,
+                            ~ . - IDS_pref:method - IDS_pref:CDI.z_age_months - IDS_pref:z_age_months)
+  bridge.two_way.uk <- bridge_sampler(brm.two_way.uk, silent = T)
+  for(term in one_ways.uk){
+    brm.one_way.uk <- update(brm.two_way.uk, formula(paste("~ . -", term)))
+    bridge.one_way.uk <- bridge_sampler(brm.one_way.uk, silent = T)
+    bf.uk[term] <- bayes_factor(bridge.two_way.uk, bridge.one_way.uk)$bf
+  }
   # Save full model and Bayes factors
+  bf.uk %<>% unlist() %>% as_tibble(rownames = "m_name")
   write_csv(bf.uk, file = "results/registered/bf_uk.csv")
   # TODO: save full model? Estimates only?
 }else{
@@ -443,13 +515,37 @@ if(run_models){
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
                            (1 + CDI.z_age_months | labid),
                          data = data.uk_nae, family = gaussian,
-                         iter = 1000, refresh = 0,
+                         iter = 10000, refresh = 0,
                          save_pars = save_pars(all = T),
                          control = list(adapt_delta = .9999,
                                         max_treedepth = 20))
   # Run model comparisons
-  bf.uk_nae <- lr_tests.brmsfit(brm.full.uk_nae)
+  #bf.uk_nae <- lr_tests.brmsfit(brm.full.uk_nae)
+  ## Initialise bf list and parameters lists
+  bf.uk_nae <- list()
+  two_ways.uk_nae <- list("IDS_pref:language_zone", "IDS_pref:method",
+                          "IDS_pref:CDI.z_age_months", "IDS_pref:z_age_months")
+  one_ways.uk_nae <- list("CDI.z_age_months", "language_zone",
+                          "gender", "z_age_months", "method", "IDS_pref")
+  ## Two-way interactions
+  bridge.full.uk_nae <- bridge_sampler(brm.full.uk_nae, silent = T)
+  for(term in two_ways.uk_nae){
+    brm.two_way.uk_nae <- update(brm.full.uk_nae, formula(paste("~ . -", term)))
+    bridge.two_way.uk_nae <- bridge_sampler(brm.two_way.uk_nae, silent = T)
+    bf.uk_nae[term] <- bayes_factor(bridge.full.uk_nae, bridge.two_way.uk_nae)$bf
+  }
+  ## One-way interactions
+  brm.two_way.uk_nae <- update(brm.full.uk_nae,
+                               ~ . - IDS_pref:language_zone - IDS_pref:method -
+                                 IDS_pref:CDI.z_age_months - IDS_pref:z_age_months)
+  bridge.two_way.uk_nae <- bridge_sampler(brm.two_way.uk_nae, silent = T)
+  for(term in one_ways.uk_nae){
+    brm.one_way.uk_nae <- update(brm.two_way.uk_nae, formula(paste("~ . -", term)))
+    bridge.one_way.uk_nae <- bridge_sampler(brm.one_way.uk_nae, silent = T)
+    bf.uk_nae[term] <- bayes_factor(bridge.two_way.uk_nae, bridge.one_way.uk_nae)$bf
+  }
   # Save full model and Bayes factors
+  bf.uk_nae %<>% unlist() %>% as_tibble(rownames = "m_name")
   write_csv(bf.uk_nae, file = "results/registered/bf_uk-nae.csv")
   # TODO: save full model? Estimates only?
 }else{

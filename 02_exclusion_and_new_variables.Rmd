@@ -154,7 +154,7 @@ We want to create a new variable for the standardized mean preference for IDS `z
 
 ```{r ids_preference}
 df.final <- exclusions.errors %>%
-  select(-trial_num) %>% # Not relevant, we only want the pair number
+  select(-trial_num) %>% # Not relevant, we only want the pair number in stimulus_num
   pivot_wider(names_from = trial_type, values_from = looking_time) %>%
   mutate(IDS_pref_pair = IDS - ADS,
          mean_LT_pair = (IDS + ADS) / 2)
