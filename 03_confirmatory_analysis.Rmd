@@ -29,6 +29,11 @@ library(lme4); library(lmerTest); library(simr)
 library(brms); library(rstan)
 library(future)
 plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
+library(lattice)
+library(effects)
+library(sjPlot)
+library(robustlmm)
+library(car)
 
 # Load model comparison functions
 source("helper/lrtests.R")
@@ -261,15 +266,30 @@ ggsave("plots/scatter_age.pdf", plot.age_group,
 
 Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model bellow, simplifying the random effects structure until it converges.
 
-NAE full model
+### NAE full model
 ```{r full_lmer}
 # Run models =====================================
 ## NAE
+data.nae <- data.nae %>% 
+  filter(!is.na(standardized.score.CDI.num)) %>% 
+  mutate(log_standardized_score_CDI_num = log(standardized.score.CDI.num))
+
+data.nae$centered_IDS_pref <- scale(data.nae$IDS_pref, center = T, scale = F)
+
 lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-                        z_age_months + method + IDS_pref +
-                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+                        z_age_months + method + centered_IDS_pref +
+                        centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months +
                         (1 | labid),
                       data = data.nae)
+
+summary(lmer.full.nae)
+
+robust_lmer.full.nae <- robustlmm::rlmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+                        z_age_months + method + centered_IDS_pref +
+                        centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months +
+                        (1 | labid),
+                      data = data.nae)
+
 
 summary(lmer.full.nae)
 
@@ -290,8 +310,38 @@ full.nae_pvalue <- anova(lmer.full.nae) %>%
 
 ```
 
+#### Checking mixed-model assumptions. We will check the following:
+1) Linearlity
+2) Normality of the residuals
+3) Homoscedasticity of residuals
+4) No autocorrelation
+5) No multicollinearity
+```{r}
+#First, check linearity
+# data.nae$resid <- residuals(lmer.full.nae)
+# 
+# plot(data.nae$resid, data.nae$standardized.score.CDI)
 
-UK full model
+#Second, check normality
+plot_model(lmer.full.nae, type = 'diag') ## we do have right-skewed normality of residuals
+
+plot(robust_lmer.full.nae) #plot_model doesn't work with robustlmm, so we used plot(base)
+
+#Third, check autocorrelation
+re_run_lme.full.nae <- nlme::lme(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+                        z_age_months + method + centered_IDS_pref +
+                        centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months, random = ~1 | labid,
+                        method = "REML",
+                      data = data.nae, na.action = na.exclude)
+
+plot(nlme::ACF(re_run_lme.full.nae, resType = "normalized")) #there is no sign for autocorrelation
+      
+#Lastly, check multi-collinearity
+# car::vif(lmer.full.nae)
+```
+
+
+### UK full model
 ```{r}
 lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
                        z_age_months + method + IDS_pref +
@@ -316,6 +366,24 @@ full.uk_pvalue <- anova(lmer.full.uk) %>%
 # CDI.z_age_months
 
 ```
+#### Checking mixed-model assumptions. We will check the following:
+1) Linearlity
+2) Normality of the residuals
+3) Homoscedasticity of residuals
+4) No autocorrelation
+5) No multicollinearity
+```{r}
+#First, check linearity. The plot looks linear
+data.uk$resid <- residuals(lmer.full.uk)
+ 
+plot(data.uk$resid, data.uk$vocab_nwords)
+
+#Second, check normality
+qqmath(lmer.full.uk)
+
+plot_model(lmer.full.uk, type = 'diag')
+```
+
 
 We now want to check the statistical power of significant effects, and discard any models with significant effects that do not reach 80% power. This however leads to too many warnings of singularity issues on the model updates inherent to the `simr` power simulations, hence we cannot obtain satisfactory power estimates as pre-registered.
 
@@ -332,7 +400,7 @@ check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", metho
 check_pwr_uk_gender
 ```
 
-## Combined Sample
+### Combined Sample
 
 For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±1.5 months).
 
@@ -382,6 +450,24 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 #==========
 
 ```
+#### Checking mixed-model assumptions
+1) Linearlity
+2) Normality of the residuals
+3) Homoscedasticity of residuals
+4) No autocorrelation
+5) No multicollinearity
+```{r}
+#First, check linearity. The plot looks linear
+data.uk$resid <- residuals(lmer.full.uk)
+ 
+plot(data.uk$resid, data.uk$vocab_nwords)
+
+#Second, check normality
+qqmath(lmer.full.uk)
+
+plot_model(lmer.full.uk, type = 'diag')
+```
+
 
 We then compute $p$-values, but leave out power estimates for those $p$-values as above. Again, we have a lot of singular fit issues for the power checks and decided not to remove parameters based on posthoc power analysis. 
 
