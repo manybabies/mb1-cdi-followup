@@ -45,6 +45,8 @@ theme_set(theme_bw(base_size = 10))
 options("future" = T)
 #knitr::opts_chunk$set(cache = TRUE)
 
+print(sessionInfo()) #listing all info about R and packages info
+
 # Read data ======================================
 col_types <- cols(
   labid = col_factor(),
@@ -194,10 +196,15 @@ First, we want to assess quickly if there is a direct correlation between IDS pr
 test.pearson.nae <- cor.test(data.nae$IDS_pref,
                              data.nae$z_standardized_CDI,
                              alternative = "two.sided", method = "pearson")
+
+test.pearson.nae
+
 ## UK Sample
 test.pearson.uk <- cor.test(data.uk$IDS_pref,
                             data.uk$z_vocab_nwords,
                             alternative = "two.sided", method = "pearson")
+
+test.pearson.uk
 ```
 
 
@@ -270,9 +277,6 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 ```{r full_lmer}
 # Run models =====================================
 ## NAE
-data.nae <- data.nae %>% 
-  filter(!is.na(standardized.score.CDI.num)) %>% 
-  mutate(log_standardized_score_CDI_num = log(standardized.score.CDI.num))
 
 data.nae$centered_IDS_pref <- scale(data.nae$IDS_pref, center = T, scale = F)
 
@@ -310,7 +314,7 @@ full.nae_pvalue <- anova(lmer.full.nae) %>%
 
 ```
 
-#### Checking mixed-model assumptions. We will check the following:
+#### (Optional) Checking mixed-model assumptions. We will check the following:
 1) Linearlity
 2) Normality of the residuals
 3) Homoscedasticity of residuals
@@ -325,8 +329,6 @@ full.nae_pvalue <- anova(lmer.full.nae) %>%
 #Second, check normality
 plot_model(lmer.full.nae, type = 'diag') ## we do have right-skewed normality of residuals
 
-plot(robust_lmer.full.nae) #plot_model doesn't work with robustlmm, so we used plot(base)
-
 #Third, check autocorrelation
 re_run_lme.full.nae <- nlme::lme(standardized.score.CDI.num ~ CDI.z_age_months + gender +
                         z_age_months + method + centered_IDS_pref +
@@ -337,7 +339,7 @@ re_run_lme.full.nae <- nlme::lme(standardized.score.CDI.num ~ CDI.z_age_months +
 plot(nlme::ACF(re_run_lme.full.nae, resType = "normalized")) #there is no sign for autocorrelation
       
 #Lastly, check multi-collinearity
-# car::vif(lmer.full.nae)
+car::vif(lmer.full.nae) #we do see a multicollineartiy for the IDS preference variable, even though we have centered the IDS preference score. It is probably related to the number the participating labs (as this is the group level that we are controlling) and how we entered interaction between IDS preference and other variables (that lack variability in the current sample). We need to keep IDS preference in the model as exploring the relationship between IDS preference and CDI score is the key research question in the paper.
 ```
 
 
@@ -366,7 +368,7 @@ full.uk_pvalue <- anova(lmer.full.uk) %>%
 # CDI.z_age_months
 
 ```
-#### Checking mixed-model assumptions. We will check the following:
+#### (Optional) Checking mixed-model assumptions. We will check the following:
 1) Linearlity
 2) Normality of the residuals
 3) Homoscedasticity of residuals
@@ -379,9 +381,19 @@ data.uk$resid <- residuals(lmer.full.uk)
 plot(data.uk$resid, data.uk$vocab_nwords)
 
 #Second, check normality
-qqmath(lmer.full.uk)
+plot_model(lmer.full.uk, type = 'diag') ## we do have right-skewed normality of residuals
 
-plot_model(lmer.full.uk, type = 'diag')
+#Third, check autocorrelation
+re_run_lme.full.uk <- nlme::lme(vocab_nwords ~ CDI.z_age_months + gender +
+                       z_age_months + method + IDS_pref +
+                       IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months, random = ~1 | labid,
+                        method = "REML",
+                      data = data.nae, na.action = na.exclude)
+
+plot(nlme::ACF(re_run_lme.full.uk, resType = "normalized")) #there is no sign for autocorrelation
+      
+#Lastly, check multi-collinearity
+car::vif(lmer.full.uk) #no problem for multicollinearlity
 ```
 
 
@@ -450,7 +462,7 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 #==========
 
 ```
-#### Checking mixed-model assumptions
+#### (Optional) Checking mixed-model assumptions
 1) Linearlity
 2) Normality of the residuals
 3) Homoscedasticity of residuals
@@ -458,14 +470,25 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 5) No multicollinearity
 ```{r}
 #First, check linearity. The plot looks linear
-data.uk$resid <- residuals(lmer.full.uk)
+data.uk_nae$resid <- residuals(lmer.full.uk_nae)
  
-plot(data.uk$resid, data.uk$vocab_nwords)
+plot(data.uk_nae$resid, data.uk_nae$CDI.prop)
 
 #Second, check normality
-qqmath(lmer.full.uk)
+plot_model(lmer.full.uk_nae, type = 'diag') ## we do have right-skewed normality of residuals
 
-plot_model(lmer.full.uk, type = 'diag')
+#Third, check autocorrelation
+re_run_lme.full.uk_nae <- nlme::lme(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+                           z_age_months + method + IDS_pref + IDS_pref:language_zone +
+                           IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
+                           random = ~CDI.z_age_months  | labid,
+                        method = "REML",
+                      data = data.uk_nae, na.action = na.exclude)
+
+plot(nlme::ACF(re_run_lme.full.uk_nae, resType = "normalized")) #there is no sign for autocorrelation
+      
+#Lastly, check multi-collinearity
+car::vif(lmer.full.uk_nae) #no problem for multicollinearlity
 ```
 
 
