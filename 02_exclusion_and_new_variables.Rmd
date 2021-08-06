@@ -94,7 +94,7 @@ Our dataset is now reduced from `r length(levels(exclusions.age$subid_unique))` 
 
 ## Incomplete IDS/ADS pairs
 
-For analysis purposes, we consider pairs of ADS/IDS trials, and as such exclude any pairs in which one of the trials is missing.
+For analysis purposes, we consider pairs of ADS/IDS trials, and as such exclude any pairs in which one of the trials is missing. Participants without any useable trials after these exclusions are excluded from further analysis.
 
 ```{r trial_pairs}
 exclusions.pairs <- exclusions.ids %>%
