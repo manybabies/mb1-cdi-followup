@@ -13,7 +13,7 @@ output:
 
 In this script, we go through all the pre-registered proposed analyses. As a reminder, the main research questions where as follows:
 
-1. To what extent does infants#' preference for IDS as measured in a laboratory setting predict their vocabulary at 18 and 24 months?
+1. To what extent does infants' preference for IDS as measured in a laboratory setting predict their vocabulary at 18 and 24 months?
 2. Does the relation between IDS preference and vocabulary size change over development?
 3. Are there systematic differences in the strength of this relationship across the language communities in our sample?
 

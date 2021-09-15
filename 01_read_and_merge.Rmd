@@ -34,7 +34,7 @@ Other notable issues at data import were:
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
 * standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file
 (`data/cdi/unprocessed_merge.csv`) [NOTE FROM MELANIE: If these are from the North American samples, I think we want to include these data. It should be straighforward to fix taking the top or bottom of the range systematically rather than converting to NA.]; further, standardized score reported as `<1` were treated as zeros rather than NA;
-* inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded for problematic cases as whether the participant was younger (18) or older (24) than the middle 21-months-old;
+* inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded to 18 if younger than 21 months or 24 if older than 21 months;
 * inconstitencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
@@ -190,7 +190,7 @@ check_subid.tibble <- check_subid %>%
   mutate_all(as_factor)
 ```
 
-Even after correcting formatting issues in subids, there are `r sum(check_subid.tibble$dataset == "CDI")` subids in the CDI data that do not have a match in the preprocessed IDS data. This is most likely due to the fact that some infants were excluded from the IDS analysis but still had their CDI scores recorded. We check that this is the case bellow.
+Even after correcting formatting issues in subids, there are `r sum(check_subid.tibble$dataset == "CDI")` subids in the CDI data that do not have a match in the preprocessed IDS data. This is most likely due to the fact that some infants were excluded from the IDS analysis but still had their CDI scores recorded. We check that this is the case below.
 
 ```{r subid_exclusion_check, message=FALSE, warning=FALSE}
 # Import subids from all participants in IDS (before exculsion) for labs that provided CDI data
@@ -229,9 +229,9 @@ Here we see that `r sum(check_subid.tibble.full$dataset == "CDI")` subids from t
 
 * For `weltentdeckerzurich`, the unmatched CDI subids were confirmed to be infants that were not included in the IDS analysis (see [issue #2](https://github.com/manybabies/mb1-cdi-followup/issues/2)).
 * Similarly for `babylabbrookes`, those were infants that were not included in the IDS analysis (see [issue #3](https://github.com/manybabies/mb1-cdi-followup/issues/3)). Notably participant `mb43` in our dataset should have been `mb143`, but this does not matter given that we do not keep their data.
-* For `chosunbaby`, the only remaining issue was a typo, corrected bellow, where participant `h71y23` should be `h71o23`, (see [issue #4](https://github.com/manybabies/mb1-cdi-followup/issues/4)).
+* For `chosunbaby`, the only remaining issue was a typo, corrected below, where participant `h71y23` should be `h71o23`, (see [issue #4](https://github.com/manybabies/mb1-cdi-followup/issues/4)).
 * For `infantlanglabutk`, those were infants for whom there was no IDS data available (see [issue #5](https://github.com/manybabies/mb1-cdi-followup/issues/5)).
-* For `unlvmusiclab` the only mismatch stems from the participant having been a pilot infant for the IDS analysis. We correct its subiid here for consistency, but this participant will be exclude in script 02 (see [issue #6](https://github.com/manybabies/mb1-cdi-followup/issues/6)). [NOTE FROM MELANIE: I don't see where this happens in 02, though maybe I missed it. Is there any reason we shouldn't just exclude this one here?]
+* For `unlvmusiclab` the only mismatch stems from the participant having been a pilot infant for the IDS analysis. We correct its subiid here for consistency, but this participant will be exclude in script 02 (see [issue #6](https://github.com/manybabies/mb1-cdi-followup/issues/6)). 
 
 ```{r subid_handcheck, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%
