@@ -80,21 +80,12 @@ exclusions.age <- exclusions.na %>%
 
 After this first exclusion, we are left with `r length(levels(exclusions.age$subid_unique))` participants out of `r length(levels(df$subid_unique))`.
 
-## Infants Excluded from MB1 IDS
-
-Labs sometimes recorded CDI scores regardless of the inclusion of the IDS data in the original study. Those infants and only those will have `NA` values for columns such as `trial_order`, `trial_num`, `trial_type`.
-
-```{r IDS_exculsion}
-exclusions.ids <- exclusions.age %>%
-  drop_na(trial_order) %>%
-  droplevels()
-```
-
-Our dataset is now reduced from `r length(levels(exclusions.age$subid_unique))` participants to `r length(levels(exclusions.ids$subid_unique))`.
-
-## Incomplete IDS/ADS pairs
+## Incomplete IDS/ADS pairs and Infants Excluded from MB1 IDS
 
 For analysis purposes, we consider pairs of ADS/IDS trials, and as such exclude any pairs in which one of the trials is missing. Participants without any useable trials after these exclusions are excluded from further analysis.
+
+Labs sometimes recorded CDI scores regardless of the inclusion of the IDS data in the original study. Those infants and only those will have `NA` values for columns such as `trial_order`, `trial_num`, `trial_type`. This also excludes these infants.
+
 
 ```{r trial_pairs}
 exclusions.pairs <- exclusions.ids %>%
@@ -177,6 +168,7 @@ df.final <- df.final %>%
 
 For our 3rd research question, we need to compute the proportional CDI scores as the raw score (number of words produced) divided by the total number of words in the CDI used.
 
+
 ```{r CDI.prop}
 CDI.nwords.list <- tribble(
   ~CDI.form, ~CDI.nwords,
@@ -216,6 +208,10 @@ df.final <- df.final %>%
 # Conclusion
 
 In the end, our dataset consists of `r length(levels(df.final$subid_unique))` infants and `r nrow(df.final)` CDI scores at 18 or 24 months.
+
+!!!!!!
+HB: can't write df.final to csv because of format of z columns (need to convert format?) (might be problem with HB's R setup)
+!!!!!!
 
 ```{r data_summary}
 write_csv(df.final, "data/02b_processed.csv")
