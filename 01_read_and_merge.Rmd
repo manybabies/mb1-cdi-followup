@@ -33,7 +33,7 @@ Other notable issues at data import were:
 * a misnamed column in `infantstudies-ubc.tsv`, `subject_id` instead of `subid`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
 * standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file
-(`data/cdi/unprocessed_merge.csv`) [NOTE FROM MELANIE: If these are from the North American samples, I think we want to include these data. It should be straighforward to fix taking the top or bottom of the range systematically rather than converting to NA.]; further, standardized score reported as `<1` were treated as zeros rather than NA;
+(`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA;
 * inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded to 18 if younger than 21 months or 24 if older than 21 months;
 * inconstitencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
 
