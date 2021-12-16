@@ -88,7 +88,7 @@ Labs sometimes recorded CDI scores regardless of the inclusion of the IDS data i
 
 
 ```{r trial_pairs}
-exclusions.pairs <- exclusions.ids %>%
+exclusions.pairs <- exclusions.age %>%
   subset(!missing, select = -missing) %>%
   # We have to add vocab_nwords as some infants have multiple data points for filling the CDI twice (processed further down)
   group_by(subid_unique, CDI.agerange, vocab_nwords, stimulus_num) %>%
@@ -99,7 +99,7 @@ exclusions.pairs <- exclusions.ids %>%
   droplevels()
 ```
 
-Our dataset is now reduced from `r length(levels(exclusions.ids$subid_unique))` participants to `r length(levels(exclusions.pairs$subid_unique))`.
+Our dataset is now reduced from `r length(levels(exclusions.age$subid_unique))` participants to `r length(levels(exclusions.pairs$subid_unique))`.
 
 ## Reported errors
 
