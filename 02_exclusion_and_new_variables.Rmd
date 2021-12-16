@@ -203,15 +203,20 @@ We discussed above the interest of scaling numerical variables. In our case, our
 df.final <- df.final %>%
   mutate(z_standardized_CDI = scale(standardized.score.CDI.num),
          z_vocab_nwords = scale(vocab_nwords))
+         
+# remove extra dimension from z score variables (value of 1 in second column prevented write_csv in next chunk)
+df.final$z_age_months <- drop(df.final$z_age_months)
+df.final$CDI.z_age_months <- drop(df.final$CDI.z_age_months)
+df.final$CDI.grouped.z_age_months <- drop(df.final$CDI.grouped.z_age_months)
+df.final$z_standardized_CDI <- drop(df.final$z_standardized_CDI)
+df.final$z_vocab_nwords <- drop(df.final$z_vocab_nwords)
+
 ```
 
 # Conclusion
 
 In the end, our dataset consists of `r length(levels(df.final$subid_unique))` infants and `r nrow(df.final)` CDI scores at 18 or 24 months.
 
-!!!!!!
-HB: can't write df.final to csv because of format of z columns (need to convert format?) (might be problem with HB's R setup)
-!!!!!!
 
 ```{r data_summary}
 write_csv(df.final, "data/02b_processed.csv")
