@@ -1,5 +1,5 @@
 ---
-title: "MB1 CDI Follow-up Confirmatory Analysis"
+title: "MB1 CDI Follow-up Confirmatory Analyses: Bayesian"
 author: "The ManyBabies Analysis Team"
 date: '`r format(Sys.time(), "%a %b %d %X %Y")`'
 output: 
@@ -11,13 +11,9 @@ output:
 
 # Introduction
 
-In this script, we go through all the pre-registered proposed analyses. As a reminder, the main research questions where as follows:
+In this script, follow up the Frequentist analyses by providing additional Bayesian statistics where a null effect was found, as specified in the pre-registration.
 
-1. To what extent does infants' preference for IDS as measured in a laboratory setting predict their vocabulary at 18 and 24 months?
-2. Does the relation between IDS preference and vocabulary size change over development?
-3. Are there systematic differences in the strength of this relationship across the language communities in our sample?
-
-We first present the main "sample theory based" analyses (also known as frequentist), separately on the North American and UK samples in parallel to answer our first two research questions, then on the total dataset to answer our third research question. We then provide additional Bayesian statistics where a null effect was found, as specified in the pre-registration.
+[NOTE: I don't know which of these libraries are unnecessary for the Bayes analysis and can be deleted here.]
 
 ```{r setup, message=FALSE, warning=FALSE}
 # Library imports, general settings ==============
