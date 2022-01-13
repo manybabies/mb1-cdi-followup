@@ -109,10 +109,18 @@ data.nae <- data.total %>% subset(language_zone == "NAE") %>% droplevels()
 contrasts(data.nae$gender) <- contr.sum(2)
 contrasts(data.nae$method) <- contr.sum(3)
 
-## UK
-data.uk <- data.total %>% subset(language_zone == "British") %>% droplevels()
-contrasts(data.uk$gender) <- contr.sum(2)
-contrasts(data.uk$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+## UK (separate 18/24 months)
+data.uk.18 <- data.total %>% subset(language_zone == "British" & CDI.agerange == 
+                                "18") %>% droplevels()
+contrasts(data.uk.18$gender) <- contr.sum(2)
+contrasts(data.uk.18$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+
+data.uk.24 <- data.total %>% subset(language_zone == "British" & CDI.agerange == 
+                                "24") %>% droplevels()
+contrasts(data.uk.24$gender) <- contr.sum(2)
+contrasts(data.uk.24$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+
+
 
 ## Other
 data.other <- data.total %>% subset(language_zone == "Other") %>% droplevels()
@@ -188,7 +196,7 @@ ggplot(by_lab,
 
 ## Simple Correlation
 
-First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson#'s product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. [NOTE FROM MELANIE: I'm not sure this makes sense to do with the raw UK scores - since we're collapsing across 18 and 24 month data and the data aren#'t standardized by age.].
+First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson#'s product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. Since CDI grows with age, we run the British sample separately for 18 and 24 months.
 
 ```{r simple_correlation}
 # Statistics =====================================
@@ -200,11 +208,19 @@ test.pearson.nae <- cor.test(data.nae$IDS_pref,
 test.pearson.nae
 
 ## UK Sample
-test.pearson.uk <- cor.test(data.uk$IDS_pref,
-                            data.uk$z_vocab_nwords,
+test.pearson.uk.18 <- cor.test(data.uk.18$IDS_pref,
+                            data.uk.18$z_vocab_nwords,
                             alternative = "two.sided", method = "pearson")
 
-test.pearson.uk
+test.pearson.uk.18
+
+test.pearson.uk.24 <- cor.test(data.uk.24$IDS_pref,
+                            data.uk.24$z_vocab_nwords,
+                            alternative = "two.sided", method = "pearson")
+
+test.pearson.uk.24
+
+
 ```
 
 
