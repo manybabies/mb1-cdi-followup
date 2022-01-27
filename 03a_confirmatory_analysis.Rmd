@@ -19,7 +19,7 @@ In this script, we go through all the pre-registered proposed analyses. As a rem
 
 Here we present the main "sample theory based" analyses (also known as frequentist), separately on the North American and UK samples in parallel to answer our first two research questions, then together to answer our third research question. In the next section (03b) provide additional Bayesian statistics where a null effect was found, as specified in the pre-registration.
 
-[NOTE: I don't know which of these libraries are solely for the Bayes analysis and can be deleted here.]
+TODO: Delete any libraries that are solely for the Bayes analysis and can be deleted here.
 
 ```{r setup, message=FALSE, warning=FALSE}
 # Library imports, general settings ==============
@@ -79,7 +79,7 @@ col_types <- cols(
   second_session = col_logical()
 )
 data.total <- read_csv("data/02b_processed.csv", col_types = col_types)
-# TODO: add saved results
+# TODO: add saved results -Not sure what is wanted here. Can this note be deleted???
 ```
 
 Before moving on with the analysis, we have to ready the data by (a) checking for colinearity between `z_age_months` and `CDI.z_age_months` and correcting this if necessary, and (b) setting up the contrasts described in our data analysis.
