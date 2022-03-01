@@ -183,6 +183,7 @@ names(final_swiss)[names(final_swiss) == "percentile_2"] <- "percentile"
 # Add swiss data to the final sample
 d1_total<-rbind(d1, final_swiss)
 
+colnames(d1_total)[colnames(d1_total) == "percentile"] <- "daily_percentile"
 write.table(d1_total,"percentiles_manybabies_cdi.txt",sep="\t",row.names=FALSE, quote = FALSE)
 
 ```
