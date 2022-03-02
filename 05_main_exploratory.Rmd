@@ -1,30 +1,27 @@
 ---
 title: "Main exploratory analysis"
-author: "MB CDI Analysis Team"
-date: "19/01/2022"
+author: "Luis"
+date: "03/2022"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+## CDI_vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + protocol + test_age + (1 | lab) + (1| participant)
+```{r setup, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "")
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r libraries, echo = FALSE, include = FALSE}
+library(dplyr)
 ```
 
-## Including Plots
+```{r preprocessing}
+rm(list = ls())
 
-You can also embed plots, for example:
+# Load data from a .txt file
+imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt") 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+data <- tibble(vocabulary_percentile = imported$daily_percentile, ids_pref = imported$IDS_pref, test_age = imported$age_days, cdi_age = imported$CDI.agedays, protocol = imported$method, gender = imported$gender, lab = imported$labid, participant = imported$subid)
+#noticed that for subid_unique there are still some subjects that have the same id.
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
