@@ -20,7 +20,6 @@ library(glmmTMB)
 
 ```{r preprocessing}
 rm(list = ls())
-
 # Load data from a .txt file
 imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt", stringsAsFactors = TRUE, header = TRUE) 
 
@@ -49,6 +48,7 @@ plot(table(data$nae)) # few more non-nae
 #z transformation of the predictors to help with the interpretation of the model.
 data$z.ids_pref <- as.vector(scale(data$ids_pref))
 data$z.test_age <- as.vector(scale(data$test_age))
+data$z.cdi_age <- as.vector(scale(data$cdi_age))
 
 #ensuring the response variable is between 0 and 1, as is required for a beta error model.
 data$vocabulary_percentile[data$vocabulary_percentile == 0] <- 1
@@ -58,8 +58,11 @@ if(data$vocabulary_percentile > 1)
 }
 
 #Running the mixed effects model with a beta error distribution for the response variable.
-full=glmmTMB(vocabulary_percentile ~ ids_pref*test_age + ids_pref*cdi_age + ids_pref*protocol + gender +(1 | lab) + (1| participant), family=beta_family(link="logit"), data=data)
+full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * z.cdi_age + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data)
 
+null <- glmmTMB(vocabulary_percentile ~ z.test_age + z.cdi_age + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data)
 summary(full)
+
+summary(null)
 ```
 
