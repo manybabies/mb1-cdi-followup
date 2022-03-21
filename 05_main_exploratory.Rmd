@@ -16,6 +16,7 @@ knitr::opts_knit$set(root.dir = "")
 ```{r libraries, echo = FALSE, include = FALSE}
 library(dplyr)
 library(glmmTMB)
+library(ggplot2)
 ```
 
 ```{r preprocessing}
@@ -23,7 +24,7 @@ rm(list = ls())
 # Load data from a .txt file
 imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt", stringsAsFactors = TRUE, header = TRUE) 
 
-data <- tibble(vocabulary_percentile = imported$daily_percentile, ids_pref = imported$IDS_pref, test_age = imported$age_days, cdi_age = imported$CDI.agedays, protocol = imported$method, gender = imported$gender, lab = imported$labid, participant = imported$subid_unique, nae = imported$nae)
+data <- tibble(vocabulary_percentile = imported$daily_percentile, ids_pref = imported$IDS_pref, test_age = imported$age_days, cdi_age = imported$CDI.agedays, protocol = imported$method, gender = imported$gender, lab = imported$labid, participant = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords)
 #noticed that for subid_unique there are still some subjects that have the same id.
 
 #investigate the distribution of each variable
@@ -34,6 +35,11 @@ hist(data$ids_pref) #normally distributed
 hist(data$test_age) #normally distributed
 
 hist(data$cdi_age) #bimodal distribution
+temp <- data$cdi_age
+
+data$cdi_age_cat <- !(temp < 650)
+
+#vocabulary ~ cdi_age_Cat + gender + lab
 
 plot(data$protocol) # head-turn preference design is most prevalent.
 
@@ -56,13 +62,22 @@ if(data$vocabulary_percentile > 1)
 {
   data$vocabulary_percentile <- data$vocabulary_percentile/100
 }
-
+data_sub <- data[!(data$lab == "bllumanitoba"),]
+korean <- data[data$lab == "chosunbaby",]
+# data$cdi_age_cat <- as.factor(data$cdi_age)
 #Running the mixed effects model with a beta error distribution for the response variable.
-full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * z.cdi_age + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data)
+full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * cdi_age_cat + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data_sub)
 
 null <- glmmTMB(vocabulary_percentile ~ z.test_age + z.cdi_age + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data)
 summary(full)
 
 summary(null)
+
+reduced_model <- glmmTMB(vocabulary_percentile ~ z.ids_pref + z.test_age + cdi_age_cat + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data)
+
+ggplot(data = data, aes(x = gender , y = vocabulary_percentile, color = cdi_age_cat)) +
+  geom_point()+
+  geom_boxplot() +
+  facet_wrap(.~ lab)
 ```
 
