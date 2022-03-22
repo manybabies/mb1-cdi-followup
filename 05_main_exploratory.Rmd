@@ -7,16 +7,16 @@ output: html_document
 ## Full Model:
 # CDI vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + (1 + ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender | lab)
 ## Pruned Model:
-# CDI_vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + protocol + test_age + (1 | lab) + (1| participant)
+# CDI_vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + protocol + test_age + ids_pref : nae + nae + (1 | lab) + (1| participant)
 ```{r setup, echo = FALSE, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = "")
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
 ```{r libraries, echo = FALSE, include = FALSE}
 library(dplyr)
 library(glmmTMB)
 library(ggplot2)
+library(lmtest)
 ```
 
 ```{r preprocessing}
@@ -70,6 +70,10 @@ summary(null)
 
 reduced_model <- glmmTMB(vocabulary_percentile ~ z.ids_pref + z.test_age + cdi_age + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data=data)
 
+lrtest(full, null)
+```
+
+```{r plots, include = TRUE, warning= FALSE}
 ggplot(data = data, aes(x = gender , y = vocabulary_percentile, color = cdi.age_range)) +
   geom_point() +
   geom_boxplot() +
