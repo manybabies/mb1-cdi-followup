@@ -1,0 +1,105 @@
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized-score-CDI	CDI-error	Notes
+bllmanitoba	1020	webCDI					error	webCDI sent but not completed
+bllmanitoba	1025	webCDI	18	534	62	56	noerror	
+bllmanitoba	1025	webCDI	24	758	367	70	noerror	
+bllmanitoba	1115	webCDI	24	773	533	91	noerror	
+bllmanitoba	1164	webCDI	18	506	47	40	noerror	
+bllmanitoba	1164	webCDI	24	727	307	52	noerror	
+bllmanitoba	1220	webCDI					error	webCDI sent but not completed
+bllmanitoba	1289	webCDI	18	588	46	29	noerror	
+bllmanitoba	1289	webCDI					error	webCDI sent but not completed
+bllmanitoba	1289	webCDI					error	webCDI sent but not completed
+bllmanitoba	1327	webCDI	24	755	198	39	noerror	
+bllmanitoba	1335	webCDI	18	556	82	56	noerror	
+bllmanitoba	1335	webCDI	24	718	495	91	noerror	
+bllmanitoba	1335	webCDI					error	webCDI sent but not completed
+bllmanitoba	1366	webCDI	18	534	49	33	noerror	
+bllmanitoba	1366	webCDI					error	webCDI sent but not completed
+bllmanitoba	1399	webCDI	18	541	3	2	noerror	
+bllmanitoba	1399	webCDI					error	webCDI sent but not completed
+bllmanitoba	1417	webCDI	18	554	122	67	noerror	
+bllmanitoba	1460	webCDI	18	543	26	17	noerror	
+bllmanitoba	1460	webCDI	24	724	102	16	noerror	
+bllmanitoba	1470	webCDI	18	518	11	6	noerror	
+bllmanitoba	1470	webCDI	24	736	469	74	noerror	
+bllmanitoba	1524	webCDI					error	webCDI sent but not completed
+bllmanitoba	1696	webCDI	18	531	60	39	noerror	
+bllmanitoba	1696	webCDI					error	webCDI sent but not completed
+bllmanitoba	1756	webCDI	18	551	16	10	noerror	
+bllmanitoba	1756	webCDI	24	714	125	30	noerror	
+bllmanitoba	1793	webCDI					error	webCDI sent but not completed
+bllmanitoba	1799	webCDI	18	551	23	11	noerror	
+bllmanitoba	1799	webCDI	24	692	24	3	noerror	
+bllmanitoba	1817	webCDI	18	550	49	40	noerror	
+bllmanitoba	1817	webCDI	24	700	174	50	noerror	
+bllmanitoba	1896	webCDI	24	730	334	57	noerror	
+bllmanitoba	1934	webCDI	18	529	16	15	noerror	
+bllmanitoba	1934	webCDI	24	744	60	9	noerror	
+bllmanitoba	1937	webCDI	18	580	6	2	noerror	
+bllmanitoba	1937	webCDI					error	webCDI sent but not completed
+bllmanitoba	2086	webCDI	18	555	88	44	noerror	
+bllmanitoba	2106	webCDI	18	547	53	35	noerror	
+bllmanitoba	2106	webCDI	24	720	410	72	noerror	
+bllmanitoba	2196	webCDI	18	608	20	6	noerror	
+bllmanitoba	2196	webCDI					error	webCDI sent but not completed
+bllmanitoba	2287	webCDI	18	544	6	5	noerror	
+bllmanitoba	2329	webCDI	18	555	43	22	noerror	
+bllmanitoba	2329	webCDI	24	721	258	43	noerror	
+bllmanitoba	2531	webCDI					error	webCDI sent but not completed
+bllmanitoba	2566	webCDI	18	550	188	74	noerror	
+bllmanitoba	2566	webCDI					error	webCDI sent but not completed
+bllmanitoba	2661	webCDI					error	webCDI sent but not completed
+bllmanitoba	2702	webCDI					error	webCDI sent but not completed
+bllmanitoba	2739	webCDI	18	537	108	60	noerror	
+bllmanitoba	2739	webCDI	24	728	217	36	noerror	
+bllmanitoba	2920	webCDI					error	webCDI sent but not completed
+bllmanitoba	2966	webCDI					error	webCDI sent but not completed
+bllmanitoba	3004	webCDI	18	578	24	18	noerror	
+bllmanitoba	3004	webCDI	24	721	298	66	noerror	
+bllmanitoba	3052	webCDI	18	545	98	67	noerror	
+bllmanitoba	3052	webCDI	24	693	335	78	noerror	
+bllmanitoba	3092	webCDI	24	741	435	67	noerror	
+bllmanitoba	3120	webCDI	18		42	22	error	participant not identifiable - possibly test data?
+bllmanitoba	3137	webCDI	18	540	241	87	noerror	
+bllmanitoba	3137	webCDI	24	728	438	68	noerror	
+bllmanitoba	3645	webCDI	18	545	17	10	noerror	
+bllmanitoba	3645	webCDI					error	webCDI sent but not completed
+bllmanitoba	3685	webCDI	24	714	54	11	noerror	
+bllmanitoba	3780	webCDI	18	554	218	80	noerror	
+bllmanitoba	3780	webCDI	24	702	439	83	noerror	
+bllmanitoba	3886	webCDI					error	webCDI sent but not completed
+bllmanitoba	3933	webCDI	18	533	74	60	noerror	
+bllmanitoba	3933	webCDI	24	782	376	63	noerror	
+bllmanitoba	3949	webCDI	18	536	21	21	noerror	
+bllmanitoba	3949	webCDI	24	772	367	61	noerror	
+bllmanitoba	4022	webCDI	18	538	38	40	noerror	
+bllmanitoba	4022	webCDI	24	723	361	76	noerror	
+bllmanitoba	4041	webCDI	24	687	202	56	noerror	
+bllmanitoba	4048	webCDI	18	570	101	62	noerror	
+bllmanitoba	4051	webCDI	24	703	76	10	noerror	
+bllmanitoba	4051	webCDI					error	webCDI sent but not completed
+bllmanitoba	4065	webCDI	18	541	77	61	noerror	
+bllmanitoba	4065	webCDI	24	695	339	79	noerror	
+bllmanitoba	4073	webCDI	18	575	6	3	noerror	
+bllmanitoba	4080	webCDI	24	700	482	89	noerror	
+bllmanitoba	4161	webCDI	24	752	640	97	noerror	
+bllmanitoba	4165	webCDI	18	570	372	96	noerror	
+bllmanitoba	4165	webCDI					error	webCDI sent but not completed
+bllmanitoba	4192	webCDI	18	553	95	47	noerror	
+bllmanitoba	4204	webCDI	18	526	78	61	noerror	
+bllmanitoba	4204	webCDI					error	webCDI sent but not completed
+bllmanitoba	4239	webCDI					error	webCDI sent but not completed
+bllmanitoba	4392	webCDI	24	684	40	10	noerror	
+bllmanitoba	4552	webCDI					error	webCDI sent but not completed
+bllmanitoba	4620	webCDI	18	551	182	82	noerror	
+bllmanitoba	4620	webCDI	24	724	444	86	noerror	
+bllmanitoba	4620	webCDI					error	webCDI sent but not completed
+bllmanitoba	4625	webCDI	18	581	44	18	noerror	
+bllmanitoba	4625	webCDI	24	765	74	5	noerror	
+bllmanitoba	4625	webCDI					error	webCDI sent but not completed
+bllmanitoba	4718	webCDI	18	537	17	16	noerror	
+bllmanitoba	4718	webCDI	24	716	75	16	noerror	
+bllmanitoba	4790	webCDI	18	557	91	45	noerror	
+bllmanitoba	4790	webCDI	24	768	523	77	noerror	
+bllmanitoba	4901	webCDI	18	585	312	91	noerror	
+bllmanitoba	4901	webCDI					error	webCDI sent but not completed
