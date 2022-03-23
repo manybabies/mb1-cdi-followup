@@ -242,7 +242,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">MB1 CDI Follow-up Data Reading and Merge</h1>
 <h4 class="author">The ManyBabies Analysis Team</h4>
-<h4 class="date">Wed Sep 15 14:40:59 2021</h4>
+<h4 class="date">Wed Mar 23 08:31:47 2022</h4>
 
 </div>
 
@@ -265,7 +265,7 @@ knitr::opts_chunk$set(cache = TRUE)</code></pre>
 <li>a misnamed column in <code>chosunbaby-cdi.csv</code>, <code>vocab_nwords(=raw score)</code> instead of <code>vocab_nwords</code>, corrected by hand;</li>
 <li>a misnamed column in <code>infantstudies-ubc.tsv</code>, <code>subject_id</code> instead of <code>subid</code>, corrected by hand;</li>
 <li>extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);</li>
-<li>standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (<code>data/cdi/unprocessed_merge.csv</code>) [NOTE FROM MELANIE: If these are from the North American samples, I think we want to include these data. It should be straighforward to fix taking the top or bottom of the range systematically rather than converting to NA.]; further, standardized score reported as <code>&lt;1</code> were treated as zeros rather than NA;</li>
+<li>standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file (<code>data/cdi/unprocessed_merge.csv</code>); further, standardized score reported as <code>&lt;1</code> were treated as zeros rather than NA;</li>
 <li>inconsistencies in the coding of <code>CDI.agerange</code>, sometimes coded as a ages in months rather than age groups (18, 24), recoded to 18 if younger than 21 months or 24 if older than 21 months;</li>
 <li>inconstitencies in the use of upper/lower case for the <code>webCDI</code> level of <code>CDI.form</code>.</li>
 </ul>
