@@ -32,7 +32,7 @@ data <- data.frame(vocabulary_percentile = imported$daily_percentile, ids_pref =
 
 data$cdi.age_range <- as.factor(data$cdi.age_range)
 #investigate the distribution of each variable
-hist(data$vocabulary_percentile) #evenly distributed
+hist(data$vocabulary_percentile, breaks = 100) #evenly distributed
 
 hist(data$ids_pref) #normally distributed
 
@@ -54,15 +54,14 @@ plot(table(data$nae)) # few more non-nae
 
 #ensuring the response variable is between 0 and 1, as is required for a beta error model.
 data$vocabulary_percentile[data$vocabulary_percentile == 0] <- 1
+
 if(data$vocabulary_percentile > 1)
 {
-  data$vocabulary_percentile <- data$vocabulary_percentile/100
+  data$vocabulary_percentile <- data$vocabulary_percentile / 100
 }
-full.fe.re <- fe.re.tab(fe.model = "vocabulary_percentile ~ ids_pref * test_age + ids_pref * cdi.age_range + ids_pref * protocol + ids_pref * nae + gender", re = c("lab", "participant"), data = data)
-full.fe.re_test <- fe.re.tab(fe.model = "vocab_nwords ~ ids_pref * test_age + ids_pref * cdi.age_range + ids_pref * protocol + ids_pref * nae + gender", re = c("lab", "participant"), data = data)
 
-full.fe.re_test$summary
-library("lme4")
+#get the data with all NA values removed.
+full.fe.re <- fe.re.tab(fe.model = "vocabulary_percentile ~ ids_pref * test_age + ids_pref * cdi.age_range + ids_pref * protocol + ids_pref * nae + gender", re = c("lab", "participant"), data = data)
 t.data <- full.fe.re$data
 
 #z transformation of the predictors to help with the interpretation of the model.
@@ -70,63 +69,41 @@ t.data$z.ids_pref <- as.vector(scale(t.data$ids_pref))
 t.data$z.test_age <- as.vector(scale(t.data$test_age))
 
 #Running the mixed effects model with a beta error distribution for the response variable.
-full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * cdi.age_range + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 + ids_pref * cdi.age_range + ids_pref * test_age || lab) + (1 + cdi.age_range || participant), family = beta_family(link = "logit"), data = t.data)
+full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * cdi.age_range + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 |lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
 
-summary(full)$varcor
-
+#Checking the assumption that variance and the mean are linked. It was met with this model.
 overdisp.test(full)
 
-ranef.diagn.plot(full)
+#Best Linear Unbiased Predictors: the estimated deviations of intercepts and slopes from the respective common average, per level of the random effects.
+ranef.diagn.plot(full) #The random effects appear normally distributed.
 
+#Test for collinearity between the predictors. There are no signs of collinearity.
 coll_model <- lm(vocabulary_percentile ~ z.ids_pref + z.test_age + cdi.age_range + protocol + nae + gender, data = t.data)
-
-summary(full)
-
 library(car)
 vif(coll_model)
 
-full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
+# #Test for stability by dropping one subject at a time. There don't seem to be major issues with the stability of the model coefficients.
+# full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
+# 
+# table(full.stab$detailed$converged)
+# m.stab.plot(full.stab$summary[, -1])
 
-table(full.stab$detailed$converged)
-m.stab.plot(full.stab$summary[, -1])
+null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
 
-null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + nae + gender + (1 + ids_pref * cdi.age_range + ids_pref * test_age || lab) + (1 + cdi.age_range || participant), family = beta_family(link = "logit"), data = t.data)
-round(summary(full)$coefficients$cond, 3)
-
+#full - null model comparison reveals that the effect of z.ids_pref doesn't significantly improve the model fit.
 as.data.frame(anova(null, full, test="Chisq"))
 
-full.test <- lmer(vocab_nwords ~  z.ids_pref * z.test_age + z.ids_pref * cdi.age_range + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 + gender + cdi.age_range + ids_pref + test_age | lab) + (1 | participant), data = t.data)
-
-summary(full.test)$varcor
-
-diagnostics.plot(full.test)
-
-source("C:/Projects/Roger's course/r-files/glmm_stability.r")
-full.stab_test=glmm.model.stab(model.res=full.test, contr=NULL, para=F,
-data=NULL)
-
-full.stab_test
-table(full.stab_test$detailed$lme4.warnings)
-table(full.stab_test$detailed$opt.warnings)
-round(full.stab$summary[, -1], 3)
-
-m.stab.plot(full.stab_test$summary[, -1])
-
-summary(full.test)
+summary(full)
 ```
 
 ```{r plots, include = TRUE, warning= FALSE}
-
-only_nae <- t.data[t.data$nae == TRUE,]
-ggplot(data = only_nae, aes(x = nae , y = vocabulary_percentile, colour = cdi.age_range)) +
-  geom_point() +
-  geom_boxplot() +
-  # ylim(0,1)
-   facet_wrap(.~ lab)
-
-ggplot(data = t.data, aes(x = gender , y = vocab_nwords, color = cdi.age_range)) +
+ggplot(data = t.data, aes(y = vocabulary_percentile)) +
+  geom_histogram(bin = 100)+
+  facet_wrap(.~lab)
+  
+ggplot(data = t.data, aes(x = cdi.age_range, y = vocabulary_percentile, colour = cdi.age_range,)) +
+  geom_boxplot()+
   geom_point()+
-  geom_boxplot() +
-  facet_wrap(.~ lab)
+  facet_wrap(.~lab)
 ```
 
