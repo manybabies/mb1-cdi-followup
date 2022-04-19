@@ -100,6 +100,8 @@ french$Age<-c(1:max_age_CDI1)
 
 ```{r Compute CDI in percentiles for production, include=FALSE}
 prod_T1 <- c()
+perc <- NULL
+perc_15plus <- NULL
 
 for(i in 1 : nrow(d1))  
 {
@@ -132,64 +134,56 @@ for(i in 1 : nrow(d1))
   # Get percentiles for production (both for CDI-I[WG] and CDI-II[WS])
   score <- as.numeric(d1 [[i, "vocab_nwords"]])
   age <- as.numeric(d1[[i, "CDI.agedays"]])
-
-  if(age > max_age_CDI1)# adjust for the age limits in the sample-specific norming data
-  {
-    age = max_age_CDI1
-  }
-    
-  if(age < min_age_CDI1)# adjust for the age limits in the sample-specific norming data
-  {
-    age = min_age_CDI1
-  }
-  
-  ##
-  ##
-  ##This is where I implemented the change for the 15 day correction
-  ##
-  ##
-  
   perc_CDI1_prod$Age_15plus <- perc_CDI1_prod$Age + 15
-  age_row <- as.numeric(which(perc_CDI1_prod$Age_15plus == age))
-  perc_15plus <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score)))
-
-  if(score == 0)
+  
+  if(age > max_age_CDI1 | age < min_age_CDI1 + 15| is.na(score))
   {
-    perc_15plus = floor(perc_15plus / 2)
-    print(perc_15plus)
+    perc_15plus <- NA
   }
-  perc <- perc_15plus
-  
-  ##
-  ##
-  ##Don't apply the 15 day correction to the Norwegian data.
-  ##
-  ##
-  
-  if((tool == "NorCDI"))
+  else
   {
     # get the number of line with the corresponding age
-    age_row <- as.numeric(which(perc_CDI1_prod$Age == age))
+    age_row <- as.numeric(which(perc_CDI1_prod$Age_15plus == age))
     # get the number of the column containing the min value between the CDI score and the value in the age corresponding line
-    perc <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
-        
+    perc_15plus <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
+
     if(score == 0)
     {
-      perc = 1
+      perc_15plus <- floor(perc_15plus/2)
     }
   }
   
+  #do not apply the correction to Norwegian data because the age in days was collected rather than interpolated.
+  if(tool == "NorCDI" | tool == "K-CDI"){
+    # adjust for the age limits in the sample-specific norming data
+    if(age > max_age_CDI1 | age < min_age_CDI1 | is.na(score))
+    {
+      perc <- NA
+    }
+    else
+    {
+      # get the number of line with the corresponding age
+      age_row <- as.numeric(which(perc_CDI1_prod$Age == age))
+      # get the number of the column containing the min value between the CDI score and the value in the age corresponding line
+      perc <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
+          
+      if(score == 0)
+      {
+        perc <- floor(perc/2)
+      }
+    }
+    perc_15plus <- perc
+  }
   if((tool == "FROSCH" || tool == "NCDI"))
   {
     perc <- NA
   }
   
-  prod_T1 <- c(prod_T1, perc)
+  prod_T1 <- c(prod_T1, perc_15plus)
 }
-      
+
 # Add a column for the CDI production score in percentiles for T1
 d1$percentile <- prod_T1
-
 ```
 
 ## Add swiss data and visualize
