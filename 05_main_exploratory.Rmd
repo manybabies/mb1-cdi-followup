@@ -40,8 +40,6 @@ hist(data$test_age) #normally distributed
 
 hist(data$cdi_age) #bimodal distribution
 
-#vocabulary ~ cdi_age_Cat + gender + lab
-
 plot(data$protocol) # head-turn preference design is most prevalent.
 
 plot(data$gender) # roughly equal numbers of each gender
