@@ -1,30 +1,107 @@
 ---
 title: "Main exploratory analysis"
-author: "MB CDI Analysis Team"
-date: "19/01/2022"
+author: "Luis"
+date: "03/2022"
 output: html_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Full Model:
+# CDI vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + (1 + ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender | lab)
+## Pruned Model:
+# CDI_vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + protocol + test_age + ids_pref : nae + nae + (1 | lab) + (1| participant)
+```{r setup, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r libraries, echo = FALSE, include = FALSE}
+library(dplyr)
+library(glmmTMB)
+library(ggplot2)
+library(lmtest)
+library(rstatix)
 ```
 
-## Including Plots
+```{r preprocessing, echo = TRUE, include = TRUE, warning = FALSE}
+rm(list = ls())
 
-You can also embed plots, for example:
+source("C:/Projects/Roger's course/r-files/glmmTMB_stability.r")
+source("C:/Projects/Roger's course/r-files/diagnostic_fcns.r")
+# Load data from a .txt file
+imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt", stringsAsFactors = TRUE, header = TRUE) 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+data <- data.frame(vocabulary_percentile = imported$daily_percentile, ids_pref = imported$IDS_pref, test_age = imported$age_days, cdi_age = imported$CDI.agedays, protocol = imported$method, gender = imported$gender, lab = imported$labid, participant = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords, cdi.age_range = imported$CDI.agerange)
+
+data$cdi.age_range <- as.factor(data$cdi.age_range)
+#investigate the distribution of each variable
+hist(data$vocabulary_percentile, breaks = 100) #evenly distributed
+
+hist(data$ids_pref) #normally distributed
+
+hist(data$test_age) #normally distributed
+
+hist(data$cdi_age) #bimodal distribution
+
+plot(data$protocol) # head-turn preference design is most prevalent.
+
+plot(data$gender) # roughly equal numbers of each gender
+
+plot(data$lab) # fairly large variance in numbers from each lab
+
+plot(data$participant) # some infants seem to have been tested multiple times
+
+plot(table(data$nae)) # few more non-nae
+
+#ensuring the response variable is between 0 and 1, as is required for a beta error model.
+data$vocabulary_percentile[data$vocabulary_percentile == 0] <- 1
+
+if(data$vocabulary_percentile > 1)
+{
+  data$vocabulary_percentile <- data$vocabulary_percentile / 100
+}
+
+#get the data with all NA values removed.
+full.fe.re <- fe.re.tab(fe.model = "vocabulary_percentile ~ ids_pref * test_age + ids_pref * cdi.age_range + ids_pref * protocol + ids_pref * nae + gender", re = c("lab", "participant"), data = data)
+t.data <- full.fe.re$data
+
+#z transformation of the predictors to help with the interpretation of the model.
+t.data$z.ids_pref <- as.vector(scale(t.data$ids_pref))
+t.data$z.test_age <- as.vector(scale(t.data$test_age))
+
+#Running the mixed effects model with a beta error distribution for the response variable.
+full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * cdi.age_range + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 |lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
+
+#Checking the assumption that variance and the mean are linked. It was met with this model.
+overdisp.test(full)
+
+#Best Linear Unbiased Predictors: the estimated deviations of intercepts and slopes from the respective common average, per level of the random effects.
+ranef.diagn.plot(full) #The random effects appear normally distributed.
+
+#Test for collinearity between the predictors. There are no signs of collinearity.
+coll_model <- lm(vocabulary_percentile ~ z.ids_pref + z.test_age + cdi.age_range + protocol + nae + gender, data = t.data)
+library(car)
+vif(coll_model)
+
+#Test for stability by dropping one subject at a time. There don't seem to be major issues with the stability of the model coefficients.
+full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
+
+table(full.stab$detailed$converged)
+m.stab.plot(full.stab$summary[, -1])
+
+null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
+
+#full - null model comparison reveals that the effect of z.ids_pref doesn't significantly improve the model fit.
+as.data.frame(anova(null, full, test="Chisq"))
+
+summary(full)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r plots, include = TRUE, warning= FALSE}
+ggplot(data = t.data, aes(y = vocabulary_percentile)) +
+  geom_histogram(bin = 100)+
+  facet_wrap(.~lab)
+  
+ggplot(data = t.data, aes(x = cdi.age_range, y = vocabulary_percentile, colour = cdi.age_range,)) +
+  geom_boxplot()+
+  geom_point()+
+  facet_wrap(.~lab)
+```
+
