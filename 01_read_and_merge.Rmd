@@ -35,7 +35,8 @@ Other notable issues at data import were:
 * standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file
 (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA;
 * inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded to 18 if younger than 21 months or 24 if older than 21 months;
-* inconstitencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
+* inconsistencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
+* during data analysis, an error in age group assignment in `bllmanitoba` was discovered and corrected by hand
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information
