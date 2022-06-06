@@ -224,3 +224,16 @@ In the end, our dataset consists of `r length(levels(df.final$subid_unique))` in
 write_csv(df.final, "data/02b_processed.csv")
 df.final %>% count(CDI.agerange)
 ```
+
+Some additional tables for sample reporting are below.
+
+```{r participant reporting}
+lab.table <-df.final %>% group_by(labid) %>%
+  summarise(min.mb1.age = min(age_days), max.mb1.age = max(age_days),
+            n.18months = sum(CDI.agerange=="18"),
+            n.24months=sum(CDI.agerange=="24"),
+            n.m.18months= sum(gender=="M"&CDI.agerange=="18"),
+            n.m.24months= sum(gender=="M"&CDI.agerange=="24")) %>%
+  arrange(labid)
+knitr::kable(lab.table)
+```
