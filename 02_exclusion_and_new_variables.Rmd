@@ -124,13 +124,12 @@ We have a limited number of error types to process, and no participants that had
 
 ```{r cdi_errors_exclusions}
 exclusions.errors <- exclusions.pairs %>%
-  filter(Notes != "father", rm.na=TRUE) %>%
+  filter(is.na(Notes)|Notes != "Opened and did not complete the questionnaire") %>%
   droplevels()
 ```
 
-ARGH. SOMETHING ISN"T WORKING HERE.
 
-Our dataset is now reduced from `r length(levels(exclusions.pairs$subid_unique))` participants to `r length(levels(exclusions.errors$subid_unique))`, meaning that `r length(levels(exclusions.errors$subid_unique)) - length(levels(exclusions.pairs$subid_unique))` participants were excluded due to a reported error, namely that the data were incomplete. It is worth noting that this is likely a significant underestimate of the number of participants who started but did not complete the questionnaire as most labs did not specifically report these data, or they were excluded due to missing data at a prior exclusion stage.
+Our dataset is now reduced from `r length(levels(exclusions.pairs$subid_unique))` participants to `r length(levels(exclusions.errors$subid_unique))`, meaning that `r  length(levels(exclusions.pairs$subid_unique))-length(levels(exclusions.errors$subid_unique))` participants were excluded due to a reported error, namely that the data were incomplete. It is worth noting that this is likely a significant underestimate of the number of participants who started but did not complete the questionnaire as most labs did not specifically report these data, or they were excluded due to missing data at a prior exclusion stage.
 
 ## Final dataset
 
