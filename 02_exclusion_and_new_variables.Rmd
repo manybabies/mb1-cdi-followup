@@ -235,5 +235,5 @@ lab.table <-df.final %>% group_by(labid) %>%
             n.m.18months= sum(gender=="M"&CDI.agerange=="18"),
             n.m.24months= sum(gender=="M"&CDI.agerange=="24")) %>%
   arrange(labid)
-knitr::kable(lab.table)
+knitr::kable(lab.table, caption = "Data for Table 1 in manuscript")
 ```

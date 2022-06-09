@@ -37,6 +37,7 @@ Other notable issues at data import were:
 * inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded to 18 if younger than 21 months or 24 if older than 21 months;
 * inconsistencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
 * during data analysis, an error in age group assignment in `bllmanitoba` was discovered and corrected by hand
+* Note: Some issues in updating 00_unprocessed_cdi_merged.csv. If you run into this problem, delete the file and have the code recreate it from scratch rather than updating. (There may be a more elegant solution to this problem.)
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information

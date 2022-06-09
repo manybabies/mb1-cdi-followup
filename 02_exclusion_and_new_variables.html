@@ -1511,7 +1511,7 @@ div.tocify {
 <h1 class="title toc-ignore">MB1 CDI Follow-up Exclusions and Data
 Manipulations</h1>
 <h4 class="author">The ManyBabies Analysis Team</h4>
-<h4 class="date">Mon Jun 06 15:14:25 2022</h4>
+<h4 class="date">Thu Jun 09 13:50:11 2022</h4>
 
 </div>
 
@@ -1554,7 +1554,7 @@ col_types &lt;- cols(
 )
 # Read data
 df &lt;- read_csv(&quot;data/01_processed_merged.csv&quot;, col_types = col_types)</code></pre>
-<p>The total number of rows of data in our merged dataset is 13424.</p>
+<p>The total number of rows of data in our merged dataset is 14080.</p>
 </div>
 <div id="exclusions" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Exclusions</h1>
@@ -1565,8 +1565,8 @@ raw score.</p>
   drop_na(vocab_nwords) %&gt;%
   droplevels()</code></pre>
 <p>The total number of rows of data in our merged dataset is reduced to
-12007, meaning that 1417 rows of data were excluded. We are left with
-632 participants out of 684, meaning that 52 participants were excluded
+13059, meaning that 1021 rows of data were excluded. We are left with
+680 participants out of 712, meaning that 32 participants were excluded
 due to missing data.</p>
 <div id="infants-outside-age-range" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Infants Outside Age
@@ -1591,8 +1591,8 @@ exclusions.age &lt;- exclusions.na %&gt;%
 ## introduced by coercion</code></pre>
 <pre><code>## Warning in map2_dbl(language_zone, as.integer(as.character(CDI.agerange)), : NAs
 ## introduced by coercion</code></pre>
-<p>After the age exclusion, we are left with 549 participants out of
-632, meaning that 83 were excluded due to falling outside of the planned
+<p>After the age exclusion, we are left with 592 participants out of
+680, meaning that 88 were excluded due to falling outside of the planned
 age range.</p>
 </div>
 <div id="incomplete-idsads-pairs-and-infants-excluded-from-mb1-ids" class="section level2" number="2.2">
@@ -1616,8 +1616,8 @@ these infants.</p>
   subset(pair_complete,
          select = -pair_complete) %&gt;%
   droplevels()</code></pre>
-<p>Our dataset is now reduced to 463 from 549 participants, meaning that
-86 participants were excluded due to insufficient IDS preference
+<p>Our dataset is now reduced to 469 from 592 participants, meaning that
+123 participants were excluded due to insufficient IDS preference
 data.</p>
 </div>
 <div id="reported-errors" class="section level2" number="2.3">
@@ -1636,11 +1636,8 @@ errors_check &lt;- exclusions.pairs %&gt;%
 <pre class="r"><code># What kind of errors do we have?
 (levels(errors_check$Notes))</code></pre>
 <pre><code>## [1] &quot;Opened and did not complete the questionnaire&quot;                                             
-## [2] &quot;already aged out; filled out pen-and-paper version&quot;                                        
-## [3] &quot;filled out web-based version when child was too young (younger than 17;15)&quot;                
-## [4] &quot;already aged out; filled out web-based version&quot;                                            
-## [5] &quot;filled out web-based version when child was too young (younger than 23;15)&quot;                
-## [6] &quot;original data was lost due to experimenter error, parents filled out web CDI a second time&quot;</code></pre>
+## [2] &quot;already aged out; filled out web-based version&quot;                                            
+## [3] &quot;original data was lost due to experimenter error, parents filled out web CDI a second time&quot;</code></pre>
 <p>We have a limited number of error types to process, and no
 participants that had an error with no attached note. The “aged out”
 error was due to differences in how indivual labs converted age in days
@@ -1653,7 +1650,7 @@ excluded.</p>
 <pre class="r"><code>exclusions.errors &lt;- exclusions.pairs %&gt;%
   filter(is.na(Notes)|Notes != &quot;Opened and did not complete the questionnaire&quot;) %&gt;%
   droplevels()</code></pre>
-<p>Our dataset is now reduced from 463 participants to 461, meaning that
+<p>Our dataset is now reduced from 469 participants to 467, meaning that
 2 participants were excluded due to a reported error, namely that the
 data were incomplete. It is worth noting that this is likely a
 significant underestimate of the number of participants who started but
@@ -1755,15 +1752,15 @@ df.final$z_vocab_nwords &lt;- drop(df.final$z_vocab_nwords)</code></pre>
 </div>
 <div id="conclusion" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Conclusion</h1>
-<p>In the end, our dataset consists of 461 infants and 700 CDI scores at
+<p>In the end, our dataset consists of 467 infants and 668 CDI scores at
 18 or 24 months.</p>
 <pre class="r"><code>write_csv(df.final, &quot;data/02b_processed.csv&quot;)
 df.final %&gt;% count(CDI.agerange)</code></pre>
 <pre><code>## # A tibble: 2 × 2
 ##   CDI.agerange     n
 ##   &lt;fct&gt;        &lt;int&gt;
-## 1 18             346
-## 2 24             354</code></pre>
+## 1 18             341
+## 2 24             327</code></pre>
 <p>Some additional tables for sample reporting are below.</p>
 <pre class="r"><code>lab.table &lt;-df.final %&gt;% group_by(labid) %&gt;%
   summarise(min.mb1.age = min(age_days), max.mb1.age = max(age_days),
@@ -1772,8 +1769,9 @@ df.final %&gt;% count(CDI.agerange)</code></pre>
             n.m.18months= sum(gender==&quot;M&quot;&amp;CDI.agerange==&quot;18&quot;),
             n.m.24months= sum(gender==&quot;M&quot;&amp;CDI.agerange==&quot;24&quot;)) %&gt;%
   arrange(labid)
-knitr::kable(lab.table)</code></pre>
+knitr::kable(lab.table, caption = &quot;Data for Table 1 in manuscript&quot;)</code></pre>
 <table>
+<caption>Data for Table 1 in manuscript</caption>
 <colgroup>
 <col width="24%" />
 <col width="12%" />
@@ -1798,46 +1796,46 @@ knitr::kable(lab.table)</code></pre>
 <tr class="odd">
 <td align="left">babylabbrookes</td>
 <td align="right">92</td>
-<td align="right">446</td>
-<td align="right">23</td>
-<td align="right">21</td>
-<td align="right">12</td>
-<td align="right">9</td>
+<td align="right">445</td>
+<td align="right">17</td>
+<td align="right">14</td>
+<td align="right">8</td>
+<td align="right">4</td>
 </tr>
 <tr class="even">
 <td align="left">babylablmu</td>
 <td align="right">276</td>
-<td align="right">449</td>
-<td align="right">21</td>
-<td align="right">30</td>
-<td align="right">10</td>
-<td align="right">14</td>
+<td align="right">442</td>
+<td align="right">11</td>
+<td align="right">28</td>
+<td align="right">4</td>
+<td align="right">13</td>
 </tr>
 <tr class="odd">
 <td align="left">babylabnijmegen</td>
 <td align="right">206</td>
 <td align="right">358</td>
-<td align="right">24</td>
-<td align="right">28</td>
-<td align="right">10</td>
+<td align="right">23</td>
+<td align="right">27</td>
+<td align="right">9</td>
 <td align="right">12</td>
 </tr>
 <tr class="even">
 <td align="left">babylabpotsdam</td>
 <td align="right">249</td>
 <td align="right">364</td>
-<td align="right">30</td>
-<td align="right">29</td>
-<td align="right">15</td>
-<td align="right">14</td>
+<td align="right">27</td>
+<td align="right">17</td>
+<td align="right">13</td>
+<td align="right">9</td>
 </tr>
 <tr class="odd">
 <td align="left">babylabvuw</td>
 <td align="right">107</td>
 <td align="right">278</td>
-<td align="right">12</td>
+<td align="right">10</td>
 <td align="right">11</td>
-<td align="right">7</td>
+<td align="right">6</td>
 <td align="right">6</td>
 </tr>
 <tr class="even">
@@ -1859,15 +1857,24 @@ knitr::kable(lab.table)</code></pre>
 <td align="right">8</td>
 </tr>
 <tr class="even">
-<td align="left">chosunbaby</td>
-<td align="right">183</td>
-<td align="right">452</td>
-<td align="right">34</td>
-<td align="right">34</td>
-<td align="right">19</td>
-<td align="right">15</td>
+<td align="left">bllumanitoba</td>
+<td align="right">147</td>
+<td align="right">446</td>
+<td align="right">39</td>
+<td align="right">32</td>
+<td align="right">21</td>
+<td align="right">16</td>
 </tr>
 <tr class="odd">
+<td align="left">chosunbaby</td>
+<td align="right">183</td>
+<td align="right">451</td>
+<td align="right">21</td>
+<td align="right">19</td>
+<td align="right">11</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
 <td align="left">infantcogubc</td>
 <td align="right">94</td>
 <td align="right">231</td>
@@ -1876,7 +1883,7 @@ knitr::kable(lab.table)</code></pre>
 <td align="right">4</td>
 <td align="right">9</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">infantcoglablouisville</td>
 <td align="right">281</td>
 <td align="right">330</td>
@@ -1885,7 +1892,7 @@ knitr::kable(lab.table)</code></pre>
 <td align="right">5</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">infantlanglabutk</td>
 <td align="right">189</td>
 <td align="right">452</td>
@@ -1894,11 +1901,20 @@ knitr::kable(lab.table)</code></pre>
 <td align="right">16</td>
 <td align="right">22</td>
 </tr>
+<tr class="odd">
+<td align="left">infantstudiesubc</td>
+<td align="right">189</td>
+<td align="right">262</td>
+<td align="right">17</td>
+<td align="right">9</td>
+<td align="right">9</td>
+<td align="right">5</td>
+</tr>
 <tr class="even">
 <td align="left">lcduleeds</td>
 <td align="right">368</td>
 <td align="right">446</td>
-<td align="right">5</td>
+<td align="right">4</td>
 <td align="right">8</td>
 <td align="right">2</td>
 <td align="right">3</td>
@@ -1907,19 +1923,19 @@ knitr::kable(lab.table)</code></pre>
 <td align="left">lllliv</td>
 <td align="right">213</td>
 <td align="right">451</td>
-<td align="right">15</td>
-<td align="right">10</td>
+<td align="right">14</td>
 <td align="right">9</td>
+<td align="right">8</td>
 <td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="left">lscppsl</td>
 <td align="right">369</td>
-<td align="right">444</td>
-<td align="right">6</td>
-<td align="right">7</td>
+<td align="right">442</td>
 <td align="right">3</td>
-<td align="right">3</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">2</td>
 </tr>
 <tr class="odd">
 <td align="left">babylabprinceton</td>
@@ -1940,15 +1956,6 @@ knitr::kable(lab.table)</code></pre>
 <td align="right">13</td>
 </tr>
 <tr class="odd">
-<td align="left">bllumanitoba</td>
-<td align="right">147</td>
-<td align="right">446</td>
-<td align="right">39</td>
-<td align="right">32</td>
-<td align="right">21</td>
-<td align="right">16</td>
-</tr>
-<tr class="even">
 <td align="left">unlvmusiclab</td>
 <td align="right">100</td>
 <td align="right">179</td>
@@ -1957,13 +1964,22 @@ knitr::kable(lab.table)</code></pre>
 <td align="right">4</td>
 <td align="right">3</td>
 </tr>
+<tr class="even">
+<td align="left">weescienceedinburgh</td>
+<td align="right">184</td>
+<td align="right">250</td>
+<td align="right">22</td>
+<td align="right">4</td>
+<td align="right">10</td>
+<td align="right">2</td>
+</tr>
 <tr class="odd">
 <td align="left">weltentdeckerzurich</td>
 <td align="right">367</td>
-<td align="right">406</td>
-<td align="right">12</td>
-<td align="right">0</td>
+<td align="right">384</td>
 <td align="right">8</td>
+<td align="right">0</td>
+<td align="right">6</td>
 <td align="right">0</td>
 </tr>
 </tbody>
