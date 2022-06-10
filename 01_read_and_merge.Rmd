@@ -32,10 +32,12 @@ Other notable issues at data import were:
 * a misnamed column in `chosunbaby-cdi.csv`, `vocab_nwords(=raw score)` instead of `vocab_nwords`, corrected by hand;
 * a misnamed column in `infantstudies-ubc.tsv`, `subject_id` instead of `subid`, corrected by hand;
 * extra non-needed columns in a few files, ignored by specifying by hand the columns and column types for import (see helper function);
-* standardized scores incorrectly reported as numerical ranges instead of numbers, treated as NAs for the analysis, but kept in a separate column as characters and in an unprocessed data file
+* standardized scores from UK reported as numerical ranges instead of numbers. Not used in the current analyses but kept in a separate column as characters and in an unprocessed data file
 (`data/cdi/unprocessed_merge.csv`); further, standardized score reported as `<1` were treated as zeros rather than NA;
 * inconsistencies in the coding of `CDI.agerange`, sometimes coded as a ages in months rather than age groups (18, 24), recoded to 18 if younger than 21 months or 24 if older than 21 months;
-* inconstitencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
+* inconsistencies in the use of upper/lower case for the `webCDI` level of `CDI.form`.
+* during data analysis, an error in age group assignment in `bllmanitoba` was discovered and corrected by hand
+* Note: Some issues in updating 00_unprocessed_cdi_merged.csv. If you run into this problem, delete the file and have the code recreate it from scratch rather than updating. (There may be a more elegant solution to this problem.)
 
 ```{r cdi_import, message=FALSE, warning=FALSE}
 # Lab information
@@ -227,11 +229,12 @@ check_subid.tibble.full %>%
 
 Here we see that `r sum(check_subid.tibble.full$dataset == "CDI")` subids from the CDI data still have no match even in the unprocessed IDS data. Those might have resulted from typos when entering data, and thus need to be handchecked with the corresponding labs.
 
-* For `weltentdeckerzurich`, the unmatched CDI subids were confirmed to be infants that were not included in the IDS analysis (see [issue #2](https://github.com/manybabies/mb1-cdi-followup/issues/2)).
-* Similarly for `babylabbrookes`, those were infants that were not included in the IDS analysis (see [issue #3](https://github.com/manybabies/mb1-cdi-followup/issues/3)). Notably participant `mb43` in our dataset should have been `mb143`, but this does not matter given that we do not keep their data.
+* For `weltentdeckerzurich`, the `r check_subid.tibble.full %>% filter(dataset=="CDI"&labid=="weltentdeckerzurich") %>%count()` unmatched CDI subids were confirmed to be infants that were not included in the IDS analysis (see [issue #2](https://github.com/manybabies/mb1-cdi-followup/issues/2)).
+* Similarly for `babylabbrookes`, the `r check_subid.tibble.full %>% filter(dataset=="CDI"&labid=="babylabbrookes") %>%count()` unmatched CDI subids were infants that were not included in the IDS analysis (see [issue #3](https://github.com/manybabies/mb1-cdi-followup/issues/3)). Notably participant `mb43` in our dataset should have been `mb143`, but this does not matter given that we do not keep their data.
 * For `chosunbaby`, the only remaining issue was a typo, corrected below, where participant `h71y23` should be `h71o23`, (see [issue #4](https://github.com/manybabies/mb1-cdi-followup/issues/4)).
-* For `infantlanglabutk`, those were infants for whom there was no IDS data available (see [issue #5](https://github.com/manybabies/mb1-cdi-followup/issues/5)).
-* For `unlvmusiclab` the only mismatch stems from the participant having been a pilot infant for the IDS analysis. We correct its subiid here for consistency, but this participant will be exclude in script 02 (see [issue #6](https://github.com/manybabies/mb1-cdi-followup/issues/6)). 
+* For `infantlanglabutk`, the `r check_subid.tibble.full %>% filter(dataset=="CDI"&labid=="infantlanglabutk") %>%count()` unmatched CDI subids were infants for whom there was no IDS data available (see [issue #5](https://github.com/manybabies/mb1-cdi-followup/issues/5)).
+* For `unlvmusiclab` the only mismatch stems from the participant having been a pilot infant for the IDS analysis. We correct its subid here for consistency, but this participant will be exclude in script 02 (see [issue #6](https://github.com/manybabies/mb1-cdi-followup/issues/6)). 
+
 
 ```{r subid_handcheck, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%

@@ -49,16 +49,19 @@ col_types <- cols(
 # Read data
 df <- read_csv("data/01_processed_merged.csv", col_types = col_types)
 ```
+The total number of rows of data in our merged dataset is `r count(df)`.
 
 # Exclusions
 
-Before excluding participants based on the exclusion criteria reported in our manuscript, we exclude participants for which we don't have a raw score.
+Before excluding participants based on the exclusion criteria reported in our manuscript, we exclude rows for which we don't have a raw score.
 
 ```{r remove_na}
 exclusions.na <- df %>%
   drop_na(vocab_nwords) %>%
   droplevels()
 ```
+
+The total number of rows of data in our merged dataset is reduced to `r count(exclusions.na)`, meaning that `r count(df) - count(exclusions.na)` rows of data were excluded. We are left with `r length(levels(exclusions.na$subid_unique))` participants out of `r length(levels(df$subid_unique))`, meaning that `r length(levels(df$subid_unique)) - length(levels(exclusions.na$subid_unique))` participants were excluded due to missing data.
 
 ## Infants Outside Age Range
 
@@ -71,14 +74,14 @@ We first exclude all infants who are outside the age range described in the data
 # Age ranges
 exclusions.age <- exclusions.na %>%
   mutate(CDI.agemin = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
-                               ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365.25/12)),
+                               ~round((.y - if_else(.x=="NAE", 2, 0.5)) * 365.25/12)),
          CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
-                               ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365.25/12))) %>%
+                               ~round((.y + if_else(.x=="NAE", 2, 0.5)) * 365.25/12))) %>%
   subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
   droplevels()
 ```
 
-After this first exclusion, we are left with `r length(levels(exclusions.age$subid_unique))` participants out of `r length(levels(df$subid_unique))`.
+After the age exclusion, we are left with `r length(levels(exclusions.age$subid_unique))` participants out of `r length(levels(exclusions.na$subid_unique))`, meaning that `r length(levels(exclusions.na$subid_unique)) - length(levels(exclusions.age$subid_unique))` were excluded due to falling outside of the planned age range.
 
 ## Incomplete IDS/ADS pairs and Infants Excluded from MB1 IDS
 
@@ -99,7 +102,7 @@ exclusions.pairs <- exclusions.age %>%
   droplevels()
 ```
 
-Our dataset is now reduced from `r length(levels(exclusions.age$subid_unique))` participants to `r length(levels(exclusions.pairs$subid_unique))`.
+Our dataset is now reduced to `r length(levels(exclusions.pairs$subid_unique))` from  `r length(levels(exclusions.age$subid_unique))` participants, meaning that `r length(levels(exclusions.age$subid_unique)) - length(levels(exclusions.pairs$subid_unique))` participants were excluded due to insufficient IDS preference data.
 
 ## Reported errors
 
@@ -117,17 +120,16 @@ errors_check <- exclusions.pairs %>%
 (levels(errors_check$Notes))
 ```
 
-We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and this error can therefore be ignored.
+We have a limited number of error types to process, and no participants that had an error with no attached note. The "aged out" error was due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`, there does not seem to be an issue with the data itself, and this error can therefore be ignored. Only the first error "`r first(levels(errors_check$notes))` appears to be a true error and is excluded.
 
 ```{r cdi_errors_exclusions}
 exclusions.errors <- exclusions.pairs %>%
-  subset(!(Notes %in% c("Opened and did not complete the questionnaire",
-                        "filled out web-based version but did not complete it",
-                        "Participant did not complete survey"))) %>%
+  filter(is.na(Notes)|Notes != "Opened and did not complete the questionnaire") %>%
   droplevels()
 ```
 
-Our dataset is now reduced from `r length(levels(exclusions.pairs$subid_unique))` participants to `r length(levels(exclusions.errors$subid_unique))`.
+
+Our dataset is now reduced from `r length(levels(exclusions.pairs$subid_unique))` participants to `r length(levels(exclusions.errors$subid_unique))`, meaning that `r  length(levels(exclusions.pairs$subid_unique))-length(levels(exclusions.errors$subid_unique))` participants were excluded due to a reported error, namely that the data were incomplete. It is worth noting that this is likely a significant underestimate of the number of participants who started but did not complete the questionnaire as most labs did not specifically report these data, or they were excluded due to missing data at a prior exclusion stage.
 
 ## Final dataset
 
@@ -221,4 +223,17 @@ In the end, our dataset consists of `r length(levels(df.final$subid_unique))` in
 ```{r data_summary}
 write_csv(df.final, "data/02b_processed.csv")
 df.final %>% count(CDI.agerange)
+```
+
+Some additional tables for sample reporting are below.
+
+```{r participant reporting}
+lab.table <-df.final %>% group_by(labid) %>%
+  summarise(min.mb1.age = min(age_days), max.mb1.age = max(age_days),
+            n.18months = sum(CDI.agerange=="18"),
+            n.24months=sum(CDI.agerange=="24"),
+            n.m.18months= sum(gender=="M"&CDI.agerange=="18"),
+            n.m.24months= sum(gender=="M"&CDI.agerange=="24")) %>%
+  arrange(labid)
+knitr::kable(lab.table, caption = "Data for Table 1 in manuscript")
 ```

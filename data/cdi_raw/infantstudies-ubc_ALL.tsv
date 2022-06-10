@@ -1,4 +1,4 @@
-labid	subject_id	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized_score_CDI	CDI-error	Notes
+labid	subid	CDI-form	CDI-agerange	CDI-agedays	vocab_nwords	standardized_score_CDI	CDI-error	Notes
 infantstudies-ubc	MB_M_1	webcdi	24	NA	NA	NA	NA	not completed
 infantstudies-ubc	MB_M_2	webcdi	24	NA	NA	NA	NA	not completed
 infantstudies-ubc	MB_M_3	webcdi	24	702	507	92	NA	

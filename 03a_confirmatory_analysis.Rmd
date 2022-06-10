@@ -186,13 +186,12 @@ by_lab <- data.total %>%
   arrange(language_zone) %>%
   rownames_to_column()
 
-# TODO: find a way to group by language zone?
 ggplot(by_lab,
        aes(x = labid, colour = language_zone,
            y = mean, ymin = ci_lower, ymax = ci_upper)) + 
   geom_linerange() + 
   geom_point(aes(size = tested)) + 
-  facet_grid(cols = vars(CDI.agerange), scales = "free") + coord_flip(ylim = c(0, 500)) +
+  facet_grid(cols = vars(CDI.agerange), rows = vars(fct_relevel(language_zone, "British", "NAE", "Other")), scales = "free", space ="free_y") + coord_flip(ylim = c(0, 500)) +
   xlab("Lab") + ylab("Vocabulary size") +
   scale_colour_brewer(palette = "Dark2", name = "Language zone",
                       breaks = c("British", "NAE", "Other")) +
