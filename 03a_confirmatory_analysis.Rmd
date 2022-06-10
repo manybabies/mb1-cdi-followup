@@ -169,7 +169,7 @@ data.total %>%
 
 ```
 
-We then assess the data per lab in terms of sample size and CDI score (vocabulary size, for consistency between language zones).
+We then assess the data per lab in terms of sample size and CDI score (vocabulary size, for consistency between language zones). This Figure shows raw vocabulary scores (mean and distribution) for each lab by age and language zone.
 
 ```{r desc_by_lab}
 by_lab <- data.total %>%
@@ -203,13 +203,13 @@ ggplot(by_lab,
 
 ## Simple Correlation
 
-First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson#'s product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores for the British sample. Since CDI grows with age, we run the British sample separately for 18 and 24 months.
+First, we want to assess quickly if there is a direct correlation between IDS preference and CDI score, computing a Pearson#'s product-moment correlation. We use standardized CDI scores for the North American sample, and raw scores (converted to z scores) for the British sample. Since CDI grows with age, we run the British sample separately for 18 and 24 months.
 
 ```{r simple_correlation}
 # Statistics =====================================
 ## North American Sample
 test.pearson.nae <- cor.test(data.nae$IDS_pref,
-                             data.nae$z_standardized_CDI,
+                             data.nae$standardized.score.CDI.num,
                              alternative = "two.sided", method = "pearson")
 
 test.pearson.nae
@@ -242,18 +242,18 @@ cor_value <- round(test.pearson.nae$estimate, 3)
 plot.pearson.nae <- data.nae %>%
   ggplot(aes(x = IDS_pref,
              y = standardized.score.CDI.num)) +
-  xlab("IDS preference") + ylab("Standardized CDI score") +
+  labs(x="IDS preference", y = "Standardized CDI score", title = "North American English") +
   geom_point() +
   geom_smooth(method = lm) +
   annotate("text", x = -.9, y = 51, parse = T, size = 4,
-           label = paste(cor_text, cor_value, sep = "~"))
+           label = paste(cor_text, cor_value, sep = "~")) 
 
 ## UK Sample
 cor_value <- round(test.pearson.uk.18$estimate, 3)
 plot.pearson.uk.18 <- data.uk.18 %>%
   ggplot(aes(x = IDS_pref,
              y = vocab_nwords)) +
-  xlab("IDS preference") + ylab("Vocabulary size (in words)") +
+  labs(x="IDS preference", y="Vocabulary size (in words)", title="UK English 18 months") +
   geom_point() +
   geom_smooth(method = lm) +
   annotate("text", x = .8, y = 150, parse = T, size = 4,
@@ -263,7 +263,7 @@ cor_value <- round(test.pearson.uk.24$estimate, 3)
 plot.pearson.uk.24 <- data.uk.24 %>%
   ggplot(aes(x = IDS_pref,
              y = vocab_nwords)) +
-  xlab("IDS preference") + ylab("Vocabulary size (in words)") +
+  labs(x="IDS preference", y="Vocabulary size (in words)", title="UK English 24 months") +
   geom_point() +
   geom_smooth(method = lm) +
   annotate("text", x = .8, y = 150, parse = T, size = 4,
@@ -274,7 +274,7 @@ plot.pearson <- ggarrange(plot.pearson.nae, plot.pearson.uk.18, plot.pearson.uk.
 
 plot.pearson
 
-#TODO: These plots need to be cleaned up!
+#TODO: There is still more clean-up needed on these plots
 
 ggsave("plots/corr_plot.pdf", plot.pearson,
        units = "mm", width = 180, height = 100, dpi = 1000)
@@ -285,14 +285,12 @@ We see no obvious direct link between IDS prefernce and CDI score here. However,
 
 ```{r plot_by_age}
 plot.age_group <- data.total %>%
-  subset(language_zone != "Other") %>%
-  droplevels() %>%
   ggplot(aes(x = IDS_pref,
              y = vocab_nwords,
              colour = CDI.agerange)) +
-  facet_wrap(vars(language_zone),
+  facet_wrap(vars(fct_relevel(language_zone, "British", "NAE", "Other")),
              labeller = as_labeller(c("British" = "UK samples",
-                                      "NAE" = "North Amercian samples"))) +
+                                      "NAE" = "North American samples", "Other" = "Other"))) +
   xlab("Standardized IDS prefence score") + ylab("Vocabulary size (in words)") + theme(legend.position = "top") +
   geom_point() +
   geom_smooth(method = lm) +
@@ -306,7 +304,7 @@ ggsave("plots/scatter_age.pdf", plot.age_group,
 
 ## Mixed-Effects Model by Language Zone
 
-Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model bellow, simplifying the random effects structure until it converges.
+Here, we run a mixed-effects model including only theoretically motivated effects, as described in the pre-registration. We start with the full model below, simplifying the random effects structure until it converges.
 
 ### NAE full model
 ```{r full_lmer}
@@ -442,14 +440,14 @@ check_pwr_uk_cdi_age <- simr::powerSim(lmer.full.uk, test = fixed("CDI.z_age_mon
 
 check_pwr_uk_cdi_age
 
-check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) #specify that Gender is the ixed effect that we are looking into
+check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) #specify that Gender is the fixed effect that we are looking into
 
 check_pwr_uk_gender
 ```
 
 ### Combined Sample
 
-For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±1.5 months). [Note: This should be +/- 0.5 months...]
+For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±0.5 months).
 
 ```{r NAE_agerange}
 # Create dataset with British and NAE only
