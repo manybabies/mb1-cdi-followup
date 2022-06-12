@@ -27,10 +27,6 @@ library(tidyverse); library(egg)
 library(knitr)
 library(lme4); library(lmerTest); library(simr)
 # As in our discussion with Mike, we will use lmerTest for calculating p values
-# in the mixed-effects models (noted as a deviation) 
-library(brms); library(rstan)
-library(future)
-plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
 library(lattice)
 library(effects)
 library(sjPlot)
@@ -383,7 +379,8 @@ car::vif(lmer.full.nae) #we do see a multicollineartiy for the IDS preference va
 lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
                        z_age_months + method + IDS_pref +
                        IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                       (1 | labid) + (1 | subid_unique),
+                       #(1 | labid) + 
+                       (1 | subid_unique),
                      data = data.uk) 
 
 summary(lmer.full.uk)
@@ -401,7 +398,7 @@ full.uk_pvalue <- anova(lmer.full.uk) %>%
 # z_age_months
 # gender
 # CDI.z_age_months
-
+# (1| labid) please note the variance was very little and reported as zero in the results, we needed to remove this random effect
 ```
 #### (Optional) Checking mixed-model assumptions. We will check the following:
 1) Linearlity
@@ -475,7 +472,7 @@ We can then run the planned combined analysis adding the main effect and interac
 lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
                            z_age_months + method + IDS_pref + IDS_pref:language_zone +
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                           (1 + CDI.z_age_months | labid) + (1 | subid_unique),
+                           (1 | labid) + (1 | subid_unique),
                          data = data.uk_nae)
 
 summary(lmer.full.uk_nae)
@@ -494,6 +491,7 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 # z_age_months
 # gender
 # language_zone
+# CDI.z_age_months
 #==========
 
 ```
@@ -516,7 +514,7 @@ plot_model(lmer.full.uk_nae, type = 'diag') ## we do have right-skewed normality
 re_run_lme.full.uk_nae <- nlme::lme(CDI.prop ~ CDI.z_age_months + language_zone + gender +
                            z_age_months + method + IDS_pref + IDS_pref:language_zone +
                            IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
-                           random = ~CDI.z_age_months  | labid,
+                           random = ~1  | labid,
                         method = "REML",
                       data = data.uk_nae, na.action = na.exclude)
 
