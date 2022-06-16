@@ -19,7 +19,6 @@ In this script, we go through all the pre-registered proposed analyses. As a rem
 
 Here we present the main "sample theory based" analyses (also known as frequentist), separately on the North American and UK samples in parallel to answer our first two research questions, then together to answer our third research question. In the next section (03b) provide additional Bayesian statistics where a null effect was found, as specified in the pre-registration.
 
-TODO: Delete any libraries that are solely for the Bayes analysis and can be deleted here.
 
 ```{r setup, message=FALSE, warning=FALSE}
 # Library imports, general settings ==============
@@ -297,7 +296,7 @@ plot.age_group <- data.total %>%
                       labels = c("18mo", "24m"))
 ggsave("plots/scatter_age.pdf", plot.age_group,
        units = "mm", width = 180, height = 100, dpi = 1000)
-(plot.age_group)
+plot.age_group
 ```
 
 ## Mixed-Effects Model by Language Zone
@@ -446,10 +445,13 @@ check_pwr_uk_gender
 
 ### Combined Sample
 
-For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±1.5 months). [Note: This should be +/- 0.5 months...]
+For this combined analysis, we first need to restrain the age range for the NAE sample (previously ±2 months, now ±0.5 months). 
 
 ```{r NAE_agerange}
 # Create dataset with British and NAE only
+before_exclusion_participants <- data.total %>% filter(language_zone == "NAE" | language_zone == "British") %>% distinct(subid_unique) %>% count()
+before_exclusion_CDIs <- data.total %>% filter(language_zone == "NAE" | language_zone == "British") %>% count()
+
 data.uk_nae <- data.total %>%
   subset(language_zone %in% c("British", "NAE")) %>%
   mutate(CDI.agemin = ifelse(language_zone == "NAE",
@@ -464,7 +466,12 @@ data.uk_nae <- data.total %>%
 contrasts(data.uk_nae$gender) <- contr.sum(2)
 contrasts(data.uk_nae$method) <- contr.sum(3)
 contrasts(data.uk_nae$language_zone) <- contr.sum(2)
+
+after_exclusion_participants<- data.uk_nae %>% distinct(subid_unique) %>% count()
+after_exclusion_CDIs <- count(data.uk_nae)
 ```
+
+We go from `r before_exclusion_participants` to `r after_exclusion_participants` total participants in the combined sample, meaning that `r before_exclusion_participants - after_exclusion_participants` participants were excluded from the North American sample. In total, `r before_exclusion_CDIs - after_exclusion_CDIs` rows of data were removed.
 
 We can then run the planned combined analysis adding the main effect and interactions of `language_zone`.
 
