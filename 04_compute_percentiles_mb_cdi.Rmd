@@ -15,7 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(readxl)
 library(plyr)
 library(ggplot2)
-library(powerAnalysis)
+library(remotes)
+# library(powerAnalysis)
 library(ggpubr)
 library(DataCombine)
 library(tidyverse)
@@ -37,6 +38,15 @@ d1 <- read.csv("02b_processed.csv") # indicate the file name and sheet number
 setwd("cdi_percentile")
 # Examine the outcomes of variables
 summary(d1)
+
+remotes::install_github("https://github.com/langcog/wordbankr/tree/bilingual")
+db_args <- list(host = "wordbank2-dev.canyiscnpddk.us-west-2.rds.amazonaws.com",
+                dbname = "wordbank",
+                user = "wordbank_reader",
+                password = "ICanOnlyRead@99")
+mode <- "remote"
+
+admins <- get_administration_data(mode = mode)
 # Load percentiles for countries 
 korean<-read.delim('korean.txt', header=F)
 # Rename the header with column names
@@ -99,14 +109,21 @@ french$Age<-c(1:max_age_CDI1)
 ## Compute CDI in percentiles for production
 
 ```{r Compute CDI in percentiles for production, include=FALSE}
+# Initiate variables that will be used later in the code chunk
 prod_T1 <- c()
 perc <- NULL
 perc_15plus <- NULL
 
+# Run through each row in d1. Each row corresponds to a single participant.
+# This loop calculates the percentile ranking for each participant in daily
+# percentiles according to their own country's norms. Daily vocabulary scores 
+# from 0 to 99th percentile ranking created from norming data for each CDI we 
+# have. The percentile scoring that most closely matches their score is then 
+# assigned as their percentile ranking.
 for(i in 1 : nrow(d1))  
 {
   tool <- d1[[i,"CDI.form"]]
-    
+  # Pick which CDI daily vocabulary score rankings to use based on the language.  
   if((tool == "O-CDI"))
     {perc_CDI1_prod <- oxford}
 
@@ -133,43 +150,59 @@ for(i in 1 : nrow(d1))
 
   # Get percentiles for production (both for CDI-I[WG] and CDI-II[WS])
   score <- as.numeric(d1 [[i, "vocab_nwords"]])
+  
+  # Get age in days for the current participant
   age <- as.numeric(d1[[i, "CDI.agedays"]])
+  
+  # Account for the differences in the way that countries defined their norming
+  # age for the CDI.
   perc_CDI1_prod$Age_15plus <- perc_CDI1_prod$Age + 15
   
+  # If the participant's age is above or below the CDI age, or their score is NA
+  # assign their score NA.
   if(age > max_age_CDI1 | age < min_age_CDI1 + 15| is.na(score))
   {
     perc_15plus <- NA
   }
   else
   {
-    # get the number of line with the corresponding age
+    # Get the line number with the age corresponding to the current participant's
+    # age.
     age_row <- as.numeric(which(perc_CDI1_prod$Age_15plus == age))
-    # get the number of the column containing the min value between the CDI score and the value in the age corresponding line
+    
+    # Get the number of the column containing the min value between the CDI 
+    # score and the value in the age corresponding line
     perc_15plus <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
-
+    
     if(score == 0)
     {
-      perc_15plus <- floor(perc_15plus/2)
+      # Some infants have a score of 0 even at different ages and this can be
+      # perfectly normally depending on their age, rather than
+      # assigning them 0 percentiles we assign them the percentile they were
+      # divided by 2 and rounded up. This avoids systematic zeros while maintaining
+      # the properties of the distribution.
+      perc_15plus <- ceiling(perc_15plus/2)
     }
   }
   
-  #do not apply the correction to Norwegian data because the age in days was collected rather than interpolated.
+  # Do not apply the 15 day correction to Norwegian data because the age in 
+  # days was collected rather than interpolated.
   if(tool == "NorCDI" | tool == "K-CDI"){
-    # adjust for the age limits in the sample-specific norming data
+    # Adjust for the age limits in the sample-specific norming data
     if(age > max_age_CDI1 | age < min_age_CDI1 | is.na(score))
     {
       perc <- NA
     }
     else
     {
-      # get the number of line with the corresponding age
+      # Get the number of line with the corresponding age
       age_row <- as.numeric(which(perc_CDI1_prod$Age == age))
-      # get the number of the column containing the min value between the CDI score and the value in the age corresponding line
+      # Get the number of the column containing the min value between the CDI 
+      # score and the value in the age corresponding line
       perc <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
-          
       if(score == 0)
       {
-        perc <- floor(perc/2)
+        perc <- ceiling(perc/2)
       }
     }
     perc_15plus <- perc
@@ -178,7 +211,8 @@ for(i in 1 : nrow(d1))
   {
     perc <- NA
   }
-  
+  # Join all the rows from prod_T1 and perc_15plus to get the percentiles for
+  # all the data. Most percentile rankings are in perc_15plus
   prod_T1 <- c(prod_T1, perc_15plus)
 }
 
