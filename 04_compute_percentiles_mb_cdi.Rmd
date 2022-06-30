@@ -16,6 +16,7 @@ library(readxl)
 library(plyr)
 library(ggplot2)
 library(remotes)
+library(wordbankr)
 # library(powerAnalysis)
 library(ggpubr)
 library(DataCombine)
@@ -39,14 +40,6 @@ setwd("cdi_percentile")
 # Examine the outcomes of variables
 summary(d1)
 
-remotes::install_github("https://github.com/langcog/wordbankr/tree/bilingual")
-db_args <- list(host = "wordbank2-dev.canyiscnpddk.us-west-2.rds.amazonaws.com",
-                dbname = "wordbank",
-                user = "wordbank_reader",
-                password = "ICanOnlyRead@99")
-mode <- "remote"
-
-admins <- get_administration_data(mode = mode)
 # Load percentiles for countries 
 korean<-read.delim('korean.txt', header=F)
 # Rename the header with column names
@@ -94,7 +87,15 @@ max_age_CDI1 <- nrow(german)
 # Add a column for Age in days
 german$Age<-c(1:max_age_CDI1)
 
-#dutch<- No norms
+dutch<- read.delim('dutch.txt',header = F)
+colnames(dutch) <- c(1:99)
+# Get the minimum age for the CDI instrument
+min_age_CDI1 <- which(dutch[,1] != 0)[1]
+# Get the maximal age for the CDI instrument
+max_age_CDI1 <- nrow(dutch)
+# Add a column for Age in days
+dutch$Age<-c(1:max_age_CDI1)
+
 french<-read.delim('french.txt', header=F)
 colnames(french) <- c(1:99)
 # Get the minimum age for the CDI instrument
@@ -138,7 +139,10 @@ for(i in 1 : nrow(d1))
     
   if((tool == "K-CDI"))
     {perc_CDI1_prod <- korean}
-
+  
+  if((tool == "NCDI"))
+    {perc_CDI1_prod <- dutch}
+  
   if((tool == "French European"))
     {perc_CDI1_prod <- french}
 
