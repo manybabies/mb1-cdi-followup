@@ -17,6 +17,17 @@ This script implements and documents exclusion criteria. We first read the full 
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
 knitr::opts_chunk$set(cache = TRUE)
+```
+
+
+```{r session_infos}
+# Provides a session log for the packages used in this .rmd
+library(sessioninfo)
+session_info(pkgs = "!attached", to_file = "02_session_log.txt")
+```
+
+
+```{r col_types}
 # Define column types
 col_types <- cols(
   labid = col_factor(),
@@ -46,6 +57,10 @@ col_types <- cols(
   looking_time = col_number(),
   missing = col_logical()
 )
+```
+
+# Data Import
+```{r import_data}
 # Read data
 df <- read_csv("data/01_processed_merged.csv", col_types = col_types)
 ```
@@ -70,10 +85,16 @@ We first exclude all infants who are outside the age range described in the data
 ```{r age_range}
 # Age ranges
 exclusions.age <- exclusions.na %>%
-  mutate(CDI.agemin = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
-                               ~round((.y - if_else(.x=="NAE", 2, 1.5)) * 365.25/12)),
-         CDI.agemax = map2_dbl(language_zone, as.integer(as.character(CDI.agerange)),
-                               ~round((.y + if_else(.x=="NAE", 2, 1.5)) * 365.25/12))) %>%
+  mutate(
+    CDI.agemin = map2_dbl(
+      language_zone, as.integer(as.character(CDI.agerange)),
+      ~ round((.y - if_else(.x == "NAE", 2, 1.5)) * 365.25 / 12)
+    ),
+    CDI.agemax = map2_dbl(
+      language_zone, as.integer(as.character(CDI.agerange)),
+      ~ round((.y + if_else(.x == "NAE", 2, 1.5)) * 365.25 / 12)
+    )
+  ) %>%
   subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
   droplevels()
 ```
@@ -95,7 +116,8 @@ exclusions.pairs <- exclusions.age %>%
   mutate(pair_complete = (n() == 2)) %>%
   ungroup() %>%
   subset(pair_complete,
-         select = -pair_complete) %>%
+    select = -pair_complete
+  ) %>%
   droplevels()
 ```
 
@@ -117,13 +139,15 @@ errors_check <- exclusions.pairs %>%
 (levels(errors_check$Notes))
 ```
 
-We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how indivual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and this error can therefore be ignored.
+We have a limited number of error types to process, and no participants that had an error with no attached note. First, we can exclude errors of the type "survey not completed". The "aged out" errors are due to differences in how individual labs converted age in days to age in months and how we did it in this script, and can be ignored. For the last type of error, "`r last(levels(errors_check$Notes))`"", there does not seem to be an issue with the data itself, and this error can therefore be ignored.
 
 ```{r cdi_errors_exclusions}
 exclusions.errors <- exclusions.pairs %>%
-  subset(!(Notes %in% c("Opened and did not complete the questionnaire",
-                        "filled out web-based version but did not complete it",
-                        "Participant did not complete survey"))) %>%
+  subset(!(Notes %in% c(
+    "Opened and did not complete the questionnaire",
+    "filled out web-based version but did not complete it",
+    "Participant did not complete survey"
+  ))) %>%
   droplevels()
 ```
 
@@ -147,8 +171,10 @@ We want to create a new variable for the standardized mean preference for IDS `z
 df.final <- exclusions.errors %>%
   select(-trial_num) %>% # Not relevant, we only want the pair number in stimulus_num
   pivot_wider(names_from = trial_type, values_from = looking_time) %>%
-  mutate(IDS_pref_pair = IDS - ADS,
-         mean_LT_pair = (IDS + ADS) / 2)
+  mutate(
+    IDS_pref_pair = IDS - ADS,
+    mean_LT_pair = (IDS + ADS) / 2
+  )
 ```
 
 We then need to compute the mean preference for IDS for each infant, and the mean looking time across trials for each infant, to finally get our standardized preference score for IDS.
@@ -156,9 +182,11 @@ We then need to compute the mean preference for IDS for each infant, and the mea
 ```{r z_ids_preference}
 df.final <- df.final %>%
   group_by(subid_unique) %>%
-  mutate(mean_IDS_pref = mean(IDS_pref_pair),
-         mean_LT = mean(mean_LT_pair),
-         IDS_pref = mean_IDS_pref / mean_LT) %>%
+  mutate(
+    mean_IDS_pref = mean(IDS_pref_pair),
+    mean_LT = mean(mean_LT_pair),
+    IDS_pref = mean_IDS_pref / mean_LT
+  ) %>%
   ungroup() %>%
   select(-c(stimulus_num, IDS, ADS, IDS_pref_pair, mean_LT_pair, mean_IDS_pref, mean_LT)) %>%
   unique()
@@ -179,38 +207,41 @@ CDI.nwords.list <- tribble(
 df.final <- df.final %>%
   left_join(CDI.nwords.list) %>%
   mutate_at(vars(CDI.form), as_factor) %>%
-  mutate(CDI.prop = vocab_nwords/CDI.nwords)
+  mutate(CDI.prop = vocab_nwords / CDI.nwords)
 ```
 
 ## `z_age_months`, `CDI.z_age_months`, `CDI.grouped.z_age_months`
 
-A common way to get better computational models both in terms of estimate precision and convergence is to center and scale numerical variables, particularly ones that have relatively large values and/or large spreads. In our case, age in days are such variables. However, for better interpretation and generalisation of the results, we choose to center those values, but instead of scaling them we simply convert them to ages in months. Here, we further create variables to center `CDI.agedays` either overall or for each age group defined by `CDI.agerange`.
+A common way to get better computational models both in terms of estimate precision and convergence is to center and scale numerical variables, particularly ones that have relatively large values and/or large spreads. In our case, age in days are such variables. However, for better interpretation and generalization of the results, we choose to center those values, but instead of scaling them we simply convert them to ages in months. Here, we further create variables to center `CDI.agedays` either overall or for each age group defined by `CDI.agerange`.
 
 ```{r z_age_days}
 df.final <- df.final %>%
-  mutate(z_age_months = scale(age_days, scale = F)/365.25*12,
-         CDI.z_age_months = scale(CDI.agedays, scale = F)/365.25*12) %>%
+  mutate(
+    z_age_months = scale(age_days, scale = F) / 365.25 * 12,
+    CDI.z_age_months = scale(CDI.agedays, scale = F) / 365.25 * 12
+  ) %>%
   group_by(CDI.agerange) %>%
-  mutate(CDI.grouped.z_age_months = scale(CDI.agedays, scale = F)/365.25*12) %>%
+  mutate(CDI.grouped.z_age_months = scale(CDI.agedays, scale = F) / 365.25 * 12) %>%
   ungroup()
 ```
 
 ## `z_standardized_CDI`, `z_vocab_nwords`
 
-We discussed above the interest of scaling numerical variables. In our case, our dependant variables are also numerical with high values and wide spreads, so scaling and centring them can sensibly improve model convergence and model fit.
+We discussed above the interest of scaling numerical variables. In our case, our dependent variables are also numerical with high values and wide spreads, so scaling and centering them can sensibly improve model convergence and model fit.
 
 ```{r z_CDI_scores}
 df.final <- df.final %>%
-  mutate(z_standardized_CDI = scale(standardized.score.CDI.num),
-         z_vocab_nwords = scale(vocab_nwords))
-         
+  mutate(
+    z_standardized_CDI = scale(standardized.score.CDI.num),
+    z_vocab_nwords = scale(vocab_nwords)
+  )
+
 # remove extra dimension from z score variables (value of 1 in second column prevented write_csv in next chunk)
 df.final$z_age_months <- drop(df.final$z_age_months)
 df.final$CDI.z_age_months <- drop(df.final$CDI.z_age_months)
 df.final$CDI.grouped.z_age_months <- drop(df.final$CDI.grouped.z_age_months)
 df.final$z_standardized_CDI <- drop(df.final$z_standardized_CDI)
 df.final$z_vocab_nwords <- drop(df.final$z_vocab_nwords)
-
 ```
 
 # Conclusion
