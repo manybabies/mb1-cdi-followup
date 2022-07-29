@@ -30,21 +30,21 @@ TODO: Delete any libraries that are solely for the Bayes analysis and can be del
 ```{r library_import}
 # Library imports, general settings ==============
 library(tidyverse)
-#library(egg)
+library(egg)
 library(knitr)
-#library(lme4)
-#library(lmerTest) 
-#library(simr)
-# As in our discussion with Mike, we will use lmerTest for calculating p values in the mixed-effects models (noted as a deviation) 
-#library(brms)
-#library(rstan)
+library(lme4)
+library(lmerTest)
+library(simr)
+# As in our discussion with Mike, we will use lmerTest for calculating p values in the mixed-effects models (noted as a deviation)
+library(brms)
+library(rstan)
 library(future)
-#plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
-#library(lattice)
-#library(effects)
-#library(sjPlot)
-#library(robustlmm)
-#library(car)
+# plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
+library(lattice)
+library(effects)
+library(sjPlot)
+library(robustlmm)
+library(car)
 ```
 
 
@@ -58,7 +58,7 @@ select <- dplyr::select
 
 theme_set(theme_bw(base_size = 10))
 options("future" = T)
-#knitr::opts_chunk$set(cache = TRUE)
+# knitr::opts_chunk$set(cache = TRUE)
 ```
 
 
@@ -123,31 +123,41 @@ contrasts(data.total$method) <- contr.sum(3)
 
 # Create sub-datasets, with contrasts ============
 ## NAE
-data.nae <- data.total %>% subset(language_zone == "NAE") %>% droplevels()
+data.nae <- data.total %>%
+  subset(language_zone == "NAE") %>%
+  droplevels()
 contrasts(data.nae$gender) <- contr.sum(2)
 contrasts(data.nae$method) <- contr.sum(3)
 
 ## UK (combined-age and separate 18/24 months)
 
-data.uk <- data.total %>% subset(language_zone == "British") %>% droplevels()
+data.uk <- data.total %>%
+  subset(language_zone == "British") %>%
+  droplevels()
 contrasts(data.uk$gender) <- contr.sum(2)
-contrasts(data.uk$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+contrasts(data.uk$method) <- contr.sum(2) # note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
 
 
-data.uk.18 <- data.total %>% subset(language_zone == "British" & CDI.agerange == 
-                                "18") %>% droplevels()
+data.uk.18 <- data.total %>%
+  subset(language_zone == "British" & CDI.agerange ==
+    "18") %>%
+  droplevels()
 contrasts(data.uk.18$gender) <- contr.sum(2)
-contrasts(data.uk.18$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+contrasts(data.uk.18$method) <- contr.sum(2) # note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
 
-data.uk.24 <- data.total %>% subset(language_zone == "British" & CDI.agerange == 
-                                "24") %>% droplevels()
+data.uk.24 <- data.total %>%
+  subset(language_zone == "British" & CDI.agerange ==
+    "24") %>%
+  droplevels()
 contrasts(data.uk.24$gender) <- contr.sum(2)
-contrasts(data.uk.24$method) <- contr.sum(2) #note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
+contrasts(data.uk.24$method) <- contr.sum(2) # note that UK sample has only 2 levels, so sum of zero contrasts set to 2 levels
 
 
 
 ## Other
-data.other <- data.total %>% subset(language_zone == "Other") %>% droplevels()
+data.other <- data.total %>%
+  subset(language_zone == "Other") %>%
+  droplevels()
 contrasts(data.other$gender) <- contr.sum(2)
 contrasts(data.other$method) <- contr.sum(3)
 ```
@@ -164,25 +174,26 @@ data.total %>%
 ```
 More detailed information about Descriptive Statistics
 ```{r}
-#number of lab
-data.total %>% 
-  select(labid, language_zone) %>% 
-  unique() %>% 
-  group_by(language_zone) %>% 
+# number of lab
+data.total %>%
+  select(labid, language_zone) %>%
+  unique() %>%
+  group_by(language_zone) %>%
   count()
 
-data.total %>% 
-  group_by(language_zone, CDI.agerange) %>% 
+data.total %>%
+  group_by(language_zone, CDI.agerange) %>%
   summarize(N = n())
 
 # age range in each age group and language zone
-data.total %>% 
-  select(subid, language_zone, CDI.agedays, CDI.agerange) %>% 
-  unique() %>% 
-  group_by(language_zone, CDI.agerange) %>% 
-  summarize(age_min = (min(CDI.agedays)/365.25*12),
-            age_max = (max(CDI.agedays)/365.25*12))
-
+data.total %>%
+  select(subid, language_zone, CDI.agedays, CDI.agerange) %>%
+  unique() %>%
+  group_by(language_zone, CDI.agerange) %>%
+  summarize(
+    age_min = (min(CDI.agedays) / 365.25 * 12),
+    age_max = (max(CDI.agedays) / 365.25 * 12)
+  )
 ```
 
 We then assess the data per lab in terms of sample size and CDI score (vocabulary size, for consistency between language zones).
@@ -193,27 +204,70 @@ by_lab <- data.total %>%
   mutate(tested = n_distinct(subid_unique)) %>%
   select(labid, language_zone, CDI.agerange, tested, vocab_nwords) %>%
   nest(scores = vocab_nwords) %>%
-  mutate(model = map(scores, ~ lm(vocab_nwords ~ 1, data = .x)),
-         ci = map(model, confint)) %>%
-  transmute(tested = tested,
-            mean = map_dbl(model, ~ coefficients(.x)[[1]]),
-            ci_lower = map_dbl(ci, 1),
-            ci_upper = map_dbl(ci, 2)) %>%
+  mutate(
+    model = map(scores, ~ lm(vocab_nwords ~ 1, data = .x)),
+    ci = map(model, confint)
+  ) %>%
+  transmute(
+    tested = tested,
+    mean = map_dbl(model, ~ coefficients(.x)[[1]]),
+    ci_lower = map_dbl(ci, 1),
+    ci_upper = map_dbl(ci, 2)
+  ) %>%
   arrange(language_zone) %>%
-  rownames_to_column()
+  rownames_to_column() %>%
+  ungroup()
 
-# TODO: find a way to group by language zone?
-ggplot(by_lab,
-       aes(x = labid, colour = language_zone,
-           y = mean, ymin = ci_lower, ymax = ci_upper)) + 
-  geom_linerange() + 
-  geom_point(aes(size = tested)) + 
-  facet_grid(cols = vars(CDI.agerange), scales = "free") + coord_flip(ylim = c(0, 500)) +
-  xlab("Lab") + ylab("Vocabulary size") +
-  scale_colour_brewer(palette = "Dark2", name = "Language zone",
-                      breaks = c("British", "NAE", "Other")) +
+# created a new column with the labs IDs as character so it can be sorted in alphabetical order
+by_lab$labid_car <- as.character(by_lab$labid)
+
+# relabel the CDI age factor column
+levels(by_lab$CDI.agerange) <- c("18 months", "24 months")
+
+# Making sure the factor columns have levels in the order I would like to graph them
+by_lab$language_zone <- factor(by_lab$language_zone, levels = c("British", "NAE", "Other"))
+
+# sorted the idcolum in the way I would it to show in the ggplot
+labid_ord <- by_lab %>%
+  dplyr::arrange(language_zone, desc(labid_car)) %>%
+  ungroup() %>%
+  filter(CDI.agerange == "18 months") %>%
+  select(labid)
+
+# Making sure the factor columns have levels in the order I would like to graph them
+by_lab$labid <- factor(by_lab$labid, levels = labid_ord$labid)
+
+
+## graph by language zone and lab Id in asc order
+by_lab %>%
+  ggplot(
+    .,
+    aes(
+      x = labid,
+      y = mean, colour = language_zone,
+      ymin = ci_lower, ymax = ci_upper
+    )
+  ) +
+  geom_linerange() +
+  geom_point(aes(size = tested)) +
+  coord_flip(ylim = c(0, 500)) +
+  xlab("Lab") +
+  ylab("Vocabulary size") +
+  scale_colour_brewer(
+    palette = "Dark2", name = "Language zone",
+    breaks = c("British", "NAE", "Other")
+  ) +
   scale_size_continuous(name = "N", breaks = function(x) c(min(x), mean(x), max(x))) +
-  theme(legend.position = "bottom")
+  facet_wrap(vars(CDI.agerange)) +
+  theme(
+    legend.position = "bottom",
+    strip.background = element_blank(),
+    strip.placement = "outside",
+    text = element_text(size = 22)
+  )
+
+
+ggsave("plots/vocab-size_by-lab.png", width = 12, height = 8)
 ```
 
 # Sample Theory Based Statistics
@@ -226,25 +280,26 @@ First, we want to assess quickly if there is a direct correlation between IDS pr
 # Statistics =====================================
 ## North American Sample
 test.pearson.nae <- cor.test(data.nae$IDS_pref,
-                             data.nae$z_standardized_CDI,
-                             alternative = "two.sided", method = "pearson")
+  data.nae$z_standardized_CDI,
+  alternative = "two.sided", method = "pearson"
+)
 
 test.pearson.nae
 
 ## UK Sample
 test.pearson.uk.18 <- cor.test(data.uk.18$IDS_pref,
-                            data.uk.18$z_vocab_nwords,
-                            alternative = "two.sided", method = "pearson")
+  data.uk.18$z_vocab_nwords,
+  alternative = "two.sided", method = "pearson"
+)
 
 test.pearson.uk.18
 
 test.pearson.uk.24 <- cor.test(data.uk.24$IDS_pref,
-                            data.uk.24$z_vocab_nwords,
-                            alternative = "two.sided", method = "pearson")
+  data.uk.24$z_vocab_nwords,
+  alternative = "two.sided", method = "pearson"
+)
 
 test.pearson.uk.24
-
-
 ```
 
 
@@ -257,45 +312,60 @@ cor_value <- round(test.pearson.nae$estimate, 3)
 
 ### Build plot
 plot.pearson.nae <- data.nae %>%
-  ggplot(aes(x = IDS_pref,
-             y = standardized.score.CDI.num)) +
-  xlab("IDS preference") + ylab("Standardized CDI score") +
+  ggplot(aes(
+    x = IDS_pref,
+    y = standardized.score.CDI.num
+  )) +
+  xlab("IDS preference") +
+  ylab("Standardized CDI score") +
   geom_point() +
   geom_smooth(method = lm) +
-  annotate("text", x = -.9, y = 51, parse = T, size = 4,
-           label = paste(cor_text, cor_value, sep = "~"))
+  annotate("text",
+    x = -.9, y = 51, parse = T, size = 4,
+    label = paste(cor_text, cor_value, sep = "~")
+  )
 
 ## UK Sample
 cor_value <- round(test.pearson.uk.18$estimate, 3)
 plot.pearson.uk.18 <- data.uk.18 %>%
-  ggplot(aes(x = IDS_pref,
-             y = vocab_nwords)) +
-  xlab("IDS preference") + ylab("Vocabulary size (in words)") +
+  ggplot(aes(
+    x = IDS_pref,
+    y = vocab_nwords
+  )) +
+  xlab("IDS preference") +
+  ylab("Vocabulary size (in words)") +
   geom_point() +
   geom_smooth(method = lm) +
-  annotate("text", x = .8, y = 150, parse = T, size = 4,
-           label = paste(cor_text, cor_value, sep = "~"))
+  annotate("text",
+    x = .8, y = 150, parse = T, size = 4,
+    label = paste(cor_text, cor_value, sep = "~")
+  )
 
 cor_value <- round(test.pearson.uk.24$estimate, 3)
 plot.pearson.uk.24 <- data.uk.24 %>%
-  ggplot(aes(x = IDS_pref,
-             y = vocab_nwords)) +
-  xlab("IDS preference") + ylab("Vocabulary size (in words)") +
+  ggplot(aes(
+    x = IDS_pref,
+    y = vocab_nwords
+  )) +
+  xlab("IDS preference") +
+  ylab("Vocabulary size (in words)") +
   geom_point() +
   geom_smooth(method = lm) +
-  annotate("text", x = .8, y = 150, parse = T, size = 4,
-           label = paste(cor_text, cor_value, sep = "~"))
+  annotate("text",
+    x = .8, y = 150, parse = T, size = 4,
+    label = paste(cor_text, cor_value, sep = "~")
+  )
 
 # Global plot
 plot.pearson <- ggarrange(plot.pearson.nae, plot.pearson.uk.18, plot.pearson.uk.24, ncol = 3)
 
 plot.pearson
 
-#TODO: These plots need to be cleaned up!
+# TODO: These plots need to be cleaned up!
 
 ggsave("plots/corr_plot.pdf", plot.pearson,
-       units = "mm", width = 180, height = 100, dpi = 1000)
-
+  units = "mm", width = 180, height = 100, dpi = 1000
+)
 ```
 
 We see no obvious direct link between IDS prefernce and CDI score here. However, an effect might appear once we take into account various factors that might interact with IDS preference and/or CDI score. We can also first enhance these plots with information about the age group at which infants were tested (18- or 24-month-old) for the NAE sample, using vocabulary size to better compare the NAE and UK samples.
@@ -304,20 +374,30 @@ We see no obvious direct link between IDS prefernce and CDI score here. However,
 plot.age_group <- data.total %>%
   subset(language_zone != "Other") %>%
   droplevels() %>%
-  ggplot(aes(x = IDS_pref,
-             y = vocab_nwords,
-             colour = CDI.agerange)) +
+  ggplot(aes(
+    x = IDS_pref,
+    y = vocab_nwords,
+    colour = CDI.agerange
+  )) +
   facet_wrap(vars(language_zone),
-             labeller = as_labeller(c("British" = "UK samples",
-                                      "NAE" = "North Amercian samples"))) +
-  xlab("Standardized IDS prefence score") + ylab("Vocabulary size (in words)") + theme(legend.position = "top") +
+    labeller = as_labeller(c(
+      "British" = "UK samples",
+      "NAE" = "North Amercian samples"
+    ))
+  ) +
+  xlab("Standardized IDS prefence score") +
+  ylab("Vocabulary size (in words)") +
+  theme(legend.position = "top") +
   geom_point() +
   geom_smooth(method = lm) +
-  scale_colour_brewer(palette = "Dark2", name = "Age group",
-                      breaks = c("18", "24"),
-                      labels = c("18mo", "24m"))
+  scale_colour_brewer(
+    palette = "Dark2", name = "Age group",
+    breaks = c("18", "24"),
+    labels = c("18mo", "24m")
+  )
 ggsave("plots/scatter_age.pdf", plot.age_group,
-       units = "mm", width = 180, height = 100, dpi = 1000)
+  units = "mm", width = 180, height = 100, dpi = 1000
+)
 (plot.age_group)
 ```
 
@@ -333,10 +413,11 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 data.nae$centered_IDS_pref <- scale(data.nae$IDS_pref, center = T, scale = F)
 
 lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-                        z_age_months + method + centered_IDS_pref +
-                        centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months +
-                        (1 | labid) + (1 | subid_unique),
-                      data = data.nae)
+  z_age_months + method + centered_IDS_pref +
+  centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.nae
+)
 
 summary(lmer.full.nae)
 
@@ -345,12 +426,12 @@ summary(lmer.full.nae)
 #                         centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months +
 #                         (1 | labid),
 #                       data = data.nae)
-# 
-# 
+#
+#
 # summary(robust_lmer.full.nae) #this model is used to see if we can meet some statistical assumption better but we decided to use the original model as the inferential statistical results are consistent
 
-full.nae_pvalue <- anova(lmer.full.nae) %>% 
-  as_tibble(rownames = "Parameter") #this gives us the Type III p values
+full.nae_pvalue <- anova(lmer.full.nae) %>%
+  as_tibble(rownames = "Parameter") # this gives us the Type III p values
 
 # ==========
 # Sequentially removed random effects:
@@ -362,8 +443,7 @@ full.nae_pvalue <- anova(lmer.full.nae) %>%
 # z_age_months
 # gender
 # CDI.z_age_months
-#==========
-
+# ==========
 ```
 
 #### (Optional) Checking mixed-model assumptions. We will check the following:
@@ -373,42 +453,45 @@ full.nae_pvalue <- anova(lmer.full.nae) %>%
 4) No autocorrelation
 5) No multicollinearity
 ```{r}
-#First, check linearity
+# First, check linearity
 # data.nae$resid <- residuals(lmer.full.nae)
-# 
+#
 # plot(data.nae$resid, data.nae$standardized.score.CDI)
 
-#Second, check normality
-plot_model(lmer.full.nae, type = 'diag') ## we do have right-skewed normality of residuals
+# Second, check normality
+plot_model(lmer.full.nae, type = "diag") ## we do have right-skewed normality of residuals
 
-#Third, check autocorrelation
+# Third, check autocorrelation
 re_run_lme.full.nae <- nlme::lme(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-                        z_age_months + method + centered_IDS_pref +
-                        centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months, random = ~1 | labid,
-                        method = "REML",
-                      data = data.nae, na.action = na.exclude)
+  z_age_months + method + centered_IDS_pref +
+  centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months,
+random = ~ 1 | labid,
+method = "REML",
+data = data.nae, na.action = na.exclude
+)
 
-plot(nlme::ACF(re_run_lme.full.nae, resType = "normalized")) #there is no sign for autocorrelation
-      
-#Lastly, check multi-collinearity
-car::vif(lmer.full.nae) #we do see a multicollineartiy for the IDS preference variable, even though we have centered the IDS preference score. It is probably related to the number the participating labs (as this is the group level that we are controlling) and how we entered interaction between IDS preference and other variables (that lack variability in the current sample). We need to keep IDS preference in the model as exploring the relationship between IDS preference and CDI score is the key research question in the paper.
+plot(nlme::ACF(re_run_lme.full.nae, resType = "normalized")) # there is no sign for autocorrelation
+
+# Lastly, check multi-collinearity
+car::vif(lmer.full.nae) # we do see a multicollineartiy for the IDS preference variable, even though we have centered the IDS preference score. It is probably related to the number the participating labs (as this is the group level that we are controlling) and how we entered interaction between IDS preference and other variables (that lack variability in the current sample). We need to keep IDS preference in the model as exploring the relationship between IDS preference and CDI score is the key research question in the paper.
 ```
 
 
 ### UK full model
 ```{r}
 lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
-                       z_age_months + method + IDS_pref +
-                       IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                       (1 | labid) + (1 | subid_unique),
-                     data = data.uk) 
+  z_age_months + method + IDS_pref +
+  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.uk
+)
 
 summary(lmer.full.uk)
 
-full.uk_pvalue <- anova(lmer.full.uk) %>% 
-  as_tibble(rownames = "Parameter") #this gives us the Type III p values
+full.uk_pvalue <- anova(lmer.full.uk) %>%
+  as_tibble(rownames = "Parameter") # this gives us the Type III p values
 
-#==========
+# ==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -418,7 +501,6 @@ full.uk_pvalue <- anova(lmer.full.uk) %>%
 # z_age_months
 # gender
 # CDI.z_age_months
-
 ```
 #### (Optional) Checking mixed-model assumptions. We will check the following:
 1) Linearlity
@@ -427,25 +509,27 @@ full.uk_pvalue <- anova(lmer.full.uk) %>%
 4) No autocorrelation
 5) No multicollinearity
 ```{r}
-#First, check linearity. The plot looks linear
+# First, check linearity. The plot looks linear
 data.uk$resid <- residuals(lmer.full.uk)
- 
+
 plot(data.uk$resid, data.uk$vocab_nwords)
 
-#Second, check normality
-plot_model(lmer.full.uk, type = 'diag') ## we do have right-skewed normality of residuals
+# Second, check normality
+plot_model(lmer.full.uk, type = "diag") ## we do have right-skewed normality of residuals
 
-#Third, check autocorrelation
+# Third, check autocorrelation
 re_run_lme.full.uk <- nlme::lme(vocab_nwords ~ CDI.z_age_months + gender +
-                       z_age_months + method + IDS_pref +
-                       IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months, random = ~1 | labid,
-                        method = "REML",
-                      data = data.nae, na.action = na.exclude)
+  z_age_months + method + IDS_pref +
+  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
+random = ~ 1 | labid,
+method = "REML",
+data = data.nae, na.action = na.exclude
+)
 
-plot(nlme::ACF(re_run_lme.full.uk, resType = "normalized")) #there is no sign for autocorrelation
-      
-#Lastly, check multi-collinearity
-car::vif(lmer.full.uk) #no problem for multicollinearlity
+plot(nlme::ACF(re_run_lme.full.uk, resType = "normalized")) # there is no sign for autocorrelation
+
+# Lastly, check multi-collinearity
+car::vif(lmer.full.uk) # no problem for multicollinearlity
 ```
 
 
@@ -455,11 +539,11 @@ AST: Note that we don't have any IV(s) that turned out to be significant in the 
 
 ```{r pwr_lmer, eval = FALSE}
 
-check_pwr_uk_cdi_age <- simr::powerSim(lmer.full.uk, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) #specify that Gender is the ixed effect that we are looking into
+check_pwr_uk_cdi_age <- simr::powerSim(lmer.full.uk, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
 
 check_pwr_uk_cdi_age
 
-check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) #specify that Gender is the ixed effect that we are looking into
+check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
 
 check_pwr_uk_gender
 ```
@@ -472,12 +556,16 @@ For this combined analysis, we first need to restrain the age range for the NAE 
 # Create dataset with British and NAE only
 data.uk_nae <- data.total %>%
   subset(language_zone %in% c("British", "NAE")) %>%
-  mutate(CDI.agemin = ifelse(language_zone == "NAE",
-                             CDI.agemin + round(.5*365.25/12),
-                             CDI.agemin),
-         CDI.agemax = ifelse(language_zone == "NAE",
-                             CDI.agemax - round(.5*365.25/12),
-                             CDI.agemax)) %>%
+  mutate(
+    CDI.agemin = ifelse(language_zone == "NAE",
+      CDI.agemin + round(.5 * 365.25 / 12),
+      CDI.agemin
+    ),
+    CDI.agemax = ifelse(language_zone == "NAE",
+      CDI.agemax - round(.5 * 365.25 / 12),
+      CDI.agemax
+    )
+  ) %>%
   subset(!(CDI.agedays < CDI.agemin | CDI.agedays > CDI.agemax)) %>%
   droplevels()
 # Create contrasts for analysis
@@ -490,17 +578,18 @@ We can then run the planned combined analysis adding the main effect and interac
 
 ```{r uk_nae_lmer}
 lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-                           z_age_months + method + IDS_pref + IDS_pref:language_zone +
-                           IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-                           (1 + CDI.z_age_months | labid) + (1 | subid_unique),
-                         data = data.uk_nae)
+  z_age_months + method + IDS_pref + IDS_pref:language_zone +
+  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+  (1 + CDI.z_age_months | labid) + (1 | subid_unique),
+data = data.uk_nae
+)
 
 summary(lmer.full.uk_nae)
 
-combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>% 
-  as_tibble(rownames = "Parameter") #this gives us the Type III p values
+combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
+  as_tibble(rownames = "Parameter") # this gives us the Type III p values
 
-#==========
+# ==========
 # Sequentially removed random effects:
 # IDS_pref:z_age_months
 # IDS_pref:CDI.z_age_months
@@ -511,8 +600,7 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 # z_age_months
 # gender
 # language_zone
-#==========
-
+# ==========
 ```
 #### (Optional) Checking mixed-model assumptions
 1) Linearlity
@@ -521,43 +609,42 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 4) No autocorrelation
 5) No multicollinearity
 ```{r}
-#First, check linearity. The plot looks linear
+# First, check linearity. The plot looks linear
 data.uk_nae$resid <- residuals(lmer.full.uk_nae)
- 
+
 plot(data.uk_nae$resid, data.uk_nae$CDI.prop)
 
-#Second, check normality
-plot_model(lmer.full.uk_nae, type = 'diag') ## we do have right-skewed normality of residuals
+# Second, check normality
+plot_model(lmer.full.uk_nae, type = "diag") ## we do have right-skewed normality of residuals
 
-#Third, check autocorrelation
+# Third, check autocorrelation
 re_run_lme.full.uk_nae <- nlme::lme(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-                           z_age_months + method + IDS_pref + IDS_pref:language_zone +
-                           IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
-                           random = ~CDI.z_age_months  | labid,
-                        method = "REML",
-                      data = data.uk_nae, na.action = na.exclude)
+  z_age_months + method + IDS_pref + IDS_pref:language_zone +
+  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
+random = ~ CDI.z_age_months | labid,
+method = "REML",
+data = data.uk_nae, na.action = na.exclude
+)
 
-plot(nlme::ACF(re_run_lme.full.uk_nae, resType = "normalized")) #there is no sign for autocorrelation
-      
-#Lastly, check multi-collinearity
-car::vif(lmer.full.uk_nae) #no problem for multicollinearlity
+plot(nlme::ACF(re_run_lme.full.uk_nae, resType = "normalized")) # there is no sign for autocorrelation
+
+# Lastly, check multi-collinearity
+car::vif(lmer.full.uk_nae) # no problem for multicollinearlity
 ```
 
 
 We then compute $p$-values, but leave out power estimates for those $p$-values as above. Again, we have a lot of singular fit issues for the power checks and decided not to remove parameters based on posthoc power analysis. 
 
 ```{r uk_nae_statistics, eval = FALSE}
-check_pwr_combined_cdi_age <- simr::powerSim(lmer.full.uk_nae, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) #specify that Gender is the ixed effect that we are looking into
+check_pwr_combined_cdi_age <- simr::powerSim(lmer.full.uk_nae, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
 
 check_pwr_combined_cdi_age
 
-check_pwr_combined_lang_zone <- simr::powerSim(lmer.full.uk_nae, test = fixed("language_zone", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) #specify that Gender is the ixed effect that we are looking into
+check_pwr_combined_lang_zone <- simr::powerSim(lmer.full.uk_nae, test = fixed("language_zone", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
 
 check_pwr_combined_lang_zone
 
-check_pwr_combined_gender <- simr::powerSim(lmer.full.uk_nae, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) #specify that Gender is the ixed effect that we are looking into
+check_pwr_combined_gender <- simr::powerSim(lmer.full.uk_nae, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
 
 check_pwr_combined_gender
 ```
-
-
