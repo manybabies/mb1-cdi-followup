@@ -9,6 +9,12 @@ output:
     number_sections: yes
 ---
 
+```{r session_infos}
+# Provides a session log for the packages used in this .rmd
+library(sessioninfo)
+session_info(pkgs = "!attached", to_file = "02_session_log.txt")
+```
+
 # Introduction
 
 In this script, we go through all the pre-registered proposed analyses. As a reminder, the main research questions where as follows:
@@ -21,22 +27,29 @@ Here we present the main "sample theory based" analyses (also known as frequenti
 
 TODO: Delete any libraries that are solely for the Bayes analysis and can be deleted here.
 
-```{r setup, message=FALSE, warning=FALSE}
+```{r library_import}
 # Library imports, general settings ==============
-library(tidyverse); library(egg)
+library(tidyverse)
+#library(egg)
 library(knitr)
-library(lme4); library(lmerTest); library(simr)
-# As in our discussion with Mike, we will use lmerTest for calculating p values
-# in the mixed-effects models (noted as a deviation) 
-library(brms); library(rstan)
+#library(lme4)
+#library(lmerTest) 
+#library(simr)
+# As in our discussion with Mike, we will use lmerTest for calculating p values in the mixed-effects models (noted as a deviation) 
+#library(brms)
+#library(rstan)
 library(future)
-plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
-library(lattice)
-library(effects)
-library(sjPlot)
-library(robustlmm)
-library(car)
+#plan(multicore, workers = 8) # Swap to multiprocess if running from Rstudio
+#library(lattice)
+#library(effects)
+#library(sjPlot)
+#library(robustlmm)
+#library(car)
+```
 
+
+
+```{r setup, message=FALSE, warning=FALSE}
 # Load model comparison functions
 source("helper/lrtests.R")
 
@@ -46,10 +59,10 @@ select <- dplyr::select
 theme_set(theme_bw(base_size = 10))
 options("future" = T)
 #knitr::opts_chunk$set(cache = TRUE)
+```
 
-print(sessionInfo()) #listing all info about R and packages info
 
-# Read data ======================================
+```{r coles_types}
 col_types <- cols(
   labid = col_factor(),
   subid = col_factor(),
@@ -78,8 +91,11 @@ col_types <- cols(
   gender = col_factor(),
   second_session = col_logical()
 )
+```
+
+## Import Data
+```{r import_data}
 data.total <- read_csv("data/02b_processed.csv", col_types = col_types)
-# TODO: add saved results -Not sure what is wanted here. Can this note be deleted???
 ```
 
 Before moving on with the analysis, we have to ready the data by (a) checking for colinearity between `z_age_months` and `CDI.z_age_months` and correcting this if necessary, and (b) setting up the contrasts described in our data analysis.
