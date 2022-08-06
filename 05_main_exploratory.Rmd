@@ -18,6 +18,8 @@ library(glmmTMB)
 library(ggplot2)
 library(lmtest)
 library(rstatix)
+library(sjPlot)
+library(rstudioapi) 
 ```
 
 Response to questions:
@@ -29,7 +31,8 @@ Response to questions:
 3. The full vs pruned model was something that was decided within the paper. I didn't make this decision. I just ran the closest model possible to the original planned analyses, which had the same fixed and mixed effects as the pruned model. I only report the pruned model, I did not run the full model described above. However, I do refer to a "full" model in my code, but this is just a naming convention I use. Only the pruned model is being reported on.
 ```{r preprocessing, echo = TRUE, include = TRUE, warning = FALSE}
 rm(list = ls())
-
+#always start by setting the current directory to the directory of this script file.
+setwd(dirname(getActiveDocumentContext()$path))
 source("glmmTMB_stability.r")
 source("diagnostic_fcns.r")
 # Load data from a .txt file
@@ -60,7 +63,7 @@ plot(table(data$nae)) # few more non-nae
 #ensuring the response variable is between 0 and 1, as is required for a beta error model.
 data$vocabulary_percentile[data$vocabulary_percentile == 0] <- 1
 
-if(data$vocabulary_percentile > 1)
+if(any(data$vocabulary_percentile > 1))
 {
   data$vocabulary_percentile <- data$vocabulary_percentile / 100
 }
@@ -89,7 +92,7 @@ vif(coll_model)
 
 #Test for stability by dropping levels of the random effects one at a time and comparing the estimates derived
 #from models fitted on the respective subsets with those obtained for the full data set. There don't seem to be major issues with the stability of the model coefficients.
-full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
+# full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
 
 table(full.stab$detailed$converged)
 m.stab.plot(full.stab$summary[, -1])
@@ -101,12 +104,7 @@ as.data.frame(anova(null, full, test="Chisq"))
 
 summary(full)
 
-library(sjPlot)
-
-null <- glmmTMB(vocabulary_percentile ~ z.ids_pref+ z.test_age + cdi.age_range + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
-
 tab_model(full, file = "plot.png")
-
 ```
 
 ```{r plots, include = TRUE, warning= FALSE}
