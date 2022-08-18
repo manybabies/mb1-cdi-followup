@@ -18,6 +18,9 @@ Data import functions are factored into a helper functions file.
 ```{r setup, message=FALSE, warning=FALSE, error=FALSE}
 source("helper/preprocessing.R")
 knitr::opts_chunk$set(cache = TRUE)
+
+library(sessioninfo)
+session_info(pkgs = "!attached", to_file = "01_session_log.txt")
 ```
 
 # Data Import
@@ -46,21 +49,30 @@ data.labs <- read_labs("data/labs.csv")
 data.cdi <- list.files("data/cdi_raw/") %>%
   map_dfr(read_cdi, save_unprocessed = !file.exists("data/00_unprocessed_cdi_merged.csv")) %>%
   drop_na(labid) %>%
-  mutate(subid_unique = paste(labid, subid, sep = ":"),
-         standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0"),
-         CDI.agerange = case_when(!(CDI.agerange %in% c("18", "24")) ~
-                                      if_else(CDI.agedays < 21*365.25/12, "18", "24"),
-                                  T ~ as.character(CDI.agerange)),
-         CDI.form = str_replace(CDI.form, "webcdi", "webCDI"),
-         CDI.error = (CDI.error == "error")) %>%
-  mutate_at(vars(subid, CDI.form, CDI.agerange),
-            as_factor) %>%
+  mutate(
+    subid_unique = paste(labid, subid, sep = ":"),
+    standardized.score.CDI.num = str_replace(standardized.score.CDI, "<1", "0"),
+    CDI.agerange = case_when(
+      !(CDI.agerange %in% c("18", "24")) ~
+        if_else(CDI.agedays < 21 * 365.25 / 12, "18", "24"),
+      T ~ as.character(CDI.agerange)
+    ),
+    CDI.form = str_replace(CDI.form, "webcdi", "webCDI"),
+    CDI.error = (CDI.error == "error")
+  ) %>%
+  mutate_at(
+    vars(subid, CDI.form, CDI.agerange),
+    as_factor
+  ) %>%
   left_join(data.labs) %>%
   mutate_at(vars(labid), as_factor) %>%
   mutate_at(vars(standardized.score.CDI.num), as.numeric)
+
 # Check for labs that signed up but didn't send data:
-missing_labs <- setdiff(levels(data.labs$labid),
-                        levels(data.cdi$labid)) %>%
+missing_labs <- setdiff(
+  levels(data.labs$labid),
+  levels(data.cdi$labid)
+) %>%
   str_sort()
 ```
 
@@ -73,6 +85,7 @@ We expect to have no more than one data point per unique participant per age ran
 data.cdi %>%
   count(subid_unique, CDI.agerange) %>%
   subset(n != 1)
+
 # Only a few issues, let's check if they are subid typos or duplicate entries
 data.cdi %>%
   group_by(subid_unique, CDI.agerange) %>%
@@ -91,7 +104,7 @@ Although the scope of this script is not to exclude data points, we remove the p
 ```{r cdi_fix_babylablmu, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%
   subset(!(subid_unique %in% c("babylab-lmu:35", "babylab-lmu:76", "unlv-musiclab:MB021") &
-             CDI.error %in% c("error", TRUE))) %>%
+    CDI.error %in% c("error", TRUE))) %>%
   subset(!(subid_unique == "InfantCog-UBC:tp13" & vocab_nwords != 470)) %>%
   unique()
 ```
@@ -105,7 +118,11 @@ We then import the (pre-processed) data from the original Many Babies study on I
 data.ids <- read_csv("data/ids_preference_trial.csv") %>%
   rename(labid = lab) %>%
   mutate_at(vars(labid, subid), as_factor) %>%
-  mutate(gender = str_sub(gender, 1, 1)) # Some data coded as "(FE)MALE" instead of F/M
+  mutate(gender = str_sub(gender, 1, 1)) %>%
+  mutate(gender = case_when(
+    gender == "0" ~ NA_character_,
+    TRUE ~ gender
+  )) # Some data coded as "(FE)MALE" instead of F/M and zero
 ```
 
 ## Compatibility Check
@@ -118,22 +135,30 @@ We first check that the coding of `labid` is consistent between the original IDS
 
 ```{r labid_check}
 # Check for labid present in CDI but not IDS (i.e. differently named), and vice versa
-changed_labid <- setdiff(data.cdi$labid,
-                         data.ids$labid)
-unused_labid <- setdiff(data.ids$labid,
-                        data.cdi$labid)
+changed_labid <- setdiff(
+  data.cdi$labid,
+  data.ids$labid
+)
+unused_labid <- setdiff(
+  data.ids$labid,
+  data.cdi$labid
+)
 # By hand, we see that the names seem to be the same but with "-" or "_" added in data.cdi
 # Only exception: leeds-lcdu in data.cdi should be lcduleeds
 data.cdi <- data.cdi %>%
-  mutate(labid = case_when(labid == "leeds-lcdu" ~ "lcduleeds",
-                           labid == "InfantCog-UBC" ~ "infantcogubc",
-                           labid == "princeton-babylab" ~ "babylabprinceton",
-                           labid == "um_babylanguagelab" ~ "bllumanitoba",
-                           T ~ str_remove_all(labid, "-|_"))) %>%
+  mutate(labid = case_when(
+    labid == "leeds-lcdu" ~ "lcduleeds",
+    labid == "InfantCog-UBC" ~ "infantcogubc",
+    labid == "princeton-babylab" ~ "babylabprinceton",
+    labid == "um_babylanguagelab" ~ "bllumanitoba",
+    T ~ str_remove_all(labid, "-|_")
+  )) %>%
   mutate_at(vars(labid), as_factor)
 # We check again for safety
-changed_labid <- setdiff(data.cdi$labid,
-                         data.ids$labid)
+changed_labid <- setdiff(
+  data.cdi$labid,
+  data.ids$labid
+)
 ```
 
 ### Coding of `subid`
@@ -144,48 +169,70 @@ Now that we have consistent coding for `labid`, we can update the new `data.cdi$
 # Update subid_unique in CDI
 data.cdi <- data.cdi %>%
   mutate(subid_unique = paste(labid, subid, sep = ":"))
+
 # Check for labid present in CDI but not IDS (i.e. differently named)
-changed_subid <- setdiff(data.cdi$subid_unique,
-                         data.ids$subid_unique)
+changed_subid <- setdiff(
+  data.cdi$subid_unique,
+  data.ids$subid_unique
+)
+
 # Many subids to check, let's extract the labs with issues
 changed_subid_labs <- changed_subid %>%
   str_match("[a-z]+") %>%
   unique()
+
 # Too many lab, let's print for each lab the proposed subids (CDI) and the possible subids (IDS)
-unused_subid <- setdiff(data.ids$subid_unique,
-                        data.cdi$subid_unique)
+unused_subid <- setdiff(
+  data.ids$subid_unique,
+  data.cdi$subid_unique
+)
 check_subid <- changed_subid_labs %>%
-  map(~list(CDI = str_subset(changed_subid, .x) %>% str_sort(),
-            IDS = str_subset(unused_subid, .x) %>% str_sort())) %>%
+  map(~ list(
+    CDI = str_subset(changed_subid, .x) %>% str_sort(),
+    IDS = str_subset(unused_subid, .x) %>% str_sort()
+  )) %>%
   setNames(changed_subid_labs)
+
 # Fix formatting issues, update subid_unique
 data.cdi <- data.cdi %>%
   mutate_at(vars(subid), as.character) %>%
-  mutate(subid = case_when(labid == "babylabbrookes" ~ str_replace(subid, "brookes-", "mb"),
-                           labid == "bcrlunlv" ~ paste0("mb", str_pad(subid, 4, pad = 0)),
-                           labid == "lscppsl" ~ paste0(subid, "lscppsl"),
-                           labid == "babylabprinceton" ~ str_replace(subid, "MB",
-                                                                     "manybabies"),
-                           labid == "unlvmusiclab" ~ str_replace(subid, "MB", "run"),
-                           labid %in% changed_subid_labs ~
-                             str_remove_all(subid, "-|_") %>% str_to_lower(),
-                           T ~ subid),
-         subid_unique = paste(labid, subid, sep = ":")) %>%
+  mutate(
+    subid = case_when(
+      labid == "babylabbrookes" ~ str_replace(subid, "brookes-", "mb"),
+      labid == "bcrlunlv" ~ paste0("mb", str_pad(subid, 4, pad = 0)),
+      labid == "lscppsl" ~ paste0(subid, "lscppsl"),
+      labid == "babylabprinceton" ~ str_replace(
+        subid, "MB",
+        "manybabies"
+      ),
+      labid == "unlvmusiclab" ~ str_replace(subid, "MB", "run"),
+      labid %in% changed_subid_labs ~
+        str_remove_all(subid, "-|_") %>% str_to_lower(),
+      T ~ subid
+    ),
+    subid_unique = paste(labid, subid, sep = ":")
+  ) %>%
   mutate_at(vars(subid, subid_unique), as_factor)
 # Check again for safety
-changed_subid <- setdiff(data.cdi$subid_unique,
-                         data.ids$subid_unique)
-unused_subid <- setdiff(data.ids$subid_unique,
-                        data.cdi$subid_unique)
+changed_subid <- setdiff(
+  data.cdi$subid_unique,
+  data.ids$subid_unique
+)
+unused_subid <- setdiff(
+  data.ids$subid_unique,
+  data.cdi$subid_unique
+)
 changed_subid_labs <- changed_subid %>%
   str_match("[a-z]+") %>%
   unique()
 check_subid <- changed_subid_labs %>%
-  map(~list(CDI = str_subset(changed_subid, .x) %>% str_sort(),
-            IDS = str_subset(unused_subid, .x) %>% str_sort())) %>%
+  map(~ list(
+    CDI = str_subset(changed_subid, .x) %>% str_sort(),
+    IDS = str_subset(unused_subid, .x) %>% str_sort()
+  )) %>%
   setNames(changed_subid_labs)
 check_subid.tibble <- check_subid %>%
-  map_dfr(~tibble(CDI = list(.x[["CDI"]]), IDS = list(.x[["IDS"]])), .id = "labid") %>%
+  map_dfr(~ tibble(CDI = list(.x[["CDI"]]), IDS = list(.x[["IDS"]])), .id = "labid") %>%
   gather(key = "dataset", value = "subids", -labid) %>%
   unnest(subids) %>%
   mutate(subids = str_remove(subids, "[a-z]+:")) %>%
@@ -197,30 +244,39 @@ Even after correcting formatting issues in subids, there are `r sum(check_subid.
 ```{r subid_exclusion_check, message=FALSE, warning=FALSE}
 # Import subids from all participants in IDS (before exculsion) for labs that provided CDI data
 data.ids.full.subids <- read_csv("data/ids_full.csv",
-                                 col_types = cols_only(
-                                   lab = col_character(),
-                                   subid_unique = col_character()
-                                   )) %>%
+  col_types = cols_only(
+    lab = col_character(),
+    subid_unique = col_character()
+  )
+) %>%
   rename(labid = lab) %>%
   subset(labid %in% levels(data.cdi$labid))
+
 # Compare to subids in CDI
-changed_subid.full <- setdiff(data.cdi$subid_unique,
-                              data.ids.full.subids$subid_unique)
-unused_subid.full <- setdiff(data.ids.full.subids$subid_unique,
-                        data.cdi$subid_unique)
+changed_subid.full <- setdiff(
+  data.cdi$subid_unique,
+  data.ids.full.subids$subid_unique
+)
+unused_subid.full <- setdiff(
+  data.ids.full.subids$subid_unique,
+  data.cdi$subid_unique
+)
 changed_subid_labs.full <- changed_subid.full %>%
   str_match("[a-z]+") %>%
   unique()
 check_subid.full <- changed_subid_labs.full %>%
-  map(~list(CDI = str_subset(changed_subid.full, .x) %>% str_sort(),
-            IDS = str_subset(unused_subid.full, .x) %>% str_sort())) %>%
+  map(~ list(
+    CDI = str_subset(changed_subid.full, .x) %>% str_sort(),
+    IDS = str_subset(unused_subid.full, .x) %>% str_sort()
+  )) %>%
   setNames(changed_subid_labs.full)
 check_subid.tibble.full <- check_subid.full %>%
-  map_dfr(~tibble(CDI = list(.x[["CDI"]]), IDS = list(.x[["IDS"]])), .id = "labid") %>%
+  map_dfr(~ tibble(CDI = list(.x[["CDI"]]), IDS = list(.x[["IDS"]])), .id = "labid") %>%
   gather(key = "dataset", value = "subids", -labid) %>%
   unnest(subids) %>%
   mutate(subids = str_remove(subids, "[a-z]+:")) %>%
   mutate_all(as_factor)
+
 # Save problematic labs' unmatched subids
 check_subid.tibble.full %>%
   nest(data = c(dataset, subids)) %>%
@@ -235,13 +291,16 @@ Here we see that `r sum(check_subid.tibble.full$dataset == "CDI")` subids from t
 * For `infantlanglabutk`, the `r check_subid.tibble.full %>% filter(dataset=="CDI"&labid=="infantlanglabutk") %>%count()` unmatched CDI subids were infants for whom there was no IDS data available (see [issue #5](https://github.com/manybabies/mb1-cdi-followup/issues/5)).
 * For `unlvmusiclab` the only mismatch stems from the participant having been a pilot infant for the IDS analysis. We correct its subid here for consistency, but this participant will be exclude in script 02 (see [issue #6](https://github.com/manybabies/mb1-cdi-followup/issues/6)). 
 
-
 ```{r subid_handcheck, message=FALSE, warning=FALSE}
 data.cdi <- data.cdi %>%
-  mutate(subid = case_when(labid == "chosunbaby" ~ str_replace(subid, "h71y23", "h71o23"),
-                           labid == "unlvmusiclab" ~ str_replace(subid, "run001", "run001pilot"),
-                           T ~ as.character(subid)),
-         subid_unique = paste(labid, subid, sep = ":")) %>%
+  mutate(
+    subid = case_when(
+      labid == "chosunbaby" ~ str_replace(subid, "h71y23", "h71o23"),
+      labid == "unlvmusiclab" ~ str_replace(subid, "run001", "run001pilot"),
+      T ~ as.character(subid)
+    ),
+    subid_unique = paste(labid, subid, sep = ":")
+  ) %>%
   mutate_at(vars(subid, subid_unique), as_factor)
 ```
 
