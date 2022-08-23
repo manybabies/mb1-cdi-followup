@@ -24,7 +24,7 @@ library(sessioninfo)
 session_info(pkgs = "!attached", to_file = "02_session_log.txt")
 ```
 
-```{r setup, message=FALSE, warning=FALSE}
+```{r col_types, message=FALSE, warning=FALSE}
 # Define column types
 col_types <- cols(
   labid = col_factor(),
