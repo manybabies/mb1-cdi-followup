@@ -530,11 +530,11 @@ AST: Note that we don't have any IV(s) that turned out to be significant in the 
 
 ```{r pwr_lmer, eval = FALSE}
 
-check_pwr_uk_cdi_age <- simr::powerSim(lmer.full.uk, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
+check_pwr_uk_cdi_age <- simr::powerSim(lmer.full.uk, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_uk_cdi_age
 
-check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
+check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_uk_gender
 ```
@@ -643,15 +643,15 @@ car::vif(lmer.full.uk_nae) # no problem for multicollinearlity
 We then compute $p$-values, but leave out power estimates for those $p$-values as above. Again, we have a lot of singular fit issues for the power checks and decided not to remove parameters based on posthoc power analysis. 
 
 ```{r uk_nae_statistics, eval = FALSE}
-check_pwr_combined_cdi_age <- simr::powerSim(lmer.full.uk_nae, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
+check_pwr_combined_cdi_age <- simr::powerSim(lmer.full.uk_nae, test = fixed("CDI.z_age_months", method = "z"), seed = 2, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_combined_cdi_age
 
-check_pwr_combined_lang_zone <- simr::powerSim(lmer.full.uk_nae, test = fixed("language_zone", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
+check_pwr_combined_lang_zone <- simr::powerSim(lmer.full.uk_nae, test = fixed("language_zone", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_combined_lang_zone
 
-check_pwr_combined_gender <- simr::powerSim(lmer.full.uk_nae, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the ixed effect that we are looking into
+check_pwr_combined_gender <- simr::powerSim(lmer.full.uk_nae, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_combined_gender
 ```
