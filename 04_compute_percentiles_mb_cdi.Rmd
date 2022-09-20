@@ -1,150 +1,209 @@
 ---
 title: "Processing manybabies cdi project"
-author: "Natalia Altered by: Luis"
-date: "07/2021 Altered: 02/2022"
-output: pdf_document
+author: "Natalia (07/2021) Altered by: Luis (02/2022) and Joscelin (09/16/2022)"
+date: '`r format(Sys.time(), "%a %b %d %X %Y")`'
+output: 
+  html_document:
+    toc: true
+    toc_depth: 5
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Load Libraries
+## Load Libraries
 
-```{r libraries, echo=FALSE, include=FALSE}
-library(readxl)
-library(plyr)
-library(ggplot2)
-library(remotes)
-library(wordbankr)
-# library(powerAnalysis)
-library(ggpubr)
-library(DataCombine)
+```{r libraries}
 library(tidyverse)
-library(stringr)
-library(data.table)
-library(PerformanceAnalytics)
-library(WRS2)
-library(dplyr)
-library(MASS)
+library(sessioninfo)
+
+session_info(pkgs = "!attached", to_file = "04_session_log.txt")
 ```
 
 ## Load data
 
-```{r load data, echo=FALSE, include=FALSE}
+```{r load data}
 rm(list = ls())
-setwd("data")
-# Load data from Excel
-d1 <- read.csv("02b_processed.csv") # indicate the file name and sheet number 
-setwd("cdi_percentile")
+
+# Load data from csv
+d1 <- read.csv("data/02b_processed.csv")
+
 # Examine the outcomes of variables
 summary(d1)
+```
 
-# Load percentiles for countries 
-korean<-read.delim('korean.txt', header=F)
+## Load data for individual type
+
+### Korean CDI percentiles
+
+```{r korean}
+# Load percentiles for countries
+korean <- read.delim("data/cdi_percentile/korean.txt", header = F)
+
 # Rename the header with column names
 colnames(korean) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(korean[,1] != 0)[1]
+min_age_CDI1 <- which(korean[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(korean)
-# Add a column for Age in days
-korean$Age<-c(1:max_age_CDI1)
 
-oxford<-read.delim('oxford.txt', header=F)
+# Add a column for Age in days
+korean$Age <- c(1:max_age_CDI1)
+```
+
+### Oxford CDI percentiles
+
+```{r oxford}
+oxford <- read.delim("data/cdi_percentile/oxford.txt", header = F)
+
 colnames(oxford) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(oxford[,1] != 0)[1]
+min_age_CDI1 <- which(oxford[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(oxford)
-# Add a column for Age in days
-oxford$Age<-c(1:max_age_CDI1)
 
-web_cdi<-read.delim('web_cdi.txt', header=F)
+# Add a column for Age in days
+oxford$Age <- c(1:max_age_CDI1)
+```
+
+### Web CDI percentiles
+
+```{r web, echo=TRUE, include=FALSE}
+web_cdi <- read.delim("data/cdi_percentile/web_cdi.txt", header = F)
+
 colnames(web_cdi) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(web_cdi[,1] != 0)[1]
+min_age_CDI1 <- which(web_cdi[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(web_cdi)
-# Add a column for Age in days
-web_cdi$Age<-c(1:max_age_CDI1)
 
-norwegian<-read.delim('norwegian.txt', header=F)
+# Add a column for Age in days
+web_cdi$Age <- c(1:max_age_CDI1)
+```
+
+### Norwegian CDI percentiles
+
+```{r norwegian}
+norwegian <- read.delim("data/cdi_percentile/norwegian.txt", header = F)
+
 colnames(norwegian) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(norwegian[,1] != 0)[1]
+min_age_CDI1 <- which(norwegian[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(norwegian)
-# Add a column for Age in days
-norwegian$Age<-c(1:max_age_CDI1)
 
-german<-read.delim('german.txt', header=F)
+# Add a column for Age in days
+norwegian$Age <- c(1:max_age_CDI1)
+```
+
+### German CDI percentiles
+
+```{r german}
+german <- read.delim("data/cdi_percentile/german.txt", header = F)
+
 colnames(german) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(german[,1] != 0)[1]
+min_age_CDI1 <- which(german[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(german)
-# Add a column for Age in days
-german$Age<-c(1:max_age_CDI1)
 
-dutch<- read.delim('dutch.txt',header = F)
+# Add a column for Age in days
+german$Age <- c(1:max_age_CDI1)
+```
+
+### Dutch CDI percentiles
+
+```{r dutch}
+dutch <- read.delim("data/cdi_percentile/dutch.txt", header = F)
+
 colnames(dutch) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(dutch[,1] != 0)[1]
+min_age_CDI1 <- which(dutch[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(dutch)
-# Add a column for Age in days
-dutch$Age<-c(1:max_age_CDI1)
 
-french<-read.delim('french.txt', header=F)
+# Add a column for Age in days
+dutch$Age <- c(1:max_age_CDI1)
+```
+
+### French CDI percentiles
+
+```{r french}
+french <- read.delim("data/cdi_percentile/french.txt", header = F)
+
 colnames(french) <- c(1:99)
+
 # Get the minimum age for the CDI instrument
-min_age_CDI1 <- which(french[,1] != 0)[1]
+min_age_CDI1 <- which(french[, 1] != 0)[1]
+
 # Get the maximal age for the CDI instrument
 max_age_CDI1 <- nrow(french)
-# Add a column for Age in days
-french$Age<-c(1:max_age_CDI1)
 
+# Add a column for Age in days
+french$Age <- c(1:max_age_CDI1)
 ```
 
 ## Compute CDI in percentiles for production
 
-```{r Compute CDI in percentiles for production, include=FALSE}
+```{r Compute CDI in percentiles for production}
+
 # Initiate variables that will be used later in the code chunk
 prod_T1 <- c()
+
 perc <- NULL
+
 perc_15plus <- NULL
 
 # Run through each row in d1. Each row corresponds to a single participant.
-# This loop calculates the percentile ranking for each participant in daily
-# percentiles according to their own country's norms. Daily vocabulary scores 
-# from 0 to 99th percentile ranking created from norming data for each CDI we 
-# have. The percentile scoring that most closely matches their score is then 
-# assigned as their percentile ranking.
-for(i in 1 : nrow(d1))  
+# This loop calculates the percentile ranking for each participant in daily percentiles according to their own country's norms. 
+# Daily vocabulary scores from 0 to 99th percentile ranking created from norming data for each CDI we have. 
+# The percentile scoring that most closely matches their score is then assigned as their percentile ranking.
+
+for (i in 1:nrow(d1))
 {
-  tool <- d1[[i,"CDI.form"]]
-  # Pick which CDI daily vocabulary score rankings to use based on the language.  
-  if((tool == "O-CDI"))
-    {perc_CDI1_prod <- oxford}
+  tool <- d1[[i, "CDI.form"]]
+  # Pick which CDI daily vocabulary score rankings to use based on the language.
+  if ((tool == "O-CDI")) {
+    perc_CDI1_prod <- oxford
+  }
 
-  if((tool == "FRAKIS"))
-    {perc_CDI1_prod <- german}
+  if ((tool == "FRAKIS")) {
+    perc_CDI1_prod <- german
+  }
 
-  if((tool == "webCDI"))
-    {perc_CDI1_prod <- web_cdi}
+  if ((tool == "webCDI")) {
+    perc_CDI1_prod <- web_cdi
+  }
 
-  if((tool == "NorCDI"))
-    {perc_CDI1_prod <- norwegian}
-    
-  if((tool == "K-CDI"))
-    {perc_CDI1_prod <- korean}
-  
-  if((tool == "NCDI"))
-    {perc_CDI1_prod <- dutch}
-  
-  if((tool == "French European"))
-    {perc_CDI1_prod <- french}
+  if ((tool == "NorCDI")) {
+    perc_CDI1_prod <- norwegian
+  }
+
+  if ((tool == "K-CDI")) {
+    perc_CDI1_prod <- korean
+  }
+
+  if ((tool == "NCDI")) {
+    perc_CDI1_prod <- dutch
+  }
+
+  if ((tool == "French European")) {
+    perc_CDI1_prod <- french
+  }
 
   # Get the minimum age for the CDI instrument
   min_age_CDI1 <- which(perc_CDI1_prod[, 1] != 0)[1]
@@ -153,70 +212,55 @@ for(i in 1 : nrow(d1))
   max_age_CDI1 <- nrow(perc_CDI1_prod)
 
   # Get percentiles for production (both for CDI-I[WG] and CDI-II[WS])
-  score <- as.numeric(d1 [[i, "vocab_nwords"]])
-  
+  score <- as.numeric(d1[[i, "vocab_nwords"]])
+
   # Get age in days for the current participant
   age <- as.numeric(d1[[i, "CDI.agedays"]])
-  
+
   # Account for the differences in the way that countries defined their norming
+
   # age for the CDI.
   perc_CDI1_prod$Age_15plus <- perc_CDI1_prod$Age + 15
-  
-  # If the participant's age is above or below the CDI age, or their score is NA
-  # assign their score NA.
-  if(age > max_age_CDI1 | age < min_age_CDI1 + 15| is.na(score))
-  {
+
+  # If the participant's age is above or below the CDI age, or their score is NA assign their score NA.
+  if (age > max_age_CDI1 | age < min_age_CDI1 + 15 | is.na(score)) {
     perc_15plus <- NA
-  }
-  else
-  {
+  } else {
+
     # Get the line number with the age corresponding to the current participant's
     # age.
     age_row <- as.numeric(which(perc_CDI1_prod$Age_15plus == age))
-    
-    # Get the number of the column containing the min value between the CDI 
-    # score and the value in the age corresponding line
-    perc_15plus <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
-    
-    if(score == 0)
-    {
-      # Some infants have a score of 0 even at different ages and this can be
-      # perfectly normally depending on their age, rather than
-      # assigning them 0 percentiles we assign them the percentile they were
-      # divided by 2 and rounded up. This avoids systematic zeros while maintaining
-      # the properties of the distribution.
-      perc_15plus <- ceiling(perc_15plus/2)
+
+    # Get the number of the column containing the min value between the CDI score and the value in the age corresponding line
+    perc_15plus <- as.numeric(which.min(abs(perc_CDI1_prod[age_row, c(1:99)] - score)))
+
+    if (score == 0) {
+      # Some infants have a score of 0 even at different ages and this can be perfectly normally depending on their age, rather than assigning them 0 percentiles we assign them the percentile they were divided by 2 and rounded up. This avoids systematic zeros while maintaining the properties of the distribution.
+      perc_15plus <- ceiling(perc_15plus / 2)
     }
   }
-  
-  # Do not apply the 15 day correction to Norwegian data because the age in 
-  # days was collected rather than interpolated.
-  if(tool == "NorCDI" | tool == "K-CDI"){
+
+  # Do not apply the 15 day correction to Norwegian data because the age in days was collected rather than interpolated.
+  if (tool == "NorCDI" | tool == "K-CDI") {
     # Adjust for the age limits in the sample-specific norming data
-    if(age > max_age_CDI1 | age < min_age_CDI1 | is.na(score))
-    {
+    if (age > max_age_CDI1 | age < min_age_CDI1 | is.na(score)) {
       perc <- NA
-    }
-    else
-    {
+    } else {
       # Get the number of line with the corresponding age
       age_row <- as.numeric(which(perc_CDI1_prod$Age == age))
-      # Get the number of the column containing the min value between the CDI 
+      # Get the number of the column containing the min value between the CDI
       # score and the value in the age corresponding line
-      perc <- as.numeric(which.min(abs(perc_CDI1_prod[age_row,c(1:99)] - score))) 
-      if(score == 0)
-      {
-        perc <- ceiling(perc/2)
+      perc <- as.numeric(which.min(abs(perc_CDI1_prod[age_row, c(1:99)] - score)))
+      if (score == 0) {
+        perc <- ceiling(perc / 2)
       }
     }
     perc_15plus <- perc
   }
-  if((tool == "FROSCH" || tool == "NCDI"))
-  {
+  if ((tool == "FROSCH" || tool == "NCDI")) {
     perc <- NA
   }
-  # Join all the rows from prod_T1 and perc_15plus to get the percentiles for
-  # all the data. Most percentile rankings are in perc_15plus
+  # Join all the rows from prod_T1 and perc_15plus to get the percentiles for all the data. Most percentile rankings are in perc_15plus
   prod_T1 <- c(prod_T1, perc_15plus)
 }
 
@@ -226,24 +270,31 @@ d1$percentile <- prod_T1
 
 ## Add swiss data and visualize
 
-```{r echo=FALSE, include=FALSE}
-setwd("data/cdi_percentile")
-swiss_data<-read.delim("zurich_data.txt", header=T)
-swiss_data$CDI.agerange<-NA
-swiss_data$CDI.error<-FALSE
+```{r swiss}
+# read dataset
+swiss_data <- read.delim("data/cdi_percentile/zurich_data.txt", header = T)
+
+swiss_data$CDI.agerange <- NA
+swiss_data$CDI.error <- FALSE
+
 names(swiss_data)[names(swiss_data) == "percentile"] <- "percentile_2"
-swiss_data1<- swiss_data[c("subid", "CDI.agedays","percentile_2")]
-final_swiss<-d1[d1$labid=="weltentdeckerzurich",]
-d1<-d1[!d1$labid=="weltentdeckerzurich",]
-final_swiss<-inner_join(final_swiss, swiss_data1)
-final_swiss$percentile<-NULL
+
+swiss_data1 <- swiss_data[c("subid", "CDI.agedays", "percentile_2")]
+
+final_swiss <- d1[d1$labid == "weltentdeckerzurich", ]
+
+d1 <- d1[!d1$labid == "weltentdeckerzurich", ]
+
+final_swiss <- inner_join(final_swiss, swiss_data1)
+
+final_swiss$percentile <- NULL
+
 names(final_swiss)[names(final_swiss) == "percentile_2"] <- "percentile"
 
 # Add swiss data to the final sample
-d1_total<-rbind(d1, final_swiss)
+d1_total <- rbind(d1, final_swiss)
 
 colnames(d1_total)[colnames(d1_total) == "percentile"] <- "daily_percentile"
-write.table(d1_total,"percentiles_manybabies_cdi.txt",sep="\t",row.names=FALSE, quote = FALSE)
 
+write.table(d1_total, "data/cdi_percentile/percentiles_manybabies_cdi.txt", sep = "\t", row.names = FALSE, quote = FALSE)
 ```
-
