@@ -93,9 +93,8 @@ vif(coll_model)
 #Test for stability by dropping levels of the random effects one at a time and comparing the estimates derived
 #from models fitted on the respective subsets with those obtained for the full data set. There don't seem to be major issues with the stability of the model coefficients.
 # full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
-
-table(full.stab$detailed$converged)
-m.stab.plot(full.stab$summary[, -1])
+# table(full.stab$detailed$converged)
+# m.stab.plot(full.stab$summary[, -1])
 
 null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
 
