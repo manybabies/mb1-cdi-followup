@@ -58,6 +58,7 @@ col_types <- cols(
   standardized.score.CDI = col_character(),
   standardized.score.CDI.num = col_number(),
   IDS_pref = col_number(),
+  z.IDS_pref = col_number(),
   language = col_factor(),
   language_zone = col_factor(),
   CDI.error = col_logical(),
@@ -173,7 +174,7 @@ prior_nae_1 <- c(
   set_prior("normal(50, 10)", class = "Intercept"), # note that nae's DV is percentile score, but I will assume at 18 months, the average is at 50 percentile
   set_prior("cauchy(5, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 5 % percentile increase?
   set_prior("cauchy(-15, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males
-  set_prior("cauchy(0, 1)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 1)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 1)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "method2"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months"),
@@ -194,15 +195,15 @@ prior_nae_2 <- c(
   set_prior("normal(50, 10)", class = "Intercept"), # note that nae's DV is percentile score, but I will assume at 18 months, the average is at 50 percentile
   set_prior("cauchy(5, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 5 % percentile increase?
   set_prior("cauchy(-15, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males
-  set_prior("cauchy(0, 1)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 1)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 1)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "method2"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   # note all interaction priors are weak as we don't really have much info to form a prior
   set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "method1:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "method2:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months:IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "method1:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "method2:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months:z.IDS_pref"),
   set_prior("normal(0, 1)", class = "sd")
 )
 
@@ -210,14 +211,14 @@ prior_nae_null_2 <- c(
   set_prior("normal(50, 10)", class = "Intercept"), # note that nae's DV is percentile score, but I will assume at 18 months, the average is at 50 percentile
   set_prior("cauchy(5, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 5 % percentile increase?
   set_prior("cauchy(-15, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males
-  set_prior("cauchy(0, 1)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 1)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 1)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "method2"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   # note all interaction priors are weak as we don't really have much info to form a prior
   set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "method1:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "method2:IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "method1:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "method2:z.IDS_pref"),
   set_prior("normal(0, 1)", class = "sd")
 )
 ```
@@ -229,7 +230,7 @@ prior_uk_1 <- c(
   set_prior("normal(40, 20)", class = "Intercept"), # note that UK's DV is raw score, based on wordbank (oxford CDI), the average (50 percentile) is around 41.6
   set_prior("cauchy(15, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase (proxy from wordbank)
   set_prior("cauchy(-10, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males
-  set_prior("cauchy(0, 1)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 1)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 1)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months"),
   set_prior("normal(0, 1)", class = "sd")
@@ -248,13 +249,13 @@ prior_uk_2 <- c(
   set_prior("normal(40, 20)", class = "Intercept"), # note that UK's DV is raw score, based on wordbank (oxford CDI), the average (50 percentile) is around 41.6
   set_prior("cauchy(15, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase (proxy from wordbank)
   set_prior("cauchy(-10, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males
-  set_prior("cauchy(0, 1)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 1)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 1)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months"),
   # note all interaction priors are weak as we don't really have much info to form a prior
-  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "method1:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months:IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "method1:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months:z.IDS_pref"),
   set_prior("normal(0, 1)", class = "sd")
 )
 
@@ -262,12 +263,12 @@ prior_uk_null_2 <- c(
   set_prior("normal(40, 20)", class = "Intercept"), # note that UK's DV is raw score, based on wordbank (oxford CDI), the average (50 percentile) is around 41.6
   set_prior("cauchy(15, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase (proxy from wordbank)
   set_prior("cauchy(-10, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males
-  set_prior("cauchy(0, 1)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 1)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 1)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 1)", class = "b", coef = "z_age_months"),
   # note all interaction priors are weak as we don't really have much info to form a prior
-  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:IDS_pref"),
-  set_prior("cauchy(0, 1)", class = "b", coef = "method1:IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "CDI.z_age_months:z.IDS_pref"),
+  set_prior("cauchy(0, 1)", class = "b", coef = "method1:z.IDS_pref"),
   set_prior("normal(0, 1)", class = "sd")
 )
 ```
@@ -284,18 +285,18 @@ prior_combined_full_info <- c(
   set_prior("cauchy(0.03, 0.01)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase in UK cdi and lead to 28 words increase in NAE (proxy from wordbank). In general, 15/416 = 3% and 28/680 = 4%
   set_prior("cauchy(-0.03, 0.01)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males, 11/416 ~ 2.6% and Wordbank NAE suggested females knows approximately 27 words than males, 27/680 ~ 3.9%
   set_prior("cauchy(0, 0.01)", class = "b", coef = "language_zone1"), # weak prior as don't know the effect of language zone to CDI score
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 0.01)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 0.01)", class = "b", coef = "method2"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 0.01)", class = "b", coef = "z_age_months"),
   # note all interaction priors are weak as we don't really have much info to form a prior
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "CDI.z_age_months:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "language_zone1:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "method1:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "method2:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "z_age_months:IDS_pref"),
-  set_prior("normal(0, 0.01)", class = "sd"),
-  set_prior("lkj(2)", class = "L")
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "CDI.z_age_months:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "language_zone1:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "method1:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "method2:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "z_age_months:z.IDS_pref"),
+  set_prior("normal(0, 0.01)", class = "sd")#,
+  #set_prior("lkj(2)", class = "L") #LKJ(2) corr is removed as there is no random slope in this model anymore
 ) # adding this as there is a random slope and we need a correlation matrix prior between slope and intercept
 
 prior_combined_null_info <- c(
@@ -303,17 +304,17 @@ prior_combined_null_info <- c(
   set_prior("cauchy(0.03, 0.01)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase in UK cdi and lead to 28 words increase in NAE (proxy from wordbank). In general, 15/416 = 3% and 28/680 = 4%
   set_prior("cauchy(-0.03, 0.01)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males, 11/416 ~ 2.6% and Wordbank NAE suggested females knows approximately 27 words than males, 27/680 ~ 3.9%
   set_prior("cauchy(0, 0.01)", class = "b", coef = "language_zone1"), # weak prior as don't know the effect of language zone to CDI score
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "z.IDS_pref"), # weak prior as don't know the effect of IDS preference to CDI score
   set_prior("cauchy(0, 0.01)", class = "b", coef = "method1"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 0.01)", class = "b", coef = "method2"), # weak prior as methods related to the MB1 study shouldn't influence CDI scores
   set_prior("cauchy(0, 0.01)", class = "b", coef = "z_age_months"),
   # note all interaction priors are weak as we don't really have much info to form a prior
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "CDI.z_age_months:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "method1:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "method2:IDS_pref"),
-  set_prior("cauchy(0, 0.01)", class = "b", coef = "z_age_months:IDS_pref"),
-  set_prior("normal(0, 0.01)", class = "sd"),
-  set_prior("lkj(2)", class = "L")
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "CDI.z_age_months:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "method1:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "method2:z.IDS_pref"),
+  set_prior("cauchy(0, 0.01)", class = "b", coef = "z_age_months:z.IDS_pref"),
+  set_prior("normal(0, 0.01)", class = "sd")#,
+  #set_prior("lkj(2)", class = "L") #LKJ(2) corr is removed as there is no random slope in this model anymore
 ) # adding this as there is a random slope and we need a correlation matrix prior between slope and intercept
 ```
 
@@ -332,7 +333,7 @@ To calcualte Bayes factor for the main effect IDS preference on CDI scores, we n
 Sys.setenv(R_FUTURE_RNG_ONMISUSE = "ignore") # this line of code is needed to get rid of warning message due to the "future" package. https://github.com/satijalab/seurat/issues/3622
 
 lmer.bf_full_1.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
+  z_age_months + method + z.IDS_pref +
   (1 | labid) + (1 | subid_unique),
 data = data.nae,
 family = gaussian,
@@ -382,8 +383,8 @@ BF_full_1.nae
 ```{r}
 
 lmer.bf_full_2.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
   (1 | labid) + (1 | subid_unique),
 data = data.nae,
 family = gaussian,
@@ -400,8 +401,8 @@ summary(lmer.bf_full_2.nae)
 
 
 lmer.bf_null_2.nae <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months +
   (1 | labid) + (1 | subid_unique),
 data = data.nae,
 family = gaussian,
@@ -435,8 +436,9 @@ BF_full_2.nae
 ```{r}
 
 lmer.bf_full_1.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  (1 | labid) + (1 | subid_unique),
+  z_age_months + method + z.IDS_pref +
+  #(1 | labid) + 
+    (1 | subid_unique),
 data = data.uk,
 family = gaussian,
 prior = prior_uk_1,
@@ -453,7 +455,8 @@ summary(lmer.bf_full_1.uk)
 
 lmer.bf_null_1.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender +
   z_age_months + method +
-  (1 | labid) + (1 | subid_unique),
+  #(1 | labid) + 
+    (1 | subid_unique),
 data = data.uk,
 family = gaussian,
 prior = prior_uk_null_1,
@@ -485,9 +488,10 @@ BF_full_1.uk
 
 
 lmer.bf_full_2.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-  (1 | labid) + (1 | subid_unique),
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  #(1 | labid) + 
+    (1 | subid_unique),
 data = data.uk,
 family = gaussian,
 prior = prior_uk_2,
@@ -503,9 +507,10 @@ summary(lmer.bf_full_2.uk)
 
 
 lmer.bf_null_2.uk <- brm(vocab_nwords ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months +
-  (1 | labid) + (1 | subid_unique),
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + 
+  #(1 | labid) + 
+    (1 | subid_unique),
 data = data.uk,
 family = gaussian,
 prior = prior_uk_null_2,
@@ -537,11 +542,10 @@ BF_full_2.uk
 ## Combined model (interaction between lanaguage zone and IDS preference)
 ```{r Bayesian_combined Bayes Factor analysis}
 
-
 lmer.bf_full_3.combined <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-  z_age_months + method + IDS_pref + IDS_pref:language_zone +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-  (1 + CDI.z_age_months | labid) + (1 | subid_unique),
+  z_age_months + method + z.IDS_pref + z.IDS_pref:language_zone +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
 data = data.uk_nae,
 family = gaussian,
 prior = prior_combined_full_info,
@@ -557,9 +561,9 @@ summary(lmer.bf_full_3.combined)
 
 
 lmer.bf_null_3.combined <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
-  (1 + CDI.z_age_months | labid) + (1 | subid_unique),
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
 data = data.uk_nae,
 family = gaussian,
 prior = prior_combined_null_info,

@@ -190,6 +190,12 @@ df.final <- df.final %>%
   unique()
 ```
 
+
+```{r}
+df.final <- df.final %>%
+  mutate(z.IDS_pref = scale(IDS_pref, center = T, scale = F))
+```
+
 ## `CDI.nwords`, `CDI.prop`
 
 For our 3rd research question, we need to compute the proportional CDI scores as the raw score (number of words produced) divided by the total number of words in the CDI used.

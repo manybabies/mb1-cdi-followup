@@ -68,7 +68,7 @@ col_types <- cols(
   vocab_nwords = col_integer(),
   standardized.score.CDI = col_character(),
   standardized.score.CDI.num = col_number(),
-  IDS_pref = col_number(),
+  z.IDS_pref = col_number(),
   language = col_factor(),
   language_zone = col_factor(),
   CDI.error = col_logical(),
@@ -270,7 +270,7 @@ First, we want to assess quickly if there is a direct correlation between IDS pr
 ```{r simple_correlation}
 # Statistics =====================================
 ## North American Sample
-test.pearson.nae <- cor.test(data.nae$IDS_pref,
+test.pearson.nae <- cor.test(data.nae$z.IDS_pref,
   data.nae$z_standardized_CDI,
   alternative = "two.sided", method = "pearson"
 )
@@ -278,14 +278,14 @@ test.pearson.nae <- cor.test(data.nae$IDS_pref,
 test.pearson.nae
 
 ## UK Sample
-test.pearson.uk.18 <- cor.test(data.uk.18$IDS_pref,
+test.pearson.uk.18 <- cor.test(data.uk.18$z.IDS_pref,
   data.uk.18$z_vocab_nwords,
   alternative = "two.sided", method = "pearson"
 )
 
 test.pearson.uk.18
 
-test.pearson.uk.24 <- cor.test(data.uk.24$IDS_pref,
+test.pearson.uk.24 <- cor.test(data.uk.24$z.IDS_pref,
   data.uk.24$z_vocab_nwords,
   alternative = "two.sided", method = "pearson"
 )
@@ -401,17 +401,16 @@ Here, we run a mixed-effects model including only theoretically motivated effect
 # Run models =====================================
 ## NAE
 
-data.nae$centered_IDS_pref <- scale(data.nae$IDS_pref, center = T, scale = F)
 
-lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender + z_age_months + method + centered_IDS_pref + centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months + (1 | labid) + (1 | subid_unique),
+lmer.full.nae <- lmer(standardized.score.CDI.num ~ CDI.z_age_months + gender + z_age_months + method + z.IDS_pref + z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months + (1 | labid) + (1 | subid_unique),
 data = data.nae
 )
 
 summary(lmer.full.nae)
 
 # robust_lmer.full.nae <- robustlmm::rlmer(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-#                         z_age_months + method + centered_IDS_pref +
-#                         centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months +
+#                         z_age_months + method + z.IDS_pref +
+#                         z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
 #                         (1 | labid),
 #                       data = data.nae)
 #
@@ -423,10 +422,10 @@ full.nae_pvalue <- anova(lmer.full.nae) %>%
 
 # ==========
 # Sequentially removed random effects:
-# IDS_pref:z_age_months
-# IDS_pref:CDI.z_age_months
-# IDS_pref:method
-# IDS_pref
+# z.IDS_pref:z_age_months
+# z.IDS_pref:CDI.z_age_months
+# z.IDS_pref:method
+# z.IDS_pref
 # method
 # z_age_months
 # gender
@@ -451,8 +450,8 @@ plot_model(lmer.full.nae, type = "diag") ## we do have right-skewed normality of
 
 # Third, check autocorrelation
 re_run_lme.full.nae <- nlme::lme(standardized.score.CDI.num ~ CDI.z_age_months + gender +
-  z_age_months + method + centered_IDS_pref +
-  centered_IDS_pref:method + centered_IDS_pref:CDI.z_age_months + centered_IDS_pref:z_age_months,
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months,
 random = ~ 1 | labid,
 method = "REML",
 data = data.nae, na.action = na.exclude
@@ -467,9 +466,10 @@ car::vif(lmer.full.nae) # we do see a multicollineartiy for the IDS preference v
 
 ### UK full model
 ```{r}
+
 lmer.full.uk <- lmer(vocab_nwords ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
   # (1 | labid) +
   (1 | subid_unique),
 data = data.uk
@@ -482,10 +482,10 @@ full.uk_pvalue <- anova(lmer.full.uk) %>%
 
 # ==========
 # Sequentially removed random effects:
-# IDS_pref:z_age_months
-# IDS_pref:CDI.z_age_months
-# IDS_pref:method
-# IDS_pref
+# z.IDS_pref:z_age_months
+# z.IDS_pref:CDI.z_age_months
+# z.IDS_pref:method
+# z.IDS_pref
 # method
 # z_age_months
 # gender
@@ -510,8 +510,8 @@ plot_model(lmer.full.uk, type = "diag") ## we do have right-skewed normality of 
 
 # Third, check autocorrelation
 re_run_lme.full.uk <- nlme::lme(vocab_nwords ~ CDI.z_age_months + gender +
-  z_age_months + method + IDS_pref +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months,
 random = ~ 1 | labid,
 method = "REML",
 data = data.nae, na.action = na.exclude
@@ -584,8 +584,8 @@ We can then run the planned combined analysis adding the main effect and interac
 
 ```{r uk_nae_lmer}
 lmer.full.uk_nae <- lmer(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-  z_age_months + method + IDS_pref + IDS_pref:language_zone +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months +
+  z_age_months + method + z.IDS_pref + z.IDS_pref:language_zone +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
   (1 | labid) + (1 | subid_unique),
 data = data.uk_nae
 )
@@ -597,11 +597,11 @@ combined.full.uk_nae_pvalue <- anova(lmer.full.uk_nae) %>%
 
 # ==========
 # Sequentially removed random effects:
-# IDS_pref:z_age_months
-# IDS_pref:CDI.z_age_months
-# IDS_pref:method
-# IDS_pref:language_zone
-# IDS_pref
+# z.IDS_pref:z_age_months
+# z.IDS_pref:CDI.z_age_months
+# z.IDS_pref:method
+# z.IDS_pref:language_zone
+# z.IDS_pref
 # method
 # z_age_months
 # gender
@@ -626,8 +626,8 @@ plot_model(lmer.full.uk_nae, type = "diag") ## we do have right-skewed normality
 
 # Third, check autocorrelation
 re_run_lme.full.uk_nae <- nlme::lme(CDI.prop ~ CDI.z_age_months + language_zone + gender +
-  z_age_months + method + IDS_pref + IDS_pref:language_zone +
-  IDS_pref:method + IDS_pref:CDI.z_age_months + IDS_pref:z_age_months,
+  z_age_months + method + z.IDS_pref + z.IDS_pref:language_zone +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months,
 random = ~ 1 | labid,
 method = "REML",
 data = data.uk_nae, na.action = na.exclude
