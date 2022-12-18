@@ -22,13 +22,6 @@ library(sjPlot)
 library(rstudioapi) 
 ```
 
-Response to questions:
-
-1. I explored the distributions for the predictors because I wasn't familiar with the data set and I needed to see how it looks in case there is anything unexpected. The only issue that may be specific to the beta regression would be if the percentiles weren't computed properly. There are no special considerations for beta regressions in terms of the distributions of the predictors.
-
-2. Yes the main assumption specific to beta-regression is that the variance and the mean of the residuals are roughly the same. We test this by looking at overdispersion. The model doesn't show evidence of overdispersion, though it does show evidence of underdipersion which may indicate overly conservative p values. Though this doesn't really play a role because the full-null comparison was not significant. Testing the stability of the model is not unique to beta-regression analyses. It is a way to measure the influence of specific levels of random effects on the results of the model. If removing certain levels makes massive changes in the results then we would have an unstable model, this was not the case in this model.
-
-3. The full vs pruned model was something that was decided within the paper. I didn't make this decision. I just ran the closest model possible to the original planned analyses, which had the same fixed and mixed effects as the pruned model. I only report the pruned model, I did not run the full model described above. However, I do refer to a "full" model in my code, but this is just a naming convention I use. Only the pruned model is being reported on.
 ```{r preprocessing, echo = TRUE, include = TRUE, warning = FALSE}
 rm(list = ls())
 #always start by setting the current directory to the directory of this script file.
@@ -38,10 +31,13 @@ source("diagnostic_fcns.r")
 # Load data from a .txt file
 imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt", stringsAsFactors = TRUE, header = TRUE) 
 
+#Data set that will be used for the analyses.
 data <- data.frame(vocabulary_percentile = imported$daily_percentile, ids_pref = imported$IDS_pref, test_age = imported$age_days, cdi_age = imported$CDI.agedays, protocol = imported$method, gender = imported$gender, lab = imported$labid, participant = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords, cdi.age_range = imported$CDI.agerange)
 
+#ensuring 
 data$cdi.age_range <- as.factor(data$cdi.age_range)
-#investigate the distribution of each variable
+
+#The following plots/histograms are not intended for publication. They are only used to understand the distribution of each variable.
 hist(data$vocabulary_percentile, breaks = 100) #evenly distributed
 
 hist(data$ids_pref) #normally distributed
@@ -92,9 +88,10 @@ vif(coll_model)
 
 #Test for stability by dropping levels of the random effects one at a time and comparing the estimates derived
 #from models fitted on the respective subsets with those obtained for the full data set. There don't seem to be major issues with the stability of the model coefficients.
-# full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
-# table(full.stab$detailed$converged)
-# m.stab.plot(full.stab$summary[, -1])
+#Takes a while to run
+full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
+table(full.stab$detailed$converged)
+m.stab.plot(full.stab$summary[, -1])
 
 null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
 
@@ -102,18 +99,5 @@ null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + 
 as.data.frame(anova(null, full, test="Chisq"))
 
 summary(full)
-
-tab_model(full, file = "plot.png")
-```
-
-```{r plots, include = TRUE, warning= FALSE}
-ggplot(data = t.data, aes(y = vocabulary_percentile)) +
-  geom_histogram(bin = 100)+
-  facet_wrap(.~lab)
-  
-ggplot(data = t.data, aes(x = cdi.age_range, y = vocabulary_percentile, colour = cdi.age_range,)) +
-  geom_boxplot()+
-  geom_point()+
-  facet_wrap(.~lab)
 ```
 
