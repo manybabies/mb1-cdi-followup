@@ -266,7 +266,7 @@ ggplot(data.total,
   theme(legend.position = "bottom")
 ```
 
-# Reliability check
+# Sensitivity analysis incorporating reliability information
 We will compute ICC3k using psych package. In the following, we will examine the reliability in different exclusion criteria. Note that this analysis is not reported in the manuscript, as a related and more powerful analysis using the full MB1 dataset was reported in Byers-Heinlein et al. (2021). Preprint: https://psyarxiv.com/u37fy/ 
 
 ```{r}
@@ -275,14 +275,6 @@ We will compute ICC3k using psych package. In the following, we will examine the
 mb1_excl2_icc <- mb1_wide_excl2 %>%
 select(-lab, -subid, -method, -age_group)
 
-mb1_excl4_icc <- mb1_wide_excl4 %>%
-select(-lab, -subid, -method, -age_group)
-
-mb1_excl6_icc <- mb1_wide_excl6 %>%
-select(-lab, -subid, -method, -age_group)
-
-mb1_excl8_icc <- mb1_wide_excl8 %>%
-select(-lab, -subid, -method, -age_group)
 ```
 
 Compute ICC values and pull out ICC3k.
@@ -291,25 +283,16 @@ Compute ICC values and pull out ICC3k.
 icctable_excl2 <- ICC(mb1_excl2_icc, missing = FALSE, lmer = TRUE) #ICC3k = .124
 icc3k_excl2 <- icctable_excl2$results %>% filter(type == "ICC3k") %>% select("ICC") %>% pull() # Use these values, which represent all babies with at least two trials, same as MB1-CDI
 
-# Other values for other exclusion criteria- exploratory/not used
+# Other values for other exclusion criteria- exploratory/not used (just for informational purposes)
 
-icctable_excl4 <- ICC(mb1_excl4_icc, missing = FALSE, lmer = TRUE) #ICC3k = .144
-icc3k_excl4 <- icctable_excl4$results %>% filter(type == "ICC3k") %>% select("ICC") %>% pull()
-
-icctable_excl6 <- ICC(mb1_excl6_icc, missing = FALSE, lmer = TRUE) #ICC3k = .142
-icc3k_excl6 <- icctable_excl6$results %>% filter(type == "ICC3k") %>% select("ICC") %>% pull()
-
-icctable_excl8 <- ICC(mb1_excl8_icc, missing = FALSE, lmer = TRUE) #ICC3k = .205
-icc3k_excl8 <- icctable_excl8$results %>% filter(type == "ICC3k") %>% select("ICC") %>% pull()
 ```
 
 Power analysis for ICC
 ```{r}
 
-# Previous research suggests that CDI test-retest reliability is .86-.90 (Dale et al., 1989, Jahn-Smilo et al., 2001; Simonsen et al., 2014)
+# Previous research suggests that CDI test-retest reliability is .86-.90 (Dale et al., 1989, Jahn-Smilo et al., 2001; Simonsen et al., 2014). We will go with .86 to be conservative.
 # What power do we have to detect the correlation between CDI and IDS preference, given the reliability of the CDI and the reliability of IDS preference at different exclusion criteria?
 
-# Infants with complete data have highest reliability, = .206
 
 # Functions to compute spearman-brown prophecy formula
 spearman_brown_obs <- function(r_true, rxx, ryy) {
@@ -322,34 +305,22 @@ spearman_brown_true <- function(r_obs, rxx, ryy) {
   return(r_true)
 }
 
-# Number of infants in sample based on different exclusion criteria
-n_excl2 <- nrow(mb1_excl2_icc) # n = 467
-n_excl4 <- nrow(mb1_excl4_icc) # n = 361
-n_excl6 <- nrow(mb1_excl6_icc) # n = 293
-n_excl8 <- nrow(mb1_excl8_icc) # n = 142
+
+# Number of infants in each subgroup
+n_nae <- length(data.nae$subid)
+n_uk <- length(data.uk$subid)
 
 
-
-# Observed correlations we can detect at 80% power with each sample size under different exclusion criteria
-pwr_excl2 <- round(pwr.r.test(n = n_excl2, power = .8)$r,2) # .13
-pwr_excl4 <- round(pwr.r.test(n = n_excl4, power = .8)$r,2) # .15
-pwr_excl6 <- round(pwr.r.test(n = n_excl6, power = .8)$r,2) # .16
-pwr_excl8 <- round(pwr.r.test(n = n_excl8, power = .8)$r,2) # .23
-
-# True correlations that can be detected given ICC associated with each exclusion criterion, assuming CDI reliability of .86
-spearman_brown_true(pwr_excl2, .86, icc3k_excl2) # r = .398
-spearman_brown_true(pwr_excl4, .86, icc3k_excl4) # r = .425
-spearman_brown_true(pwr_excl6, .86, icc3k_excl6) # r = .457
-spearman_brown_true(pwr_excl8, .86, icc3k_excl8) # r = .548
-
-# True correlations that can be detected given ICC associated with each exclusion criterion, assuming CDI reliability of .95
-spearman_brown_true(pwr_excl2, .95, icc3k_excl2) # r = .387
-spearman_brown_true(pwr_excl4, .95, icc3k_excl4) # r = .405
-spearman_brown_true(pwr_excl6, .95, icc3k_excl6) # r = .435
-spearman_brown_true(pwr_excl8, .95, icc3k_excl8) # r = .521
+# Observed correlations we can detect at 80% power with sample size of each subgroup
+pwr_nae <- round(pwr.r.test(n = n_nae, power = .8)$r,2) # .15
+pwr_uk <- round(pwr.r.test(n = n_uk, power = .8)$r,2) # .29
 
 
-# Even with reduced reliability, the most sensitive approach is to use the loosest exclusion criterion. We have 80% power to detect a true underlying correlation of .369-.351 or greater, given CDI reliability of .89-95, and IDS preference reliability of .12-.22. But still, this is an awfully strong true correlation - do we really expect the effect of IDS preference on CDI to be that strong?
+# Applying the spearman-brown prophecy formula, true correlations that can be detected given ICC associated with each exclusion criterion, assuming CDI reliability of .86
+spearman_brown_true(pwr_nae, .86, icc3k_excl2) # r = .46
+spearman_brown_true(pwr_uk, .86, icc3k_excl2) # r = .89
+
+
 
 ```
 
