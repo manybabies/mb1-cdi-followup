@@ -56,7 +56,9 @@ max_age_CDI1 <- nrow(korean)
 korean$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ### Oxford CDI percentiles
@@ -79,7 +81,9 @@ max_age_CDI1 <- nrow(oxford)
 oxford$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ### Web CDI percentiles
@@ -102,7 +106,9 @@ max_age_CDI1 <- nrow(web_cdi)
 web_cdi$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ### Norwegian CDI percentiles
@@ -126,7 +132,9 @@ max_age_CDI1 <- nrow(norwegian)
 norwegian$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ### German CDI percentiles
@@ -149,7 +157,9 @@ max_age_CDI1 <- nrow(german)
 german$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ### Dutch CDI percentiles
@@ -172,7 +182,9 @@ max_age_CDI1 <- nrow(dutch)
 dutch$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ### French CDI percentiles
@@ -195,7 +207,9 @@ max_age_CDI1 <- nrow(french)
 french$Age <- c(1:max_age_CDI1)
 
 # The value in each cell indicates the number of words a child of a given age at a given percentile ranking would know and produce.
-# The columns indicate the percentile ranking and the rows indicate the age in days
+# The columns indicate the percentile ranking and the rows indicate the age in days.
+# There are zeroes for all the rows that the age in days is outside of the validated age for the CDI tool.
+# Please scroll until you move past the zeroes and onto the actual vocabulary values assigned to each percentile ranking for each age in days.
 ```
 
 ## Compute CDI in percentiles for production
@@ -276,7 +290,7 @@ for (i in 1:nrow(d1))
     perc_15plus <- as.numeric(which.min(abs(perc_CDI1_prod[age_row, c(1:99)] - score)))
 
     if (score == 0) {
-      # Some infants have a score of 0 even at different ages and this can be perfectly normally depending on their age, rather than assigning them 0 percentiles we            assign them the percentile they were divided by 2 and rounded up. This avoids systematic zeros while maintaining the properties of the distribution.
+      # Some infants have a score of 0 even at different ages and this can be perfectly normally depending on their age, rather than assigning them 0 percentiles we assign them the percentile they were divided by 2 and rounded up. This avoids systematic zeros while maintaining the properties of the distribution.
       perc_15plus <- ceiling(perc_15plus / 2)
     }
   }
@@ -306,36 +320,18 @@ for (i in 1:nrow(d1))
 }
 
 # Add a column for the CDI production score in percentiles for T1
-d1$percentile <- prod_T1
-```
+d1$daily_percentile <- prod_T1
 
-## Add swiss data and visualize
 
-```{r swiss}
-# read dataset
+# The Swiss data already had the percentiles computed using the same method as above. This code is to include the correctly computed Swiss
+# percentiles into the column daily_percentile for the joint data set. 
+
+# read data set
 swiss_data <- read.delim("data/cdi_percentile/zurich_data.txt", header = T)
 
-swiss_data$CDI.agerange <- NA
-swiss_data$CDI.error <- FALSE
+# Include only the participants where the babies were within the right age to be tested with the CDI tool.
+d1[d1$labid == "weltentdeckerzurich", "daily_percentile"] <- swiss_data[swiss_data$CDIagerange == "18","percentile"]
 
-names(swiss_data)[names(swiss_data) == "percentile"] <- "percentile_2"
-
-swiss_data1 <- swiss_data[c("subid", "CDI.agedays", "percentile_2")]
-
-final_swiss <- d1[d1$labid == "weltentdeckerzurich", ]
-
-d1 <- d1[!d1$labid == "weltentdeckerzurich", ]
-
-final_swiss <- inner_join(final_swiss, swiss_data1)
-
-final_swiss$percentile <- NULL
-
-names(final_swiss)[names(final_swiss) == "percentile_2"] <- "percentile"
-
-# Add swiss data to the final sample
-d1_total <- rbind(d1, final_swiss)
-
-colnames(d1_total)[colnames(d1_total) == "percentile"] <- "daily_percentile"
-
+# Write out the joint data set. 
 write.table(d1_total, "data/cdi_percentile/percentiles_manybabies_cdi.txt", sep = "\t", row.names = FALSE, quote = FALSE)
 ```
