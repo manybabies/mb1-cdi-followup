@@ -23,9 +23,7 @@ library(rstudioapi)
 ```
 
 ```{r preprocessing, echo = TRUE, include = TRUE, warning = FALSE}
-rm(list = ls())
 # Always start by setting the current directory to the directory of this script file.
-setwd(dirname(getActiveDocumentContext()$path))
 source("glmmTMB_stability.r")
 source("diagnostic_fcns.r")
 # Load data from a .txt file

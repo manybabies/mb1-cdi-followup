@@ -333,5 +333,6 @@ swiss_data <- read.delim("data/cdi_percentile/zurich_data.txt", header = T)
 d1[d1$labid == "weltentdeckerzurich", "daily_percentile"] <- swiss_data[swiss_data$CDIagerange == "18","percentile"]
 
 # Write out the joint data set. 
-write.table(d1_total, "data/cdi_percentile/percentiles_manybabies_cdi.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(d1, "data/cdi_percentile/percentiles_manybabies_cdi.txt", 
+            sep = "\t", row.names = FALSE, quote = FALSE)
 ```

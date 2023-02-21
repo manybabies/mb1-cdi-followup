@@ -11,7 +11,7 @@ output:
 
 # Introduction
 
-In this script, we are exploring whether using the residual IDS preference model (after controling for method and IDS test age) as predictors in the mixed-level models will yield similiar results.
+In this script, we are exploring whether using the residual IDS preference model (after controlling for method and IDS test age) as predictors in the mixed-level models will yield similiar results.
 
 The following analysis codes were adapted from 03_confirmatory_analysis.Rmd
 

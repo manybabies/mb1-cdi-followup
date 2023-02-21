@@ -193,7 +193,7 @@ df.final <- df.final %>%
 
 ```{r}
 df.final <- df.final %>%
-  mutate(z.IDS_pref = scale(IDS_pref, center = T, scale = F))
+  mutate(z.IDS_pref = as.numeric(scale(IDS_pref, center = T, scale = F)))
 ```
 
 ## `CDI.nwords`, `CDI.prop`
@@ -221,11 +221,11 @@ A common way to get better computational models both in terms of estimate precis
 ```{r z_age_days}
 df.final <- df.final %>%
   mutate(
-    z_age_months = scale(age_days, scale = F) / 365.25 * 12,
-    CDI.z_age_months = scale(CDI.agedays, scale = F) / 365.25 * 12
+    z_age_months = as.numeric(scale(age_days, scale = F)) / 365.25 * 12,
+    CDI.z_age_months = as.numeric(scale(CDI.agedays, scale = F)) / 365.25 * 12
   ) %>%
   group_by(CDI.agerange) %>%
-  mutate(CDI.grouped.z_age_months = scale(CDI.agedays, scale = F) / 365.25 * 12) %>%
+  mutate(CDI.grouped.z_age_months = as.numeric(scale(CDI.agedays, scale = F)) / 365.25 * 12) %>%
   ungroup()
 ```
 
@@ -236,8 +236,8 @@ We discussed above the interest of scaling numerical variables. In our case, our
 ```{r z_CDI_scores}
 df.final <- df.final %>%
   mutate(
-    z_standardized_CDI = scale(standardized.score.CDI.num),
-    z_vocab_nwords = scale(vocab_nwords)
+    z_standardized_CDI = as.numeric(scale(standardized.score.CDI.num)),
+    z_vocab_nwords = as.numeric(scale(vocab_nwords))
   )
 
 # remove extra dimension from z score variables (value of 1 in second column prevented write_csv in next chunk)
@@ -246,6 +246,7 @@ df.final$CDI.z_age_months <- drop(df.final$CDI.z_age_months)
 df.final$CDI.grouped.z_age_months <- drop(df.final$CDI.grouped.z_age_months)
 df.final$z_standardized_CDI <- drop(df.final$z_standardized_CDI)
 df.final$z_vocab_nwords <- drop(df.final$z_vocab_nwords)
+df.final$z.IDS_pref <- drop(df.final$z.IDS_pref)
 ```
 
 # Conclusion
