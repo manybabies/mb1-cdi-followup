@@ -85,6 +85,9 @@ full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
 table(full.stab$detailed$converged)
 m.stab.plot(full.stab$summary[, -1])
 
+# The same structure as the full model but removes the key variable of interest "IDS_pref" and all its interacting terms.
+# This will help control for the multitude of possible models that we could run with this term and if this model is found to be 
+# statistically significantly different from the full model, that suggests "IDS_pref" is associated with daily_percentile. 
 null <- glmmTMB(daily_percentile ~ z.age_days + CDI.agerange + method + nae + gender + (1 | labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
 
 # full - null model comparison reveals that the effect of z.IDS_pref doesn't significantly improve the model fit.
