@@ -5,9 +5,9 @@ date: "03/2022"
 output: html_document
 ---
 ## Full Model (This model was not used in the analyses):
-# CDI vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + (1 + ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender | lab)
+# CDI vocabulary ~  ids_pref:age_days + ids_pref:CDI.agedays + ids_pref:method + ids_pref + CDI.agedays + gender + (1 + ids_pref:age_days + ids_pref:CDI.agedays + ids_pref:method + ids_pref + CDI.agedays + gender | labid)
 ## Pruned Model (only this model was tested in the analyses):
-# CDI_vocabulary ~  ids_pref:test_age + ids_pref:cdi_age + ids_pref:protocol + ids_pref + cdi_age + gender + protocol + test_age + ids_pref : nae + nae + (1 | lab) + (1| participant)
+# CDI_vocabulary ~  ids_pref:age_days + ids_pref:CDI.agedays + ids_pref:method + ids_pref + CDI.agedays + gender + method + age_days + ids_pref : nae + nae + (1 | labid) + (1| subid_unique)
 ```{r setup, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
@@ -23,47 +23,49 @@ library(rstudioapi)
 ```
 
 ```{r preprocessing, echo = TRUE, include = TRUE, warning = FALSE}
+rm(list = ls())
 # Always start by setting the current directory to the directory of this script file.
+setwd(dirname(getActiveDocumentContext()$path))
 source("glmmTMB_stability.r")
 source("diagnostic_fcns.r")
 # Load data from a .txt file
 imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt", stringsAsFactors = TRUE, header = TRUE) 
 
 # Data set that will be used for the analyses.
-data <- data.frame(vocabulary_percentile = imported$daily_percentile, ids_pref = imported$IDS_pref, test_age = imported$age_days, cdi_age = imported$CDI.agedays, protocol = imported$method, gender = imported$gender, lab = imported$labid, participant = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords, cdi.age_range = imported$CDI.agerange)
+data <- data.frame(daily_percentile = imported$daily_percentile, IDS_pref = imported$IDS_pref, age_days = imported$age_days, CDI.agedays = imported$CDI.agedays, method = imported$method, gender = imported$gender, labid = imported$labid, subid_unique = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords, CDI.agerange = imported$CDI.agerange)
 
 # These are only used to understand the distribution of each variable.
-hist(data$vocabulary_percentile, breaks = 100)
-hist(data$ids_pref)
-hist(data$test_age)
-hist(data$cdi_age)
-plot(data$protocol)
+hist(data$daily_percentile, breaks = 100)
+hist(data$IDS_pref)
+hist(data$age_days)
+hist(data$CDI.agedays)
+plot(data$method)
 plot(data$gender)
-plot(data$lab)
-plot(data$participant)
+plot(data$labid)
+plot(data$subid_unique)
 plot(table(data$nae))
 
 # Ensuring the value is a factor because it is a categorical variable.
-data$cdi.age_range <- as.factor(data$cdi.age_range)
+data$CDI.agerange <- as.factor(data$CDI.agerange)
 
 # Ensuring the response variable is between 0 and 1, as is required for a beta error model.
-data$vocabulary_percentile[data$vocabulary_percentile == 0] <- 1
+data$daily_percentile[data$daily_percentile == 0] <- 1
 
-if(any(data$vocabulary_percentile > 1))
+if(any(data$daily_percentile > 1))
 {
-  data$vocabulary_percentile <- data$vocabulary_percentile / 100
+  data$daily_percentile <- data$daily_percentile / 100
 }
 
 #get the data with all NA values removed.
-full.fe.re <- fe.re.tab(fe.model = "vocabulary_percentile ~ ids_pref * test_age + ids_pref * cdi.age_range + ids_pref * protocol + ids_pref * nae + gender", re = c("lab", "participant"), data = data)
+full.fe.re <- fe.re.tab(fe.model = "daily_percentile ~ IDS_pref * age_days + IDS_pref * CDI.agerange + IDS_pref * method + IDS_pref * nae + gender", re = c("labid", "subid_unique"), data = data)
 t.data <- full.fe.re$data
 
 #z transformation of the predictors to help with the interpretation of the model.
-t.data$z.ids_pref <- as.vector(scale(t.data$ids_pref))
-t.data$z.test_age <- as.vector(scale(t.data$test_age))
+t.data$z.IDS_pref <- as.vector(scale(t.data$IDS_pref))
+t.data$z.age_days <- as.vector(scale(t.data$age_days))
 
 #Running the mixed effects model with a beta error distribution for the response variable.
-full <- glmmTMB(vocabulary_percentile ~ z.ids_pref * z.test_age + z.ids_pref * cdi.age_range + z.ids_pref * protocol + z.ids_pref * nae + gender + (1 |lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
+full <- glmmTMB(daily_percentile ~ z.IDS_pref * z.age_days + z.IDS_pref * CDI.agerange + z.IDS_pref * method + z.IDS_pref * nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
 
 #Checking the assumption that variance and the mean are linked. It was met with this model.
 overdisp.test(full)
@@ -72,7 +74,7 @@ overdisp.test(full)
 ranef.diagn.plot(full) #The random effects appear normally distributed.
 
 #Test for collinearity between the predictors. There are no signs of collinearity.
-coll_model <- lm(vocabulary_percentile ~ z.ids_pref + z.test_age + cdi.age_range + protocol + nae + gender, data = t.data)
+coll_model <- lm(daily_percentile ~ z.IDS_pref + z.age_days + CDI.agerange + method + nae + gender, data = t.data)
 library(car)
 vif(coll_model)
 
@@ -83,9 +85,9 @@ full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
 table(full.stab$detailed$converged)
 m.stab.plot(full.stab$summary[, -1])
 
-null <- glmmTMB(vocabulary_percentile ~ z.test_age + cdi.age_range + protocol + nae + gender + (1 | lab) + (1 | participant), family = beta_family(link = "logit"), data = t.data)
+null <- glmmTMB(daily_percentile ~ z.age_days + CDI.agerange + method + nae + gender + (1 | labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
 
-# full - null model comparison reveals that the effect of z.ids_pref doesn't significantly improve the model fit.
+# full - null model comparison reveals that the effect of z.IDS_pref doesn't significantly improve the model fit.
 as.data.frame(anova(null, full, test="Chisq"))
 
 summary(full)
