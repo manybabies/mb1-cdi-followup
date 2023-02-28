@@ -1487,7 +1487,7 @@ border-radius: 0px;
 <h1 class="title toc-ignore">MB1 CDI Follow-up Confirmatory Analyses:
 Bayesian</h1>
 <h4 class="author">The ManyBabies Analysis Team</h4>
-<h4 class="date">Mon Feb 20 22:15:09 2023</h4>
+<h4 class="date">Mon Feb 27 20:10:34 2023</h4>
 
 </div>
 
@@ -1829,12 +1829,34 @@ seed = 456
 )</code></pre>
 <pre><code>## Warning: Rows containing NAs were excluded from the model.</code></pre>
 <pre><code>## Compiling Stan program...</code></pre>
+<pre><code>## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;689c08011d3afe3a29ff31aa4b543110&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 7e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.7 seconds.
+## Chain 1: Gradient evaluation took 5.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.51 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1851,15 +1873,15 @@ seed = 456
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 2.51896 seconds (Warm-up)
-## Chain 1:                2.54924 seconds (Sampling)
-## Chain 1:                5.0682 seconds (Total)
+## Chain 1:  Elapsed Time: 1.49227 seconds (Warm-up)
+## Chain 1:                1.06001 seconds (Sampling)
+## Chain 1:                2.55228 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;689c08011d3afe3a29ff31aa4b543110&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 6.8e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.68 seconds.
+## Chain 2: Gradient evaluation took 5.8e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.58 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1876,15 +1898,15 @@ seed = 456
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 2.93958 seconds (Warm-up)
-## Chain 2:                2.48312 seconds (Sampling)
-## Chain 2:                5.4227 seconds (Total)
+## Chain 2:  Elapsed Time: 1.71134 seconds (Warm-up)
+## Chain 2:                1.44515 seconds (Sampling)
+## Chain 2:                3.15648 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;689c08011d3afe3a29ff31aa4b543110&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 9.2e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.92 seconds.
+## Chain 3: Gradient evaluation took 5.2e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.52 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1901,15 +1923,15 @@ seed = 456
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 2.69154 seconds (Warm-up)
-## Chain 3:                2.59092 seconds (Sampling)
-## Chain 3:                5.28247 seconds (Total)
+## Chain 3:  Elapsed Time: 1.56568 seconds (Warm-up)
+## Chain 3:                1.39954 seconds (Sampling)
+## Chain 3:                2.96523 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;689c08011d3afe3a29ff31aa4b543110&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 6.8e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.68 seconds.
+## Chain 4: Gradient evaluation took 5.2e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.52 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1926,9 +1948,9 @@ seed = 456
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 3.12597 seconds (Warm-up)
-## Chain 4:                2.51145 seconds (Sampling)
-## Chain 4:                5.63742 seconds (Total)
+## Chain 4:  Elapsed Time: 1.70152 seconds (Warm-up)
+## Chain 4:                1.40946 seconds (Sampling)
+## Chain 4:                3.11098 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_full_1.nae)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -1941,25 +1963,25 @@ seed = 456
 ## Group-Level Effects: 
 ## ~labid (Number of levels: 8) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     1.08      0.75     0.04     2.80 1.00     5373     4608
+## sd(Intercept)     1.06      0.76     0.05     2.77 1.00     4741     4382
 ## 
 ## ~subid_unique (Number of levels: 211) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.88      0.67     0.03     2.54 1.00     5888     4050
+## sd(Intercept)     0.90      0.67     0.04     2.50 1.00     5918     4035
 ## 
 ## Population-Level Effects: 
 ##                  Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept           39.67      2.12    35.36    43.78 1.00    12081     5640
-## CDI.z_age_months     0.96      0.56    -0.13     2.04 1.00    18955     5592
-## gender1             -1.87      1.63    -5.10     1.35 1.00    18732     5945
-## z_age_months        -0.14      0.42    -0.97     0.68 1.00    19310     6050
-## method1              0.11      1.27    -2.46     2.81 1.00    12072     4861
-## method2             -0.22      1.93    -4.76     3.65 1.00    10950     2883
-## z.IDS_pref          -0.71      2.26    -6.49     2.98 1.00     7924     2971
+## Intercept           39.69      2.13    35.55    43.77 1.00     9250     4607
+## CDI.z_age_months     0.96      0.57    -0.13     2.09 1.00    17827     5392
+## gender1             -1.87      1.61    -5.03     1.27 1.00    20035     5807
+## z_age_months        -0.14      0.42    -0.96     0.67 1.00    15485     6213
+## method1              0.12      1.28    -2.36     2.82 1.00     9618     3583
+## method2             -0.21      1.96    -4.36     3.46 1.00     7651     3157
+## z.IDS_pref          -0.77      2.26    -6.81     2.77 1.00     8081     2738
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    27.97      1.13    25.91    30.29 1.00    19025     5848
+## sigma    27.99      1.19    25.78    30.46 1.00    16213     5147
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -1979,12 +2001,34 @@ seed = 123
 )</code></pre>
 <pre><code>## Warning: Rows containing NAs were excluded from the model.</code></pre>
 <pre><code>## Compiling Stan program...
-## Start sampling</code></pre>
+## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
+<pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;ebcd4fd32cb45ee74df683b088b326f5&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 8.2e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.82 seconds.
+## Chain 1: Gradient evaluation took 5.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.51 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2001,15 +2045,15 @@ seed = 123
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 2.61441 seconds (Warm-up)
-## Chain 1:                2.1243 seconds (Sampling)
-## Chain 1:                4.7387 seconds (Total)
+## Chain 1:  Elapsed Time: 1.44884 seconds (Warm-up)
+## Chain 1:                1.43448 seconds (Sampling)
+## Chain 1:                2.88332 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ebcd4fd32cb45ee74df683b088b326f5&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 6.8e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.68 seconds.
+## Chain 2: Gradient evaluation took 5.1e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.51 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -2026,15 +2070,15 @@ seed = 123
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 2.63385 seconds (Warm-up)
-## Chain 2:                1.41956 seconds (Sampling)
-## Chain 2:                4.05341 seconds (Total)
+## Chain 2:  Elapsed Time: 1.50122 seconds (Warm-up)
+## Chain 2:                1.43229 seconds (Sampling)
+## Chain 2:                2.93351 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ebcd4fd32cb45ee74df683b088b326f5&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 6.7e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.67 seconds.
+## Chain 3: Gradient evaluation took 4.8e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.48 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -2051,15 +2095,15 @@ seed = 123
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 2.73689 seconds (Warm-up)
-## Chain 3:                2.54654 seconds (Sampling)
-## Chain 3:                5.28343 seconds (Total)
+## Chain 3:  Elapsed Time: 1.47336 seconds (Warm-up)
+## Chain 3:                1.41098 seconds (Sampling)
+## Chain 3:                2.88433 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ebcd4fd32cb45ee74df683b088b326f5&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 6.2e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.62 seconds.
+## Chain 4: Gradient evaluation took 5.3e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.53 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -2076,9 +2120,9 @@ seed = 123
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 2.54561 seconds (Warm-up)
-## Chain 4:                1.97011 seconds (Sampling)
-## Chain 4:                4.51572 seconds (Total)
+## Chain 4:  Elapsed Time: 1.4566 seconds (Warm-up)
+## Chain 4:                1.1282 seconds (Sampling)
+## Chain 4:                2.5848 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_null_1.nae)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -2091,24 +2135,24 @@ seed = 123
 ## Group-Level Effects: 
 ## ~labid (Number of levels: 8) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     1.05      0.77     0.04     2.85 1.00     4280     2867
+## sd(Intercept)     1.07      0.77     0.05     2.83 1.00     5838     4859
 ## 
 ## ~subid_unique (Number of levels: 211) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.88      0.66     0.03     2.44 1.00     5277     3921
+## sd(Intercept)     0.88      0.65     0.04     2.44 1.00     6145     4831
 ## 
 ## Population-Level Effects: 
 ##                  Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept           39.73      2.12    35.45    43.76 1.00     9037     4808
-## CDI.z_age_months     0.96      0.57    -0.16     2.09 1.00    11600     5290
-## gender1             -1.92      1.62    -5.10     1.21 1.00    11264     6047
-## z_age_months        -0.15      0.42    -0.99     0.67 1.00    10319     6226
-## method1              0.14      1.27    -2.38     2.97 1.00     9013     4392
-## method2             -0.22      1.91    -4.66     3.53 1.00     7501     2806
+## Intercept           39.70      2.17    35.39    43.94 1.00    12612     5595
+## CDI.z_age_months     0.96      0.56    -0.11     2.06 1.00    18701     6111
+## gender1             -1.90      1.64    -5.08     1.32 1.00    16680     4931
+## z_age_months        -0.15      0.42    -0.98     0.66 1.00    16634     5545
+## method1              0.11      1.25    -2.38     2.86 1.00    10868     4779
+## method2             -0.19      1.91    -4.58     3.70 1.00     9829     3558
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    28.00      1.14    25.88    30.34 1.00    11258     6133
+## sigma    27.99      1.14    25.84    30.36 1.00    15831     4745
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -2124,7 +2168,7 @@ Bridge sampling</p>
 <p>Bayes factor</p>
 <pre class="r"><code>BF_full_1.nae &lt;- bayes_factor(marloglik_full_1.nae, marloglik_null_1.nae)
 BF_full_1.nae</code></pre>
-<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.87975</code></pre>
+<pre><code>## Estimated Bayes factor in favor of x1 over x2: 1.05902</code></pre>
 </div>
 <div id="nae-model-interaction-between-ids-test-age-and-ids-preference" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> NAE model
@@ -2145,12 +2189,34 @@ seed = 890
 )</code></pre>
 <pre><code>## Warning: Rows containing NAs were excluded from the model.</code></pre>
 <pre><code>## Compiling Stan program...</code></pre>
+<pre><code>## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;fe0d18310131732caa12b925be381d4d&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 6.1e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.61 seconds.
+## Chain 1: Gradient evaluation took 5.2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.52 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2167,15 +2233,15 @@ seed = 890
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 3.59697 seconds (Warm-up)
-## Chain 1:                2.46246 seconds (Sampling)
-## Chain 1:                6.05943 seconds (Total)
+## Chain 1:  Elapsed Time: 1.86334 seconds (Warm-up)
+## Chain 1:                1.49443 seconds (Sampling)
+## Chain 1:                3.35776 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;fe0d18310131732caa12b925be381d4d&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 0.000149 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 1.49 seconds.
+## Chain 2: Gradient evaluation took 5.6e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.56 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -2192,15 +2258,15 @@ seed = 890
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 3.36448 seconds (Warm-up)
-## Chain 2:                2.4464 seconds (Sampling)
-## Chain 2:                5.81088 seconds (Total)
+## Chain 2:  Elapsed Time: 1.75347 seconds (Warm-up)
+## Chain 2:                1.4464 seconds (Sampling)
+## Chain 2:                3.19988 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;fe0d18310131732caa12b925be381d4d&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 0.000113 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 1.13 seconds.
+## Chain 3: Gradient evaluation took 5.2e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.52 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -2217,15 +2283,15 @@ seed = 890
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 3.2155 seconds (Warm-up)
-## Chain 3:                2.42882 seconds (Sampling)
-## Chain 3:                5.64432 seconds (Total)
+## Chain 3:  Elapsed Time: 1.74745 seconds (Warm-up)
+## Chain 3:                1.01065 seconds (Sampling)
+## Chain 3:                2.7581 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;fe0d18310131732caa12b925be381d4d&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 8.2e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.82 seconds.
+## Chain 4: Gradient evaluation took 5.1e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.51 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -2242,9 +2308,9 @@ seed = 890
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 3.4874 seconds (Warm-up)
-## Chain 4:                2.5168 seconds (Sampling)
-## Chain 4:                6.00421 seconds (Total)
+## Chain 4:  Elapsed Time: 1.91784 seconds (Warm-up)
+## Chain 4:                1.50514 seconds (Sampling)
+## Chain 4:                3.42298 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_full_2.nae)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -2257,41 +2323,41 @@ seed = 890
 ## Group-Level Effects: 
 ## ~labid (Number of levels: 8) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     1.06      0.75     0.05     2.76 1.00     5100     4696
+## sd(Intercept)     1.06      0.76     0.05     2.77 1.00     4818     3546
 ## 
 ## ~subid_unique (Number of levels: 211) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.87      0.67     0.03     2.52 1.00     5938     4133
+## sd(Intercept)     0.88      0.66     0.04     2.47 1.00     6044     3876
 ## 
 ## Population-Level Effects: 
 ##                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-## Intercept                      39.47      2.13    35.18    43.51 1.00    12479
-## CDI.z_age_months                0.97      0.57    -0.15     2.10 1.00    21873
-## gender1                        -1.84      1.60    -4.97     1.30 1.00    19167
-## z_age_months                   -0.14      0.42    -0.98     0.70 1.00    18727
-## method1                         0.09      1.25    -2.38     2.75 1.00    12098
-## method2                        -0.24      1.88    -4.46     3.52 1.00     9539
-## z.IDS_pref                     -0.99      2.56    -8.13     2.56 1.00     7604
-## method1:z.IDS_pref             -0.08      2.10    -4.68     4.54 1.00    11803
-## method2:z.IDS_pref              0.37      2.39    -3.96     6.13 1.00     8957
-## CDI.z_age_months:z.IDS_pref     0.53      1.09    -1.42     3.04 1.00    15288
-## z_age_months:z.IDS_pref         0.82      1.15    -1.04     3.46 1.00    12579
+## Intercept                      39.46      2.20    35.00    43.73 1.00     9901
+## CDI.z_age_months                0.98      0.55    -0.10     2.08 1.00    13825
+## gender1                        -1.83      1.62    -4.99     1.34 1.00    13529
+## z_age_months                   -0.14      0.41    -0.96     0.68 1.00    13581
+## method1                         0.09      1.25    -2.31     2.85 1.00     9695
+## method2                        -0.26      1.99    -4.87     3.48 1.00     8157
+## z.IDS_pref                     -1.12      2.74    -9.06     2.44 1.00     4868
+## method1:z.IDS_pref             -0.09      2.11    -4.79     4.29 1.00     7377
+## method2:z.IDS_pref              0.35      2.71    -4.50     6.64 1.00     4647
+## CDI.z_age_months:z.IDS_pref     0.54      1.11    -1.43     3.12 1.00    11911
+## z_age_months:z.IDS_pref         0.86      1.17    -1.09     3.64 1.00     8472
 ##                             Tail_ESS
-## Intercept                       5860
-## CDI.z_age_months                5609
-## gender1                         5303
-## z_age_months                    6193
-## method1                         5135
-## method2                         3886
-## z.IDS_pref                      3372
-## method1:z.IDS_pref              3466
-## method2:z.IDS_pref              3025
-## CDI.z_age_months:z.IDS_pref     4589
-## z_age_months:z.IDS_pref         4969
+## Intercept                       4676
+## CDI.z_age_months                6081
+## gender1                         5498
+## z_age_months                    5600
+## method1                         4279
+## method2                         3679
+## z.IDS_pref                      2280
+## method1:z.IDS_pref              2653
+## method2:z.IDS_pref              2247
+## CDI.z_age_months:z.IDS_pref     4605
+## z_age_months:z.IDS_pref         4575
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    27.97      1.17    25.79    30.31 1.00    18112     5680
+## sigma    27.97      1.13    25.84    30.21 1.00    13916     6549
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -2312,12 +2378,34 @@ seed = 102
 )</code></pre>
 <pre><code>## Warning: Rows containing NAs were excluded from the model.</code></pre>
 <pre><code>## Compiling Stan program...
-## Start sampling</code></pre>
+## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
+<pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;fc9c99e61df3f89efb19026d5c334a2b&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 6.9e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.69 seconds.
+## Chain 1: Gradient evaluation took 4.3e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.43 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2334,15 +2422,15 @@ seed = 102
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 2.87185 seconds (Warm-up)
-## Chain 1:                2.44306 seconds (Sampling)
-## Chain 1:                5.31491 seconds (Total)
+## Chain 1:  Elapsed Time: 1.5996 seconds (Warm-up)
+## Chain 1:                1.43245 seconds (Sampling)
+## Chain 1:                3.03205 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;fc9c99e61df3f89efb19026d5c334a2b&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 6.8e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.68 seconds.
+## Chain 2: Gradient evaluation took 3.9e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.39 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -2359,15 +2447,15 @@ seed = 102
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 3.0344 seconds (Warm-up)
-## Chain 2:                2.39946 seconds (Sampling)
-## Chain 2:                5.43386 seconds (Total)
+## Chain 2:  Elapsed Time: 1.72966 seconds (Warm-up)
+## Chain 2:                1.44039 seconds (Sampling)
+## Chain 2:                3.17005 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;fc9c99e61df3f89efb19026d5c334a2b&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 6.1e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.61 seconds.
+## Chain 3: Gradient evaluation took 4.2e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.42 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -2384,15 +2472,15 @@ seed = 102
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 3.11155 seconds (Warm-up)
-## Chain 3:                2.36521 seconds (Sampling)
-## Chain 3:                5.47675 seconds (Total)
+## Chain 3:  Elapsed Time: 1.78628 seconds (Warm-up)
+## Chain 3:                1.44091 seconds (Sampling)
+## Chain 3:                3.2272 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;fc9c99e61df3f89efb19026d5c334a2b&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 6.8e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.68 seconds.
+## Chain 4: Gradient evaluation took 4.5e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.45 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -2409,9 +2497,9 @@ seed = 102
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 3.00632 seconds (Warm-up)
-## Chain 4:                2.53081 seconds (Sampling)
-## Chain 4:                5.53712 seconds (Total)
+## Chain 4:  Elapsed Time: 1.63087 seconds (Warm-up)
+## Chain 4:                1.42527 seconds (Sampling)
+## Chain 4:                3.05613 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_null_2.nae)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -2424,39 +2512,39 @@ seed = 102
 ## Group-Level Effects: 
 ## ~labid (Number of levels: 8) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     1.08      0.76     0.05     2.82 1.00     6448     4648
+## sd(Intercept)     1.08      0.76     0.05     2.84 1.00     5253     4657
 ## 
 ## ~subid_unique (Number of levels: 211) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.89      0.66     0.04     2.47 1.00     6554     4309
+## sd(Intercept)     0.89      0.67     0.04     2.50 1.00     6280     4505
 ## 
 ## Population-Level Effects: 
 ##                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-## Intercept                      39.65      2.11    35.41    43.76 1.00    12646
-## CDI.z_age_months                0.97      0.56    -0.12     2.08 1.00    18476
-## gender1                        -1.89      1.60    -5.05     1.26 1.00    19125
-## z_age_months                   -0.14      0.42    -0.98     0.70 1.00    16626
-## method1                         0.10      1.27    -2.45     2.92 1.00    10344
-## method2                        -0.24      1.90    -4.74     3.32 1.00     9675
-## z.IDS_pref                     -0.81      2.46    -7.55     3.02 1.00     6895
-## method1:z.IDS_pref             -0.21      1.96    -4.83     3.60 1.00     8777
-## method2:z.IDS_pref              0.16      2.23    -4.31     5.44 1.00     7869
-## CDI.z_age_months:z.IDS_pref     0.56      1.11    -1.37     3.11 1.00    13635
+## Intercept                      39.65      2.12    35.41    43.84 1.00    13287
+## CDI.z_age_months                0.96      0.56    -0.12     2.07 1.00    19200
+## gender1                        -1.88      1.63    -5.12     1.30 1.00    17142
+## z_age_months                   -0.14      0.42    -1.00     0.68 1.00    17894
+## method1                         0.09      1.30    -2.54     2.92 1.00    10155
+## method2                        -0.22      1.90    -4.39     3.42 1.00     9886
+## z.IDS_pref                     -0.77      2.35    -7.29     2.81 1.00     8034
+## method1:z.IDS_pref             -0.19      2.00    -4.81     3.86 1.00     9800
+## method2:z.IDS_pref              0.11      2.35    -4.52     5.54 1.00     8834
+## CDI.z_age_months:z.IDS_pref     0.58      1.13    -1.40     3.21 1.00    14780
 ##                             Tail_ESS
-## Intercept                       5297
-## CDI.z_age_months                6235
-## gender1                         5240
-## z_age_months                    5266
-## method1                         3974
-## method2                         3351
-## z.IDS_pref                      2702
-## method1:z.IDS_pref              3302
-## method2:z.IDS_pref              3149
-## CDI.z_age_months:z.IDS_pref     4636
+## Intercept                       5145
+## CDI.z_age_months                5521
+## gender1                         5217
+## z_age_months                    5352
+## method1                         3711
+## method2                         3359
+## z.IDS_pref                      2374
+## method1:z.IDS_pref              3658
+## method2:z.IDS_pref              2877
+## CDI.z_age_months:z.IDS_pref     4520
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    27.99      1.16    25.83    30.34 1.00    14578     5650
+## sigma    28.01      1.16    25.89    30.35 1.00    17432     5641
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -2472,7 +2560,7 @@ Bridge sampling</p>
 <p>Bayes factor</p>
 <pre class="r"><code>BF_full_2.nae &lt;- bayes_factor(marloglik_full_2.nae, marloglik_null_2.nae)
 BF_full_2.nae</code></pre>
-<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.81211</code></pre>
+<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.80068</code></pre>
 </div>
 <div id="uk-model-main-effect-of-ids-preference" class="section level2" number="3.7">
 <h2><span class="header-section-number">3.7</span> UK model (main effect
@@ -2492,12 +2580,34 @@ control = list(adapt_delta = .95),
 seed = 213
 )</code></pre>
 <pre><code>## Compiling Stan program...</code></pre>
+<pre><code>## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;54ade77b011561067f6649c5a0a3bf39&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 3.3e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.33 seconds.
+## Chain 1: Gradient evaluation took 4.9e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.49 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2514,15 +2624,15 @@ seed = 213
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 1.13162 seconds (Warm-up)
-## Chain 1:                0.875999 seconds (Sampling)
-## Chain 1:                2.00762 seconds (Total)
+## Chain 1:  Elapsed Time: 0.485312 seconds (Warm-up)
+## Chain 1:                0.477416 seconds (Sampling)
+## Chain 1:                0.962728 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;54ade77b011561067f6649c5a0a3bf39&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 3.1e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.31 seconds.
+## Chain 2: Gradient evaluation took 4.5e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.45 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -2539,15 +2649,15 @@ seed = 213
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.895282 seconds (Warm-up)
-## Chain 2:                0.882273 seconds (Sampling)
-## Chain 2:                1.77755 seconds (Total)
+## Chain 2:  Elapsed Time: 0.505468 seconds (Warm-up)
+## Chain 2:                0.478601 seconds (Sampling)
+## Chain 2:                0.984069 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;54ade77b011561067f6649c5a0a3bf39&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 7.2e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.72 seconds.
+## Chain 3: Gradient evaluation took 4.9e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.49 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -2564,15 +2674,15 @@ seed = 213
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 1.3377 seconds (Warm-up)
-## Chain 3:                0.876475 seconds (Sampling)
-## Chain 3:                2.21418 seconds (Total)
+## Chain 3:  Elapsed Time: 0.607484 seconds (Warm-up)
+## Chain 3:                0.473754 seconds (Sampling)
+## Chain 3:                1.08124 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;54ade77b011561067f6649c5a0a3bf39&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 3.4e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.34 seconds.
+## Chain 4: Gradient evaluation took 4.4e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.44 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -2589,9 +2699,9 @@ seed = 213
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 1.17485 seconds (Warm-up)
-## Chain 4:                1.72942 seconds (Sampling)
-## Chain 4:                2.90427 seconds (Total)
+## Chain 4:  Elapsed Time: 0.501296 seconds (Warm-up)
+## Chain 4:                0.475094 seconds (Sampling)
+## Chain 4:                0.97639 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_full_1.uk)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -2604,20 +2714,20 @@ seed = 213
 ## Group-Level Effects: 
 ## ~subid_unique (Number of levels: 76) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.80      0.60     0.03     2.25 1.00     7023     4031
+## sd(Intercept)     0.79      0.60     0.03     2.26 1.00     7296     3926
 ## 
 ## Population-Level Effects: 
 ##                  Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept          162.23      9.26   143.19   179.77 1.00    12807     5931
-## CDI.z_age_months    31.85      3.38    25.00    38.40 1.00    12766     5992
-## gender1             -2.51      7.99   -14.77    15.87 1.00    11092     5401
-## z_age_months        -2.40      2.42    -8.01     0.89 1.00     6622     5549
-## method1             -0.24      3.24    -7.66     5.69 1.00     5964     2278
-## z.IDS_pref           0.41      4.91    -6.32    10.70 1.00     4246     1265
+## Intercept          162.27      9.19   143.76   179.97 1.00    12723     6285
+## CDI.z_age_months    31.78      3.43    24.95    38.34 1.00    10107     5723
+## gender1             -2.69      7.71   -14.21    15.20 1.00     9802     5199
+## z_age_months        -2.43      2.44    -8.11     0.84 1.00     5863     5008
+## method1             -0.38      3.08    -8.34     4.98 1.00     6439     1752
+## z.IDS_pref           0.30      4.76    -7.04     8.88 1.01     3628     1390
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    87.43      7.10    75.03   102.49 1.00    13793     6881
+## sigma    87.51      7.09    75.25   102.68 1.00    11870     6420
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -2637,12 +2747,34 @@ control = list(adapt_delta = .95),
 seed = 312
 )</code></pre>
 <pre><code>## Compiling Stan program...
-## Start sampling</code></pre>
+## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
+<pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;060cd7005100656de6505ea0c1c2d324&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 3.5e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.35 seconds.
+## Chain 1: Gradient evaluation took 4.6e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.46 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2659,15 +2791,15 @@ seed = 312
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.928993 seconds (Warm-up)
-## Chain 1:                0.883705 seconds (Sampling)
-## Chain 1:                1.8127 seconds (Total)
+## Chain 1:  Elapsed Time: 0.585343 seconds (Warm-up)
+## Chain 1:                0.439279 seconds (Sampling)
+## Chain 1:                1.02462 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;060cd7005100656de6505ea0c1c2d324&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 4.1e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.41 seconds.
+## Chain 2: Gradient evaluation took 4.3e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.43 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -2684,15 +2816,15 @@ seed = 312
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.894763 seconds (Warm-up)
-## Chain 2:                0.816233 seconds (Sampling)
-## Chain 2:                1.711 seconds (Total)
+## Chain 2:  Elapsed Time: 0.478957 seconds (Warm-up)
+## Chain 2:                0.466772 seconds (Sampling)
+## Chain 2:                0.945729 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;060cd7005100656de6505ea0c1c2d324&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 5.5e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.55 seconds.
+## Chain 3: Gradient evaluation took 4.8e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.48 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -2709,15 +2841,15 @@ seed = 312
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.974919 seconds (Warm-up)
-## Chain 3:                0.912986 seconds (Sampling)
-## Chain 3:                1.8879 seconds (Total)
+## Chain 3:  Elapsed Time: 0.385786 seconds (Warm-up)
+## Chain 3:                0.460107 seconds (Sampling)
+## Chain 3:                0.845893 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;060cd7005100656de6505ea0c1c2d324&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 3.5e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.35 seconds.
+## Chain 4: Gradient evaluation took 4.7e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.47 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -2734,9 +2866,9 @@ seed = 312
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.773202 seconds (Warm-up)
-## Chain 4:                0.480114 seconds (Sampling)
-## Chain 4:                1.25332 seconds (Total)
+## Chain 4:  Elapsed Time: 0.374847 seconds (Warm-up)
+## Chain 4:                0.243913 seconds (Sampling)
+## Chain 4:                0.61876 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_null_1.uk)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -2749,19 +2881,19 @@ seed = 312
 ## Group-Level Effects: 
 ## ~subid_unique (Number of levels: 76) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.81      0.61     0.03     2.27 1.00     7051     4069
+## sd(Intercept)     0.80      0.61     0.04     2.25 1.00     6919     3603
 ## 
 ## Population-Level Effects: 
 ##                  Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept          162.24      9.24   143.19   179.97 1.00    12755     5720
-## CDI.z_age_months    31.81      3.42    24.86    38.33 1.00    12935     5868
-## gender1             -2.51      7.89   -14.45    15.53 1.00     9340     5006
-## z_age_months        -2.38      2.42    -7.94     0.92 1.00     7243     6219
-## method1             -0.24      2.79    -6.43     4.95 1.00     7092     2295
+## Intercept          162.33      9.27   143.23   180.05 1.00    11234     5861
+## CDI.z_age_months    31.86      3.44    25.00    38.38 1.00    10459     6059
+## gender1             -2.66      7.60   -14.30    15.05 1.00    10901     5728
+## z_age_months        -2.41      2.44    -8.16     0.92 1.00     6649     5397
+## method1             -0.25      3.03    -7.53     5.30 1.00     5717     2427
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    87.48      7.17    74.96   102.95 1.00    13064     6387
+## sigma    87.41      7.17    74.83   103.23 1.00    10914     6052
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -2770,14 +2902,35 @@ seed = 312
 Bridge sampling</p>
 <pre class="r"><code>marloglik_full_1.uk &lt;- bridge_sampler(lmer.bf_full_1.uk, silent = T)</code></pre>
 <pre><code>## Recompiling the model with &#39;rstan&#39;</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Recompilation done</code></pre>
 <pre class="r"><code>marloglik_null_1.uk &lt;- bridge_sampler(lmer.bf_null_1.uk, silent = T)</code></pre>
-<pre><code>## Recompiling the model with &#39;rstan&#39;
-## Recompilation done</code></pre>
+<pre><code>## Recompiling the model with &#39;rstan&#39;</code></pre>
+<pre><code>## Recompilation done</code></pre>
 <p>Bayes factor</p>
 <pre class="r"><code>BF_full_1.uk &lt;- bayes_factor(marloglik_full_1.uk, marloglik_null_1.uk)
 BF_full_1.uk</code></pre>
-<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.96330</code></pre>
+<pre><code>## Estimated Bayes factor in favor of x1 over x2: 1.03668</code></pre>
 </div>
 <div id="uk-model-interaction-between-ids-test-age-and-ids-preference" class="section level2" number="3.8">
 <h2><span class="header-section-number">3.8</span> UK model (interaction
@@ -2798,12 +2951,34 @@ control = list(adapt_delta = .95),
 seed = 546
 )</code></pre>
 <pre><code>## Compiling Stan program...</code></pre>
+<pre><code>## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;48e86c99c1b0b4251a1252bae605ff02&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 4.1e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.41 seconds.
+## Chain 1: Gradient evaluation took 4.6e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.46 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2820,15 +2995,15 @@ seed = 546
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 1.15091 seconds (Warm-up)
-## Chain 1:                0.966785 seconds (Sampling)
-## Chain 1:                2.1177 seconds (Total)
+## Chain 1:  Elapsed Time: 0.549007 seconds (Warm-up)
+## Chain 1:                0.480013 seconds (Sampling)
+## Chain 1:                1.02902 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;48e86c99c1b0b4251a1252bae605ff02&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 3.9e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.39 seconds.
+## Chain 2: Gradient evaluation took 4.2e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.42 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -2845,15 +3020,15 @@ seed = 546
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 1.46756 seconds (Warm-up)
-## Chain 2:                0.895062 seconds (Sampling)
-## Chain 2:                2.36262 seconds (Total)
+## Chain 2:  Elapsed Time: 0.826452 seconds (Warm-up)
+## Chain 2:                0.495082 seconds (Sampling)
+## Chain 2:                1.32153 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;48e86c99c1b0b4251a1252bae605ff02&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 3.5e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.35 seconds.
+## Chain 3: Gradient evaluation took 5e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.5 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -2870,15 +3045,15 @@ seed = 546
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 1.63662 seconds (Warm-up)
-## Chain 3:                0.935694 seconds (Sampling)
-## Chain 3:                2.57231 seconds (Total)
+## Chain 3:  Elapsed Time: 0.722223 seconds (Warm-up)
+## Chain 3:                0.560776 seconds (Sampling)
+## Chain 3:                1.283 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;48e86c99c1b0b4251a1252bae605ff02&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 3.5e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.35 seconds.
+## Chain 4: Gradient evaluation took 4.3e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.43 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -2895,9 +3070,9 @@ seed = 546
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 1.20059 seconds (Warm-up)
-## Chain 4:                0.901017 seconds (Sampling)
-## Chain 4:                2.10161 seconds (Total)
+## Chain 4:  Elapsed Time: 0.823145 seconds (Warm-up)
+## Chain 4:                0.485997 seconds (Sampling)
+## Chain 4:                1.30914 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_full_2.uk)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -2910,33 +3085,33 @@ seed = 546
 ## Group-Level Effects: 
 ## ~subid_unique (Number of levels: 76) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.79      0.61     0.03     2.23 1.00     7050     3435
+## sd(Intercept)     0.79      0.61     0.03     2.28 1.00     5700     3032
 ## 
 ## Population-Level Effects: 
 ##                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-## Intercept                     162.36      9.43   143.21   180.13 1.00    11707
-## CDI.z_age_months               31.81      3.39    25.10    38.23 1.00    10691
-## gender1                        -2.36      8.01   -14.54    16.28 1.00    10649
-## z_age_months                   -2.46      2.48    -8.24     0.93 1.00     6381
-## method1                        -0.29      2.85    -7.20     5.07 1.00     4302
-## z.IDS_pref                      0.31      4.22    -6.88    10.03 1.00     3954
-## method1:z.IDS_pref             -0.10      4.32    -9.12     8.06 1.00     5079
-## CDI.z_age_months:z.IDS_pref     0.55      2.70    -3.91     7.82 1.00     6140
-## z_age_months:z.IDS_pref        -0.36      2.38    -6.37     3.87 1.00     7278
+## Intercept                     162.22      9.27   143.51   179.91 1.00     8346
+## CDI.z_age_months               31.85      3.40    25.04    38.36 1.00     7454
+## gender1                        -2.48      7.94   -14.68    16.20 1.00     7098
+## z_age_months                   -2.41      2.47    -8.32     0.90 1.00     4796
+## method1                        -0.23      2.84    -6.82     5.17 1.00     5291
+## z.IDS_pref                      0.44      4.60    -6.43    10.13 1.00     3647
+## method1:z.IDS_pref             -0.32      4.49   -10.92     7.46 1.01     4419
+## CDI.z_age_months:z.IDS_pref     0.59      2.87    -4.01     8.28 1.00     5008
+## z_age_months:z.IDS_pref        -0.25      2.39    -5.67     4.45 1.00     5312
 ##                             Tail_ESS
-## Intercept                       5776
-## CDI.z_age_months                6042
-## gender1                         5555
-## z_age_months                    5688
-## method1                         1615
-## z.IDS_pref                      1434
-## method1:z.IDS_pref              1930
-## CDI.z_age_months:z.IDS_pref     2174
-## z_age_months:z.IDS_pref         2251
+## Intercept                       5865
+## CDI.z_age_months                5073
+## gender1                         5098
+## z_age_months                    5111
+## method1                         2154
+## z.IDS_pref                      1096
+## method1:z.IDS_pref              1650
+## CDI.z_age_months:z.IDS_pref     1659
+## z_age_months:z.IDS_pref         2582
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    87.44      7.41    74.59   103.70 1.00    11402     6432
+## sigma    87.57      7.09    75.05   102.80 1.00     8031     5624
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -2957,12 +3132,34 @@ control = list(adapt_delta = .95),
 seed = 689
 )</code></pre>
 <pre><code>## Compiling Stan program...
-## Start sampling</code></pre>
+## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
+<pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;cba05cf2524cc1e6f6464aa498097dae&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 3.5e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.35 seconds.
+## Chain 1: Gradient evaluation took 5e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.5 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -2979,15 +3176,15 @@ seed = 689
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 1.10751 seconds (Warm-up)
-## Chain 1:                0.924335 seconds (Sampling)
-## Chain 1:                2.03185 seconds (Total)
+## Chain 1:  Elapsed Time: 0.968053 seconds (Warm-up)
+## Chain 1:                0.905059 seconds (Sampling)
+## Chain 1:                1.87311 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;cba05cf2524cc1e6f6464aa498097dae&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 3.3e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.33 seconds.
+## Chain 2: Gradient evaluation took 5.1e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.51 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -3004,18 +3201,15 @@ seed = 689
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 1.15842 seconds (Warm-up)
-## Chain 2:                0.876027 seconds (Sampling)
-## Chain 2:                2.03445 seconds (Total)
-## Chain 2:</code></pre>
-<pre><code>## Warning: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
-## Running the chains for more iterations may help. See
-## https://mc-stan.org/misc/warnings.html#tail-ess</code></pre>
-<pre><code>## 
+## Chain 2:  Elapsed Time: 0.69768 seconds (Warm-up)
+## Chain 2:                0.955219 seconds (Sampling)
+## Chain 2:                1.6529 seconds (Total)
+## Chain 2: 
+## 
 ## SAMPLING FOR MODEL &#39;cba05cf2524cc1e6f6464aa498097dae&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 3.4e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.34 seconds.
+## Chain 3: Gradient evaluation took 4.2e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.42 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -3032,15 +3226,15 @@ seed = 689
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 1.41258 seconds (Warm-up)
-## Chain 3:                0.90539 seconds (Sampling)
-## Chain 3:                2.31797 seconds (Total)
+## Chain 3:  Elapsed Time: 0.630107 seconds (Warm-up)
+## Chain 3:                0.485641 seconds (Sampling)
+## Chain 3:                1.11575 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;cba05cf2524cc1e6f6464aa498097dae&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 4e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.4 seconds.
+## Chain 4: Gradient evaluation took 4.8e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.48 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -3057,9 +3251,9 @@ seed = 689
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 1.7452 seconds (Warm-up)
-## Chain 4:                0.916083 seconds (Sampling)
-## Chain 4:                2.66129 seconds (Total)
+## Chain 4:  Elapsed Time: 0.713614 seconds (Warm-up)
+## Chain 4:                0.514881 seconds (Sampling)
+## Chain 4:                1.2285 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_null_2.uk)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -3072,31 +3266,31 @@ seed = 689
 ## Group-Level Effects: 
 ## ~subid_unique (Number of levels: 76) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.79      0.60     0.03     2.29 1.00     7140     4062
+## sd(Intercept)     0.79      0.61     0.02     2.30 1.00     5281     3079
 ## 
 ## Population-Level Effects: 
 ##                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-## Intercept                     162.34      9.22   143.74   179.61 1.00     9280
-## CDI.z_age_months               31.94      3.40    25.22    38.53 1.00     9855
-## gender1                        -2.63      7.82   -14.52    15.65 1.00     8260
-## z_age_months                   -2.50      2.47    -8.23     0.90 1.00     5535
-## method1                        -0.26      2.89    -7.00     5.28 1.00     4863
-## z.IDS_pref                      0.49      4.91    -7.00    11.11 1.00     2823
-## method1:z.IDS_pref             -0.22      4.74    -8.68     7.24 1.00     2861
-## CDI.z_age_months:z.IDS_pref     0.52      2.74    -4.14     7.47 1.00     6075
+## Intercept                     162.28      9.30   143.37   180.21 1.00    10233
+## CDI.z_age_months               31.84      3.40    24.99    38.53 1.00     8566
+## gender1                        -2.57      8.00   -14.79    16.02 1.00     8800
+## z_age_months                   -2.45      2.47    -8.20     0.91 1.00     5768
+## method1                        -0.36      3.20    -8.43     5.11 1.00     4985
+## z.IDS_pref                      0.59      5.20    -7.01    11.61 1.00     2989
+## method1:z.IDS_pref             -0.21      4.74   -10.09     8.20 1.00     5046
+## CDI.z_age_months:z.IDS_pref     0.46      2.62    -4.11     7.43 1.00     6926
 ##                             Tail_ESS
-## Intercept                       5930
-## CDI.z_age_months                5961
-## gender1                         4369
-## z_age_months                    4632
-## method1                         2021
-## z.IDS_pref                      1096
-## method1:z.IDS_pref               816
-## CDI.z_age_months:z.IDS_pref     2455
+## Intercept                       6229
+## CDI.z_age_months                5342
+## gender1                         5355
+## z_age_months                    4434
+## method1                         1794
+## z.IDS_pref                      1084
+## method1:z.IDS_pref              1902
+## CDI.z_age_months:z.IDS_pref     2051
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma    87.45      7.23    74.77   103.16 1.00     9239     6308
+## sigma    87.42      7.01    74.96   102.55 1.00     9844     6505
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -3106,16 +3300,37 @@ seed = 689
 marginal log likelihoods for each hypothese using Bridge sampling</h3>
 <pre class="r"><code>marloglik_full_2.uk &lt;- bridge_sampler(lmer.bf_full_2.uk, silent = T)</code></pre>
 <pre><code>## Recompiling the model with &#39;rstan&#39;</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Recompilation done</code></pre>
 <pre class="r"><code>marloglik_null_2.uk &lt;- bridge_sampler(lmer.bf_null_2.uk, silent = T)</code></pre>
-<pre><code>## Recompiling the model with &#39;rstan&#39;
-## Recompilation done</code></pre>
+<pre><code>## Recompiling the model with &#39;rstan&#39;</code></pre>
+<pre><code>## Recompilation done</code></pre>
 </div>
 <div id="bayes-factor" class="section level3" number="3.8.2">
 <h3><span class="header-section-number">3.8.2</span> Bayes factor</h3>
 <pre class="r"><code>BF_full_2.uk &lt;- bayes_factor(marloglik_full_2.uk, marloglik_null_2.uk)
 BF_full_2.uk</code></pre>
-<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.89850</code></pre>
+<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.83741</code></pre>
 </div>
 </div>
 <div id="combined-model-interaction-between-lanaguage-zone-and-ids-preference" class="section level2" number="3.9">
@@ -3136,6 +3351,28 @@ control = list(adapt_delta = .9999),
 seed = 100
 )</code></pre>
 <pre><code>## Compiling Stan program...</code></pre>
+<pre><code>## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
 <pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;c00d110c2b0d13bee30e4b91f8a74804&#39; NOW (CHAIN 1).
@@ -3158,15 +3395,15 @@ seed = 100
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 13.2949 seconds (Warm-up)
-## Chain 1:                12.103 seconds (Sampling)
-## Chain 1:                25.3979 seconds (Total)
+## Chain 1:  Elapsed Time: 7.35435 seconds (Warm-up)
+## Chain 1:                7.51921 seconds (Sampling)
+## Chain 1:                14.8736 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;c00d110c2b0d13bee30e4b91f8a74804&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 7.2e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.72 seconds.
+## Chain 2: Gradient evaluation took 8.2e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.82 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -3183,15 +3420,15 @@ seed = 100
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 11.7465 seconds (Warm-up)
-## Chain 2:                5.97908 seconds (Sampling)
-## Chain 2:                17.7256 seconds (Total)
+## Chain 2:  Elapsed Time: 7.42743 seconds (Warm-up)
+## Chain 2:                4.96517 seconds (Sampling)
+## Chain 2:                12.3926 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;c00d110c2b0d13bee30e4b91f8a74804&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 7.2e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.72 seconds.
+## Chain 3: Gradient evaluation took 7.9e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.79 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -3208,15 +3445,15 @@ seed = 100
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 11.0321 seconds (Warm-up)
-## Chain 3:                11.9362 seconds (Sampling)
-## Chain 3:                22.9683 seconds (Total)
+## Chain 3:  Elapsed Time: 6.97462 seconds (Warm-up)
+## Chain 3:                7.53123 seconds (Sampling)
+## Chain 3:                14.5058 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;c00d110c2b0d13bee30e4b91f8a74804&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 9.6e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.96 seconds.
+## Chain 4: Gradient evaluation took 7.2e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.72 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -3233,9 +3470,9 @@ seed = 100
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 12.4866 seconds (Warm-up)
-## Chain 4:                11.9301 seconds (Sampling)
-## Chain 4:                24.4167 seconds (Total)
+## Chain 4:  Elapsed Time: 7.28026 seconds (Warm-up)
+## Chain 4:                7.52137 seconds (Sampling)
+## Chain 4:                14.8016 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_full_3.combined)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -3248,45 +3485,45 @@ seed = 100
 ## Group-Level Effects: 
 ## ~labid (Number of levels: 13) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     3761     3487
+## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     3502     3277
 ## 
 ## ~subid_unique (Number of levels: 290) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     3971     4035
+## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     3720     3298
 ## 
 ## Population-Level Effects: 
 ##                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-## Intercept                       0.32      0.01     0.29     0.34 1.00     9864
-## CDI.z_age_months                0.05      0.00     0.04     0.06 1.00    16399
-## language_zone1                  0.09      0.02     0.06     0.12 1.00     8034
-## gender1                         0.02      0.01     0.00     0.05 1.00    13353
-## z_age_months                   -0.00      0.00    -0.01     0.00 1.00    14367
-## method1                        -0.00      0.01    -0.02     0.02 1.00     6740
-## method2                         0.00      0.01    -0.02     0.04 1.00     7630
-## z.IDS_pref                     -0.00      0.02    -0.04     0.03 1.00    10123
-## language_zone1:z.IDS_pref       0.01      0.02    -0.02     0.06 1.00     6483
-## method1:z.IDS_pref             -0.00      0.02    -0.04     0.03 1.00     8208
-## method2:z.IDS_pref              0.00      0.02    -0.03     0.05 1.00     6942
-## CDI.z_age_months:z.IDS_pref     0.01      0.01    -0.01     0.02 1.00    15008
-## z_age_months:z.IDS_pref        -0.00      0.01    -0.02     0.01 1.00    13726
+## Intercept                       0.32      0.01     0.29     0.34 1.00    10232
+## CDI.z_age_months                0.05      0.00     0.04     0.06 1.00    15246
+## language_zone1                  0.09      0.02     0.06     0.12 1.00     8043
+## gender1                         0.02      0.01     0.00     0.05 1.00    13660
+## z_age_months                   -0.00      0.00    -0.01     0.00 1.00    13946
+## method1                        -0.00      0.01    -0.02     0.02 1.00     9219
+## method2                         0.00      0.01    -0.02     0.03 1.00     7253
+## z.IDS_pref                     -0.00      0.02    -0.04     0.02 1.00     7862
+## language_zone1:z.IDS_pref       0.01      0.02    -0.02     0.06 1.00     6456
+## method1:z.IDS_pref             -0.00      0.02    -0.04     0.03 1.00     6948
+## method2:z.IDS_pref              0.00      0.02    -0.03     0.05 1.00     6968
+## CDI.z_age_months:z.IDS_pref     0.01      0.01    -0.01     0.02 1.00    11827
+## z_age_months:z.IDS_pref        -0.00      0.01    -0.02     0.01 1.00    11728
 ##                             Tail_ESS
-## Intercept                       6082
-## CDI.z_age_months                5864
-## language_zone1                  5998
-## gender1                         5762
-## z_age_months                    6377
-## method1                         3605
-## method2                         3903
-## z.IDS_pref                      4114
-## language_zone1:z.IDS_pref       3071
-## method1:z.IDS_pref              3088
-## method2:z.IDS_pref              3632
-## CDI.z_age_months:z.IDS_pref     5354
-## z_age_months:z.IDS_pref         5433
+## Intercept                       6998
+## CDI.z_age_months                5898
+## language_zone1                  6268
+## gender1                         5387
+## z_age_months                    6180
+## method1                         5174
+## method2                         3307
+## z.IDS_pref                      3879
+## language_zone1:z.IDS_pref       3443
+## method1:z.IDS_pref              3652
+## method2:z.IDS_pref              2689
+## CDI.z_age_months:z.IDS_pref     5543
+## z_age_months:z.IDS_pref         5599
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma     0.20      0.01     0.19     0.22 1.00    11590     5645
+## sigma     0.20      0.01     0.19     0.22 1.00    11943     6240
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -3306,12 +3543,34 @@ control = list(adapt_delta = .9999),
 seed = 200
 )</code></pre>
 <pre><code>## Compiling Stan program...
-## Start sampling</code></pre>
+## Trying to compile a simple C file</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/Rcpp/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/unsupported&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/BH/include&quot; -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/src/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppParallel/include/&quot;  -I&quot;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/opt/R/arm64/include   -fPIC  -falign-functions=64 -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
+<pre><code>## Start sampling</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;101f19279fa023f9189fee81890b20b9&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 7.8e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.78 seconds.
+## Chain 1: Gradient evaluation took 6.2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.62 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -3328,15 +3587,15 @@ seed = 200
 ## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 11.2618 seconds (Warm-up)
-## Chain 1:                11.7882 seconds (Sampling)
-## Chain 1:                23.05 seconds (Total)
+## Chain 1:  Elapsed Time: 7.69948 seconds (Warm-up)
+## Chain 1:                7.55129 seconds (Sampling)
+## Chain 1:                15.2508 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;101f19279fa023f9189fee81890b20b9&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 7e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.7 seconds.
+## Chain 2: Gradient evaluation took 6.2e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.62 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -3353,15 +3612,15 @@ seed = 200
 ## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 11.7961 seconds (Warm-up)
-## Chain 2:                6.09547 seconds (Sampling)
-## Chain 2:                17.8916 seconds (Total)
+## Chain 2:  Elapsed Time: 7.39399 seconds (Warm-up)
+## Chain 2:                7.67179 seconds (Sampling)
+## Chain 2:                15.0658 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;101f19279fa023f9189fee81890b20b9&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 7.1e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.71 seconds.
+## Chain 3: Gradient evaluation took 6.2e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.62 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -3378,15 +3637,15 @@ seed = 200
 ## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 11.3974 seconds (Warm-up)
-## Chain 3:                11.8996 seconds (Sampling)
-## Chain 3:                23.297 seconds (Total)
+## Chain 3:  Elapsed Time: 7.07216 seconds (Warm-up)
+## Chain 3:                3.80378 seconds (Sampling)
+## Chain 3:                10.8759 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;101f19279fa023f9189fee81890b20b9&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 0.000109 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 1.09 seconds.
+## Chain 4: Gradient evaluation took 5.7e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.57 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -3403,9 +3662,9 @@ seed = 200
 ## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 10.6295 seconds (Warm-up)
-## Chain 4:                6.06626 seconds (Sampling)
-## Chain 4:                16.6958 seconds (Total)
+## Chain 4:  Elapsed Time: 6.99948 seconds (Warm-up)
+## Chain 4:                7.54384 seconds (Sampling)
+## Chain 4:                14.5433 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>summary(lmer.bf_null_3.combined)</code></pre>
 <pre><code>##  Family: gaussian 
@@ -3418,43 +3677,43 @@ seed = 200
 ## Group-Level Effects: 
 ## ~labid (Number of levels: 13) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     3746     3871
+## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     4190     4182
 ## 
 ## ~subid_unique (Number of levels: 290) 
 ##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     4250     3949
+## sd(Intercept)     0.01      0.01     0.00     0.03 1.00     4755     4449
 ## 
 ## Population-Level Effects: 
 ##                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-## Intercept                       0.32      0.01     0.29     0.34 1.00    13594
-## CDI.z_age_months                0.05      0.00     0.04     0.06 1.00    17105
-## language_zone1                  0.09      0.02     0.05     0.12 1.00    10018
-## gender1                         0.02      0.01     0.00     0.05 1.00    16351
-## z_age_months                   -0.00      0.00    -0.01     0.00 1.00    15086
-## method1                        -0.00      0.01    -0.02     0.02 1.00    11777
-## method2                         0.00      0.01    -0.02     0.03 1.00     9173
-## z.IDS_pref                     -0.01      0.02    -0.05     0.02 1.00    10614
-## method1:z.IDS_pref             -0.00      0.02    -0.04     0.03 1.00     9853
-## method2:z.IDS_pref              0.01      0.02    -0.03     0.06 1.00     9700
-## CDI.z_age_months:z.IDS_pref     0.01      0.01    -0.01     0.02 1.00    16423
-## z_age_months:z.IDS_pref        -0.00      0.01    -0.02     0.01 1.00    16655
+## Intercept                       0.32      0.01     0.29     0.34 1.00    11103
+## CDI.z_age_months                0.05      0.00     0.04     0.06 1.00    18791
+## language_zone1                  0.09      0.02     0.05     0.12 1.00    11510
+## gender1                         0.02      0.01     0.00     0.05 1.00    19715
+## z_age_months                   -0.00      0.00    -0.01     0.00 1.00    16166
+## method1                        -0.00      0.01    -0.03     0.02 1.00    13225
+## method2                         0.00      0.01    -0.02     0.04 1.00    10182
+## z.IDS_pref                     -0.01      0.02    -0.05     0.02 1.00    12003
+## method1:z.IDS_pref             -0.00      0.02    -0.04     0.03 1.00     9927
+## method2:z.IDS_pref              0.01      0.02    -0.03     0.05 1.00     8286
+## CDI.z_age_months:z.IDS_pref     0.01      0.01    -0.01     0.02 1.00    18594
+## z_age_months:z.IDS_pref        -0.00      0.01    -0.02     0.01 1.00    16925
 ##                             Tail_ESS
-## Intercept                       6538
-## CDI.z_age_months                5448
-## language_zone1                  6035
-## gender1                         5745
-## z_age_months                    5613
-## method1                         5672
-## method2                         4005
-## z.IDS_pref                      4093
-## method1:z.IDS_pref              4377
-## method2:z.IDS_pref              2925
-## CDI.z_age_months:z.IDS_pref     5284
-## z_age_months:z.IDS_pref         5466
+## Intercept                       6409
+## CDI.z_age_months                5827
+## language_zone1                  6301
+## gender1                         5658
+## z_age_months                    6221
+## method1                         5492
+## method2                         4174
+## z.IDS_pref                      3779
+## method1:z.IDS_pref              3564
+## method2:z.IDS_pref              3164
+## CDI.z_age_months:z.IDS_pref     4833
+## z_age_months:z.IDS_pref         5522
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma     0.20      0.01     0.19     0.22 1.00    15331     6074
+## sigma     0.20      0.01     0.19     0.22 1.00    15295     5737
 ## 
 ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -3473,7 +3732,7 @@ marginal log likelihoods for each hypothese using Bridge sampling</h3>
 <h3><span class="header-section-number">3.9.2</span> Bayes factor</h3>
 <pre class="r"><code>BF_full_3.combined &lt;- bayes_factor(marloglik_full_3.combined, marloglik_null_3.combined)
 BF_full_3.combined</code></pre>
-<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.48833</code></pre>
+<pre><code>## Estimated Bayes factor in favor of x1 over x2: 0.37502</code></pre>
 </div>
 </div>
 </div>
