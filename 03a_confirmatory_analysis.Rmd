@@ -33,7 +33,8 @@ library(knitr)
 library(lme4)
 library(lmerTest)
 library(simr)
-
+library(modelsummary)  #<= creates and exports the  tables for the models as word doc
+ 
 # As in our discussion with Mike, we will use lmerTest for calculating p values
 library(lattice)
 library(effects)
@@ -160,6 +161,65 @@ data.total %>%
   kable()
 ```
 
+Total number of children by age group
+
+```{r}
+data.total %>%
+  group_by(CDI.agerange) %>%
+  summarise(N = n()) %>%
+  kable()
+```
+
+Total number of CDIs (not unique children)
+
+```{r}
+data.total %>%
+  summarise(N = n()) %>%
+  kable()
+```
+Total number of CDIs (not unique children) by language zone
+
+```{r}
+data.total %>%
+  group_by(language_zone) %>%
+  summarise(N = n()) %>%
+  kable()
+```
+
+Total number of unique children
+
+```{r}
+data.total %>%
+  distinct(subid_unique) %>%
+  summarise(N = n()) %>%
+  kable()
+```
+
+Total number of unique children per language zone
+
+```{r}
+data.total %>%
+  group_by(language_zone) %>%
+  distinct(subid_unique) %>%
+  summarise(N = n()) %>%
+  kable()
+```
+Total number of children per gender and age
+
+```{r}
+data.total %>%
+  group_by(gender,CDI.agerange) %>%
+  summarise(N = n()) %>%
+  kable()
+```
+Total number of children per gender and age
+
+```{r}
+data.total %>%
+  group_by(gender) %>%
+  summarise(N = n()) %>%
+  kable()
+```
 More detailed information about Descriptive Statistics
 
 ```{r}
@@ -462,6 +522,14 @@ plot(nlme::ACF(re_run_lme.full.nae, resType = "normalized")) # there is no sign 
 # Lastly, check multi-collinearity
 car::vif(lmer.full.nae) # we do see a multicollineartiy for the IDS preference variable, even though we have centered the IDS preference score. It is probably related to the number the participating labs (as this is the group level that we are controlling) and how we entered interaction between IDS preference and other variables (that lack variability in the current sample). We need to keep IDS preference in the model as exploring the relationship between IDS preference and CDI score is the key research question in the paper.
 ```
+#### Table Summary
+```{r}
+modelsummary_lmer_full_nae<- list(
+  "Full Model" = lmer.full.nae)
+
+msummary(modelsummary_lmer_full_nae, output = "tables/lmer_full_nae.docx",
+             stars = TRUE, align = "lc",metrics=c("RMSE","R2","AIC", "BIC","Log.Lik.","F"))
+```
 
 
 ### UK full model
@@ -537,6 +605,15 @@ check_pwr_uk_cdi_age
 check_pwr_uk_gender <- simr::powerSim(lmer.full.uk, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_uk_gender
+```
+
+#### Table Summary
+```{r}
+modelsummary_lmer_full_uk<- list(
+  "Full Model" = lmer.full.uk)
+
+msummary(modelsummary_lmer_full_uk, output = "tables/lmer_full_uk.docx",
+             stars = TRUE, align = "lc",metrics=c("RMSE","R2","AIC", "BIC","Log.Lik.","F"))
 ```
 
 ### Combined Sample
@@ -654,5 +731,26 @@ check_pwr_combined_lang_zone
 check_pwr_combined_gender <- simr::powerSim(lmer.full.uk_nae, test = fixed("gender", method = "z"), seed = 3, nsim = 1000, alpha = 0.05) # specify that Gender is the fixed effect that we are looking into
 
 check_pwr_combined_gender
+```
+
+#### Table Summary
+```{r}
+modelsummary_lmer_full_uk_nae<- list(
+  "Full Model" = lmer.full.uk_nae)
+
+msummary(modelsummary_lmer_full_uk_nae, output = "tables/lmer_full_uk_nae.docx",
+             stars = TRUE, align = "lc",metrics=c("RMSE","R2","AIC", "BIC","Log.Lik.","F"))
+```
+
+
+### Summary table all 3 models
+```{r}
+modelsummary_all_three_models<- list(
+  "NAE Full Model"= lmer.full.nae,
+  "UK Full Model" = lmer.full.uk,
+  "NAE+UK Full Model" = lmer.full.uk_nae)
+
+msummary(modelsummary_all_three_models, output = "tables/lmer_full_three_models.docx",
+             stars = TRUE, align = "lccc",metrics=c("RMSE","R2","AIC", "BIC","Log.Lik.","F"))
 ```
 
