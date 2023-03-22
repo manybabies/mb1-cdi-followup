@@ -4,10 +4,16 @@ author: "Luis"
 date: "03/2022"
 output: html_document
 ---
-## Full Model (This model was not used in the analyses):
-# CDI vocabulary ~  ids_pref:age_days + ids_pref:CDI.agedays + ids_pref:method + ids_pref + CDI.agedays + gender + (1 + ids_pref:age_days + ids_pref:CDI.agedays + ids_pref:method + ids_pref + CDI.agedays + gender | labid)
-## Pruned Model (only this model was tested in the analyses):
-# CDI_vocabulary ~  ids_pref:age_days + ids_pref:CDI.agedays + ids_pref:method + ids_pref + CDI.agedays + gender + method + age_days + ids_pref : nae + nae + (1 | labid) + (1| subid_unique)
+
+To assess the influence of individual data points with respect to the “full” model we calculated a difference in beta values (DFBETA) removed data points one at a time and reran the model with each point excluded once (Besley et al. 1980). The change in the consequent beta estimates of the “full” model were inspected to check that no single data point largely altered their values. If highly influential data points were found, we would consider whether the model is misspecified (i.e. missing an important control). Data would only be removed in the circumstance that we can clearly demonstrate there was an error in the data collection, or data cleaning pipeline that led to implausible values. In the case that the model with respect to the data is unstable, the validity of any significant results from the beta regressions would be highly questionable. The presence of multicollinearity was evaluated with variance inflation factors (VIF; Fox & Weisberg, 2019). A VIF value of >2 would indicate evidence of multicollinearity and we would consider keeping only one of the variables with high VIF values. 
+
+A dispersion parameter greater than 1 can be considered a problem. In such a case, the dispersion of the data can be modeled individually to account for overdispersion, or in extreme cases, the estimates can be recalculated and scaled by the square root of the dispersion parameter. If it is not possible to address overdispersion, the model estimates would be considered unreliable and must be interpreted with caution. 
+
+Full Model:
+daily_percentile ~ z.IDS_pref * z.age_days + z.IDS_pref * CDI.agerange + z.IDS_pref * method + z.IDS_pref * nae + gender + (1 |labid) + (1 | subid_unique)
+Null Model:
+daily_percentile ~ z.age_days + CDI.agerange + method + nae + gender + (1 | labid) + (1 | subid_unique)
+
 ```{r setup, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
