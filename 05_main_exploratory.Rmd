@@ -26,6 +26,7 @@ library(lmtest)
 library(rstatix)
 library(sjPlot)
 library(rstudioapi) 
+library(performance)
 ```
 
 ```{r preprocessing, echo = TRUE, include = TRUE, warning = FALSE}
@@ -100,5 +101,13 @@ null <- glmmTMB(daily_percentile ~ z.age_days + CDI.agerange + method + nae + ge
 as.data.frame(anova(null, full, test="Chisq"))
 
 summary(full)
+
+# computes the conditional and marginal R squared values for the full and null models.
+r2_nakagawa(full)
+r2_nakagawa(null)
+
+# Computes the residual mean standard error for both the full and null models.
+performance_rmse(full)
+performance_rmse(null)
 ```
 
