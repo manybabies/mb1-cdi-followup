@@ -39,13 +39,12 @@ source("diagnostic_fcns.r")
 imported <- read.delim("data/cdi_percentile/percentiles_manybabies_cdi.txt", stringsAsFactors = TRUE, header = TRUE) 
 
 # Data set that will be used for the analyses.
-data <- data.frame(daily_percentile = imported$daily_percentile, IDS_pref = imported$IDS_pref, age_days = imported$age_days, CDI.agedays = imported$CDI.agedays, method = imported$method, gender = imported$gender, labid = imported$labid, subid_unique = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords, CDI.agerange = imported$CDI.agerange)
+data <- data.frame(daily_percentile = imported$daily_percentile, IDS_pref = imported$IDS_pref, age_mo = imported$age_mo, CDI.agedays = imported$CDI.agedays, method = imported$method, gender = imported$gender, labid = imported$labid, subid_unique = imported$subid_unique, nae = imported$nae, vocab_nwords = imported$vocab_nwords, CDI.agerange = imported$CDI.agerange)
 
 # These are only used to understand the distribution of each variable.
 hist(data$daily_percentile, breaks = 100)
 hist(data$IDS_pref)
-hist(data$age_days)
-hist(data$CDI.agedays)
+hist(data$age_mo)
 plot(data$method)
 plot(data$gender)
 plot(data$labid)
@@ -64,14 +63,15 @@ if(any(data$daily_percentile > 1))
 }
 
 #get the data with all NA values removed.
-full.fe.re <- fe.re.tab(fe.model = "daily_percentile ~ IDS_pref * CDI.agerange + IDS_pref * method + IDS_pref * nae + gender", re = c("labid", "subid_unique"), data = data)
+full.fe.re <- fe.re.tab(fe.model = "daily_percentile ~ IDS_pref * age_mo + IDS_pref * CDI.agerange + IDS_pref * method + IDS_pref * nae + gender", re = c("labid", "subid_unique"), data = data)
 t.data <- full.fe.re$data
 
 #z transformation of the predictors to help with the interpretation of the model.
 t.data$z.IDS_pref <- as.vector(scale(t.data$IDS_pref))
+t.data$z.age_months <-  as.vector(scale(t.data$age_mo))
 
 #Running the mixed effects model with a beta error distribution for the response variable.
-full <- glmmTMB(daily_percentile ~ z.IDS_pref * CDI.agerange + z.IDS_pref * method + z.IDS_pref * nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
+full <- glmmTMB(daily_percentile ~ z.IDS_pref * z.age_months + z.IDS_pref * CDI.agerange + z.IDS_pref * method + z.IDS_pref * nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
 
 #Checking the assumption that variance and the mean are linked. It was met with this model.
 overdisp.test(full)
@@ -80,29 +80,30 @@ overdisp.test(full)
 ranef.diagn.plot(full) #The random effects appear normally distributed.
 
 #Test for collinearity between the predictors. There are no signs of collinearity.
-coll_model <- lm(daily_percentile ~ z.IDS_pref + CDI.agerange + method + nae + gender, data = t.data)
+coll_model <- lm(daily_percentile ~ z.age_months + z.IDS_pref + CDI.agerange + method + nae + gender, data = t.data)
 library(car)
 vif(coll_model)
-
-#Test for stability by dropping levels of the random effects one at a time and comparing the estimates derived from models fitted on the respective subsets with those obtained for the full
-# data set. There don't seem to be major issues with the stability of the model coefficients.
-# Takes a while to run
-# full.stab <- glmmTMB.stab(model.res = full, para = TRUE, data = t.data)
-# table(full.stab$detailed$converged)
-# m.stab.plot(full.stab$summary[, -1])
 
 # The same structure as the full model but removes the key variable of interest "IDS_pref" and all its interacting terms.
 # This will help control for the multitude of possible models that we could run with this term and if this model is found to be 
 # statistically significantly different from the full model, that suggests "IDS_pref" is associated with daily_percentile. 
-null <- glmmTMB(daily_percentile ~ CDI.agerange + method + nae + gender + (1 | labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
+null <- glmmTMB(daily_percentile ~ z.age_months + CDI.agerange + method + nae + gender + (1 | labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
 
 # full - null model comparison reveals that the effect of z.IDS_pref doesn't significantly improve the model fit.
 as.data.frame(anova(null, full, test="Chisq"))
 
-full_no_int <- glmmTMB(daily_percentile ~ z.IDS_pref + CDI.agerange + method + nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
+full_no_int <- glmmTMB(daily_percentile ~ z.IDS_pref + z.age_months + CDI.agerange + method + nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
+
 overdisp.test(full_no_int)
 
-null_no_int <- glmmTMB(daily_percentile ~ CDI.agerange + method + nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
+#Test for stability by dropping levels of the random effects one at a time and comparing the estimates derived from models fitted on the respective subsets with those obtained for the full
+# data set. There don't seem to be major issues with the stability of the model coefficients.
+# Takes a while to run
+# full.stab <- glmmTMB.stab(model.res = full_no_int, para = TRUE, data = t.data)
+# table(full.stab$detailed$converged)
+# m.stab.plot(full.stab$summary[, -1])
+
+null_no_int <- glmmTMB(daily_percentile ~ z.age_months + CDI.agerange + method + nae + gender + (1 |labid) + (1 | subid_unique), family = beta_family(link = "logit"), data = t.data)
 
 # full - null model comparison reveals that the effect of z.IDS_pref doesn't significantly improve the model fit.
 as.data.frame(anova(null_no_int, full_no_int, test="Chisq"))
