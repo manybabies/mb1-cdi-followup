@@ -108,6 +108,16 @@ null_no_int <- glmmTMB(daily_percentile ~ z.age_months + CDI.agerange + method +
 # full - null model comparison reveals that the effect of z.IDS_pref doesn't significantly improve the model fit.
 as.data.frame(anova(null_no_int, full_no_int, test="Chisq"))
 
+summary(full)
+summary(null)
+
+# computes the conditional and marginal R squared values for the full and null models.
+r2_nakagawa(full_no_int)
+r2_nakagawa(null_no_int)
+
+performance_rmse(full)
+performance_rmse(null)
+
 summary(full_no_int)
 summary(null_no_int)
 
