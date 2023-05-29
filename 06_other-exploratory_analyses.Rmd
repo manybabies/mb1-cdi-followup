@@ -290,7 +290,7 @@ icc3k_excl2 <- icctable_excl2$results %>% filter(type == "ICC3k") %>% select("IC
 Power analysis for ICC
 ```{r}
 
-# Previous research suggests that CDI test-retest reliability is .86-.90 (Dale et al., 1989, Jahn-Smilo et al., 2001; Simonsen et al., 2014). We will go with .86 to be conservative.
+# Previous research suggests that CDI test-retest reliability is .86-.90 (Dale et al., 1989, Jahn-Samilo et al., 2001; Simonsen et al., 2014). We will go with .86 to be conservative.
 # What power do we have to detect the correlation between CDI and IDS preference, given the reliability of the CDI and the reliability of IDS preference at different exclusion criteria?
 
 
