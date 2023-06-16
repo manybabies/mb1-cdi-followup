@@ -1,21 +1,21 @@
-─ Session info ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.3 (2023-03-15)
- os       macOS Ventura 13.3.1
+ version  R version 4.3.0 (2023-04-21)
+ os       macOS Ventura 13.4
  system   aarch64, darwin20
- ui       RStudio
+ ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-05-03
- rstudio  2023.03.0+386 Cherry Blossom (desktop)
- pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
+ date     2023-06-16
+ pandoc   3.1.1 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
 
-─ Packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.2.0)
+ sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
+ [1] /Users/jfr5989/Library/R/arm64/4.3/library
+ [2] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
 
-─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────

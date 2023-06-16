@@ -412,7 +412,7 @@ plot.pearson <- ggarrange(plot.pearson.nae, plot.pearson.uk, ncol = 2)
 plot.pearson
 
 
-ggsave("plots/corr_plot_option_b.png", plot.pearson,
+ggsave("plots/corr_plot.png", plot.pearson,
   units = "mm", width = 180, height = 100, dpi = 1000
 )
 ```
