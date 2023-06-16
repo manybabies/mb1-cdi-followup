@@ -41,6 +41,8 @@ library(effects)
 library(sjPlot)
 library(robustlmm)
 library(car)
+library(papaja)
+theme_apa <- papaja::theme_apa
 
 # Load model comparison functions
 source("helper/lrtests.R")
@@ -269,22 +271,23 @@ by_lab <- data.total %>%
   ungroup()
 ```
 
-## Visualization by Lab
+## Visualization by Lab (Mean and confidence intervals)
+
 ```{r desc_by_lab_vis}
 # created a new column with the labs IDs as character so it can be sorted in alphabetical order
 by_lab$labid_car <- as.character(by_lab$labid)
 
 # relabel the CDI age factor column
-levels(by_lab$CDI.agerange) <- c("18 months", "24 months")
+levels(by_lab$CDI.agerange) <- c("18-Month Olds", "24-Month Olds")
 
 # Making sure the factor columns have levels in the order I would like to graph them
-by_lab$language_zone <- factor(by_lab$language_zone, levels = c("British", "NAE", "Other"))
+by_lab$language_zone <- factor(by_lab$language_zone, levels = c("Other", "NAE", "British"))
 
 # sorted the idcolum in the way I would it to show in the ggplot
 labid_ord <- by_lab %>%
   dplyr::arrange(language_zone, desc(labid_car)) %>%
   ungroup() %>%
-  filter(CDI.agerange == "18 months") %>%
+  filter(CDI.agerange == "18-Month Olds") %>%
   select(labid)
 
 # Making sure the factor columns have levels in the order I would like to graph them
@@ -303,23 +306,19 @@ by_lab %>%
   geom_linerange() +
   geom_point(aes(size = tested)) +
   coord_flip(ylim = c(0, 500)) +
-  xlab("Lab") +
-  ylab("Vocabulary size") +
+  xlab("Laboratory ID") +
+  ylab("Average Vocabulary Size") +
   scale_colour_brewer(
-    palette = "Dark2", name = "Language zone",
+    palette = "Dark2", name = "Language\nZone",
     breaks = c("British", "NAE", "Other")
   ) +
-  scale_size_continuous(name = "N", breaks = function(x) c(min(x), mean(x), max(x))) +
+  scale_size_continuous(name = "Sample\nSize") +
   facet_wrap(vars(CDI.agerange)) +
-  theme(
-    legend.position = "bottom",
-    strip.background = element_blank(),
-    strip.placement = "outside",
-    text = element_text(size = 22)
-  )
+  theme(  text = element_text(size = 20)) 
 
 ggsave("plots/vocab-size_by-lab.png", width = 12, height = 8)
 ```
+
 
 # Sample Theory Based Statistics
 
@@ -353,103 +352,73 @@ test.pearson.uk.24 <- cor.test(data.uk.24$z.IDS_pref,
 test.pearson.uk.24
 ```
 
-Plots for correlation
+### Plots for correlation
+
 ```{r}
 ## North American Sample
 ### Get correlation value for annotation
 cor_text <- "paste(italic(R)^2, \" =\")"
 cor_value <- round(test.pearson.nae$estimate, 3)
 
+
 ### Build plot
+
+xrng <- range(data.nae$IDS_pref)
+
 plot.pearson.nae <- data.nae %>%
   ggplot(aes(
     x = IDS_pref,
     y = standardized.score.CDI.num
   )) +
-  xlab("IDS preference") +
-  ylab("Standardized CDI score") +
-  geom_point() +
-  geom_smooth(method = lm) +
-  annotate("text",
-    x = -.9, y = 51, parse = T, size = 4,
+  xlab("Standardized IDS Preference") +
+  ylab("Standardized CDI Score") +
+  labs(title="NAE") +
+  geom_point(colour = "#D95F02") +
+  geom_smooth(method = lm, color = "#D95F02") +
+  annotate("text",x = xrng[2], y = 100,
+   hjust = 1, vjust = 0, parse = T, size = 3,
     label = paste(cor_text, cor_value, sep = "~")
-  )
+  ) + theme_apa()
 
 ## UK Sample
-cor_value <- round(test.pearson.uk.18$estimate, 3)
-plot.pearson.uk.18 <- data.uk.18 %>%
-  ggplot(aes(
-    x = IDS_pref,
-    y = vocab_nwords
-  )) +
-  xlab("IDS preference") +
-  ylab("Vocabulary size (in words)") +
-  geom_point() +
-  geom_smooth(method = lm) +
-  annotate("text",
-    x = .8, y = 150, parse = T, size = 4,
-    label = paste(cor_text, cor_value, sep = "~")
-  )
+cor_value_18 <- round(test.pearson.uk.18$estimate, 3)
+cor_value_24 <- round(test.pearson.uk.24$estimate, 3)
 
-cor_value <- round(test.pearson.uk.24$estimate, 3)
-plot.pearson.uk.24 <- data.uk.24 %>%
+plot.pearson.uk <- data.uk %>%
   ggplot(aes(
     x = IDS_pref,
-    y = vocab_nwords
+    y = vocab_nwords,
+    colour = CDI.agerange
   )) +
-  xlab("IDS preference") +
-  ylab("Vocabulary size (in words)") +
+  xlab("Standardized IDS Preference") +
+  ylab("Vocabulary Size (Total Words)") +
+  labs(title="UK") +
+  labs(colour = "Age \nGroup") +
   geom_point() +
-  geom_smooth(method = lm) +
-  annotate("text",
-    x = .8, y = 150, parse = T, size = 4,
-    label = paste(cor_text, cor_value, sep = "~")
-  )
+  geom_smooth(method = lm ) +
+    scale_color_manual(values = c("#D81159","#006BA6")) +
+  annotate("text",x = xrng[2], y = 415,
+   hjust = 1, vjust = 0, parse = T, size = 3,
+    label = paste(cor_text, cor_value_24, sep = "~")) +
+  annotate("text",x = xrng[2], y = 1,
+   hjust = 1, vjust = 0, parse = T, size = 3,
+    label = paste(cor_text, cor_value_18,sep = "~")) + theme_apa() +  ylim(0,420)
+  
+
 
 # Global plot
-plot.pearson <- ggarrange(plot.pearson.nae, plot.pearson.uk.18, plot.pearson.uk.24, ncol = 3)
+plot.pearson <- ggarrange(plot.pearson.nae, plot.pearson.uk, ncol = 2)
 
 plot.pearson
 
-# TODO: These plots need to be cleaned up!
 
-ggsave("plots/corr_plot.pdf", plot.pearson,
+ggsave("plots/corr_plot.png", plot.pearson,
   units = "mm", width = 180, height = 100, dpi = 1000
 )
 ```
 
 We see no obvious direct link between IDS prefernce and CDI score here. However, an effect might appear once we take into account various factors that might interact with IDS preference and/or CDI score. We can also first enhance these plots with information about the age group at which infants were tested (18- or 24-month-old) for the NAE sample, using vocabulary size to better compare the NAE and UK samples.
 
-```{r plot_by_age}
-plot.age_group <- data.total %>%
-  subset(language_zone != "Other") %>%
-  droplevels() %>%
-  ggplot(aes(
-    x = IDS_pref,
-    y = vocab_nwords,
-    colour = CDI.agerange
-  )) +
-  facet_wrap(vars(language_zone),
-    labeller = as_labeller(c(
-      "British" = "UK samples",
-      "NAE" = "North Amercian samples"
-    ))
-  ) +
-  xlab("Standardized IDS prefence score") +
-  ylab("Vocabulary size (in words)") +
-  theme(legend.position = "top") +
-  geom_point() +
-  geom_smooth(method = lm) +
-  scale_colour_brewer(
-    palette = "Dark2", name = "Age group",
-    breaks = c("18", "24"),
-    labels = c("18mo", "24m")
-  )
-ggsave("plots/scatter_age.pdf", plot.age_group,
-  units = "mm", width = 180, height = 100, dpi = 1000
-)
-plot.age_group
-```
 
 ## Mixed-Effects Model by Language Zone
 
