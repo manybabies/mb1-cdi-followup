@@ -1,30 +1,31 @@
-─ Session info ─────────────────────────────────────────────
+─ Session info ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.0 (2022-04-22)
- os       macOS Monterey 12.6.2
- system   x86_64, darwin17.0
+ version  R version 4.2.3 (2023-03-15)
+ os       macOS Ventura 13.3.1
+ system   aarch64, darwin20
  ui       RStudio
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/Los_Angeles
- date     2023-02-20
- rstudio  2022.12.0+353 Elsbeth Geranium (desktop)
- pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
+ tz       America/New_York
+ date     2023-05-05
+ rstudio  2023.03.0+386 Cherry Blossom (desktop)
+ pandoc   NA
 
-─ Packages ─────────────────────────────────────────────────
+─ Packages ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- dplyr       * 1.0.10  2022-09-01 [1] CRAN (R 4.2.0)
- forcats     * 0.5.1   2021-01-27 [1] CRAN (R 4.2.0)
- ggplot2     * 3.4.0   2022-11-04 [1] CRAN (R 4.2.0)
- purrr       * 1.0.0   2022-12-20 [1] CRAN (R 4.2.0)
- readr       * 2.1.3   2022-10-01 [1] CRAN (R 4.2.0)
+ dplyr       * 1.1.2   2023-04-20 [1] CRAN (R 4.2.3)
+ forcats     * 1.0.0   2023-01-29 [1] CRAN (R 4.2.0)
+ ggplot2     * 3.4.2   2023-04-03 [1] CRAN (R 4.2.0)
+ lubridate   * 1.9.2   2023-02-10 [1] CRAN (R 4.2.0)
+ purrr       * 1.0.1   2023-01-10 [1] CRAN (R 4.2.0)
+ readr       * 2.1.4   2023-02-10 [1] CRAN (R 4.2.0)
  sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.2.0)
  stringr     * 1.5.0   2022-12-02 [1] CRAN (R 4.2.0)
- tibble      * 3.1.8   2022-07-22 [1] CRAN (R 4.2.0)
- tidyr       * 1.2.1   2022-09-08 [1] CRAN (R 4.2.0)
- tidyverse   * 1.3.1   2021-04-15 [1] CRAN (R 4.2.0)
+ tibble      * 3.2.1   2023-03-20 [1] CRAN (R 4.2.0)
+ tidyr       * 1.3.0   2023-01-24 [1] CRAN (R 4.2.0)
+ tidyverse   * 2.0.0   2023-02-22 [1] CRAN (R 4.2.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.2/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
 
-────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
