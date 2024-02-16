@@ -25,7 +25,7 @@ library(rstan)
 library(sessioninfo)
 
 # Load model comparison functions
-source("helper/lrtests.R")
+#source("helper/lrtests.R")
 
 # Deal with package priority issues
 select <- dplyr::select
@@ -590,4 +590,331 @@ marloglik_null_3.combined <- bridge_sampler(lmer.bf_null_3.combined, silent = T)
 ```{r}
 BF_full_3.combined <- bayes_factor(marloglik_full_3.combined, marloglik_null_3.combined)
 BF_full_3.combined
+```
+
+
+# Robustness checks on Bayesian stats
+
+```{r}
+make_prior_nae <- function(scale){
+  p <- str_c("cauchy(0, ",as.character(scale),")")
+  prior_nae <- c(
+  set_prior("normal(50, 10)", class = "Intercept"), # note that nae's DV is percentile score, but I will assume at 18 months, the average is at 50 percentile
+  set_prior("cauchy(5, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 5 % percentile increase?
+  set_prior("cauchy(-15, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males
+  set_prior(p, class = "b"), # everything else 
+  set_prior("normal(0, 1)", class = "sd")
+)
+  return(prior_nae)
+}
+
+make_prior_uk <- function(scale){
+    p <- str_c("cauchy(0, ",as.character(scale),")")
+  prior_uk <- c(
+  set_prior("normal(40, 20)", class = "Intercept"), # note that UK's DV is raw score, based on wordbank (oxford CDI), the average (50 percentile) is around 41.6
+  set_prior("cauchy(15, 1)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase (proxy from wordbank)
+  set_prior("cauchy(-10, 5)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males
+  set_prior(p, class = "b"), # everything else
+  set_prior("normal(0, 1)", class = "sd")
+)
+  return(prior_uk)
+}
+
+make_prior_combined <- function(scale){
+      p <- str_c("cauchy(0, ",as.character(scale),")")
+    prior_combined <- c(
+      set_prior("normal(0.1, 0.05)", class = "Intercept"), # given the above info, we expect on average, proportion score is 10%
+      set_prior("cauchy(0.03, 0.01)", class = "b", coef = "CDI.z_age_months"), # assume increase in 1 month may lead to 15 words increase in UK cdi and lead to 28 words increase in NAE (proxy from wordbank). In general, 15/416 = 3% and 28/680 = 4%
+      set_prior("cauchy(-0.03, 0.01)", class = "b", coef = "gender1"), # female is the baseline, normally females know more words than males. Wordbank oxford CDI suggested at 18 months (50 percentile), female knows approximately 11 words more than males, 11/416 ~ 2.6% and Wordbank NAE suggested females knows approximately 27 words than males, 27/680 ~ 3.9%
+      set_prior(p, class = "b"), 
+      set_prior("normal(0, 0.01)", class = "sd"))
+    return(prior_combined)
+}
+
+```
+
+```{r robustness_nae_main}
+
+do_NAE_main_model <- function(scale, save_full, save_null){
+full <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+  z_age_months + method + z.IDS_pref +
+  (1 | labid) + (1 | subid_unique),
+data = data.nae,
+family = gaussian,
+prior = make_prior_nae(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 456
+)
+
+null <- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+  z_age_months + method +
+  (1 | labid) + (1 | subid_unique),
+data = data.nae,
+family = gaussian,
+prior = make_prior_nae(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 123
+)
+
+    
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+
+```{r robustness_nae_interact}
+
+do_NAE_interact_model <- function(scale, save_full, save_null){
+ full<- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.nae,
+family = gaussian,
+prior = make_prior_nae(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 890
+)
+
+null<- brm(standardized.score.CDI.num ~ CDI.z_age_months + gender +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.nae,
+family = gaussian,
+prior = make_prior_nae(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 102
+)
+
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+```{r robustness_uk_main}
+
+do_UK_main_model <- function(scale, save_full, save_null){
+full <- brm(vocab_nwords ~ CDI.z_age_months + gender +
+  z_age_months + method + z.IDS_pref +
+  #(1 | labid) + 
+    (1 | subid_unique),
+data = data.uk,
+family = gaussian,
+prior = make_prior_uk(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 456
+)
+
+null <- brm(vocab_nwords ~ CDI.z_age_months + gender +
+  z_age_months + method +
+  #(1 | labid) + 
+    (1 | subid_unique),
+data = data.uk,
+family = gaussian,
+prior = make_prior_uk(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 123
+)
+
+    
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+```{r robustness_uk_interact}
+
+do_UK_interact_model <- function(scale, save_full, save_null){
+full <- brm(vocab_nwords ~ CDI.z_age_months + gender +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  #(1 | labid) + 
+    (1 | subid_unique),
+data = data.uk,
+family = gaussian,
+prior = make_prior_uk(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 890
+)
+
+null<-  brm(vocab_nwords ~ CDI.z_age_months + gender +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + 
+  #(1 | labid) + 
+    (1 | subid_unique),
+data = data.uk,
+family = gaussian,
+prior = make_prior_uk(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .95),
+seed = 102
+)
+
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+```{r robustness_combined}
+
+do_combined_model <- function(scale, save_full, save_null){
+ full<- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+  z_age_months + method + z.IDS_pref + z.IDS_pref:language_zone +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.uk_nae,
+family = gaussian,
+prior = make_prior_combined(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .9999),
+seed = 100
+)
+
+
+null <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+  z_age_months + method + z.IDS_pref +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.uk_nae,
+family = gaussian,
+prior = make_prior_combined(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .9999),
+seed = 200
+)
+
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+```{r}
+b <- do_NAE_main_model(10, "mods/NAE_main_full_10.rds", "mods/NAE_main_null_10.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.37045
+a <- do_NAE_main_model(1, "mods/NAE_main_full_1.rds", "mods/NAE_main_null_1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.86690
+c <- do_NAE_main_model(.1, "mods/NAE_main_full_point1.rds", "mods/NAE_main_null_point1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.86831
+p <- do_NAE_main_model(.001, "mods/NAE_main_full_point001.rds", "mods/NAE_main_null_point001.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.57793
+
+e <- do_NAE_interact_model(10, "mods/NAE_interact_full_10.rds", "mods/NAE_interact_null_10.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.33237
+d <- do_NAE_interact_model(1, "mods/NAE_interact_full_1.rds", "mods/NAE_interact_null_1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.03461
+f <- do_NAE_interact_model(.1, "mods/NAE_interact_full_point1.rds", "mods/NAE_interact_null_point1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.03096
+t <- do_NAE_interact_model(.01, "mods/NAE_interact_full_point01.rds", "mods/NAE_interact_null_point01.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.19879
+q <- do_NAE_interact_model(.001, "mods/NAE_interact_full_point001.rds", "mods/NAE_interact_null_point001.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.63298
+
+v <- do_UK_main_model(100, "mods/UK_main_full_100.rds", "mods/UK_main_null_100.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.20513
+
+h <- do_UK_main_model(10, "mods/UK_main_full_10.rds", "mods/UK_main_null_10.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.77336
+w <- do_UK_main_model(5, "mods/UK_main_full_5.rds", "mods/UK_main_null_5.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.89392
+g <- do_UK_main_model(1, "mods/UK_main_full_1.rds", "mods/UK_main_null_1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.96754
+x <- do_UK_main_model(.5, "mods/UK_main_full_point5.rds", "mods/UK_main_null_point5.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.00724
+i <- do_UK_main_model(.1, "mods/UK_main_full_point1.rds", "mods/UK_main_null_point1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.90475
+u <- do_UK_main_model(.01, "mods/UK_main_full_point01.rds", "mods/UK_main_null_point01.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.96621
+
+z <-  do_UK_interact_model(50, "mods/UK_interact_50.rds", "mods/UK_interact_null_50.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.17077
+
+k <- do_UK_interact_model(10, "mods/UK_interact_full_10.rds", "mods/UK_interact_null_10.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.47832
+j <- do_UK_interact_model(1, "mods/UK_interact_full_1.rds", "mods/UK_interact_null_1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.97005
+l <- do_UK_interact_model(.1, "mods/UK_interact_full_point1.rds", "mods/UK_interact_null_point1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.98716
+y <- do_UK_interact_model(.01, "mods/UK_interact_full_point01.rds", "mods/UK_interact_null_point01.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.14301
+
+n <- do_combined_model(.1, "mods/combined_full_point1.rds", "mods/combined_null_point1.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.21141
+m <- do_combined_model(.01, "mods/combined_full_point01.rds", "mods/combined_null_point01.rds")
+# Estimated Bayes factor in favor of x1 over x2: 0.28282
+
+aa <- do_combined_model(.007, "mods/combined_full_point007.rds", "mods/combined_null_point007.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.50509
+r <- do_combined_model(.005, "mods/combined_full_point005.rds", "mods/combined_null_point005.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.22465
+o <- do_combined_model(.001, "mods/combined_full_point001.rds", "mods/combined_null_point001.rds")
+#Estimated Bayes factor in favor of x1 over x2: 1.14791
+bb <- do_combined_model(.0005, "mods/combined_full_point0005.rds", "mods/combined_null_point0005.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.42625
+
+s <- do_combined_model(.0001, "mods/combined_full_point0001.rds", "mods/combined_null_point0001.rds")
+#Estimated Bayes factor in favor of x1 over x2: 2646871512278566400.00000
 ```
