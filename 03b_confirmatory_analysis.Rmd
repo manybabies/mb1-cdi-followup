@@ -808,7 +808,7 @@ return(BF)
 }
 ```
 
-```{r robustness_combined}
+```{r robustness_combined_dialect_interact}
 
 do_combined_model <- function(scale, save_full, save_null){
  full<- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
@@ -917,4 +917,129 @@ bb <- do_combined_model(.0005, "mods/combined_full_point0005.rds", "mods/combine
 
 s <- do_combined_model(.0001, "mods/combined_full_point0001.rds", "mods/combined_null_point0001.rds")
 #Estimated Bayes factor in favor of x1 over x2: 2646871512278566400.00000
+```
+
+## Model + robustness 
+
+### Combined on main effect
+```{r robustness_combined_main}
+
+do_combined_model_main <- function(scale, save_full, save_null){
+ full<- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+  z_age_months + method + z.IDS_pref +
+  (1 | labid) + (1 | subid_unique),
+data = data.uk_nae,
+family = gaussian,
+prior = make_prior_combined(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .9999),
+seed = 100
+)
+
+
+null <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+  z_age_months + method + 
+  (1 | labid) + (1 | subid_unique),
+data = data.uk_nae,
+family = gaussian,
+prior = make_prior_combined(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .9999),
+seed = 200
+)
+
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+### Combined on interaction
+
+```{r robustness_combined_interact}
+
+do_combined_model_interact <- function(scale, save_full, save_null){
+ full<- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+  z_age_months + method + z.IDS_pref + z.IDS_pref:language_zone +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + z.IDS_pref:z_age_months +
+  (1 | labid) + (1 | subid_unique),
+data = data.uk_nae,
+family = gaussian,
+prior = make_prior_combined(scale),
+file=save_full,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .9999),
+seed = 100
+)
+
+
+null <- brm(CDI.prop ~ CDI.z_age_months + language_zone + gender +
+  z_age_months + method + z.IDS_pref + z.IDS_pref:language_zone +
+  z.IDS_pref:method + z.IDS_pref:CDI.z_age_months + 
+  (1 | labid) + (1 | subid_unique),
+data = data.uk_nae,
+family = gaussian,
+prior = make_prior_combined(scale),
+file=save_null,
+iter = 4000,
+warmup = 2000,
+chains = 4,
+save_pars = save_pars(all = T),
+control = list(adapt_delta = .9999),
+seed = 200
+)
+
+marloglik_full <- bridge_sampler(full, silent = T)
+marloglik_null <- bridge_sampler(null, silent = T)
+
+BF <- bayes_factor(marloglik_full, marloglik_null)
+return(BF)
+}
+```
+
+```{r}
+# with default value
+# main_combined <- do_combined_model_main(.01, "mods/combined_main_full_point01.rds", "mods/combined_main_null_point01.rds")
+# # Estimated Bayes factor in favor of x1 over x2: 0.74997
+# 
+# interact_combined <- do_combined_model_interact(.01, "mods/combined_interact_full_point01.rds", "mods/combined_interact_null_point01.rds")
+# # Estimated Bayes factor in favor of x1 over x2: 0.34544
+# 
+# ## for robustness
+# 
+# bb <- do_combined_model_main(.001, "mods/combined_main_full_point001.rds", "mods/combined_main_null_point001.rds")
+# #Estimated Bayes factor in favor of x1 over x2: 0.88511
+# 
+# cc <- do_combined_model_main(.1, "mods/combined_main_full_point1.rds", "mods/combined_main_null_point1.rds")
+# #Estimated Bayes factor in favor of x1 over x2: 0.27974
+
+#ff <- do_combined_model_main(.05, "mods/combined_main_full_point05.rds", "mods/combined_main_null_point05.rds")
+#Estimated Bayes factor in favor of x1 over x2: 4.20642
+#xx <- do_combined_model_main(.03, "mods/combined_main_full_point03.rds", "mods/combined_main_null_point03.rds")
+#Estimated Bayes factor in favor of x1 over x2: 3.01790
+
+# dd <- do_combined_model_interact(.001, "mods/combined_interact_full_point001.rds", "mods/combined_interact_null_point001.rds")
+# #Estimated Bayes factor in favor of x1 over x2: 2.70523
+# 
+# ee <- do_combined_model_interact(.1, "mods/combined_interact_full_point1.rds", "mods/combined_interact_null_point1.rds")
+# #Estimated Bayes factor in favor of x1 over x2: 0.04190
+
+#gg <- do_combined_model_interact(.005, "mods/combined_interact_full_point005.rds", "mods/combined_interact_null_point005.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.88843
+
+#yy <- do_combined_model_interact(.05, "mods/combined_interact_full_point05.rds", "mods/combined_interact_null_point05.rds")
+#Estimated Bayes factor in favor of x1 over x2: 0.49613
 ```
